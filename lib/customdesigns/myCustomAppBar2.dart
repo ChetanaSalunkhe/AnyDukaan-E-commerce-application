@@ -22,7 +22,6 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
         children: [
           AppBar(
             title: Text(title,
-                //style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),),
                 style: CustomStyle.progressTitle),
             backgroundColor: CustomColors.colorPrimaryBlue,
             shape: RoundedRectangleBorder(
