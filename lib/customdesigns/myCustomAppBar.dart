@@ -1,4 +1,5 @@
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,16 @@ class CustomAppBarWithoutSearch extends StatelessWidget with PreferredSizeWidget
       ),
       automaticallyImplyLeading: true,
       leading: Icon(Icons.arrow_back,color: CustomColors.white,),
-
+      actions: [Container(
+        margin: EdgeInsets.only(right: 16),
+        child: Row(
+          children: [
+            Image.asset("assets/serch.png",width: 24,height: 24,color: Colors.white,),
+            SizedBox(width: 16,),
+            Image.asset("assets/module_info.png",width: 24,height: 24,color: Colors.white,),
+          ],
+        )
+      )],
     );
   }
 

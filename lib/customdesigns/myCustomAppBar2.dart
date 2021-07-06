@@ -12,7 +12,7 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
   final Size preferredSize;
   final String title;
 
-  CustomAppBarWithSearch(this.title, {Key key}): preferredSize = Size.fromHeight(109),super(key: key);
+  CustomAppBarWithSearch(this.title, {Key key}): preferredSize = Size.fromHeight(100),super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,16 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
       child:Stack(
         children: [
           AppBar(
-            title: Text(title,
-                style: CustomStyle.progressTitle),
+            title: Container(
+              child: Row(
+                children: [
+                  Text(title,
+                      style: CustomStyle.progressTitle),
+                  SizedBox(width:13),
+                  Icon(Icons.keyboard_arrow_down,color: CustomColors.white,)
+                ],
+              ),
+            ),
             backgroundColor: CustomColors.colorPrimaryBlue,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(
@@ -30,11 +38,25 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
                 )
             ),
             automaticallyImplyLeading: true,
-            leading: Icon(Icons.arrow_back,color: CustomColors.white,),
+            leading: Icon(Icons.arrow_back,color: CustomColors.white),
+            actions: [Container(
+              margin: EdgeInsets.only(right: 16),
+              child: Image.asset("assets/notification.png",width: 24,height: 24,),
+            )],
+
           ),
+
+         /* Positioned(
+            top: 80,
+              child: Container(
+                  child: SearchBar())),
+
           Positioned(
-              top: 104,
-              child: SearchBar()),
+            left: 30,
+              child: Container(
+                  child:  Image.asset("assets/notification.jpg",width: 24,height: 24,fit: BoxFit.fill,))),*/
+
+
         ],
       )
     );
