@@ -14,4 +14,5 @@ class CustomColors{
   static Color greydark = Color(0xffBDBDBD);
   static Color background_fb= Color(0xfffbfbfb);
   static Color background_fd = Color(0xfffdfdfd);
+  static Color background_lightblue = Color(0xfff9fcff);
 }

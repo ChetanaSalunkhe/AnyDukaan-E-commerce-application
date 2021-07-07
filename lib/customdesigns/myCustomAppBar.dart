@@ -6,9 +6,8 @@ import 'package:flutter/material.dart';
 /*Created by Chetana*/
 class CustomAppBarWithoutSearch extends StatelessWidget with PreferredSizeWidget{
 
-  @override
-  final Size preferredSize;
-  final String title;
+  Size preferredSize;
+  String title="";
 
   CustomAppBarWithoutSearch(this.title, {Key key}): preferredSize = Size.fromHeight(64),super(key: key);
 
@@ -24,7 +23,12 @@ class CustomAppBarWithoutSearch extends StatelessWidget with PreferredSizeWidget
           )
       ),
       automaticallyImplyLeading: true,
-      leading: Icon(Icons.arrow_back,color: CustomColors.white,),
+      leading: InkWell(
+        onTap: (){
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.arrow_back,color: CustomColors.white,),
+      ),
       actions: [Container(
         margin: EdgeInsets.only(right: 16),
         child: Row(

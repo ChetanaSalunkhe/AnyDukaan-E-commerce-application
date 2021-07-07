@@ -1,4 +1,5 @@
 //listview shops
+import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class ListView_shops extends State{
               child:Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 16,right: 16,top: 8),
+                    margin: EdgeInsets.only(left: 16,right: 16,bottom: 8),
                     width: 328,
                     child: Card(
                         clipBehavior: Clip.antiAlias,
@@ -108,7 +109,7 @@ class ListView_shops extends State{
                                               Row(
                                                 children: [
                                                   //Image.asset("assets/location.png",width: 12,height: 12,fit: BoxFit.fill,),
-                                                  CustomStyle.getImageIcons("assets/location.png",12),
+                                                  CustomStyle.getImageIcons("assets/location.png",12,CustomColors.colorPrimaryOrange),
                                                   SizedBox(width: 4,),
                                                   new Text('1.2km Goregaon(E)', style: CustomStyle.subTitle,),
                                                 ],
@@ -120,7 +121,7 @@ class ListView_shops extends State{
                                                 children: [
                                                   Row(
                                                     children: [
-                                                      CustomStyle.getImageIcons("assets/rating.png",12),
+                                                      CustomStyle.getImageIcons("assets/rating.png",12,CustomColors.colorPrimaryOrange),
                                                       SizedBox(width: 4,),
                                                       new Text('4.2', style: CustomStyle.subTitleBlack,),
                                                     ],
@@ -128,7 +129,7 @@ class ListView_shops extends State{
                                                   SizedBox(width: 10,),
                                                   Row(
                                                     children: [
-                                                      CustomStyle.getImageIcons("assets/free_delivery.png",12),
+                                                      CustomStyle.getImageIcons("assets/free_delivery.png",12,CustomColors.greenlight),
                                                       SizedBox(width: 4,),
                                                       new Text('Free Delivery', style: CustomStyle.greenText10,),
                                                     ],

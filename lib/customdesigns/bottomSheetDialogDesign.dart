@@ -42,7 +42,7 @@ class ModalBottomSheetDialog extends StatelessWidget {
                                   padding: EdgeInsets.only(right: 16),
                               child: IconButton(
                                 alignment: Alignment.centerRight,
-                                icon: Image.asset('assets/close.png',color: CustomColors.black,),
+                                icon: CustomStyle.getImageIcons('assets/close.png',10,CustomColors.black),
                                 iconSize: 50,
                                 onPressed: () {
                                   Navigator.pop(context);

@@ -14,6 +14,8 @@ Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,Build
     color: Colors.transparent,
     margin: EdgeInsets.only(left: 16,right: 16),
     child: Card(
+        shadowColor: CustomColors.black,
+        elevation: 5,
         color: CustomColors.colorPrimaryOrange,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
@@ -72,11 +74,13 @@ Container BtnContinue(String title,BuildContext context){
   return Container(
     width: 328,
     height: 50.0,
-    color: Colors.transparent,
+    //color: Colors.transparent,
     margin: EdgeInsets.only(left: 16,right: 16),
     alignment: Alignment.center,
     child:  Card(
         color: CustomColors.colorPrimaryOrange,
+        shadowColor: CustomColors.black,
+        elevation: 5,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
                 Radius.circular(40)

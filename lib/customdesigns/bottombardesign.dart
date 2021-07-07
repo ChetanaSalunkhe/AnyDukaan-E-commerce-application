@@ -18,10 +18,10 @@ class BottomBarDesign extends State{
   @override
   Widget build(BuildContext context) {
     return Container(
-      /*decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(14)),
-      ),*/
       child: Card(
+        elevation:100,
+        shadowColor: CustomColors.black,
+        margin: EdgeInsets.zero,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(

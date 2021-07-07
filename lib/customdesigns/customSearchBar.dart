@@ -1,21 +1,28 @@
+import 'package:anydukaan/customdesigns/secondRoute.dart';
+import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /*Created by Chetana*/
 class SearchBar extends StatelessWidget {
-  final Widget child;
-  final Gradient gradient;
-  final double width;
-  final double height;
-  final Function onPressed;
+  Widget child;
+  Gradient gradient;
+  double width;
+  double height;
+  Function onPressed;
+  String hint="";
 
-  const SearchBar({
+  //SearchBar({Key key,this.hint}):super(key: key);
+
+  SearchBar({
     Key key,
     @required this.child,
     this.gradient,
-    this.width = double.infinity,
+    this.width = 328,
     this.height = 44.0,
     this.onPressed,
+    this.hint,
   }) : super(key: key);
 
   @override
@@ -31,6 +38,36 @@ class SearchBar extends StatelessWidget {
              top: Radius.circular(20)
            )
        ),
+       child: Padding(
+         padding: EdgeInsets.only(left: 16,right: 16),
+         child: Row(
+           crossAxisAlignment: CrossAxisAlignment.center,
+           children: [
+             Flexible(
+                 flex: 1,
+                 fit: FlexFit.loose,
+                 child:  CustomStyle.getImageIcons('assets/serch.png', 16, CustomColors.grey_subtitle),),
+             SizedBox(width: 8,),
+             Flexible(
+                 flex: 10,
+                 fit: FlexFit.tight,
+                 child: Center(
+                   child: CustomStyle.getEditTextSearch('Search here...',14),
+                 )
+             ),
+             Flexible(
+               flex: 0,
+                 fit: FlexFit.tight,
+                 child: InkWell(
+                   onTap: (){
+                     Navigator.push(context, 
+                     MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'SearchBar',)));
+                   },
+                   child: CustomStyle.getImageIcons('assets/audio_search.png', 16, CustomColors.colorPrimaryOrange),
+                 ))
+           ],
+         ),
+       )
      ),
     );
   }

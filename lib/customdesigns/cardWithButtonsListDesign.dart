@@ -18,7 +18,6 @@ class ListViewUI_cardWithbtns  extends State{
               child:Column(
                 children: [
                   Container(
-                    //margin: EdgeInsets.only(right: 16),
                     width: 156,
                     child: Card(
                         margin: EdgeInsets.only(right: 16),
@@ -106,7 +105,8 @@ class ListViewUI_cardWithbtns  extends State{
 
                                 ],
                               ),
-                            )
+                            ),
+
                           ],
                         )
                     ),

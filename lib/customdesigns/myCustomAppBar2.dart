@@ -9,16 +9,20 @@ import 'customSearchBar.dart';
 class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
 
   @override
-  final Size preferredSize;
-  final String title;
+  Size preferredSize;
+  String title="";
+  String searchHint="";
 
-  CustomAppBarWithSearch(this.title, {Key key}): preferredSize = Size.fromHeight(100),super(key: key);
+  CustomAppBarWithSearch({Key key, this.title,this.searchHint}):preferredSize=Size.fromHeight(100),super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return
     Container(
       child:Stack(
+        alignment: Alignment.center,
+        fit: StackFit.expand,
+        overflow: Overflow.visible,
         children: [
           AppBar(
             title: Container(
@@ -38,25 +42,23 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
                 )
             ),
             automaticallyImplyLeading: true,
-            leading: Icon(Icons.arrow_back,color: CustomColors.white),
+            leading: InkWell(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back,color: CustomColors.white,),
+            ),
             actions: [Container(
               margin: EdgeInsets.only(right: 16),
               child: Image.asset("assets/notification.png",width: 24,height: 24,),
             )],
-
           ),
 
-         /* Positioned(
-            top: 80,
-              child: Container(
-                  child: SearchBar())),
-
           Positioned(
-            left: 30,
+              top: 98,
               child: Container(
-                  child:  Image.asset("assets/notification.jpg",width: 24,height: 24,fit: BoxFit.fill,))),*/
-
-
+                  child: SearchBar(hint: 'searchHint',))),
+                  //child: SearchBar())),
         ],
       )
     );
