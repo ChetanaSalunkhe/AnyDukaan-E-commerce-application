@@ -2,6 +2,8 @@ import 'package:anydukaan/consumer/itemsListing.dart';
 import 'package:anydukaan/consumer/productDetails.dart';
 import 'package:anydukaan/consumer/shopDetails.dart';
 import 'package:anydukaan/consumer/shoplisting.dart';
+import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
+import 'package:anydukaan/onboardingScreens/walkThrough.dart';
 import 'package:flutter/material.dart';
 
 import 'mainSearchDesign.dart';
@@ -20,9 +22,12 @@ class SecondRoute extends StatefulWidget {
     }else if(callFrom == 'SearchBar'){
       return MainSearchDesign();
     }else if(callFrom == 'HomeShop'){
-      return ShopDetails();
+      //return ShopDetails();
+      return SelectLanguageScreen();
     }else if(callFrom == 'HomeProduct'){
       return ProductDetails();
+    }else if(callFrom == 'WalkThrough'){
+      return WalkThroughScreen();
     }
   }
 }

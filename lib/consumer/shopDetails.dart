@@ -51,7 +51,6 @@ class ShopDetails extends State{
                 ],
               ),
             )
-
         ),
         bottomNavigationBar : CustomBottomBar()
     );

@@ -44,7 +44,7 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
             automaticallyImplyLeading: true,
             leading: InkWell(
               onTap: (){
-                Navigator.pop(context);
+                Navigator.pop(context);   //close current screen and go to previous screen
               },
               child: Icon(Icons.arrow_back,color: CustomColors.white,),
             ),

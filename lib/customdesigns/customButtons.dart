@@ -127,3 +127,62 @@ Container BtnContinue(String title,BuildContext context){
     ),
   );
 }
+
+/*single text on button with outline*/
+Container BtnWithOutline(String title_,BuildContext context){
+
+  return Container(
+    width: 328,
+    height: 50.0,
+    color: Colors.transparent,
+    margin: EdgeInsets.only(left: 16,right: 16),
+    alignment: Alignment.center,
+    child:  Card(
+        //color: CustomColors.white,
+        shadowColor: CustomColors.black,
+        elevation: 1,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+                Radius.circular(40)
+            )
+        ),
+
+        child: Padding(
+          padding: EdgeInsets.only(left: 28,right: 28),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Flexible(
+                flex: 1,
+                fit: FlexFit.loose,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('',style: CustomStyle.btnTitleBlack16,),
+                    Text('',style: CustomStyle.btnTitleBlack16,)
+
+                  ],
+                ),
+              ),
+
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: (){
+                        //logic here
+                      },
+                      child: Text('$title_',style: CustomStyle.boldValueText,textAlign: TextAlign.center,),)
+                  ],
+                ),)
+            ],
+          ),
+        )
+    ),
+  );
+}
