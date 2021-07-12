@@ -326,3 +326,80 @@ Container ReviewBorder(String title_,BuildContext context,double width, double h
     ),
   );
 }
+
+/*single text on blue button*/
+Container BtnBlue_singletext_small(String title,BuildContext context,double width, double height){
+
+  return Container(
+    width: width,
+    height: height,
+    //margin: EdgeInsets.only(left: 16,right: 16),
+    alignment: Alignment.center,
+    child:  Card(
+        color: CustomColors.colorPrimaryBlue,
+        shadowColor: CustomColors.black,
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+                Radius.circular(99)
+            )
+        ),
+
+        child: Padding(
+          padding: EdgeInsets.only(top:6,bottom:6),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment:CrossAxisAlignment.center,
+            children: [
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: Text('$title',style: CustomStyle.btnTitleWhite_12,textAlign: TextAlign.center,),
+              ),
+
+            ],
+          ),
+        )
+    ),
+  );
+}
+
+/*single text on blue button ourtlinw*/
+Container BtnBlue_singletext_small_outline(String title_,BuildContext context,double width, double height){
+
+  return Container(
+      width: width,
+      height: height,
+      color: Colors.transparent,
+      //margin: EdgeInsets.only(left: 16,right: 16),
+      alignment: Alignment.center,
+      child:  Card(
+        //color:
+        // CustomColors.white,
+        /*shadowColor: CustomColors.black,
+        elevation: 1,*/
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+                Radius.circular(99)
+            ),
+            side: CustomStyle.blackOutline
+        ),
+
+        child: Padding(
+          padding: EdgeInsets.only(top:6,bottom:6),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment:CrossAxisAlignment.center,
+            children: [
+            Flexible(
+            flex: 1,
+            fit: FlexFit.loose,
+            child: Text('$title_',style: CustomStyle.subTitleBlack,textAlign: TextAlign.center,),
+          ),
+
+          ],
+        ),
+      )
+  ),
+  );
+}
