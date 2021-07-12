@@ -169,6 +169,12 @@ class CustomStyle{
       fontWeight: FontWeight.bold,
       fontSize: 10);
 
+  static var orangeText12 = TextStyle(
+      color: CustomColors.colorPrimaryOrange,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 12);
+
   /*text with cutting line*/
   static var textWithLine =  TextStyle(
       color: CustomColors.grey_subtitle,
