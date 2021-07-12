@@ -18,6 +18,12 @@ class CustomStyle{
       fontWeight: FontWeight.bold,
       fontSize: 14);
 
+  static var btnTitleWhite_12 = TextStyle(
+      color: CustomColors.white,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 12);
+
 /*black text 16, normal*/
   static var blackBold16 = TextStyle(
       color: CustomColors.black,
