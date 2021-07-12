@@ -10,6 +10,7 @@ class ListViewUI_cardWithbtns  extends State{
   Widget build(BuildContext context) {
     return ListView.builder(
         scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
         itemCount: entries.length,
         itemBuilder: (BuildContext context,int index){
           return InkWell(
@@ -77,10 +78,7 @@ class ListViewUI_cardWithbtns  extends State{
                                       child: Card(
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(18), // if you need this
-                                          side: BorderSide(
-                                            color: CustomColors.colorPrimaryOrange,
-                                            width: 0.5,
-                                          ),
+                                          side: CustomStyle.orangeOutline
                                         ),
                                         child: Container(
                                           color: Colors.white,

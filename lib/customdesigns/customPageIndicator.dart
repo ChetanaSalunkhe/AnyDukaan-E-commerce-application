@@ -4,14 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
 
 class AdvPages extends StatefulWidget{
+  double width;
+  double height;
+  String iName;
+  AdvPages({Key key,this.iName,this.width,this.height}):super(key: key);
+
   @override
   State<StatefulWidget> createState() {
-    return AdvPagesView();
+    return AdvPagesView(iName: iName,width: width,height: height);
   }
 
 }
 
 class AdvPagesView extends State{
+
+  double width;
+  double height;
+  String iName;
+  AdvPagesView({Key key,this.iName,this.width,this.height});
 
   final _pageController = PageController();
   final _currentPageNotifier = ValueNotifier<int>(0);
@@ -46,7 +56,8 @@ class AdvPagesView extends State{
           itemBuilder: (BuildContext context, int index) {
             return Center(
                 child:
-                Image.asset("assets/bannerimg2.png",width:360,height: 150,fit: BoxFit.fill,)  //grocery banner
+                Image.asset('$iName',width:width,height: height,fit: BoxFit.fill,)
+              //Image.asset("assets/bannerimg2.png",width:360,height: 150,fit: BoxFit.fill,)  //grocery banner
                 //Image.asset("assets/restbanner.png",width:360,height: 150,fit: BoxFit.fill,)  //restaurant banner
             );
           },

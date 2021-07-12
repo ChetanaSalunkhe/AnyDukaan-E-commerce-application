@@ -159,8 +159,8 @@ Container BtnWithOutline(String title_,BuildContext context){
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('',style: CustomStyle.btnTitleBlack16,),
-                    Text('',style: CustomStyle.btnTitleBlack16,)
+                    Text('',style: CustomStyle.blackBold16,),
+                    Text('',style: CustomStyle.blackBold16,)
 
                   ],
                 ),
@@ -180,6 +180,146 @@ Container BtnWithOutline(String title_,BuildContext context){
                       child: Text('$title_',style: CustomStyle.boldValueText,textAlign: TextAlign.center,),)
                   ],
                 ),)
+            ],
+          ),
+        )
+    ),
+  );
+}
+
+/*single text on button with arrow outline*/
+Container BtnWithArrow(String title_,BuildContext context){
+  return Container(
+    width: 172,
+    height: 40.0,
+    color: Colors.transparent,
+    //margin: EdgeInsets.only(left: 16,right: 16),
+    alignment: Alignment.centerLeft,
+    child:  Card(
+        //shadowColor: CustomColors.colorPrimaryOrange,
+        //elevation: 1,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+                Radius.circular(99)
+            ),
+          side: CustomStyle.orangeOutline
+        ),
+        child: Padding(
+          padding: EdgeInsets.only(left: 12,right: 12),
+          child: Row(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: (){
+                      //logic here
+                    },
+                    child: Text('$title_',style: CustomStyle.primaryBtnTextOrange,textAlign: TextAlign.left,),),
+                  SizedBox(width: 16,),
+                  CustomStyle.getImageIcons('assets/next.png', 16, CustomColors.colorPrimaryOrange),
+                ],
+              ),
+            ],
+          ),
+        )
+    ),
+  );
+}
+
+/*single text on button with arrow outline*/
+Container BtnWithIcon(String title_,BuildContext context,double width, double height){
+  return Container(
+    width: width,
+    height: height,
+    color: Colors.transparent,
+    //margin: EdgeInsets.only(left: 16,right: 16),
+    alignment: Alignment.center,
+    child:  Card(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+                Radius.circular(99)
+            ),
+            side: CustomStyle.orangeOutline
+        ),
+        child: Padding(
+          padding: EdgeInsets.only(left: 10,right: 10),
+          child: Row(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: (){
+                      //logic here
+                    },
+                    child: Text('$title_',style: CustomStyle.primaryBtnTextOrange,textAlign: TextAlign.left,),),
+                  SizedBox(width: 16,),
+                  CustomStyle.getImageIcons('assets/next.png', 16, CustomColors.colorPrimaryOrange),
+                ],
+              ),
+            ],
+          ),
+        )
+    ),
+  );
+}
+
+Container BtnWithIconAdd(String title_,BuildContext context,double width, double height){
+  return Container(
+    width: width,
+    height: height,
+    color: Colors.transparent,
+    alignment: Alignment.center,
+    child:  Card(
+      color: CustomColors.colorPrimaryOrange,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+                Radius.circular(99)
+            ),
+            //side: CustomStyle.orangeOutline
+        ),
+        child: Padding(
+          padding: EdgeInsets.only(left: 10,right: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton(
+                onPressed: (){
+                  //logic here
+                },
+                child: Text('$title_',style: CustomStyle.whiteBold14,textAlign: TextAlign.center,),),
+            ],
+          ),
+        )
+    ),
+  );
+}
+
+Container ReviewBorder(String title_,BuildContext context,double width, double height){
+  return Container(
+    width: width,
+    height: height,
+    color: Colors.transparent,
+    alignment: Alignment.center,
+    child:  Card(
+        color: CustomColors.blueboxshade,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+              Radius.circular(10)
+          ),
+          //side: CustomStyle.orangeOutline
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('$title_',style: CustomStyle.blueboldTitleText,textAlign: TextAlign.center,),
             ],
           ),
         )
