@@ -301,6 +301,8 @@ class ListViewUI_recommend extends State{
         itemBuilder: (BuildContext context,int index){
           return InkWell(
               onTap: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'HomeProduct',)));
               },
               child:Column(
                 children: [
@@ -533,10 +535,7 @@ class ListViewUI_cardWithbtns  extends State{
                                     child: Card(
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(18), // if you need this
-                                        side: BorderSide(
-                                          color: CustomColors.colorPrimaryOrange,
-                                          width: 0.5,
-                                        ),
+                                        side: CustomStyle.orangeOutline
                                       ),
                                       child: Container(
                                         color: Colors.white,

@@ -25,7 +25,7 @@ class ShopListing extends State{
           child: Column(
             children: [
               //banner image slider
-              AdvPages(),
+              AdvPages(iName: 'assets/bannerimg2.png',width:360,height:150,),
 
               //text title
               TextTitle(title:'$title',),
