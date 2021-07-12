@@ -12,6 +12,19 @@ class CustomStyle{
       fontWeight: FontWeight.bold,
       fontSize: 16);
 
+  static var whiteBold14 = TextStyle(
+      color: CustomColors.white,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 14);
+
+/*black text 16, normal*/
+  static var blackBold16 = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 16);
+
   /*black clickable text*/
   static var boldValueText = TextStyle(
         color: CustomColors.black,
@@ -26,8 +39,14 @@ class CustomStyle{
         fontWeight: FontWeight.bold,
         fontSize: 18);
 
+  static var blueboldTitleText = TextStyle(
+        color: CustomColors.colorPrimaryBlue,
+        fontFamily: 'Open Sans',
+        fontWeight: FontWeight.bold,
+        fontSize: 18);
+
   /*blue title text*/
-  static var blueTitleText = TextStyle(
+  static var blueBoldText16 = TextStyle(
         color: CustomColors.colorPrimaryBlue,
         fontFamily: 'Open Sans',
         fontWeight: FontWeight.bold,
@@ -110,6 +129,12 @@ class CustomStyle{
       fontWeight: FontWeight.normal,
       fontSize: 10);
 
+  static var greenText12 = TextStyle(
+      color: CustomColors.greenlight,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 12);
+
   /*free delivery text*/
   static var greyText10 = TextStyle(
       color: CustomColors.grey_subtitle,
@@ -148,6 +173,22 @@ class CustomStyle{
       fontSize: 12,
     );
 
+  /******************************* Button outlines *******************************************************************/
+  static var orangeOutline = BorderSide(
+    color: CustomColors.colorPrimaryOrange,
+    width: 0.5,
+  );
+
+  static var blackOutline = BorderSide(
+    color: CustomColors.black,
+    width: 0.5,
+  );
+
+  static var greenOutline = BorderSide(
+    color: CustomColors.greenlight,
+    width: 0.5,
+  );
+
   /************************************ Images custom designs ******************************************************/
   static var imageGrid = Image.asset("assets/rest.png",width: 24,height: 24,);
 
@@ -161,6 +202,18 @@ class CustomStyle{
 
   static getImageIcons(String imgName,double size,Color color){
     return Image.asset('$imgName',width: size,height: size,color: color,alignment: Alignment.center,);
+  }
+
+  static getWalkThroughImages(String iName, double size){
+    return Image.asset('$iName',width: size,height: size,alignment: Alignment.center,);
+  }
+
+  static getLogoImages(String iName, double width,double height){
+    return Image.asset('$iName',width: width,height: height,alignment: Alignment.center,);
+  }
+
+  static getIcons(IconData icon, double size,Color color_){
+    return Icon(icon,color: color_,size: size,);
   }
 
   /*********************************** EditText custom designs ****************************************************/
@@ -193,4 +246,45 @@ class CustomStyle{
    );
  }
 
+ static getGradientBackground(){
+   return BoxDecoration(
+       gradient: LinearGradient(
+           begin: Alignment.topCenter,
+           end: Alignment.bottomCenter,
+           stops: [0.6,1],
+           colors: [CustomColors.white, CustomColors.colorPrimaryBlue])
+   );
+ }
+
+  static getGradientBackground_card(){
+    return BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.8,1],
+            colors: [CustomColors.background_lightblue, CustomColors.white],)
+    );
+  }
+
+  static getBoxShadow_gradient(){
+    return BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.8,1],
+            colors: [CustomColors.background_lightblue, CustomColors.white]),
+      boxShadow: [
+        BoxShadow(
+            color: CustomColors.black,
+            blurRadius: 0.0,
+            offset: Offset(0.0, 0.0)
+        ),
+        BoxShadow(
+            color: CustomColors.white,
+            blurRadius: 0.3,
+            offset: Offset(0, 0)
+        )
+      ],
+    );
+  }
 }

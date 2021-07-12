@@ -15,4 +15,6 @@ class CustomColors{
   static Color background_fb= Color(0xfffbfbfb);
   static Color background_fd = Color(0xfffdfdfd);
   static Color background_lightblue = Color(0xfff9fcff);
+  static Color blueborder = Color(0xff5da4dc);
+  static Color blueboxshade = Color(0xffF2F9FF);
 }

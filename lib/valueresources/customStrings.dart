@@ -20,8 +20,15 @@ class CustomString{
   static var multMerch = "Mutliple Merchants";
   static var cancel = "Cancel";
   static var searchHere = "Search here...";
+  static var selectLanguage = "Select Language";
+  static var requestKhata = "Request Khata";
+  static var otherProducts = "Other products from same dukaan";
+  static var manfcture = "Manufactured on: 23 March 21’";
+  static var shopReviews = "Shop Reviews";
 
   /*dialog messages*/
   static var dmsg1 = "Orders from different Merchants will have different Delivery Charge and Delivery timing.";
+  static var dmsg2 = "Gowardhan Gold Milk is Processed (Homogenious and Pasteriuzed) in Modern Dairy Plant, Using a time-testing and Ultra Modern technique to capture the essential Vitamins and Protien content. and the naturalness ofPure Cow Milk.";
+  static var dmsg3 = "Products are good but order was delivered very late and were not properly packed. Cost is reasonable and there are good offers as well.";
 
 }
