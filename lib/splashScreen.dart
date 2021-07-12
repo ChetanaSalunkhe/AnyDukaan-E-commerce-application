@@ -23,7 +23,7 @@ class MySplashScreenState extends State<MyHomePage> {
                 Text('Button Orange text',style: CustomStyle.primaryBtnTextOrange),
                 Text('Warning text',style: CustomStyle.warningText),
                 Text('Bold text',style: CustomStyle.boldValueText),
-                Text('Blue text',style: CustomStyle.blueTitleText),
+                Text('Blue text',style: CustomStyle.blueBoldText16),
               ],
             ),
           ),
