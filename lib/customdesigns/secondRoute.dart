@@ -22,8 +22,7 @@ class SecondRoute extends StatefulWidget {
     }else if(callFrom == 'SearchBar'){
       return MainSearchDesign();
     }else if(callFrom == 'HomeShop'){
-      //return ShopDetails();
-      return SelectLanguageScreen();
+      return ShopDetails();
     }else if(callFrom == 'HomeProduct'){
       return ProductDetails();
     }else if(callFrom == 'WalkThrough'){
