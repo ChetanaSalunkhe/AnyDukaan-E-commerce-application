@@ -11,6 +11,7 @@ class CustomColors{
   static Color greenlight = Color(0xff0dc21f);
   static Color grey_subtitle = Color(0xff8f8f8f);
   static Color grey = Color(0xfff8f8f8);
+  static Color greyline = Color(0xffe6e6e6);
   static Color greydark = Color(0xffBDBDBD);
   static Color background_fb= Color(0xfffbfbfb);
   static Color background_fd = Color(0xfffdfdfd);

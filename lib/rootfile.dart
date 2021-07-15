@@ -1,3 +1,4 @@
+import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'AnyDukaan',
       theme: ThemeData(
-
+        //custom themes
+        //fontFamily: "OpenSans",
         primarySwatch: Colors.blue,
-
+        backgroundColor: CustomColors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'AnyDukaan'),

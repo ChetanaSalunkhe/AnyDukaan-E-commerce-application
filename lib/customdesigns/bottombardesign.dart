@@ -1,7 +1,11 @@
+import 'package:anydukaan/customdesigns/secondRoute.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+
+import 'customButtons.dart';
 
 class CustomBottomBar extends StatefulWidget{
 
@@ -32,6 +36,20 @@ class BottomBarDesign extends State{
           showElevation: true, //use this to remove appBar's elevation
           onItemSelected: (index) => setState(() {
             _selectedIndex = index;
+            switch(_selectedIndex){
+              case 0:
+              //     Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomHome',)));
+                break;
+              case 1:
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomCart',)));
+                break;
+              case 2:
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomOrders',)));
+                break;
+              case 3:
+              //    Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomAccount',)));
+                break;
+            }
           }),
           items: [
             BottomNavyBarItem(

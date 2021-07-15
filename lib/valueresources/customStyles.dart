@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:group_radio_button/group_radio_button.dart';
+import 'package:slide_digital_clock/slide_digital_clock.dart';
 import 'customColors.dart';
 import 'customStrings.dart';
 
@@ -8,170 +11,182 @@ class CustomStyle{
   /*progressbartitle*/
   static var progressTitle = TextStyle(
       color: CustomColors.white,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 16);
 
   static var whiteBold14 = TextStyle(
       color: CustomColors.white,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 14);
 
   static var btnTitleWhite_12 = TextStyle(
       color: CustomColors.white,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 12);
 
 /*black text 16, normal*/
   static var blackBold16 = TextStyle(
       color: CustomColors.black,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 16);
 
   /*black clickable text*/
   static var boldValueText = TextStyle(
         color: CustomColors.black,
-        fontFamily: 'Open Sans',
+       fontFamily: 'Open Sans',
         fontWeight: FontWeight.bold,
         fontSize: 16);
 
   /*black title bold text*/
   static var blackboldTitleText = TextStyle(
         color: CustomColors.black,
-        fontFamily: 'Open Sans',
+       fontFamily: 'Open Sans',
         fontWeight: FontWeight.bold,
         fontSize: 18);
 
   static var blueboldTitleText = TextStyle(
         color: CustomColors.colorPrimaryBlue,
-        fontFamily: 'Open Sans',
+       fontFamily: 'Open Sans',
         fontWeight: FontWeight.bold,
         fontSize: 18);
 
   /*blue title text*/
   static var blueBoldText16 = TextStyle(
         color: CustomColors.colorPrimaryBlue,
-        fontFamily: 'Open Sans',
+       fontFamily: 'Open Sans',
         fontWeight: FontWeight.bold,
         fontSize: 16);
 
   /*bottombar title text*/
   static var bottombarTitleText = TextStyle(
         color: CustomColors.colorPrimaryBlue,
-        fontFamily: 'Open Sans',
+       fontFamily: 'Open Sans',
         fontWeight: FontWeight.bold,
         fontSize: 12);
 
   /*bottombar title text*/
   static var tabbarTitleText = TextStyle(
         color: CustomColors.colorPrimaryBlue,
-        fontFamily: 'Open Sans',
+       fontFamily: 'Open Sans',
         fontWeight: FontWeight.bold,
         fontSize: 14);
+
+  static var offerTitleText = TextStyle(
+        color: CustomColors.colorPrimaryBlue,
+       fontFamily: 'Open Sans',
+        fontWeight: FontWeight.normal,
+        fontSize: 10);
 
   /*normal text description*/
   static var textTitle = TextStyle(
       color: CustomColors.black,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 14);
 
   /*bold text description 14*/
   static var textsemiboldblackTitle = TextStyle(
       color: CustomColors.black,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 14);
 
   /*bold text description 12*/
   static var textsemiboldblackTitle_12 = TextStyle(
       color: CustomColors.black,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 12);
 
   /*grey subtitle text*/
   static var subTitle = TextStyle(
       color: CustomColors.grey_subtitle,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
   /*grey tabbar text*/
   static var greyTabbarsubTitle = TextStyle(
       color: CustomColors.grey_subtitle,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 14);
 
   /*black subtitle text 12*/
   static var subTitleBlack = TextStyle(
       color: CustomColors.black,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
   /*white subtitle text 12*/
   static var subTitleWhite= TextStyle(
       color: CustomColors.white,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
   /*warning text*/
   static var warningText = TextStyle(
       color: CustomColors.red,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
   /*free delivery text*/
   static var greenText10 = TextStyle(
       color: CustomColors.greenlight,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 10);
 
   static var greenText12 = TextStyle(
       color: CustomColors.greenlight,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
   /*free delivery text*/
   static var greyText10 = TextStyle(
       color: CustomColors.grey_subtitle,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 10);
 
   /*orange clickable primary button text*/
+  static var textOrange16 = TextStyle(
+      color: CustomColors.colorPrimaryOrange,
+     fontFamily: 'Open Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 16);
+
   static var primaryBtnTextOrange = TextStyle(
       color: CustomColors.colorPrimaryOrange,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 14);
 
   /*orange clickable primary button text*/
   static var primaryBtnTextOrange_12 = TextStyle(
       color: CustomColors.colorPrimaryOrange,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 12);
 
   /*orange clickable primary button text*/
   static var offerOrange_12 = TextStyle(
       color: CustomColors.colorPrimaryOrange,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 10);
 
   static var orangeText12 = TextStyle(
       color: CustomColors.colorPrimaryOrange,
-      fontFamily: 'Open Sans',
+     fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
@@ -229,14 +244,27 @@ class CustomStyle{
   }
 
   /*********************************** EditText custom designs ****************************************************/
-  static getEditTextSearch(String hint,double size ){
+  static getEditTextSearch(String hint,double size,int maxline){
     return TextField(
     decoration: InputDecoration(hintText: '$hint',
     border: InputBorder.none,),
     style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
     cursorColor: CustomColors.black,
     textAlignVertical: TextAlignVertical.center,
-    textAlign: TextAlign.start,);
+    textAlign: TextAlign.justify,
+    maxLines: maxline,);
+  }
+
+  static getEditTextEnterDetails(String label, double size,int maxlines,TextInputType type){
+    return TextField(
+      keyboardType: type,
+      decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle),
+      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
+      minLines: 1,
+      maxLines: maxlines,
+      cursorColor: CustomColors.black,
+      textAlignVertical: TextAlignVertical.center,
+      textAlign: TextAlign.start,);
   }
 
   /*********************************** Container box shadow decoration ******************************************/
@@ -299,4 +327,39 @@ class CustomStyle{
       ],
     );
   }
+
+  static getDigitalClock(){
+    return DigitalClock(
+      areaDecoration: BoxDecoration(color: Colors.transparent),
+      areaAligment: AlignmentDirectional.center,
+      hourMinuteDigitDecoration: BoxDecoration(color: Colors.transparent),
+      hourMinuteDigitTextStyle: TextStyle(fontSize: 65,color: CustomColors.colorPrimaryBlue,),
+      is24HourTimeFormat: false,
+      showSecondsDigit: false,
+      digitAnimationStyle: Curves.decelerate,
+      amPmDigitTextStyle: TextStyle(fontSize: 20,color: CustomColors.colorPrimaryBlue, fontWeight: FontWeight.normal),
+    );
+  }
+
+  static var getThemeCheckBox_RadioButton = ThemeData(unselectedWidgetColor: CustomColors.colorPrimaryBlue,);
+
+  static GetRatingBar(double ratingCnt, IconData icon,Color colr,double size){
+    return  RatingBar.builder(
+      initialRating: ratingCnt,
+      minRating: 1,
+      direction: Axis.horizontal,
+      allowHalfRating: true,
+      itemCount: 5,
+      itemSize: size,
+      itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
+      itemBuilder: (context, _) => Icon(icon,
+        color:colr,
+      ),
+      onRatingUpdate: (rating) {
+        print(rating);
+      },
+    );
+  }
+
+
 }

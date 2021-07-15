@@ -1,6 +1,7 @@
 import 'package:anydukaan/customdesigns/bottombardesign.dart';
 import 'package:anydukaan/customdesigns/cardWithButtonsGridDesign.dart';
 import 'package:anydukaan/customdesigns/cardWithButtonsListDesign.dart';
+import 'package:anydukaan/customdesigns/combo_cardList_reviewsList.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/customPageIndicator.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
@@ -25,7 +26,7 @@ class ProductDetails extends State{
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-        appBar: CustomAppBarWithoutSearch('Product Details'),
+        appBar: CustomAppBarWithoutSearch('Product Details',true,false,'assets/serch.png','assets/module_info.png'),
         body: SingleChildScrollView(
           clipBehavior: Clip.antiAlias,
           child:   Column(
@@ -33,80 +34,43 @@ class ProductDetails extends State{
               Container(
                 color: CustomColors.background_lightblue,
                 margin: EdgeInsets.zero,
-                height: MediaQuery.of(context).size.height*2.3,
-                child: Column(
-                  children: [
-                    ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(14),
-                            bottomLeft: Radius.circular(14)
-                        ),
-                        child: Container(
-                            child: StackDemo()
-                        )
-                    ),
-                    SizedBox(height: 30,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(left: 16),
-                          child: Text(CustomString.otherProducts,style: CustomStyle.blackBold16,),)
-                      ],
-                    ),
-                    SizedBox(height: 24,),
-                    Container(
-                        height: 242,
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 16),
-                          child: CustomListView(entries:entries),
-                        )
-                    ),
-                    SizedBox(height: 30,),
-                    ClipRRect(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(14),
-                          topRight: Radius.circular(14)
+                //height: MediaQuery.of(context).size.height*2,
+                child: Flexible(
+                  flex: 1,
+                  fit: FlexFit.tight,
+                  child: Column(
+                    children: [
+                      ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(14),
+                              bottomLeft: Radius.circular(14)
+                          ),
+                          child: Container(
+                              child: StackDemo()
+                          )
                       ),
-                      child:  Container(
-                        margin: EdgeInsets.zero,
-                        height: MediaQuery.of(context).size.height*1,
-                        padding: EdgeInsets.only(left: 16,right: 16,top: 20),
-                        decoration: CustomStyle.getBoxShadow(),
-                        child:Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(CustomString.shopReviews,style: CustomStyle.blackBold16,),
-                              ],
-                            ),
-                            ReviewListView(entries: entries,)
-                          ],
-                        )
+                      SizedBox(height: 30,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 16),
+                            child: Text(CustomString.otherProducts,style: CustomStyle.blackBold16,),)
+                        ],
                       ),
-                    ),
-                  ],
-                ),
+                      SizedBox(height: 24,),
+                      CardShopReviewListTemplate(entries: entries,),
+
+                    ],
+                  ),
+                )
               ),
             ],
           ),
         ),
         bottomNavigationBar : CustomBottomBar()
     );
-  }
-}
-
-class CustomListView extends StatefulWidget{
-  List<String> entries;
-  CustomListView({Key key,this.entries}):super(key: key);
-
-  @override
-  State<StatefulWidget> createState() {
-
-    return ListViewUI_cardWithbtns(entries:entries);
   }
 }
 
@@ -240,13 +204,13 @@ class StackDemo extends StatelessWidget {
   }
 }
 
-class ReviewListView extends StatefulWidget{
+class CardShopReviewListTemplate extends StatefulWidget{
   List<String> entries;
-  ReviewListView({Key key,this.entries}):super(key: key);
+  CardShopReviewListTemplate({Key key,this.entries}):super(key: key);
 
   @override
   State<StatefulWidget> createState() {
 
-    return ReviewsListDesign(entries:entries);
+    return ComboCardListReviewsList(entries:entries);
   }
 }

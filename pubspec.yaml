@@ -34,6 +34,16 @@ dependencies:
   page_view_indicators:
   contained_tab_bar_view:
   flutter_rating_bar:
+  slide_digital_clock:
+  flutter_datetime_picker:
+  sticky_and_expandable_list:
+  expandable:
+  custom_radio_grouped_button:
+  group_radio_button:
+  timeline_tile:
+  timelines:
+  timeline_list2:
+
 
 dev_dependencies:
   flutter_test:
@@ -66,10 +76,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+     - family: OpenSans
+       fonts:
+         - asset: fonts/OpenSans-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

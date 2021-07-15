@@ -23,12 +23,33 @@ class CustomString{
   static var selectLanguage = "Select Language";
   static var requestKhata = "Request Khata";
   static var otherProducts = "Other products from same dukaan";
+  static var freqBrought = "Frequently Brought Together";
   static var manfcture = "Manufactured on: 23 March 21’";
   static var shopReviews = "Shop Reviews";
+  static var login = "Login";
+  static var avalQty = "Available Quantity";
+  static var addToCart = "Add to Cart";
+  static var menuOption = "Menu Options";
 
   /*dialog messages*/
   static var dmsg1 = "Orders from different Merchants will have different Delivery Charge and Delivery timing.";
   static var dmsg2 = "Gowardhan Gold Milk is Processed (Homogenious and Pasteriuzed) in Modern Dairy Plant, Using a time-testing and Ultra Modern technique to capture the essential Vitamins and Protien content. and the naturalness ofPure Cow Milk.";
   static var dmsg3 = "Products are good but order was delivered very late and were not properly packed. Cost is reasonable and there are good offers as well.";
+  static var dmsg4 = "In case of UPI, amount will be transfer by the Merchant within 2 Working days.";
 
+  /*radio group values*/
+  static String singleValue = "Text alignment right";
+  static String verticalGroupValue = "Home";
+  static List<String> status = ["Home", "Work", "Others"];
+
+  static String groupValQty = "Small";
+  static List<String> status_qty = ["Small        ₹ 75", "Medium      ₹ 135", "Large        ₹ 205"];
+
+  Map<String, bool> values = {
+    'Apple': false,
+    'Banana': false,
+    'Cherry': false,
+    'Mango': false,
+    'Orange': false,
+  };
 }

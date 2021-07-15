@@ -6,6 +6,7 @@ import 'package:anydukaan/customdesigns/title_viewall_btndesign1.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
+import 'package:anydukaan/valueresources/dimens.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class HomePageState extends State<MyHomePage> {
     String searchHere = CustomString.searchHere;
 
     return Scaffold(
-      appBar: CustomAppBarWithSearch(title:"Home 1 - Pune",searchHint:'$searchHere'),//give your appbar title here
+      appBar: CustomAppBarWithSearch(title:"Home 1 - Pune",searchHint:'$searchHere',isLeadingVisible:true,isActionVisible:true,img: 'assets/audio_search.png',),//give your appbar title here
       body:  SingleChildScrollView(
         child: Column(
           children: [
@@ -166,7 +167,7 @@ class GridViewUI extends State{
                 children: [
                   Container(
                     margin: EdgeInsets.fromLTRB(3, 3, 3, 3),
-                    width: 70,
+                    width: CustomDimens.cardWidth_70,
                     height: 60,
                     child: Card(
                       // color: Colors.white,
@@ -236,7 +237,7 @@ class ListViewUI_dukaans extends State{
                 children: [
                   Container(
                     margin: EdgeInsets.only(left: 16),
-                    width: 130,
+                    width: CustomDimens.cardWidth_130,
                     child: Card(
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(
@@ -308,7 +309,7 @@ class ListViewUI_recommend extends State{
                 children: [
                   Container(
                     margin: EdgeInsets.only(left: 16),
-                    width: 135,
+                    width: CustomDimens.cardWidth_135,
                     child: Card(
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(
@@ -378,7 +379,7 @@ class DashedLineTheme extends StatelessWidget {
       child: Row(
         children: [
           Container(
-              width:105,
+              width:CustomDimens.cardWidth_105,
               child: DashedLine()
           ),
           Container(
@@ -386,7 +387,7 @@ class DashedLineTheme extends StatelessWidget {
             child: Text(CustomString.offerZone,style: CustomStyle.boldValueText,),
           ),
           Container(
-              width:105,
+              width:CustomDimens.cardWidth_105,
               child: DashedLine()
           ),
 
@@ -442,8 +443,8 @@ class OfferZoneCardTheme extends StatelessWidget {
             bottomRight: Radius.circular(10))
         ),
         child: Container(
-          width: 100,
-          height: 262,
+          width: CustomDimens.cardWidth_100,
+          height: CustomDimens.cardheight_262,
           alignment: Alignment.center,
           child: Text(CustomString.offers,style: CustomStyle.subTitleWhite,),
         )
@@ -479,7 +480,7 @@ class ListViewUI_cardWithbtns  extends State{
                 children: [
                   Container(
                     margin: EdgeInsets.only(left: 16),
-                    width: 135,
+                    width: CustomDimens.cardWidth_135,
                     child: Card(
                         clipBehavior: Clip.antiAlias,
                         shape: RoundedRectangleBorder(
@@ -539,7 +540,7 @@ class ListViewUI_cardWithbtns  extends State{
                                       ),
                                       child: Container(
                                         color: Colors.white,
-                                        width: 104,
+                                        width: CustomDimens.cardWidth_104,
                                         height: 34,
                                         child: Row(
                                           crossAxisAlignment: CrossAxisAlignment.center,

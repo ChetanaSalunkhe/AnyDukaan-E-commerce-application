@@ -18,7 +18,7 @@ class ShopListing extends State{
     String title = CustomString.title_shops_near;
 
     return Scaffold(
-      appBar: CustomAppBarWithoutSearch('Dukaans'),
+      appBar: CustomAppBarWithoutSearch('Dukaans',true,true,'assets/serch.png','assets/module_info.png'),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,

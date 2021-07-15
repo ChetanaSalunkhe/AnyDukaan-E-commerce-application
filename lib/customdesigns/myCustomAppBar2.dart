@@ -7,13 +7,15 @@ import 'customSearchBar.dart';
 
 /*Created by Chetana*/
 class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
-
   @override
   Size preferredSize;
   String title="";
   String searchHint="";
+  bool isLeadingVisible = true;
+  bool isActionVisible = true;
+  String img="";
 
-  CustomAppBarWithSearch({Key key, this.title,this.searchHint}):preferredSize=Size.fromHeight(100),super(key: key);
+  CustomAppBarWithSearch({Key key,this.isLeadingVisible,this.isActionVisible, this.title,this.searchHint,this.img}):preferredSize=Size.fromHeight(100),super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,16 +44,23 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
                 )
             ),
             automaticallyImplyLeading: true,
-            leading: InkWell(
-              onTap: (){
-                Navigator.pop(context);   //close current screen and go to previous screen
-              },
-              child: Icon(Icons.arrow_back,color: CustomColors.white,),
+            leading: Visibility(
+              visible: isLeadingVisible,
+              child: InkWell(
+                onTap: (){
+                  Navigator.pop(context);   //close current screen and go to previous screen
+                },
+                child: Icon(Icons.arrow_back,color: CustomColors.white,),
+              ),
             ),
-            actions: [Container(
-              margin: EdgeInsets.only(right: 16),
-              child: Image.asset("assets/notification.png",width: 24,height: 24,),
-            )],
+            actions: [
+              Visibility(
+                visible: isActionVisible,
+                  child: Container(
+                    margin: EdgeInsets.only(right: 16),
+                    child: Image.asset("assets/notification.png",width: 24,height: 24,),
+                  ))
+            ],
           ),
 
           Positioned(

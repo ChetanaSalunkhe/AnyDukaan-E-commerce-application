@@ -17,7 +17,6 @@ class AdvPages extends StatefulWidget{
 }
 
 class AdvPagesView extends State{
-
   double width;
   double height;
   String iName;

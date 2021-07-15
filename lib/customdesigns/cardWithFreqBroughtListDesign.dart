@@ -3,9 +3,9 @@ import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:flutter/material.dart';
 
-class ListViewUI_cardWithbtns  extends State{
+class ListViewFreq_cardWithbtns  extends State{
  List<String> entries;
-  ListViewUI_cardWithbtns({Key key, this.entries});
+ ListViewFreq_cardWithbtns({Key key, this.entries});
 
   @override
   Widget build(BuildContext context) {
@@ -53,24 +53,27 @@ class ListViewUI_cardWithbtns  extends State{
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   SizedBox(height: 8,),
-                                  new Text('Govardhan milk',
-                                    textAlign: TextAlign.center,
+                                  new Text('Amul Masti Dahi', textAlign: TextAlign.center,
                                     style: CustomStyle.textsemiboldblackTitle_12,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 2,
                                   ),
                                   SizedBox(height: 6,),
-                                  new Text('1 Ltr', textAlign: TextAlign.center, style: CustomStyle.subTitle,),
+                                  new Text('Dairy Products', textAlign: TextAlign.center, style: CustomStyle.subTitle,),
                                   SizedBox(height: 6,),
-                                  Visibility(
-                                    visible: false,
-                                    child: new Text('Apna Kirana Store', textAlign: TextAlign.center, style: CustomStyle.subTitleBlack,),),
                                   SizedBox(height: 10,),
                                   Row(
                                     children: [
-                                      new Text('₹ 300', textAlign: TextAlign.center, style: CustomStyle.textWithLine,),
-                                      SizedBox(width: 14,),
-                                      new Text('₹ 120', textAlign: TextAlign.center, style: CustomStyle.boldValueText,),
+                                      Flexible(
+                                        flex: 8,
+                                        fit: FlexFit.tight,
+                                        child: new Text('₹ 120', textAlign: TextAlign.start, style: CustomStyle.boldValueText,),
+                                      ),
+                                      Flexible(
+                                        flex: 8,
+                                        fit: FlexFit.tight,
+                                        child: new Text('20% off', textAlign: TextAlign.end, style: CustomStyle.offerTitleText,),
+                                      ),
                                     ],
                                   ),
                                   SizedBox(height: 6,),

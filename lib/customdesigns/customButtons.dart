@@ -3,11 +3,11 @@ import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'bottomSheetDialogDesign.dart';
+import 'buttonClickActions.dart';
 
 /*cart, checkout, place order buttons*/
-Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,BuildContext context){
+Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,BuildContext context,String clickAction){
   return  Container(
     width: 328,
     height: 58.0,
@@ -50,13 +50,15 @@ Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,Build
                   children: [
                     TextButton(
                         onPressed: (){
+                          /*Navigator.push(context,
+                              MaterialPageRoute(builder: (context)=>ButtonClickActions.callActions("ViewCart")));*/
                           showModalBottomSheet(
                               context: context,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.only(
                                     topRight: Radius.circular(14),
                                     topLeft: Radius.circular(14)),),
-                              builder: (context) => ModalBottomSheetDialog());
+                              builder: (context) => ModalBottomSheetDialog(popupStyle:'MultiMerch'));
                          },
                         child: Text('$btnName',style: CustomStyle.progressTitle,textAlign: TextAlign.right,),)
                   ],
@@ -188,10 +190,10 @@ Container BtnWithOutline(String title_,BuildContext context){
 }
 
 /*single text on button with arrow outline*/
-Container BtnWithArrow(String title_,BuildContext context){
+Container BtnWithArrow(String title_,BuildContext context,double width_,double height_,bool isIconVisible){
   return Container(
-    width: 172,
-    height: 40.0,
+    width: width_,
+    height: height_,
     color: Colors.transparent,
     //margin: EdgeInsets.only(left: 16,right: 16),
     alignment: Alignment.centerLeft,
@@ -207,7 +209,7 @@ Container BtnWithArrow(String title_,BuildContext context){
         child: Padding(
           padding: EdgeInsets.only(left: 12,right: 12),
           child: Row(
-            //mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -217,9 +219,14 @@ Container BtnWithArrow(String title_,BuildContext context){
                     onPressed: (){
                       //logic here
                     },
-                    child: Text('$title_',style: CustomStyle.primaryBtnTextOrange,textAlign: TextAlign.left,),),
-                  SizedBox(width: 16,),
-                  CustomStyle.getImageIcons('assets/next.png', 16, CustomColors.colorPrimaryOrange),
+                    child: Text('$title_',style: CustomStyle.primaryBtnTextOrange,textAlign: TextAlign.center,),),
+                  Visibility(
+                    visible: isIconVisible,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 16),
+                        child: CustomStyle.getImageIcons('assets/next.png', 16, CustomColors.colorPrimaryOrange),),
+                  ),
+
                 ],
               ),
             ],
@@ -401,5 +408,33 @@ Container BtnBlue_singletext_small_outline(String title_,BuildContext context,do
         ),
       )
   ),
+  );
+}
+
+Container BtnPlusMinus(){
+  return   Container(
+      alignment: Alignment.center,
+      child: Card(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18), // if you need this
+            side: CustomStyle.orangeOutline
+        ),
+        child: Container(
+          color: Colors.white,
+          width: 104,
+          height: 34,
+          child:  Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              new Text('+', textAlign: TextAlign.center, style: CustomStyle.primaryBtnTextOrange,),
+              SizedBox(width: 24,),
+              new Text('1', textAlign: TextAlign.center, style: CustomStyle.primaryBtnTextOrange,),
+              SizedBox(width: 24,),
+              new Text('-', textAlign: TextAlign.center, style: CustomStyle.primaryBtnTextOrange,),
+            ],
+          )
+        ),
+      )
   );
 }

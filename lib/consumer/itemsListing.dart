@@ -23,7 +23,7 @@ class ItemsListing extends State{
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: CustomAppBarWithSearch(title:'Search Items',searchHint:'Milk'),
+        appBar: CustomAppBarWithSearch(title:'Search Items',searchHint:'Milk',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png',),
         body: Container(
           height: MediaQuery.of(context).size.height-150,
           child: Column(
@@ -64,7 +64,7 @@ class ItemsListing extends State{
         //make visible true on adding item in cart
         bottomSheet: Visibility(
           visible: true,
-          child: BtnViewCart_Checkout('1 Item',CustomString.viewCart,'₹25',context),
+          child: BtnViewCart_Checkout('1 Item',CustomString.viewCart,'₹25',context,'ViewCart'),
           //child: BtnViewCart_Checkout('Total Amount',CustomString.checkout,'₹25'),
           //child: BtnViewCart_Checkout('Total Amount',CustomString.placeOrder,'₹25'),
         ),//view cart button

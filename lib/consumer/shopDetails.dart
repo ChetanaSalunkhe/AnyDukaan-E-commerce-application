@@ -1,3 +1,4 @@
+import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/bottombardesign.dart';
 import 'package:anydukaan/customdesigns/cardWithButtonsGridDesign.dart';
 import 'package:anydukaan/customdesigns/collapseToolbar.dart';
@@ -24,7 +25,7 @@ class ShopDetails extends State{
 
     return Scaffold(
         //resizeToAvoidBottomInset: true,
-      appBar: CustomAppBarWithoutSearch('Shop Details'),
+      appBar: CustomAppBarWithoutSearch('Shop Details',true,false,'assets/serch.png','assets/module_info.png'),
         body: SingleChildScrollView(
           child: Container(
             color: CustomColors.background_lightblue,
@@ -123,7 +124,7 @@ class ShopDetails extends State{
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    BtnWithArrow(CustomString.requestKhata,context)
+                                    BtnWithArrow(CustomString.requestKhata,context,172,40,true)
                                   ],
                                 )
                               ],
@@ -161,16 +162,33 @@ class ShopDetails extends State{
                                 children: [
                                   Row(
                                     children: [
-                                      Text('$dropdownValue',style: CustomStyle.primaryBtnTextOrange_12,),
-                                      SizedBox(width: 12,),
-                                      CustomStyle.getIcons(Icons.keyboard_arrow_down,14,CustomColors.colorPrimaryOrange),
-                                      SizedBox(width: 12,),
+                                      InkWell(
+                                        onTap:(){
+                                          showModalBottomSheet(
+                                              context: context,
+                                              isScrollControlled: true,
+                                              isDismissible: true,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.only(
+                                                    topRight: Radius.circular(14),
+                                                    topLeft: Radius.circular(14)),),
+                                              builder: (context) => ModalBottomSheetDialog(popupStyle:'MenuOption'));
+                                      },
+                                        child: Row(
+                                          children: [
+                                            Text('$dropdownValue',style: CustomStyle.primaryBtnTextOrange_12,),
+                                            SizedBox(width: 12,),
+                                            CustomStyle.getIcons(Icons.keyboard_arrow_down,14,CustomColors.colorPrimaryOrange),
+                                            SizedBox(width: 12,),
+                                          ],
+                                        ),
+                                      ),
                                       Padding(padding: EdgeInsets.only(top: 4,bottom: 4),
                                         child: VerticalDivider(color: CustomColors.colorPrimaryOrange,),),
                                       Container(
                                         width: 200,
                                         alignment: Alignment.centerLeft,
-                                        child: CustomStyle.getEditTextSearch('Search shop', 14),
+                                        child: CustomStyle.getEditTextSearch('Search shop', 14,1),
                                       ),
                                       CustomStyle.getImageIcons('assets/serch.png', 16, CustomColors.grey_subtitle)
 

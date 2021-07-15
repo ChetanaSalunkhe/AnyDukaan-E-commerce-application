@@ -12,6 +12,7 @@ class SearchBar extends StatelessWidget {
   double height;
   Function onPressed;
   String hint="";
+  String img="";
 
   //SearchBar({Key key,this.hint}):super(key: key);
 
@@ -23,6 +24,7 @@ class SearchBar extends StatelessWidget {
     this.height = 44.0,
     this.onPressed,
     this.hint,
+    this.img,
   }) : super(key: key);
 
   @override
@@ -52,7 +54,7 @@ class SearchBar extends StatelessWidget {
                  flex: 10,
                  fit: FlexFit.tight,
                  child: Center(
-                   child: CustomStyle.getEditTextSearch('Search here...',14),
+                   child: CustomStyle.getEditTextSearch('Search here...',14,1),
                  )
              ),
              Flexible(
@@ -63,7 +65,8 @@ class SearchBar extends StatelessWidget {
                      Navigator.push(context, 
                      MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'SearchBar',)));
                    },
-                   child: CustomStyle.getImageIcons('assets/audio_search.png', 16, CustomColors.colorPrimaryOrange),
+                   //child: CustomStyle.getImageIcons('assets/audio_search.png', 16, CustomColors.colorPrimaryOrange),
+                   child: CustomStyle.getImageIcons('$img', 16, CustomColors.colorPrimaryOrange),
                  ))
            ],
          ),

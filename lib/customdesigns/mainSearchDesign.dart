@@ -11,7 +11,7 @@ class MainSearchDesign extends State{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBarWithSearch(title: 'Search Items',searchHint: 'Milk',),
+      appBar: CustomAppBarWithSearch(title: 'Search Items',searchHint: 'Milk',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png'),
       body: SingleChildScrollView(
         child: Container(
           height: 500,

@@ -58,29 +58,13 @@ class ReviewsListDesign extends State{
                                     children: [
                                     Text('2.1',style: CustomStyle.primaryBtnTextOrange_12,),
                                     SizedBox(width: 6,),
-                                    RatingBar.builder(
-                                    initialRating: 3,
-                                    minRating: 1,
-                                    direction: Axis.horizontal,
-                                    allowHalfRating: true,
-                                    itemCount: 5,
-                                    itemSize: 12,
-                                    itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
-                                    itemBuilder: (context, _) => Icon(
-                                      Icons.star,
-                                      color: CustomColors.colorPrimaryOrange,
-                                    ),
-                                    onRatingUpdate: (rating) {
-                                      print(rating);
-                                    },
-                                  ),
+                                    CustomStyle.GetRatingBar(3,Icons.star,CustomColors.colorPrimaryOrange,12),
                                     ],
                                   ),
                                   SizedBox(height: 4,),
                                   Text('22.03.2021',style: CustomStyle.subTitle,),
                                 ],
                               )
-
                             ],
                           ),
                           SizedBox(height: 10,),
@@ -96,7 +80,6 @@ class ReviewsListDesign extends State{
                           SizedBox(height: 10,)
                         ],
                       ),
-
                   ),
                 ],
               )
