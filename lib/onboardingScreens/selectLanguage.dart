@@ -49,7 +49,7 @@ class SelectLanguageScreen extends State{
                       Navigator.push(context, 
                       MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'WalkThrough',)));
                     },
-                    child: BtnContinue('English',context),
+                    child: BtnContinue('English',context,'SelLangPopup'),
                     //child: Text('English',style: CustomStyle.btnTitleBlack16,textAlign: TextAlign.center,),
                   ),
                   SizedBox(height: 12,),

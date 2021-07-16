@@ -11,7 +11,7 @@ class AvailableQtyPopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 453.0,
+        height: 400.0,
         color: Colors.transparent,
         child: new Center(
           child: Column(
@@ -92,11 +92,13 @@ class AvailableQtyPopup extends State{
                   ),
                 )
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 70,),
 
               //raisedbutton
               InkWell(
                 onTap: (){
+                 // Navigator.pop(context);
+                  //add to cart logic here
                   showModalBottomSheet(
                       context: context,
                       isScrollControlled: true,
@@ -105,9 +107,9 @@ class AvailableQtyPopup extends State{
                         borderRadius: BorderRadius.only(
                             topRight: Radius.circular(14),
                             topLeft: Radius.circular(14)),),
-                      builder: (context) => ModalBottomSheetDialog(popupStyle:'Login'));
+                      builder: (context) => ModalBottomSheetDialog(popupStyle:'TableReserveSuccessPopup'));
                 },
-                child: BtnContinue(CustomString.addToCart,context),
+                child: BtnContinue(CustomString.addToCart,context,'AvalQtyPopup'),
               ),
             ],
           ),

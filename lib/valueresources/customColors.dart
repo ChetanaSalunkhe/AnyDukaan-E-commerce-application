@@ -8,6 +8,8 @@ class CustomColors{
   static Color colorPrimaryBlue = Color(0xff1065a8);
   static Color background_all = Color(0xfff9fcff);
   static Color red = Color(0xffed0000);
+  static Color red_card = Color(0xffff4b4b);
+  static Color red_card_light = Color(0xffffe1e1);
   static Color greenlight = Color(0xff0dc21f);
   static Color grey_subtitle = Color(0xff8f8f8f);
   static Color grey = Color(0xfff8f8f8);
@@ -18,4 +20,5 @@ class CustomColors{
   static Color background_lightblue = Color(0xfff9fcff);
   static Color blueborder = Color(0xff5da4dc);
   static Color blueboxshade = Color(0xffF2F9FF);
+  static Color blueSelected = Color(0xffF6F6F6);
 }

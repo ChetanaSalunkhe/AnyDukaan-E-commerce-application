@@ -1,15 +1,17 @@
 import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
+import 'package:anydukaan/customdesigns/radioGroupDesign.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MultiMechPopup extends State{
+class ReplaceProductReasonsPopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 300.0,
+        height: 427.0,
         color: Colors.transparent,
         child: new Center(
           child: Column(
@@ -20,19 +22,19 @@ class MultiMechPopup extends State{
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Flexible(
-                    flex: 7,
+                    flex: 6,
                     fit: FlexFit.tight,
                     child:Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(CustomString.multMerch,style: CustomStyle.boldValueText,
+                        Text(CustomString.replaceProduct,style: CustomStyle.boldValueText,
                           textAlign: TextAlign.center,)
                       ],
                     ),
                   ),
 
                   Flexible(
-                      flex: 3,
+                      flex: 4,
                       fit: FlexFit.loose,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -51,40 +53,37 @@ class MultiMechPopup extends State{
                       )),
                 ],
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: 10,),
 
               Padding(
-                padding:EdgeInsets.only(left:16,right:16),
-                child: Text(CustomString.dmsg1,style: CustomStyle.textTitle,
-                  textAlign: TextAlign.center,),
+                  padding: EdgeInsets.only(left: 16,right: 16),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(CustomString.dmsg_selreason_replace,style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.left,),
+                      SizedBox(height: 8,),
+                      Text(CustomString.dmsg_selreason_cancel_subtitle,style: CustomStyle.subTitle,textAlign: TextAlign.justify,
+                      softWrap: true,maxLines: 2,overflow: TextOverflow.fade,),
+                    ],
+                  ),
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: 16,),
 
-              //raisedbutton
-              InkWell(
-                onTap: (){
-                  showModalBottomSheet(
-                      context: context,
-                      isScrollControlled: true,
-                      isDismissible: true,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(14),
-                            topLeft: Radius.circular(14)),),
-                      builder: (context) => ModalBottomSheetDialog(popupStyle:'Login'));
-                },
-                child: BtnContinue(CustomString.continue_,context,'MultiMerchPopup'),
-              ),
+              RadioGroupDesign(verticalGroupValue:CustomString.value_reasons_replaceproduct,status:CustomString.reasons_replaceproduct,direction: Axis.vertical,),
+              SizedBox(height: 20,),
 
-              SizedBox(height: 30,),
+              BtnContinue(CustomString.submit, context,'ReplaceProductPopup'),
+              SizedBox(height: 20,),
 
-              //textbutton
               TextButton(
                 onPressed: (){
                   //logic here
                   Navigator.pop(context);
                 },
-                child: Text(CustomString.cancel,style: CustomStyle.boldValueText,textAlign: TextAlign.right,),)
+                child: Text(CustomString.cancel,style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.center,),),
+              SizedBox(height: 20,),
+
             ],
           ),
         ));

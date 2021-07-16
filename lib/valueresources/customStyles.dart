@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:group_radio_button/group_radio_button.dart';
@@ -101,6 +102,18 @@ class CustomStyle{
      fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 12);
+
+  static var textnormalblack_12 = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 14);
+
+  static var textsemiboldblackTitle_20 = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 20);
 
   /*grey subtitle text*/
   static var subTitle = TextStyle(
@@ -216,6 +229,11 @@ class CustomStyle{
     width: 0.5,
   );
 
+  static var redOutline = BorderSide(
+    color: CustomColors.red,
+    width: 0.5,
+  );
+
   /************************************ Images custom designs ******************************************************/
   static var imageGrid = Image.asset("assets/rest.png",width: 24,height: 24,);
 
@@ -255,10 +273,71 @@ class CustomStyle{
     maxLines: maxline,);
   }
 
+  static getEditTextItalic(String hint,double size,int maxline){
+    return TextField(
+      decoration: InputDecoration(hintText: '$hint',
+        border: InputBorder.none,),
+      style: TextStyle(fontSize: size,fontWeight: FontWeight.w200,fontStyle: FontStyle.italic, color: CustomColors.black,),
+      cursorColor: CustomColors.black,
+      textAlignVertical: TextAlignVertical.center,
+      textAlign: TextAlign.justify,
+      maxLines: maxline,);
+  }
+
+  static getEditText(String hint,double size,int maxline){
+    return TextField(
+      decoration: InputDecoration(hintText: '$hint',
+        border: InputBorder.none,),
+      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
+      cursorColor: CustomColors.black,
+      textAlignVertical: TextAlignVertical.center,
+      textAlign: TextAlign.center,
+      maxLines: maxline,);
+  }
+
+
   static getEditTextEnterDetails(String label, double size,int maxlines,TextInputType type){
     return TextField(
       keyboardType: type,
-      decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle),
+      decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,),
+      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
+      minLines: 1,
+      maxLines: maxlines,
+      cursorColor: CustomColors.black,
+      textAlignVertical: TextAlignVertical.center,
+      textAlign: TextAlign.start,);
+  }
+
+  static getEditTextWithIcon(String label, double size,int maxlines,TextInputType type,IconData icon,Color iconColor,double iconsize,
+      String prefText){
+    return TextField(
+      keyboardType: type,
+      decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,
+        suffixIcon: Icon(icon,color: iconColor,size: iconsize,),),
+      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
+      minLines: 1,
+      maxLines: maxlines,
+      cursorColor: CustomColors.black,
+      textAlignVertical: TextAlignVertical.center,
+      textAlign: TextAlign.start,);
+  }
+
+  static getEditTextWithPlusMinus(String label, double size,int maxlines,TextInputType type,IconData icon,IconData iconPrefix,Color iconColor,double iconsize,){
+    return TextField(
+      keyboardType: type,
+      decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,
+        suffixIcon: InkWell(
+          onTap: (){
+            //add minus logic here
+          },
+          child: Icon(icon,color: iconColor,size: iconsize,),
+        ),
+      prefixIcon: InkWell(
+        onTap: (){
+          //add plus logic here
+        },
+        child: Icon(iconPrefix,color: iconColor,size: iconsize,),
+      ),),
       style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
       minLines: 1,
       maxLines: maxlines,
@@ -358,6 +437,18 @@ class CustomStyle{
       onRatingUpdate: (rating) {
         print(rating);
       },
+    );
+  }
+
+  static getIconTextTemplate(IconData icon, Color iconTextcolor,String text,var textStyle){
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        CustomStyle.getIcons(icon, 16, iconTextcolor),
+        SizedBox(width: 4,),
+        Text('$text',style: textStyle,textAlign: TextAlign.center,)
+      ],
     );
   }
 

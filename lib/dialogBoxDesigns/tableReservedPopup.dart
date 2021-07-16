@@ -1,18 +1,20 @@
-import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
+import 'package:anydukaan/customdesigns/warninTemplate.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
-class MultiMechPopup extends State{
+class TableReservedPopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 300.0,
+        height: 497.0,
         color: Colors.transparent,
         child: new Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //row for text and cross button
               Row(
@@ -25,7 +27,7 @@ class MultiMechPopup extends State{
                     child:Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(CustomString.multMerch,style: CustomStyle.boldValueText,
+                        Text(CustomString.tableReserved,style: CustomStyle.boldValueText,
                           textAlign: TextAlign.center,)
                       ],
                     ),
@@ -51,40 +53,42 @@ class MultiMechPopup extends State{
                       )),
                 ],
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: 20,),
 
+              CustomStyle.getLogoImages('assets/table_reserved.png', 135, 169.28),
+
+              SizedBox(height: 16,),
               Padding(
-                padding:EdgeInsets.only(left:16,right:16),
-                child: Text(CustomString.dmsg1,style: CustomStyle.textTitle,
-                  textAlign: TextAlign.center,),
+                  padding: EdgeInsets.only(left: 28,right: 28,bottom: 22),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(CustomString.congrats,style: CustomStyle.blueBoldText16,textAlign: TextAlign.justify,),
+                      SizedBox(height: 10,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text('Table for 2 Guests at 8:30 PM',style: CustomStyle.subTitle,textAlign: TextAlign.justify,),
+                          SizedBox(width: 5,),
+                          Text('Hotel Chetana',style: CustomStyle.bottombarTitleText,textAlign: TextAlign.justify,),
+                        ],
+                      ),
+
+                    ],
+                  )
               ),
-              SizedBox(height: 30,),
 
-              //raisedbutton
-              InkWell(
-                onTap: (){
-                  showModalBottomSheet(
-                      context: context,
-                      isScrollControlled: true,
-                      isDismissible: true,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(14),
-                            topLeft: Radius.circular(14)),),
-                      builder: (context) => ModalBottomSheetDialog(popupStyle:'Login'));
-                },
-                child: BtnContinue(CustomString.continue_,context,'MultiMerchPopup'),
+              Container(
+                height: 62,
+                margin: EdgeInsets.only(left: 16,right: 16,bottom: 20),
+                child: GetWarningTemplate(CustomString.dmsg_warning_booking,2),
               ),
 
-              SizedBox(height: 30,),
+              BtnContinue(CustomString.preOrder, context,'TableReservPopup'),
+              SizedBox(height: 20,),
 
-              //textbutton
-              TextButton(
-                onPressed: (){
-                  //logic here
-                  Navigator.pop(context);
-                },
-                child: Text(CustomString.cancel,style: CustomStyle.boldValueText,textAlign: TextAlign.right,),)
             ],
           ),
         ));

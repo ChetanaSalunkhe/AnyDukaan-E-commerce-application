@@ -42,7 +42,7 @@ class DeliveryLocPopup extends State{
                     ],
                   ),
                   SizedBox(height: 8,),
-                  BtnContinue('Add Address', context)
+                  BtnContinue('Add Address', context,'DeliveryLocPopup')
                 ],
               ),
             )

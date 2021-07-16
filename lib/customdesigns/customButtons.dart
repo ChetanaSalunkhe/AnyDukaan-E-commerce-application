@@ -1,3 +1,4 @@
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
@@ -71,7 +72,7 @@ Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,Build
 }
 
 /*single text on button*/
-Container BtnContinue(String title,BuildContext context){
+Container BtnContinue(String title,BuildContext context,String callBtnFrom){
 
   return Container(
     width: 328,
@@ -90,7 +91,7 @@ Container BtnContinue(String title,BuildContext context){
         ),
 
         child: Padding(
-          padding: EdgeInsets.only(left: 28,right: 28),
+          padding: EdgeInsets.only(left: 0,right: 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -109,8 +110,8 @@ Container BtnContinue(String title,BuildContext context){
               ),
 
               Flexible(
-                flex: 1,
-                fit: FlexFit.tight,
+                flex: 9,
+                fit: FlexFit.loose,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -119,6 +120,8 @@ Container BtnContinue(String title,BuildContext context){
                     TextButton(
                       onPressed: (){
                         //logic here
+                        /*Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:callBtnFrom,)));*/
                       },
                       child: Text('$title',style: CustomStyle.progressTitle,textAlign: TextAlign.right,),)
                   ],
@@ -140,13 +143,13 @@ Container BtnWithOutline(String title_,BuildContext context){
     margin: EdgeInsets.only(left: 16,right: 16),
     alignment: Alignment.center,
     child:  Card(
-        //color: CustomColors.white,
         shadowColor: CustomColors.black,
         elevation: 1,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
                 Radius.circular(40)
-            )
+            ),
+         side: CustomStyle.blackOutline,
         ),
 
         child: Padding(
@@ -154,19 +157,6 @@ Container BtnWithOutline(String title_,BuildContext context){
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Flexible(
-                flex: 1,
-                fit: FlexFit.loose,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('',style: CustomStyle.blackBold16,),
-                    Text('',style: CustomStyle.blackBold16,)
-
-                  ],
-                ),
-              ),
 
               Flexible(
                 flex: 1,
@@ -179,7 +169,52 @@ Container BtnWithOutline(String title_,BuildContext context){
                       onPressed: (){
                         //logic here
                       },
-                      child: Text('$title_',style: CustomStyle.boldValueText,textAlign: TextAlign.center,),)
+                      child: Text('$title_',style: CustomStyle.textnormalblack_12,textAlign: TextAlign.center,),)
+                  ],
+                ),)
+            ],
+          ),
+        )
+    ),
+  );
+}
+
+Container BtnSelectedIssue(String title_,BuildContext context){
+
+  return Container(
+    width: 328,
+    height: 50.0,
+    color: Colors.transparent,
+    margin: EdgeInsets.only(left: 16,right: 16),
+    alignment: Alignment.center,
+    child:  Card(
+      color: CustomColors.blueSelected,
+        shadowColor: CustomColors.black,
+        elevation: 1,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+              Radius.circular(40)
+          ),
+        ),
+
+        child: Padding(
+          padding: EdgeInsets.only(left: 28,right: 28),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+
+              Flexible(
+                flex: 1,
+                fit: FlexFit.tight,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: (){
+                        //logic here
+                      },
+                      child: Text('$title_',style: CustomStyle.textnormalblack_12,textAlign: TextAlign.center,),)
                   ],
                 ),)
             ],
@@ -190,7 +225,8 @@ Container BtnWithOutline(String title_,BuildContext context){
 }
 
 /*single text on button with arrow outline*/
-Container BtnWithArrow(String title_,BuildContext context,double width_,double height_,bool isIconVisible){
+Container BtnWithArrow(String title_,BuildContext context,double width_,double height_,bool isIconVisible,
+    var sideStyle,var textStyle){
   return Container(
     width: width_,
     height: height_,
@@ -204,7 +240,7 @@ Container BtnWithArrow(String title_,BuildContext context,double width_,double h
             borderRadius: BorderRadius.all(
                 Radius.circular(99)
             ),
-          side: CustomStyle.orangeOutline
+          side: sideStyle,
         ),
         child: Padding(
           padding: EdgeInsets.only(left: 12,right: 12),
@@ -219,7 +255,7 @@ Container BtnWithArrow(String title_,BuildContext context,double width_,double h
                     onPressed: (){
                       //logic here
                     },
-                    child: Text('$title_',style: CustomStyle.primaryBtnTextOrange,textAlign: TextAlign.center,),),
+                    child: Text('$title_',style:textStyle,textAlign: TextAlign.center,),),
                   Visibility(
                     visible: isIconVisible,
                       child: Padding(
@@ -335,7 +371,7 @@ Container ReviewBorder(String title_,BuildContext context,double width, double h
 }
 
 /*single text on blue button*/
-Container BtnBlue_singletext_small(String title,BuildContext context,double width, double height){
+Container BtnBlue_singletext_small(String title,BuildContext context,double width, double height,Color btnColor){
 
   return Container(
     width: width,
@@ -343,7 +379,7 @@ Container BtnBlue_singletext_small(String title,BuildContext context,double widt
     //margin: EdgeInsets.only(left: 16,right: 16),
     alignment: Alignment.center,
     child:  Card(
-        color: CustomColors.colorPrimaryBlue,
+        color: btnColor,
         shadowColor: CustomColors.black,
         elevation: 5,
         shape: RoundedRectangleBorder(

@@ -124,7 +124,7 @@ class ShopDetails extends State{
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    BtnWithArrow(CustomString.requestKhata,context,172,40,true)
+                                    BtnWithArrow(CustomString.requestKhata,context,172,40,true,CustomStyle.orangeOutline,CustomStyle.primaryBtnTextOrange)
                                   ],
                                 )
                               ],

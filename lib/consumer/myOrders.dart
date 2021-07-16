@@ -71,7 +71,7 @@ class BlankState extends StatelessWidget{
             child: Text('No Orders Placed!',style: CustomStyle.textTitle,textAlign: TextAlign.center,),),
           Container(
               margin: EdgeInsets.only(left: 40,right:40,top: 30),
-              child: BtnWithArrow('See Past Orders',context,280,50,false)
+              child: BtnWithArrow('See Past Orders',context,280,50,false,CustomStyle.orangeOutline,CustomStyle.primaryBtnTextOrange)
           )
         ],
       ),

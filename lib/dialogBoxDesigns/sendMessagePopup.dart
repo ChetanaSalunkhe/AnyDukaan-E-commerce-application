@@ -1,39 +1,39 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
+import 'package:anydukaan/customdesigns/warninTemplate.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
-class LoginPopup extends State{
+class SendMessagePopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 300.0,
+        height: 427.0,
         color: Colors.transparent,
         child: new Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //row for text and cross button
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Flexible(
-                    flex: 7,
+                    flex: 6,
                     fit: FlexFit.tight,
                     child:Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Padding(
-                            padding: EdgeInsets.only(left: 16),
-                        child: Text(CustomString.login,style: CustomStyle.boldValueText,
-                          textAlign: TextAlign.center,),)
+                        Text(CustomString.sendMsg,style: CustomStyle.boldValueText, textAlign: TextAlign.center,)
                       ],
                     ),
                   ),
 
                   Flexible(
-                      flex: 3,
+                      flex: 4,
                       fit: FlexFit.loose,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -52,13 +52,17 @@ class LoginPopup extends State{
                       )),
                 ],
               ),
-              SizedBox(height: 34,),
-              Padding(
-                  padding: EdgeInsets.only(left: 16,right: 16),
-              child: CustomStyle.getEditTextEnterDetails('Mobile Number', 16,1,TextInputType.number),),
-              SizedBox(height: 73,),
-              //raisedbutton
-              BtnContinue(CustomString.sendOTP,context,'LoginPopup'),
+              SizedBox(height: 30,),
+              BtnWithOutline(CustomString.msg1,context),
+              SizedBox(height: 12,),
+              BtnContinue(CustomString.msg2,context,'SendMsgPopup'),
+              SizedBox(height: 12,),
+              BtnWithOutline(CustomString.msg3,context),
+              SizedBox(height: 12,),
+              BtnWithOutline(CustomString.msg4,context),
+              SizedBox(height: 12,),
+              BtnWithOutline(CustomString.msg5,context),
+              SizedBox(height: 30,),
             ],
           ),
         ));
