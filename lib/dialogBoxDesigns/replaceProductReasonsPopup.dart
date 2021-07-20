@@ -61,7 +61,7 @@ class ReplaceProductReasonsPopup extends State{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(CustomString.dmsg_selreason_replace,style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.left,),
+                      Text(CustomString.dmsg_selreason_replace,style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.left,),
                       SizedBox(height: 8,),
                       Text(CustomString.dmsg_selreason_cancel_subtitle,style: CustomStyle.subTitle,textAlign: TextAlign.justify,
                       softWrap: true,maxLines: 2,overflow: TextOverflow.fade,),
@@ -81,7 +81,7 @@ class ReplaceProductReasonsPopup extends State{
                   //logic here
                   Navigator.pop(context);
                 },
-                child: Text(CustomString.cancel,style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.center,),),
+                child: Text(CustomString.cancel,style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.center,),),
               SizedBox(height: 20,),
 
             ],

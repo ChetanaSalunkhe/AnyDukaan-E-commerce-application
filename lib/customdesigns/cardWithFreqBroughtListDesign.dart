@@ -54,7 +54,7 @@ class ListViewFreq_cardWithbtns  extends State{
                                 children: [
                                   SizedBox(height: 8,),
                                   new Text('Amul Masti Dahi', textAlign: TextAlign.center,
-                                    style: CustomStyle.textsemiboldblackTitle_12,
+                                    style: CustomStyle.blackBoldlCust_12,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 2,
                                   ),

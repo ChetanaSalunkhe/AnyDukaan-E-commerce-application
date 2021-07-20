@@ -40,7 +40,7 @@ class MyOrdersList extends State {
 
             Padding(
                 padding: EdgeInsets.only(bottom: 20,left: 16,top: 20),
-                child: Text('Past Orders',style: CustomStyle.textsemiboldblackTitle_12,textAlign: TextAlign.start,),),
+                child: Text('Past Orders',style: CustomStyle.blackBoldlCust_12,textAlign: TextAlign.start,),),
 
             Container(
                 color: CustomColors.white,
@@ -93,7 +93,7 @@ class OrderCardDesign extends StatelessWidget{
                                   Flexible(
                                       flex: 9,
                                       fit: FlexFit.tight,
-                                      child: Text('$ordCount',style: CustomStyle.textsemiboldblackTitle,)),
+                                      child: Text('$ordCount',style: CustomStyle.blackBoldlCust_14,)),
                                   Flexible(
                                       flex: 1,
                                       fit: FlexFit.tight,

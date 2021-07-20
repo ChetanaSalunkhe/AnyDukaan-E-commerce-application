@@ -1,4 +1,4 @@
-//texttitle and ViewAll button widget
+//blackNormalCust_14 and ViewAll button widget
 import 'package:anydukaan/consumer/shoplisting.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';

@@ -18,7 +18,7 @@ class MySplashScreenState extends State<MyHomePage> {
           child: Container(
             child: Column(
               children: [
-                Text(CustomString.search,style: CustomStyle.textTitle),
+                Text(CustomString.search,style: CustomStyle.blackNormalCust_14),
                 Text(CustomString.subTitle,style: CustomStyle.subTitle),
                 Text('Button Orange text',style: CustomStyle.primaryBtnTextOrange),
                 Text('Warning text',style: CustomStyle.warningText),

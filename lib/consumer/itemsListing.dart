@@ -74,21 +74,21 @@ class ItemsListing extends State{
 }
 
 //title
-class TextTitle extends StatefulWidget{
+class blackNormalCust_14 extends StatefulWidget{
   String title ="";
-  TextTitle({Key key,this.title}):super(key: key);
+  blackNormalCust_14({Key key,this.title}):super(key: key);
 
   @override
   State<StatefulWidget> createState() {
     print('$title');
-    return TextTitleView(title1:'$title');
+    return blackNormalCust_14View(title1:'$title');
   }
 
 }
 
-class TextTitleView extends State{
+class blackNormalCust_14View extends State{
   String title1 ="";
-  TextTitleView({Key key,this.title1});
+  blackNormalCust_14View({Key key,this.title1});
 
   @override
   Widget build(BuildContext context) {
@@ -97,8 +97,8 @@ class TextTitleView extends State{
         margin: EdgeInsets.only(left: 16,right: 16),
         child: Row(
           children: [
-            Text('$title1',style: CustomStyle.textTitle,),
-            Text(' (06)',style: CustomStyle.textsemiboldblackTitle,),
+            Text('$title1',style: CustomStyle.blackNormalCust_14,),
+            Text(' (06)',style: CustomStyle.blackBoldlCust_14,),
           ],
         )
 

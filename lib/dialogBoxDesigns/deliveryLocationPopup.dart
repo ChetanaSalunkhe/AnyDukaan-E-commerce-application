@@ -26,7 +26,7 @@ class DeliveryLocPopup extends State{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Delivery Location',style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.start,),
+                      Text('Delivery Location',style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.start,),
                     ],
                   ),
                   SizedBox(height: 10,),

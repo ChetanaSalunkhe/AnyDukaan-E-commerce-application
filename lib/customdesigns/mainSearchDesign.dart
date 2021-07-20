@@ -72,7 +72,7 @@ class ListView_productsCard extends State{
                               //mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(entries[index].toString(),style: CustomStyle.textsemiboldblackTitle,),
+                                Text(entries[index].toString(),style: CustomStyle.blackBoldlCust_14,),
                                 SizedBox(height: 6,),
                                 Text(subentries[index].toString(),style: CustomStyle.subTitle,),
                               ],

@@ -35,7 +35,7 @@ class SelectLanguageScreen extends State{
                     crossAxisAlignment: CrossAxisAlignment.start,   //vertical alignment=top aligned
                     children: [
                       Padding(padding: EdgeInsets.only(left: 16,right: 16),
-                        child: Text(CustomString.selectLanguage,style:CustomStyle.blackboldTitleText,),)
+                        child: Text(CustomString.selectLanguage,style:CustomStyle.blackBoldCust_18,),)
                     ],
                   )
               ),

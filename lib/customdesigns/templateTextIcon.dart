@@ -19,7 +19,7 @@ Container GetTextIconTemplate(String text, IconData icon, double size,Color icon
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('$text',style: CustomStyle.textsemiboldblackTitle,textAlign:TextAlign.start,),
+                  Text('$text',style: CustomStyle.blackBoldlCust_14,textAlign:TextAlign.start,),
                   SizedBox(width: 6,),
                   CustomStyle.getIcons(icon, size, iconColor)
                 ],

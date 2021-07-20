@@ -20,7 +20,7 @@ class DeliveryTimeline extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Ordered",style: CustomStyle.textTitle,),
+                      Text("Ordered",style: CustomStyle.blackNormalCust_14,),
                       Text("Rajesh Kirana Store, Apr 1, 5:30 PM",style: CustomStyle.greyText10,),
                     ],
                   )

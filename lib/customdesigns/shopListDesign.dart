@@ -82,11 +82,11 @@ class ListView_shops extends State{
                                             children: [
                                               new Text('Ramchandra wholesellers',
                                                 textAlign: TextAlign.start,
-                                                style: CustomStyle.textsemiboldblackTitle,
+                                                style: CustomStyle.blackBoldlCust_14,
                                                 maxLines: 2,),
                                               /* new Text('China Valley',
                                           textAlign: TextAlign.start,
-                                          style: CustomStyle.textsemiboldblackTitle,
+                                          style: CustomStyle.blackBoldlCust_14,
                                           maxLines: 2,),*/
                                               SizedBox(height: 6,),
                                               new Text('Veggies & Fruits',

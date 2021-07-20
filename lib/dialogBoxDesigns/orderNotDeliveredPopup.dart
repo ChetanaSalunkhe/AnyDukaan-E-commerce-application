@@ -63,13 +63,13 @@ class OrderNotDeliveredPopup extends State{
               ),
              /* Padding(
                 padding: EdgeInsets.only(left: 22,right: 22),
-                child: Text(CustomString.dmsg_warning_sorry,style: CustomStyle.textTitle,softWrap: true,overflow: TextOverflow.fade,
+                child: Text(CustomString.dmsg_warning_sorry,style: CustomStyle.blackNormalCust_14,softWrap: true,overflow: TextOverflow.fade,
                   textAlign: TextAlign.center,maxLines: 3,),
               ),*/
               SizedBox(height: 20,),
               Padding(
                 padding: EdgeInsets.only(left: 35,right: 35,bottom: 0),
-                child: Text(CustomString.dmsg_raise_complaint,style: CustomStyle.textTitle,softWrap: true,overflow: TextOverflow.fade,
+                child: Text(CustomString.dmsg_raise_complaint,style: CustomStyle.blackNormalCust_14,softWrap: true,overflow: TextOverflow.fade,
                   textAlign: TextAlign.center,maxLines: 3,),
               ),
 

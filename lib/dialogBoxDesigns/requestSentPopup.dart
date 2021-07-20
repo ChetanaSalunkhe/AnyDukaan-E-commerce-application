@@ -68,7 +68,7 @@ class RequestSentPopup extends State{
                       SizedBox(height: 10,),
                       Text('Table for 2 Guests at 8:30 PM',style: CustomStyle.subTitle,textAlign: TextAlign.justify,),
                       SizedBox(height: 28,),
-                      Text(CustomString.dmsg_we_notify,style: CustomStyle.textsemiboldblackTitle_12,textAlign: TextAlign.justify,),
+                      Text(CustomString.dmsg_we_notify,style: CustomStyle.blackBoldlCust_12,textAlign: TextAlign.justify,),
                     ],
                   )
               ),

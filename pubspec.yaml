@@ -43,7 +43,12 @@ dependencies:
   timeline_tile:
   timelines:
   timeline_list2:
-
+  flutter_animation_progress_bar:
+  percent_indicator:
+  fl_chart:
+  charts_flutter:
+  step_progress_indicator:
+  steps_indicator:
 
 dev_dependencies:
   flutter_test:

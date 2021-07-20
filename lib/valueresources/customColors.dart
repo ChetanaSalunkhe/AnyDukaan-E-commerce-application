@@ -21,4 +21,11 @@ class CustomColors{
   static Color blueborder = Color(0xff5da4dc);
   static Color blueboxshade = Color(0xffF2F9FF);
   static Color blueSelected = Color(0xffF6F6F6);
+
+  /*merchant colors*/
+  static Color colorblackmerch = Color(0xff455055);
+  static Color coloryellow = Color(0xffFFCB43);
+  static Color colorgrey_f4 = Color(0xfff4f4f4);
+  static Color green_merch_bar= Color(0xff46CC30);
+  static Color orange_light= Color(0xffFFF1E1);
 }

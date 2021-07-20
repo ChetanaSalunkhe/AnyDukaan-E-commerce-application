@@ -80,7 +80,7 @@ class AvailableQtyPopup extends State{
                           ),
                           Padding(
                               padding: EdgeInsets.only(left: 16,top: 16),
-                          child: Text('Keshar Pista MilkShake',style: CustomStyle.textsemiboldblackTitle,
+                          child: Text('Keshar Pista MilkShake',style: CustomStyle.blackBoldlCust_14,
                             softWrap: true,overflow: TextOverflow.fade,maxLines: 2,),)
                         ],
                       ),

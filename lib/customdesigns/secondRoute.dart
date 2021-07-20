@@ -12,6 +12,8 @@ import 'package:anydukaan/consumer/shoplisting.dart';
 import 'package:anydukaan/consumer/testThemes.dart';
 import 'package:anydukaan/customdesigns/merchantReview.dart';
 import 'package:anydukaan/customdesigns/raiseComplaint.dart';
+import 'package:anydukaan/merchant/myOrdersMerchant.dart';
+import 'package:anydukaan/merchant/revenueStatusMerchant.dart';
 import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
 import 'package:anydukaan/onboardingScreens/walkThrough.dart';
 import 'package:flutter/material.dart';
@@ -63,6 +65,11 @@ class SecondRoute extends StatefulWidget {
         //return MyTableBookings();
         return RaiseComplaint();
         break;
+      case 'DashBoardMerch':
+        //return RevenueStatusMerchant();
+        return MyOrdersMerchant();
+        break;
+
 
     }
   }

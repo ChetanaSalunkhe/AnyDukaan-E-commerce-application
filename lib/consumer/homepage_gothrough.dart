@@ -260,7 +260,7 @@ class ListViewUI_dukaans extends State{
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          new Text('Apna Kirana Store', textAlign: TextAlign.center, style: CustomStyle.textsemiboldblackTitle,),
+                          new Text('Apna Kirana Store', textAlign: TextAlign.center, style: CustomStyle.blackBoldlCust_14,),
                           SizedBox(height: 9,),
                           Row(
                             children: [
@@ -342,7 +342,7 @@ class ListViewUI_recommend extends State{
                                 SizedBox(height: 8,),
                                 new Text('Cadbury Dairy Milk',
                                   textAlign: TextAlign.center,
-                                  style: CustomStyle.textsemiboldblackTitle_12,
+                                  style: CustomStyle.blackBoldlCust_12,
                                   overflow: TextOverflow.ellipsis,
                                   maxLines: 2,
                                 ),
@@ -446,7 +446,7 @@ class OfferZoneCardTheme extends StatelessWidget {
           width: CustomDimens.cardWidth_100,
           height: CustomDimens.cardheight_262,
           alignment: Alignment.center,
-          child: Text(CustomString.offers,style: CustomStyle.subTitleWhite,),
+          child: Text(CustomString.offers,style: CustomStyle.whiteNormalCust_12,),
         )
       )
     );
@@ -514,7 +514,7 @@ class ListViewUI_cardWithbtns  extends State{
                                   SizedBox(height: 8,),
                                   new Text('Govardhan milk',
                                     textAlign: TextAlign.center,
-                                    style: CustomStyle.textsemiboldblackTitle_12,
+                                    style: CustomStyle.blackBoldlCust_12,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 2,
                                   ),

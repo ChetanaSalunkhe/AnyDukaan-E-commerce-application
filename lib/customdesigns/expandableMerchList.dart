@@ -18,7 +18,7 @@ Widget MerchantList() {
       ),
       title: Transform(
         transform: Matrix4.translationValues(-32, -5, 0.0),
-        child: Text('Ramchandra Fruits and Vegetables market shop',style: CustomStyle.textsemiboldblackTitle,
+        child: Text('Ramchandra Fruits and Vegetables market shop',style: CustomStyle.blackBoldlCust_14,
           softWrap: true,overflow: TextOverflow.ellipsis,),
       ),
       subtitle: Transform(
@@ -27,7 +27,7 @@ Widget MerchantList() {
       ),
       trailing:  Transform(
         transform: Matrix4.translationValues(0.0, -10, 0.0),
-        child: Text('₹ 22', style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.start,),
+        child: Text('₹ 22', style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.start,),
       ),
       children: <Widget>[
         Column(
@@ -39,7 +39,7 @@ Widget MerchantList() {
                   return ListTile(
                     title: Transform(
                       transform: Matrix4.translationValues(0, -15, 0.0),
-                      child: Text('Govardhan Milk',style: CustomStyle.textsemiboldblackTitle,
+                      child: Text('Govardhan Milk',style: CustomStyle.blackBoldlCust_14,
                         softWrap: true,overflow: TextOverflow.ellipsis,),
                     ),
                     subtitle: Transform(

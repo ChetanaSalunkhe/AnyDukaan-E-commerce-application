@@ -79,12 +79,12 @@ class OrdCardTemplate extends State{
                             Flexible(
                               flex:8,
                               fit: FlexFit.tight,
-                              child: Text('Govardhan Milk',style: CustomStyle.textsemiboldblackTitle,
+                              child: Text('Govardhan Milk',style: CustomStyle.blackBoldlCust_14,
                                 textAlign: TextAlign.start,),),
                             Flexible(
                                 flex:2,
                                 fit: FlexFit.tight,
-                                child: Text('₹ 30',style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.end,)),
+                                child: Text('₹ 30',style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.end,)),
                           ],
                         ),),
                         Padding(

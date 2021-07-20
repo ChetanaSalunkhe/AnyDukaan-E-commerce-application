@@ -128,7 +128,7 @@ class CheckboxWidgetState extends State {
                   controlAffinity: ListTileControlAffinity.leading,
                   title: Transform(
                     transform: Matrix4.translationValues(-12, 0, 0.0),
-                    child: new Text(key,style: CustomStyle.textTitle,),
+                    child: new Text(key,style: CustomStyle.blackNormalCust_14,),
                   ),
                   //value: values[key],   //restaurants
                   value: values_groceries[key],   //grocery

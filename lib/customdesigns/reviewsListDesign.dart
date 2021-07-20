@@ -45,7 +45,7 @@ class ReviewsListDesign extends State{
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Venkatesh Shantanu',style: CustomStyle.textTitle,),
+                                  Text('Venkatesh Shantanu',style: CustomStyle.blackNormalCust_14,),
                                   SizedBox(height: 4,),
                                   Text('Goregaon(E)',style: CustomStyle.subTitle,),
                                 ],

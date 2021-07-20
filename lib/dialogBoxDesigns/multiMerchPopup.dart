@@ -55,7 +55,7 @@ class MultiMechPopup extends State{
 
               Padding(
                 padding:EdgeInsets.only(left:16,right:16),
-                child: Text(CustomString.dmsg1,style: CustomStyle.textTitle,
+                child: Text(CustomString.dmsg1,style: CustomStyle.blackNormalCust_14,
                   textAlign: TextAlign.center,),
               ),
               SizedBox(height: 30,),

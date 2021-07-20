@@ -74,14 +74,14 @@ class OrderDeliveredPopup extends State{
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('Rajesh Kirana Store',style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.start,),
-                            Text('10 Products',style: CustomStyle.textTitle,textAlign: TextAlign.start,),
+                            Text('Rajesh Kirana Store',style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.start,),
+                            Text('10 Products',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.start,),
                           ],
                         )),
                     Flexible(
                       flex: 3,
                       fit: FlexFit.tight,
-                        child:Text('₹ 1260',style: CustomStyle.textsemiboldblackTitle_20,textAlign: TextAlign.end,),),
+                        child:Text('₹ 1260',style: CustomStyle.blackBoldCust_20,textAlign: TextAlign.end,),),
                   ],
                 )
               ),
@@ -94,7 +94,7 @@ class OrderDeliveredPopup extends State{
                   //logic here
                   Navigator.pop(context);
                 },
-                child: Text(CustomString.notDeliver,style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.center,),),
+                child: Text(CustomString.notDeliver,style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.center,),),
               SizedBox(height: 20,),
 
             ],

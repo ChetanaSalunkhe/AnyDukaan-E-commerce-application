@@ -25,7 +25,7 @@ class TableBookingsList extends StatelessWidget{
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('Chetana Salunkhe',style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.start,),
+                  Text('Chetana Salunkhe',style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.start,),
                   SizedBox(height: 8,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +47,7 @@ class TableBookingsList extends StatelessWidget{
                                     children: [
                                       CustomStyle.getImageIcons('assets/chair.png', 16, CustomColors.colorPrimaryBlue,),
                                       SizedBox(width: 4,),
-                                      Text('4 Guests',style: CustomStyle.textTitle,textAlign: TextAlign.center,)
+                                      Text('4 Guests',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,)
                                     ],
                                   ),
                                   SizedBox(height: 9,),
@@ -70,9 +70,9 @@ class TableBookingsList extends StatelessWidget{
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text('17 Apr 2021',style: CustomStyle.textTitle,textAlign: TextAlign.center,),
+                                  Text('17 Apr 2021',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),
                                   SizedBox(height: 9,),
-                                  Text('9:00 PM',style: CustomStyle.textsemiboldblackTitle_12,textAlign: TextAlign.center,),
+                                  Text('9:00 PM',style: CustomStyle.blackBoldlCust_12,textAlign: TextAlign.center,),
                                 ],
                               )
                             ],
@@ -113,7 +113,8 @@ class TableBookingsList extends StatelessWidget{
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  BtnWithArrow('Cancel Request', context,144,38,false,CustomStyle.redOutline,CustomStyle.warningText),
+                                  BtnWithArrow('Cancel Request', context,144,38,false,CustomStyle.redOutline,CustomStyle.warningText,
+                                      CustomColors.colorPrimaryOrange,Icons.arrow_forward),
                                 ],
                               ),
                             ),),

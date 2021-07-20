@@ -9,6 +9,7 @@ import 'customStrings.dart';
 /*Created by Chetana*/
 class CustomStyle{
   /*custom text styles to use dynamically*/
+  /*-----------------------white-----------------------------------------------*/
   /*progressbartitle*/
   static var progressTitle = TextStyle(
       color: CustomColors.white,
@@ -22,11 +23,20 @@ class CustomStyle{
       fontWeight: FontWeight.bold,
       fontSize: 14);
 
-  static var btnTitleWhite_12 = TextStyle(
+  static var whiteBoldCust_12 = TextStyle(
       color: CustomColors.white,
      fontFamily: 'Open Sans',
       fontWeight: FontWeight.bold,
       fontSize: 12);
+
+  /*white subtitle text 12*/
+  static var whiteNormalCust_12= TextStyle(
+      color: CustomColors.white,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 12);
+
+  /*-----------------------black consumer-----------------------------------------------*/
 
 /*black text 16, normal*/
   static var blackBold16 = TextStyle(
@@ -43,11 +53,114 @@ class CustomStyle{
         fontSize: 16);
 
   /*black title bold text*/
-  static var blackboldTitleText = TextStyle(
+  static var blackBoldCust_18 = TextStyle(
         color: CustomColors.black,
        fontFamily: 'Open Sans',
         fontWeight: FontWeight.bold,
         fontSize: 18);
+
+  /*normal text description*/
+  static var blackNormalCust_14 = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 14);
+
+  /*bold text description 14*/
+  static var blackBoldlCust_14 = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 14);
+
+  /*bold text description 12*/
+  static var blackBoldlCust_12 = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 12);
+
+/*  static var blackNormalCust_14 = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 14);*/
+
+  static var blackBoldCust_20 = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 20);
+
+  /*black subtitle text 12*/
+  static var subTitleBlack = TextStyle(
+      color: CustomColors.black,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 12);
+
+  /*----------------------------------------black merchant----------------------------------------------------*/
+  /*black clickable text*/
+  static var blackBoldMerch_16 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 16);
+
+  static var blackNormalMerch_16 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 16);
+
+  /*black title bold text*/
+  static var blackBoldMerch_18 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 18);
+
+  /*normal text description*/
+  static var blackNormalMerch_14 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 14);
+
+  /*bold text description 14*/
+  static var blackBoldMerch_14 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 14);
+
+  /*bold text description 12*/
+  static var blackBoldMerch_12 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 12);
+
+  static var blackoldMerch_20 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 20);
+
+  /*black subtitle text 12*/
+  static var blackNormalMerch_12 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 12);
+
+  static var blackNormalMerch_24 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 24);
+
+  /*-----------------------blue-----------------------------------------------*/
 
   static var blueboldTitleText = TextStyle(
         color: CustomColors.colorPrimaryBlue,
@@ -82,38 +195,20 @@ class CustomStyle{
         fontWeight: FontWeight.normal,
         fontSize: 10);
 
-  /*normal text description*/
-  static var textTitle = TextStyle(
-      color: CustomColors.black,
-     fontFamily: 'Open Sans',
+  static var blueNormalMerch_12_underline = TextStyle(
+      color: CustomColors.blueborder,
+      fontFamily: 'Work Sans',
       fontWeight: FontWeight.normal,
-      fontSize: 14);
+      fontSize: 12,
+      decoration: TextDecoration.underline);
 
-  /*bold text description 14*/
-  static var textsemiboldblackTitle = TextStyle(
-      color: CustomColors.black,
-     fontFamily: 'Open Sans',
-      fontWeight: FontWeight.bold,
-      fontSize: 14);
-
-  /*bold text description 12*/
-  static var textsemiboldblackTitle_12 = TextStyle(
-      color: CustomColors.black,
-     fontFamily: 'Open Sans',
-      fontWeight: FontWeight.bold,
+  static var blue_merch_normal_12 = TextStyle(
+      color: CustomColors.colorPrimaryBlue,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
       fontSize: 12);
 
-  static var textnormalblack_12 = TextStyle(
-      color: CustomColors.black,
-      fontFamily: 'Open Sans',
-      fontWeight: FontWeight.normal,
-      fontSize: 14);
-
-  static var textsemiboldblackTitle_20 = TextStyle(
-      color: CustomColors.black,
-      fontFamily: 'Open Sans',
-      fontWeight: FontWeight.bold,
-      fontSize: 20);
+  /*-----------------------grey-----------------------------------------------*/
 
   /*grey subtitle text*/
   static var subTitle = TextStyle(
@@ -129,19 +224,29 @@ class CustomStyle{
       fontWeight: FontWeight.normal,
       fontSize: 14);
 
-  /*black subtitle text 12*/
-  static var subTitleBlack = TextStyle(
-      color: CustomColors.black,
-     fontFamily: 'Open Sans',
+  /*free delivery text*/
+  static var greyText10 = TextStyle(
+      color: CustomColors.grey_subtitle,
+      fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
-      fontSize: 12);
+      fontSize: 10);
 
-  /*white subtitle text 12*/
-  static var subTitleWhite= TextStyle(
-      color: CustomColors.white,
-     fontFamily: 'Open Sans',
+  /*text with cutting line*/
+  static var textWithLine =  TextStyle(
+    color: CustomColors.grey_subtitle,
+    decorationColor: CustomColors.grey_subtitle,
+    decorationStyle: TextDecorationStyle.solid,
+    decoration:
+    TextDecoration.lineThrough,
+    fontSize: 12,
+  );
+
+  static var subTitle_merch = TextStyle(
+      color: CustomColors.grey_subtitle,
+      fontFamily: 'Work Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
+  /*-----------------------red-----------------------------------------------*/
 
   /*warning text*/
   static var warningText = TextStyle(
@@ -149,6 +254,14 @@ class CustomStyle{
      fontFamily: 'Open Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
+
+  static var warningText_merch_12 = TextStyle(
+      color: CustomColors.red,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 12);
+
+  /*-----------------------green-----------------------------------------------*/
 
   /*free delivery text*/
   static var greenText10 = TextStyle(
@@ -163,12 +276,18 @@ class CustomStyle{
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
-  /*free delivery text*/
-  static var greyText10 = TextStyle(
-      color: CustomColors.grey_subtitle,
-     fontFamily: 'Open Sans',
+  static var greenText10_merch = TextStyle(
+      color: CustomColors.greenlight,
+      fontFamily: 'Work Sans',
       fontWeight: FontWeight.normal,
       fontSize: 10);
+
+  static var greenText12_merch = TextStyle(
+      color: CustomColors.greenlight,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 12);
+  /*-----------------------orange-----------------------------------------------*/
 
   /*orange clickable primary button text*/
   static var textOrange16 = TextStyle(
@@ -203,19 +322,26 @@ class CustomStyle{
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
-  /*text with cutting line*/
-  static var textWithLine =  TextStyle(
-      color: CustomColors.grey_subtitle,
-      decorationColor: CustomColors.grey_subtitle,
-      decorationStyle: TextDecorationStyle.solid,
-      decoration:
-      TextDecoration.lineThrough,
-      fontSize: 12,
-    );
+  static var orange_merch_24 = TextStyle(
+      color: CustomColors.colorPrimaryOrange,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 24);
+
+  static var orangeMerch_12 = TextStyle(
+      color: CustomColors.colorPrimaryOrange,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 12);
 
   /******************************* Button outlines *******************************************************************/
   static var orangeOutline = BorderSide(
     color: CustomColors.colorPrimaryOrange,
+    width: 0.5,
+  );
+
+  static var blueOutline = BorderSide(
+    color: CustomColors.colorPrimaryBlue,
     width: 0.5,
   );
 

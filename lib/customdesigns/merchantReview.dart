@@ -41,7 +41,7 @@ class MerchantReview extends State{
                                 child: Flexible(
                                   flex:8,
                                   fit: FlexFit.tight,
-                                  child: Text('Govardhan Milk',style: CustomStyle.textsemiboldblackTitle,
+                                  child: Text('Govardhan Milk',style: CustomStyle.blackBoldlCust_14,
                                     textAlign: TextAlign.start,),),),
                               Padding(
                                 padding: EdgeInsets.only(top: 3,right: 16),
@@ -53,7 +53,8 @@ class MerchantReview extends State{
                               ),
                             ],
                           ),
-                        )),
+                        )
+                    ),
                   ],
                 ),
               ),
@@ -64,7 +65,7 @@ class MerchantReview extends State{
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 16,top: 18),
-                  child: Text('Rating',style: CustomStyle.textTitle, textAlign: TextAlign.start,),),
+                  child: Text('Rating',style: CustomStyle.blackNormalCust_14, textAlign: TextAlign.start,),),
                 Padding(
                     padding: EdgeInsets.only(left: 16,top: 9),
                     child: CustomStyle.GetRatingBar(5, Icons.star_outline, CustomColors.grey_subtitle, 20)),

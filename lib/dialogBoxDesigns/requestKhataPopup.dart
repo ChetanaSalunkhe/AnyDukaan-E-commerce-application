@@ -67,7 +67,7 @@ class RequestKhataPopup extends State{
                   children: [
                     Text('Rajesh Kirana Store',style: CustomStyle.blueBoldText16,textAlign: TextAlign.justify,),
                     SizedBox(height: 20,),
-                    Text(CustomString.maintainKhata,style: CustomStyle.textsemiboldblackTitle_12,textAlign: TextAlign.justify,),
+                    Text(CustomString.maintainKhata,style: CustomStyle.blackBoldlCust_12,textAlign: TextAlign.justify,),
                     Text('Minimum ₹ 200 and Maximum ₹ 5000 Khata Balance',style: CustomStyle.subTitle,textAlign: TextAlign.justify,),
                   ],
                 )

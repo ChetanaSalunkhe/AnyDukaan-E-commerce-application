@@ -36,7 +36,7 @@ Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,Build
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('$text1',style: CustomStyle.subTitleWhite,),
+                    Text('$text1',style: CustomStyle.whiteNormalCust_12,),
                     Text('$amtVal',style: CustomStyle.progressTitle,)
 
                   ],
@@ -102,7 +102,7 @@ Container BtnContinue(String title,BuildContext context,String callBtnFrom){
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('',style: CustomStyle.subTitleWhite,),
+                    Text('',style: CustomStyle.whiteNormalCust_12,),
                     Text('',style: CustomStyle.progressTitle,)
 
                   ],
@@ -169,7 +169,7 @@ Container BtnWithOutline(String title_,BuildContext context){
                       onPressed: (){
                         //logic here
                       },
-                      child: Text('$title_',style: CustomStyle.textnormalblack_12,textAlign: TextAlign.center,),)
+                      child: Text('$title_',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),)
                   ],
                 ),)
             ],
@@ -214,7 +214,7 @@ Container BtnSelectedIssue(String title_,BuildContext context){
                       onPressed: (){
                         //logic here
                       },
-                      child: Text('$title_',style: CustomStyle.textnormalblack_12,textAlign: TextAlign.center,),)
+                      child: Text('$title_',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),)
                   ],
                 ),)
             ],
@@ -226,7 +226,7 @@ Container BtnSelectedIssue(String title_,BuildContext context){
 
 /*single text on button with arrow outline*/
 Container BtnWithArrow(String title_,BuildContext context,double width_,double height_,bool isIconVisible,
-    var sideStyle,var textStyle){
+    var sideStyle,var textStyle,Color iconColor, IconData icon){
   return Container(
     width: width_,
     height: height_,
@@ -260,7 +260,7 @@ Container BtnWithArrow(String title_,BuildContext context,double width_,double h
                     visible: isIconVisible,
                       child: Padding(
                         padding: EdgeInsets.only(left: 16),
-                        child: CustomStyle.getImageIcons('assets/next.png', 16, CustomColors.colorPrimaryOrange),),
+                        child: Icon(icon,size: 16,color: iconColor,)),
                   ),
 
                 ],
@@ -397,7 +397,7 @@ Container BtnBlue_singletext_small(String title,BuildContext context,double widt
               Flexible(
                 flex: 1,
                 fit: FlexFit.tight,
-                child: Text('$title',style: CustomStyle.btnTitleWhite_12,textAlign: TextAlign.center,),
+                child: Text('$title',style: CustomStyle.whiteBoldCust_12,textAlign: TextAlign.center,),
               ),
 
             ],

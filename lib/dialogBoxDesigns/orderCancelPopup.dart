@@ -66,7 +66,7 @@ class OrderCancelPopup extends State{
               SizedBox(height: 16,),
               Padding(
                 padding: EdgeInsets.only(left: 28,right: 28,bottom: 21),
-                child: Text(CustomString.dmsg_warning2,style: CustomStyle.textTitle,softWrap: true,overflow: TextOverflow.fade,
+                child: Text(CustomString.dmsg_warning2,style: CustomStyle.blackNormalCust_14,softWrap: true,overflow: TextOverflow.fade,
                   textAlign: TextAlign.center,maxLines: 2,),
               ),
               

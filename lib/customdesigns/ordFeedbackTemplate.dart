@@ -52,7 +52,7 @@ class OrdFeedbackTemplate extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Write Review',style: CustomStyle.textsemiboldblackTitle,textAlign:TextAlign.start,),
+                      Text('Write Review',style: CustomStyle.blackBoldlCust_14,textAlign:TextAlign.start,),
                       SizedBox(width: 6,),
                       CustomStyle.GetRatingBar(0,Icons.star_outline,CustomColors.grey_subtitle,20),
                     ],

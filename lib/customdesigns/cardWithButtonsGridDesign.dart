@@ -62,7 +62,7 @@ class GridViewUI_cardWithbtns  extends State{
                                     SizedBox(height: 8,),
                                     new Text('Govardhan milk',
                                       textAlign: TextAlign.center,
-                                      style: CustomStyle.textsemiboldblackTitle_12,
+                                      style: CustomStyle.blackBoldlCust_12,
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 2,
                                     ),

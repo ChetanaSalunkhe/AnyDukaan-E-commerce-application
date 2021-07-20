@@ -58,7 +58,7 @@ class CancelOrderPopup extends State{
               CustomStyle.getLogoImages('assets/ord_cancel.png', 214, 168),
               SizedBox(height: 22,),
 
-              Text(CustomString.areYouSure,style: CustomStyle.textTitle,textAlign: TextAlign.center,softWrap: true,maxLines: 2,),
+              Text(CustomString.areYouSure,style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,softWrap: true,maxLines: 2,),
 
               SizedBox(height: 17,),
 
@@ -70,7 +70,7 @@ class CancelOrderPopup extends State{
                   //logic here
                   Navigator.pop(context);
                 },
-                child: Text(CustomString.yesCancel,style: CustomStyle.textsemiboldblackTitle,textAlign: TextAlign.center,),),
+                child: Text(CustomString.yesCancel,style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.center,),),
               SizedBox(height: 20,),
 
             ],

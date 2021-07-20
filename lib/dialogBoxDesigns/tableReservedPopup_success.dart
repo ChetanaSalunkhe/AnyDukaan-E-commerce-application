@@ -78,7 +78,7 @@ class TableReservedSuccessPopup extends State{
                       SizedBox(height: 18,),
                       Padding(
                         padding: EdgeInsets.only(left: 35,right: 35,bottom: 0),
-                        child: Text(CustomString.dmsg_success_preorder+" ₹ 260",style: CustomStyle.textTitle,softWrap: true,overflow: TextOverflow.fade,
+                        child: Text(CustomString.dmsg_success_preorder+" ₹ 260",style: CustomStyle.blackNormalCust_14,softWrap: true,overflow: TextOverflow.fade,
                           textAlign: TextAlign.center,maxLines: 3,),
                       ),
 

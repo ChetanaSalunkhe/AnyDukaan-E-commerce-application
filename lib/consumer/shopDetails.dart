@@ -71,7 +71,7 @@ class ShopDetails extends State{
                                           SizedBox(width: 8,),
                                           CustomStyle.getImageIcons('assets/rating.png', 12, CustomColors.colorPrimaryOrange),
                                           SizedBox(width: 6,),
-                                          Text('4.2',style: CustomStyle.textTitle,),
+                                          Text('4.2',style: CustomStyle.blackNormalCust_14,),
                                         ],
                                       ),),
                                     Flexible(
@@ -124,7 +124,8 @@ class ShopDetails extends State{
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    BtnWithArrow(CustomString.requestKhata,context,172,40,true,CustomStyle.orangeOutline,CustomStyle.primaryBtnTextOrange)
+                                    BtnWithArrow(CustomString.requestKhata,context,172,40,true,CustomStyle.orangeOutline,
+                                        CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward)
                                   ],
                                 )
                               ],
@@ -144,7 +145,7 @@ class ShopDetails extends State{
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text('1500+ products',style: CustomStyle.textTitle,textAlign: TextAlign.left,),
+                          Text('1500+ products',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.left,),
                         ],
                       ),
                       SizedBox(height: 25,),
