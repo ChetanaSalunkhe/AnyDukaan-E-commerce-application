@@ -273,7 +273,7 @@ Container BtnWithArrow(String title_,BuildContext context,double width_,double h
 }
 
 /*single text on button with arrow outline*/
-Container BtnWithIcon(String title_,BuildContext context,double width, double height){
+Container BtnWithIconNextArrow(String title_,BuildContext context,double width, double height){
   return Container(
     width: width,
     height: height,
@@ -343,14 +343,15 @@ Container BtnWithIconAdd(String title_,BuildContext context,double width, double
   );
 }
 
-Container ReviewBorder(String title_,BuildContext context,double width, double height){
+/*Initial inside box*/
+Container ReviewBorder(String title_,BuildContext context,double width, double height, Color backcolor, var textStyle){
   return Container(
     width: width,
     height: height,
     color: Colors.transparent,
     alignment: Alignment.center,
     child:  Card(
-        color: CustomColors.blueboxshade,
+        color: backcolor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
               Radius.circular(10)
@@ -362,7 +363,7 @@ Container ReviewBorder(String title_,BuildContext context,double width, double h
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('$title_',style: CustomStyle.blueboldTitleText,textAlign: TextAlign.center,),
+              Text('$title_',style: textStyle,textAlign: TextAlign.center,),
             ],
           ),
         )
@@ -472,5 +473,53 @@ Container BtnPlusMinus(){
           )
         ),
       )
+  );
+}
+
+/*button with icon and text*/
+Container BtnWithIconLeftSide(String title_,BuildContext context,double width_,double height_,bool isIconVisible,
+    var textStyle,Color iconColor, IconData image, Color btncolor){
+  return Container(
+    width: width_,
+    height: height_,
+    alignment: Alignment.centerLeft,
+    child:  Card(
+        color: btncolor,
+      //shadowColor: CustomColors.colorPrimaryOrange,
+      //elevation: 1,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+              Radius.circular(99)
+          ),
+        ),
+        child: Padding(
+          padding: EdgeInsets.only(left: 0,right: 0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Visibility(
+                    visible: isIconVisible,
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 0),
+                        //child: CustomStyle.getImageIcons(image, 16, iconColor)
+                        child: CustomStyle.getIcons(image, 16, iconColor)
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: (){
+                      //logic here
+                    },
+                    child: Text('$title_',style:textStyle,textAlign: TextAlign.center,),),
+
+                ],
+              ),
+            ],
+          ),
+        )
+    ),
   );
 }

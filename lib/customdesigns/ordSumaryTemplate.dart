@@ -59,10 +59,7 @@ class OrdSummaryTemplate extends StatelessWidget{
             ],
           ),
           SizedBox(height: 14,),
-          Divider(
-            height: 1,
-            color: CustomColors.greyline,
-          ),
+          CustomStyle.GetDivider(),
           SizedBox(height: 14,),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -94,10 +91,7 @@ class OrdSummaryTemplate extends StatelessWidget{
             ],
           ),
           SizedBox(height: 14,),
-          Divider(
-            height: 1,
-            color: CustomColors.greyline,
-          ),
+          CustomStyle.GetDivider(),
           SizedBox(height: 14,),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,

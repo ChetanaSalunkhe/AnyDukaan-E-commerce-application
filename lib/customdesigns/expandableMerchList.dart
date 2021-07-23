@@ -133,10 +133,7 @@ Widget MerchantList() {
                     ],
                   ),
                   SizedBox(height: 10,),
-                  Divider(
-                    height: 1,
-                    color: CustomColors.greyline,
-                  ),
+                  CustomStyle.GetDivider(),
                   SizedBox(height: 14,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,

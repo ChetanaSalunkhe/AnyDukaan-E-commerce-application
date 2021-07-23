@@ -186,7 +186,7 @@ class StackDemo extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          BtnWithIcon('500 ml',context,126,40),
+                          BtnWithIconNextArrow('500 ml',context,126,40),
                           //BtnBlue_singletext_small('Delivery',context,109,34),
                           SizedBox(width: 24,),
                           BtnWithIconAdd('+ Add',context,126,40),

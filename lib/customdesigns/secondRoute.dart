@@ -12,6 +12,8 @@ import 'package:anydukaan/consumer/shoplisting.dart';
 import 'package:anydukaan/consumer/testThemes.dart';
 import 'package:anydukaan/customdesigns/merchantReview.dart';
 import 'package:anydukaan/customdesigns/raiseComplaint.dart';
+import 'package:anydukaan/merchant/homeScreenMerchant.dart';
+import 'package:anydukaan/merchant/myOrderDetailPageMerchant.dart';
 import 'package:anydukaan/merchant/myOrdersMerchant.dart';
 import 'package:anydukaan/merchant/revenueStatusMerchant.dart';
 import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
@@ -52,6 +54,7 @@ class SecondRoute extends StatefulWidget {
         return MyCart();
         break;
       case 'BottomOrders':
+        //consumer orders
         //return MyOrders();
         //return MyOrdersList();
         //return MyOrderDetails();
@@ -65,11 +68,53 @@ class SecondRoute extends StatefulWidget {
         //return MyTableBookings();
         return RaiseComplaint();
         break;
+
+        /******************** Merchant Calls ***********************************/
       case 'DashBoardMerch':
-        //return RevenueStatusMerchant();
+        return RevenueStatusMerchant();
+        break;
+      case 'OrdDetailPage':
+        return MyOrderDetailsPageMerchant();
+        break;
+      case 'Drawer_HomeMerch':
+        return HomeMerchant();
+        break;
+      case 'Drawer_SetupMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_MyOrdersMerch':
         return MyOrdersMerchant();
         break;
-
+      case 'Drawer_KhataMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_PromotionsMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_SupportMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_PaymentMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_SettingsMerch':
+       // return MyOrdersMerchant();
+        break;
+      case 'Drawer_LogoutMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_MyProdMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_DeliverySetupMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_PackagingMerch':
+        //return MyOrdersMerchant();
+        break;
+      case 'Drawer_ApplyOffersMerch':
+        //return MyOrdersMerchant();
+        break;
 
     }
   }

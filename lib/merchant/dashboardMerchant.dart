@@ -1,6 +1,7 @@
 import 'package:anydukaan/customdesigns/cardPendingOrders_Merchant.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/dashboardCards.dart';
+import 'package:anydukaan/customdesigns/drawerMerchant.dart';
 import 'package:anydukaan/customdesigns/merchAppBar.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/customdesigns/textViewBtnMerchantCard.dart';
@@ -151,6 +152,13 @@ class Dashboard extends State{
           ],
         ),
       ),
+      drawer:GetDrawer(),
     );
   }
+}
+
+Container GetDrawer(){
+  return Container(
+      child: GetMerchantDrawer(),
+  );
 }

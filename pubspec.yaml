@@ -49,6 +49,10 @@ dependencies:
   charts_flutter:
   step_progress_indicator:
   steps_indicator:
+  progress_timeline:
+  getwidget:
+  checkbox_formfield:
+  check_radio_group:
 
 dev_dependencies:
   flutter_test:

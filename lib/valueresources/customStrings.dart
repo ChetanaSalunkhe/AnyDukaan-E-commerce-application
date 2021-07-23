@@ -1,4 +1,6 @@
 /*Created by Chetana*/
+import 'package:progress_timeline/progress_timeline.dart';
+
 class CustomString{
   static var search = "Search";
   static var subTitle = "SubTitle";
@@ -61,6 +63,44 @@ class CustomString{
   static var tableReserved = "Table Reserved";
   static var preOrder = "Pre-Order";
   static var bookTable = "Book a Table";
+  static var upi = "UPI";
+  static var cod = "COD";
+  static var khata = "Khata";
+  static var ordSummary = "Order Summary";
+  static var qty = "Quantity : ";
+  static var moreprod = "more products";
+  static var reject = "Reject";
+  static var assignToAgent = "Assign Delivery Agent";
+  static var markAsPack = "Mark as Packed";
+  static var refund = "Refund (₹ 250)";
+  static var ordPlaceOn = "Order Placed On : ";
+  static var retAmt = "Return Amount : ";
+  static var retOn = "Return On : ";
+  static var welcom = "Welcome!";
+  static var steps = "4 Easy Steps to Start your Business ";
+  static var upload = "Upload";
+  static var saveAndContinue = "Save And Continue";
+  static var hintUpi = "mobile/email/back@upi";
+  static var minAmt = "Min Amount";
+  static var maxAMmt = "Max Amount";
+  static var chrgwt = "Charge by weight?";
+  static var adddelboy = "Create & Add Delivery Boy";
+  static var weight = "Weight";
+  static var charge = "Charge";
+  static var name = "Name";
+  static var start = "Start";
+  static var end = "End";
+  static var radius = "Radius";
+  static var scanBarcode = "Scan Barcode";
+  static var chooseTemplate = "Choose from Template";
+  static var createNew = "Create New";
+  static var setProd = "Set up your products";
+
+  /*questions*/
+  static var quePayOpt = "What Payment Option will you accept?";
+  static var queDelOpt = "Where can you Deliver?";
+  static var queDelOpt1 = "What are your Delivery timings?";
+  static var queDelOpt2 = "What is the Minimum purchase amount?";
 
   /*dialog messages*/
   static var dmsg1 = "Orders from different Merchants will have different Delivery Charge and Delivery timing.";
@@ -122,6 +162,12 @@ class CustomString{
     "Product is no longer needed",
   ];
 
+  static String value_radius= "Radius Wise";
+  static List<String> delsetup = [
+    "Radius Wise",
+    "Area Wise",
+  ];
+
   Map<String, bool> values = {
     'Apple': false,
     'Banana': false,
@@ -129,6 +175,13 @@ class CustomString{
     'Mango': false,
     'Orange': false,
   };
+
+  static List<SingleState> allStages = [
+    SingleState(stateTitle: "\n Upload \n Image"),
+    SingleState(stateTitle: "\n Payment \n Options"),
+    SingleState(stateTitle: "\n Delivery \n Setup"),
+    SingleState(stateTitle: "\n Product \n Setup"),
+  ];
 
 
 }

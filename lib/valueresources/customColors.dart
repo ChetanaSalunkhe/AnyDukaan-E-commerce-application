@@ -28,4 +28,6 @@ class CustomColors{
   static Color colorgrey_f4 = Color(0xfff4f4f4);
   static Color green_merch_bar= Color(0xff46CC30);
   static Color orange_light= Color(0xffFFF1E1);
+  static Color greenboxshade= Color(0xffBEE2C1);
+  static Color blueBackground= Color(0xffE5F4FF);
 }

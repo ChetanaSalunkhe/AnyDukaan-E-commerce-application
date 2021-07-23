@@ -13,6 +13,7 @@ class CustomAppBarWithoutSearch_Merchant extends StatelessWidget with PreferredS
   String img1="";
   String img2="";
   String imgLead="";
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   CustomAppBarWithoutSearch_Merchant(this.title,this.isLeadingVisible,this.isActionVisible,this.img1,this.img2,this.imgLead,
       {Key key}): preferredSize = Size.fromHeight(64),super(key: key);
@@ -33,7 +34,8 @@ class CustomAppBarWithoutSearch_Merchant extends StatelessWidget with PreferredS
         visible: isLeadingVisible,
         child: InkWell(
           onTap: (){
-            Navigator.pop(context);
+            //Navigator.pop(context);
+            Scaffold.of(context).openDrawer();
           },
           child:Image.asset(imgLead,width: 24,height: 24,color: Colors.white,),
         ),

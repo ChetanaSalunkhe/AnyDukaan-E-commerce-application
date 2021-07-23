@@ -36,6 +36,12 @@ class CustomStyle{
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
+  static var whiteBoldMerch_12= TextStyle(
+      color: CustomColors.white,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 12);
+
   /*-----------------------black consumer-----------------------------------------------*/
 
 /*black text 16, normal*/
@@ -208,6 +214,24 @@ class CustomStyle{
       fontWeight: FontWeight.normal,
       fontSize: 12);
 
+    static var blue_merch_bold_12 = TextStyle(
+      color: CustomColors.colorPrimaryBlue,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 12);
+
+  static var blue_merch_normal_10 = TextStyle(
+      color: CustomColors.colorPrimaryBlue,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 10);
+
+  static var blue_merch_normal_18 = TextStyle(
+      color: CustomColors.colorPrimaryBlue,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 18);
+
   /*-----------------------grey-----------------------------------------------*/
 
   /*grey subtitle text*/
@@ -260,6 +284,18 @@ class CustomStyle{
       fontFamily: 'Work Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
+
+  static var warningText_merch_bold_12 = TextStyle(
+      color: CustomColors.red,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 12);
+
+  static var warningText_merch_normal_10 = TextStyle(
+      color: CustomColors.red,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 10);
 
   /*-----------------------green-----------------------------------------------*/
 
@@ -410,6 +446,16 @@ class CustomStyle{
       maxLines: maxline,);
   }
 
+  static getEditTextBorder(String hint,double size,int maxline){
+    return TextField(
+      decoration: InputDecoration(hintText: '$hint',),
+      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
+      cursorColor: CustomColors.black,
+      textAlignVertical: TextAlignVertical.center,
+      textAlign: TextAlign.start,
+      maxLines: maxline,);
+  }
+
   static getEditText(String hint,double size,int maxline){
     return TextField(
       decoration: InputDecoration(hintText: '$hint',
@@ -420,7 +466,6 @@ class CustomStyle{
       textAlign: TextAlign.center,
       maxLines: maxline,);
   }
-
 
   static getEditTextEnterDetails(String label, double size,int maxlines,TextInputType type){
     return TextField(
@@ -516,8 +561,8 @@ class CustomStyle{
         gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            stops: [0.8,1],
-            colors: [CustomColors.background_lightblue, CustomColors.white]),
+            stops: [0.5,0.9],
+            colors: [CustomColors.blueBackground, CustomColors.white]),
       boxShadow: [
         BoxShadow(
             color: CustomColors.black,
@@ -530,6 +575,21 @@ class CustomStyle{
             offset: Offset(0, 0)
         )
       ],
+    );
+  }
+
+  static getOverlayBlue(){
+    return BoxDecoration(
+      color: CustomColors.blueboxshade,
+        image: new DecorationImage(
+          fit: BoxFit.cover,
+          colorFilter:
+          ColorFilter.mode(Colors.black.withOpacity(0.2),
+              BlendMode.dstATop),
+          image: new NetworkImage(
+            'http://www.server.com/image.jpg',
+          ),
+        ),
     );
   }
 
@@ -575,6 +635,29 @@ class CustomStyle{
         SizedBox(width: 4,),
         Text('$text',style: textStyle,textAlign: TextAlign.center,)
       ],
+    );
+  }
+
+  static GetDivider(){
+    return  Divider(
+      height: 1,
+      thickness: 0.5,
+      color: CustomColors.greyline,
+    );
+  }
+
+  static GetDividerVertical(){
+    return VerticalDivider(
+      width: 1,
+      thickness: 1,
+      color: CustomColors.greyline,
+    );
+  }
+
+  static CheckboxTitle(String title){
+    return Transform(
+      transform: Matrix4.translationValues(-12, 0, 0.0),
+      child: new Text('$title',style: CustomStyle.blackBoldMerch_12,),
     );
   }
 

@@ -5,6 +5,7 @@ import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar2.dart';
 import 'package:anydukaan/customdesigns/shopListDesign.dart';
 import 'package:anydukaan/customdesigns/tabBarIndicator.dart';
+import 'package:anydukaan/customdesigns/tabbarDesign.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
@@ -23,32 +24,14 @@ class ItemsListing extends State{
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        backgroundColor: CustomColors.background_lightblue,
         appBar: CustomAppBarWithSearch(title:'Search Items',searchHint:'Milk',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png',),
         body: Container(
           height: MediaQuery.of(context).size.height-150,
           child: Column(
             children: [
               SizedBox(height: 12,),
-              TabBar(
-                indicatorColor: CustomColors.colorPrimaryBlue,
-                labelColor: CustomColors.grey_subtitle,
-                unselectedLabelColor: CustomColors.grey_subtitle,
-                indicator: /*UnderlineTabIndicator(
-                    borderSide: BorderSide(width: 3.0,color: CustomColors.colorPrimaryBlue,),  //height of indicator
-                    insets: EdgeInsets.symmetric(horizontal:74.0),
-                  //margin left and right to indicator
-                ),*/    //customised indicator
-                MD2Indicator(
-                  indicatorSize: MD2IndicatorSize.normal,
-                  indicatorHeight: 3.0,
-                  indicatorColor: CustomColors.colorPrimaryBlue,
-                ),
-                tabs: [
-                  Tab(text: 'Items',),
-                  Tab(text: 'Shops',)
-                ],
-              ),
-
+              GetTabBar('Items (03)','Shops (05)'),
               Expanded(child: TabBarView(
                 children: [
                   CustomListView_shops(),   //items list

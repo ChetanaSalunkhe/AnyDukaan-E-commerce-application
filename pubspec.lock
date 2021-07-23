@@ -64,6 +64,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.10.0"
+  check_radio_group:
+    dependency: "direct main"
+    description:
+      name: check_radio_group
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
+  checkbox_formfield:
+    dependency: "direct main"
+    description:
+      name: checkbox_formfield
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0+3"
   clock:
     dependency: transitive
     description:
@@ -177,6 +191,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.1.8"
+  getwidget:
+    dependency: "direct main"
+    description:
+      name: getwidget
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.4"
   group_radio_button:
     dependency: "direct main"
     description:
@@ -261,6 +282,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.9+1"
+  progress_timeline:
+    dependency: "direct main"
+    description:
+      name: progress_timeline
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
   provider:
     dependency: transitive
     description:
@@ -268,6 +296,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.3.3"
+  scrollable_positioned_list:
+    dependency: transitive
+    description:
+      name: scrollable_positioned_list
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.10"
   sky_engine:
     dependency: transitive
     description: flutter

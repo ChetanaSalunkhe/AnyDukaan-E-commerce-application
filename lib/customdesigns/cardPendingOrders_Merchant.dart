@@ -14,10 +14,7 @@ class PendingOrdMerchList extends StatelessWidget{
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Divider(
-                  height: 1,
-                  color: CustomColors.greyline,
-                ),
+                CustomStyle.GetDivider(),
                 SizedBox(height: 18,),
                 Row(
                   children: [
