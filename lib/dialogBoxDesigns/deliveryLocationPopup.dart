@@ -30,9 +30,9 @@ class DeliveryLocPopup extends State{
                     ],
                   ),
                   SizedBox(height: 10,),
-                  CustomStyle.getEditTextEnterDetails('Flat, Floor, Building Name', 14,2,TextInputType.multiline),
-                  CustomStyle.getEditTextEnterDetails('Landmark', 14,1,TextInputType.text),
-                  CustomStyle.getEditTextEnterDetails('Road, area and location', 14,2,TextInputType.multiline),
+                  CustomStyle.getEditTextEnterDetails('Flat, Floor, Building Name', 14,2,TextInputType.multiline,CustomStyle.blackBoldlCust_14),
+                  CustomStyle.getEditTextEnterDetails('Landmark', 14,1,TextInputType.text,CustomStyle.blackBoldlCust_14),
+                  CustomStyle.getEditTextEnterDetails('Road, area and location', 14,2,TextInputType.multiline,CustomStyle.blackBoldlCust_14),
                   SizedBox(height: 8,),
                   Row(
                     children: [
@@ -42,7 +42,12 @@ class DeliveryLocPopup extends State{
                     ],
                   ),
                   SizedBox(height: 8,),
-                  BtnContinue('Add Address', context,'DeliveryLocPopup')
+                  InkWell(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child:BtnContinue('Add Address', context,'DeliveryLocPopup')
+                  ),
                 ],
               ),
             )

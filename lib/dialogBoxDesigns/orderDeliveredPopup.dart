@@ -86,7 +86,12 @@ class OrderDeliveredPopup extends State{
                 )
               ),
 
-              BtnContinue(CustomString.yesDeliver, context,'OrdDeliveredPopup'),
+              InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: BtnContinue(CustomString.yesDeliver, context,'OrdDeliveredPopup'),
+              ),
               SizedBox(height: 20,),
 
               TextButton(

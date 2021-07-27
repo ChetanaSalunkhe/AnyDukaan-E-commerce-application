@@ -63,6 +63,7 @@ class MultiMechPopup extends State{
               //raisedbutton
               InkWell(
                 onTap: (){
+                  Navigator.pop(context);
                   showModalBottomSheet(
                       context: context,
                       isScrollControlled: true,

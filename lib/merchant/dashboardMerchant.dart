@@ -6,9 +6,12 @@ import 'package:anydukaan/customdesigns/merchAppBar.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/customdesigns/textViewBtnMerchantCard.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+bool isWarningVisible=true;
 
 class Dashboard extends State{
   @override
@@ -23,6 +26,24 @@ class Dashboard extends State{
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: 12,),
+                /*visibility handled as per merchants payment to vsl status*/
+                Visibility(
+                  visible: isWarningVisible,
+                  child: Container(
+                    height: 100,
+                    color:CustomColors.redbackground_warning,
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(CustomString.warning_Merchant,style:CustomStyle.whiteBoldMerch_12,textAlign: TextAlign.center,
+                        softWrap: true,overflow: TextOverflow.fade,maxLines: 4,),
+                      ],
+                    )
+                  ),
+                ),
                 SizedBox(height: 12,),
                 Container(
                   height: 290,
@@ -59,7 +80,13 @@ class Dashboard extends State{
                                         color: CustomColors.blueborder,
                                       ),
                                       SizedBox(width: 6,),
-                                      Text('12 Reviews',style: CustomStyle.blueNormalMerch_12_underline,),
+                                      InkWell(
+                                        onTap: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (Context)=>SecondRoute(callFrom:'MReviews')));
+                                        },
+                                        child: Text('12 Reviews',style: CustomStyle.blueNormalMerch_12_underline,),
+                                      ),
                                     ],
                                   ),
 
@@ -148,7 +175,7 @@ class Dashboard extends State{
                 )
 
               ],
-            )
+            ),
           ],
         ),
       ),

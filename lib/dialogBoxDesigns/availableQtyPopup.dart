@@ -97,7 +97,7 @@ class AvailableQtyPopup extends State{
               //raisedbutton
               InkWell(
                 onTap: (){
-                 // Navigator.pop(context);
+                  Navigator.pop(context);
                   //add to cart logic here
                   showModalBottomSheet(
                       context: context,

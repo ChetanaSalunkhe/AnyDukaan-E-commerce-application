@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:group_radio_button/group_radio_button.dart';
 import 'package:slide_digital_clock/slide_digital_clock.dart';
 import 'customColors.dart';
@@ -386,6 +387,11 @@ class CustomStyle{
     width: 0.5,
   );
 
+  static var greyOutline = BorderSide(
+    color: CustomColors.greydark,
+    width: 0.5,
+  );
+
   static var greenOutline = BorderSide(
     color: CustomColors.greenlight,
     width: 0.5,
@@ -467,10 +473,13 @@ class CustomStyle{
       maxLines: maxline,);
   }
 
-  static getEditTextEnterDetails(String label, double size,int maxlines,TextInputType type){
+  static getEditTextEnterDetails(String label, double size,int maxlines,TextInputType type, var labelStyle){
     return TextField(
       keyboardType: type,
-      decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,),
+      decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,
+          labelStyle: labelStyle,
+        //errorText: true ? 'Value Can\'t Be Empty' : null,
+      ),
       style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
       minLines: 1,
       maxLines: maxlines,
@@ -480,7 +489,7 @@ class CustomStyle{
   }
 
   static getEditTextWithIcon(String label, double size,int maxlines,TextInputType type,IconData icon,Color iconColor,double iconsize,
-      String prefText){
+      String prefText,var textColor){
     return TextField(
       keyboardType: type,
       decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,
@@ -558,11 +567,11 @@ class CustomStyle{
 
   static getBoxShadow_gradient(){
     return BoxDecoration(
-        gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            stops: [0.5,0.9],
-            colors: [CustomColors.blueBackground, CustomColors.white]),
+      gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          stops: [0.5,0.9],
+          colors: [CustomColors.blueBackground, CustomColors.white]),
       boxShadow: [
         BoxShadow(
             color: CustomColors.black,
@@ -575,6 +584,11 @@ class CustomStyle{
             offset: Offset(0, 0)
         )
       ],
+    );
+  }
+
+  static getBoxShadow_none(){
+    return BoxDecoration(
     );
   }
 
@@ -661,5 +675,21 @@ class CustomStyle{
     );
   }
 
+  /*FlutterSwitch(
+  width: 35.0,
+  height: 20.0,
+  toggleSize: 16,
+  value: switchStatus,
+  borderRadius: 30.0,
+  padding: 2.0,
+  toggleColor: Color.fromRGBO(225, 225, 225, 1),
+  activeColor: CustomColors.colorPrimaryBlue,
+  inactiveColor: CustomColors.greydark,
+  onToggle: (val) {
+  setState(() {
+  switchStatus = val;
+  });
+  },
+  ),*/
 
 }

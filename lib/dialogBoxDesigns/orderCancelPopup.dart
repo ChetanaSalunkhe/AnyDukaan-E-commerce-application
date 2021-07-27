@@ -69,8 +69,13 @@ class OrderCancelPopup extends State{
                 child: Text(CustomString.dmsg_warning2,style: CustomStyle.blackNormalCust_14,softWrap: true,overflow: TextOverflow.fade,
                   textAlign: TextAlign.center,maxLines: 2,),
               ),
-              
-              BtnContinue('Check Shops', context,'OrdCancelPopup'),
+
+              InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child:BtnContinue('Check Shops', context,'OrdCancelPopup'),
+              ),
               SizedBox(height: 30,),
 
             ],

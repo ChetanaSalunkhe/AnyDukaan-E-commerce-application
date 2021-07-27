@@ -74,7 +74,13 @@ class CancelOrderReasonsPopup extends State{
               RadioGroupDesign(verticalGroupValue:CustomString.value_reasons_cancelorder,status:CustomString.reasons_cancelorder,direction: Axis.vertical,),
               SizedBox(height: 20,),
 
-              BtnContinue(CustomString.submit, context,'CancelOrdReasonsPopup'),
+              InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child:BtnContinue(CustomString.submit, context,'CancelOrdReasonsPopup'),
+              ),
+
               SizedBox(height: 20,),
 
               TextButton(

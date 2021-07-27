@@ -79,7 +79,8 @@ class DeliveryOptionSetup extends State{
                           child:Padding(
                             padding: EdgeInsets.only(right: 8),
                             child:  CustomStyle.getEditTextWithIcon(CustomString.start,
-                                16, 1, TextInputType.text, Icons.keyboard_arrow_down, CustomColors.colorPrimaryBlue, 16, '8:00 AM '),
+                                16, 1, TextInputType.text, Icons.keyboard_arrow_down, CustomColors.colorPrimaryBlue, 16, '8:00 AM ',
+                                CustomColors.colorblackmerch),
                           )
                       ),
                       Flexible(
@@ -88,7 +89,8 @@ class DeliveryOptionSetup extends State{
                           child: Padding(
                             padding: EdgeInsets.only(left: 8),
                             child:  CustomStyle.getEditTextWithIcon(CustomString.end,
-                                16, 1, TextInputType.text, Icons.keyboard_arrow_down, CustomColors.colorPrimaryBlue, 16, '8:00 PM '),
+                                16, 1, TextInputType.text, Icons.keyboard_arrow_down, CustomColors.colorPrimaryBlue, 16, '8:00 PM ',
+                                CustomColors.colorblackmerch),
                           )
                       ),
                     ],

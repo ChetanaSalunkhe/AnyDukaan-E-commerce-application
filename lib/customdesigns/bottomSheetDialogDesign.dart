@@ -12,6 +12,7 @@ import 'package:anydukaan/dialogBoxDesigns/replaceProductReasonsPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/requestKhataPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/requestSentPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/returnProductReasonsPopup.dart';
+import 'package:anydukaan/dialogBoxDesigns/scanProdNotFoundPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/sendMessagePopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/tableReservedPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/tableReservedPopup_success.dart';
@@ -80,6 +81,9 @@ class ModalBottomSheetDialog extends StatefulWidget {
         break;
       case 'TableReserveSuccessPopup':
         return TableReservedSuccessPopup();
+        break;
+      case 'ScanProdPopup':
+        return ProductNotPresentPopup();
         break;
     }
   }

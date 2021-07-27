@@ -98,7 +98,7 @@ class GetMerchantDrawer extends StatelessWidget{
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_PromotionsMerch',)));
                       },
-                      child:GetContainerImage('Promotions', 'assets/percentage_fill.png'),
+                      child:GetContainerImage('Promotions', 'assets/pctg.png'),
                     ),
                     CustomStyle.GetDivider(),
 

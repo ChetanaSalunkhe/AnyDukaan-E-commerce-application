@@ -17,7 +17,7 @@ class RaiseComplaint extends State{
           children: [
             Padding(
               padding: EdgeInsets.only(left: 16,top: 18,right: 16),
-              child: CustomStyle.getEditTextEnterDetails('Enter Dukaan or Restaurant Name', 16,2,TextInputType.text),),
+              child: CustomStyle.getEditTextEnterDetails('Enter Dukaan or Restaurant Name', 16,2,TextInputType.text,CustomStyle.blackBoldlCust_14),),
             Padding(
               padding: EdgeInsets.only(left: 16,top: 18,right: 16),
               child: CustomStyle.getEditTextItalic('Please raise a complaint only in case no help is provided by the Shopkeer or Restaurant',

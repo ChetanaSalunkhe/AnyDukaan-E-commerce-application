@@ -29,7 +29,7 @@ class MyOrders extends State {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //DisplayWidget_(lengthOfList: 0)
-              BlankState(),
+              BlankState(msg:'No Orders Placed!', isBtnVisibile:true),
             ],
           )
       ),
@@ -56,6 +56,10 @@ class DisplayWidget_ extends StatefulWidget{
 }
 
 class BlankState extends StatelessWidget{
+  String msg="";
+  bool isBtnVisibile=true;
+  BlankState({Key key,this.msg,this.isBtnVisibile}):super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -68,12 +72,14 @@ class BlankState extends StatelessWidget{
           ),
           Padding(
             padding:EdgeInsets.only(top: 26),
-            child: Text('No Orders Placed!',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),),
-          Container(
-              margin: EdgeInsets.only(left: 40,right:40,top: 30),
-              child: BtnWithArrow('See Past Orders',context,280,50,false,CustomStyle.orangeOutline,
-                  CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward)
-          )
+            child: Text('$msg',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),),
+          Visibility(
+            visible: isBtnVisibile,
+              child: Container(
+                  margin: EdgeInsets.only(left: 40,right:40,top: 30),
+                  child: BtnWithArrow('See Past Orders',context,280,50,false,CustomStyle.orangeOutline,
+                      CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward)
+              )),
         ],
       ),
     );

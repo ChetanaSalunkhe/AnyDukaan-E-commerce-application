@@ -49,7 +49,7 @@ class BookTable extends State{
                           child: Padding(
                             padding: EdgeInsets.only(right: 24),
                             child: CustomStyle.getEditTextWithIcon('Date', 14, 1,TextInputType.text,
-                                Icons.calendar_today,CustomColors.colorPrimaryBlue,16,''),
+                                Icons.calendar_today,CustomColors.colorPrimaryBlue,16,'',CustomColors.black),
                           )
                       ),
                       Flexible(
@@ -58,7 +58,7 @@ class BookTable extends State{
                           child: Padding(
                             padding: EdgeInsets.only(left: 24),
                             child: CustomStyle.getEditTextWithIcon('Schedule Time', 14, 1,TextInputType.text,
-                                Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,''))
+                                Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,'',CustomColors.black))
                       ),
                     ],
                   ),
@@ -127,7 +127,7 @@ class BookTable extends State{
                           child: Padding(
                               padding: EdgeInsets.only(left: 24,top: 15),
                               child: CustomStyle.getEditTextWithIcon('Special Seating', 14, 1,TextInputType.text,
-                                  Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,''))
+                                  Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,'',CustomColors.colorPrimaryBlue))
                       ),
                     ],
                   ),

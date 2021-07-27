@@ -33,8 +33,8 @@ class ProductSetup_ extends State{
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              GetTemplate(CustomString.scanBarcode,'assets/scan3.png'),
-              GetTemplate(CustomString.chooseTemplate,'assets/scan2.png'),
+              GetTemplate(CustomString.scanBarcode,'assets/scan.png'),
+              GetTemplate(CustomString.chooseTemplate,'assets/template.png'),
               GetTemplate(CustomString.createNew,'assets/createnew.png'),
             ],
           ),

@@ -62,7 +62,12 @@ class CancelOrderPopup extends State{
 
               SizedBox(height: 17,),
 
-              BtnContinue(CustomString.continue_shopping, context,'CancelOrdPopup'),
+              InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child: BtnContinue(CustomString.continue_shopping, context,'CancelOrdPopup'),
+              ),
               SizedBox(height: 20,),
 
               TextButton(

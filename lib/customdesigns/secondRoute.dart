@@ -12,15 +12,23 @@ import 'package:anydukaan/consumer/shoplisting.dart';
 import 'package:anydukaan/consumer/testThemes.dart';
 import 'package:anydukaan/customdesigns/merchantReview.dart';
 import 'package:anydukaan/customdesigns/raiseComplaint.dart';
+import 'package:anydukaan/dialogBoxDesigns/scanProdNotFoundPopup.dart';
+import 'package:anydukaan/merchant/addNewProductMerchant.dart';
+import 'package:anydukaan/merchant/editProductMerchant.dart';
+import 'package:anydukaan/merchant/filtersMerchant.dart';
+import 'package:anydukaan/merchant/myProducts.dart';
+import 'package:anydukaan/merchant/reviewMerchant.dart';
 import 'package:anydukaan/merchant/homeScreenMerchant.dart';
 import 'package:anydukaan/merchant/myOrderDetailPageMerchant.dart';
 import 'package:anydukaan/merchant/myOrdersMerchant.dart';
 import 'package:anydukaan/merchant/revenueStatusMerchant.dart';
+import 'package:anydukaan/merchant/selectImagesProductMerch.dart';
 import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
 import 'package:anydukaan/onboardingScreens/walkThrough.dart';
 import 'package:flutter/material.dart';
 
 import 'mainSearchDesign.dart';
+import 'overlayDesign.dart';
 
 class SecondRoute extends StatefulWidget {
   String callFrom="";
@@ -73,6 +81,9 @@ class SecondRoute extends StatefulWidget {
       case 'DashBoardMerch':
         return RevenueStatusMerchant();
         break;
+      case 'MReviews':
+        return ReviewMerchant();
+        break;
       case 'OrdDetailPage':
         return MyOrderDetailsPageMerchant();
         break;
@@ -104,7 +115,8 @@ class SecondRoute extends StatefulWidget {
         //return MyOrdersMerchant();
         break;
       case 'Drawer_MyProdMerch':
-        //return MyOrdersMerchant();
+        return MyProductsMerchant();
+       // return TestPage();
         break;
       case 'Drawer_DeliverySetupMerch':
         //return MyOrdersMerchant();
@@ -115,7 +127,16 @@ class SecondRoute extends StatefulWidget {
       case 'Drawer_ApplyOffersMerch':
         //return MyOrdersMerchant();
         break;
-
+      case 'AddNewProd':
+        return AddNewProductMerchant();
+        break;
+      case 'EditProd':
+        return EditProductMerchant();
+        break;
+      case 'ChangeImageMerch':
+        //return SelectProductImagesMerchant();
+        return FiltersMerchant();
+        break;
     }
   }
 }

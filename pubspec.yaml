@@ -53,6 +53,7 @@ dependencies:
   getwidget:
   checkbox_formfield:
   check_radio_group:
+  flutter_switch:
 
 dev_dependencies:
   flutter_test:

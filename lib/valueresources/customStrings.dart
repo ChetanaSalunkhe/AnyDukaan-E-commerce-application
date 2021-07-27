@@ -92,9 +92,15 @@ class CustomString{
   static var end = "End";
   static var radius = "Radius";
   static var scanBarcode = "Scan Barcode";
-  static var chooseTemplate = "Choose from Template";
+  static var chooseTemplate = "Choose from List";
   static var createNew = "Create New";
   static var setProd = "Set up your products";
+  static var reqToAdd = "Request to Add";
+  static var appOffers = "Apply Offers";
+  static var saveChanges = "Save Changes";
+  static var changeImage = "Change Image";
+  static var prodNotFound = "Product not Found";
+  static var apply = "Apply";
 
   /*questions*/
   static var quePayOpt = "What Payment Option will you accept?";
@@ -125,6 +131,10 @@ class CustomString{
   static var homeadr = "B-1204, Sun City, Goregoan Dindoshi Depot FlimCity Road Goregoan East, Mumbai - 63";
   static var officeadr = "9 Continental Park Vritti Solutions Limited Near Karve Statue, Kothrud, Pune, 411038";
   static var localadr = "";
+  static var warning_Merchant = "Plase pay your bill before on or before 28th Marsh 2021, after this your shop will be Removed from Customer listing";
+  static var noprod = "No Products Added! Click on the Plus button to ADD now!";
+  static var dummyDesc = "Aashirvaad whole wheat atta is made of zero per cent maida and 100% atta, which makes it extremely nutritious since its packed with health benefits.   This also means more fluffy and soft rotis at home. ";
+  static var sorryprodNotexist = "Sorry, this product doesn’t exist in the list! You can request to Add it.";
 
   /*radio group values*/
   static String singleValue = "Text alignment right";

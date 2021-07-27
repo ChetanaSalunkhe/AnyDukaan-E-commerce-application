@@ -79,7 +79,12 @@ class RequestKhataPopup extends State{
                 child: GetWarningTemplate(CustomString.dmsg_warning_khata,2),
               ),
 
-              BtnContinue(CustomString.requestKhata, context,'RequestKhataPopup'),
+              InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                },
+                child:BtnContinue(CustomString.requestKhata, context,'RequestKhataPopup'),
+              ),
               SizedBox(height: 30,),
 
             ],
