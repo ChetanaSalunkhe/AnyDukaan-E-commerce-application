@@ -82,13 +82,31 @@ class GetMerchantDrawer extends StatelessWidget{
                     ),
                     CustomStyle.GetDivider(),
 
+                    /*if restaurant case then visiblity of khata = false*/
                     /*Khata*/
-                    InkWell(
-                      onTap: (){
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_KhataMerch',)));
-                      },
-                      child:  GetContainerImage('Khata', 'assets/rupees.png'),
+                    Visibility(
+                      visible: true,
+                        child:  InkWell(
+                          onTap: (){
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_KhataMerch',)));
+                          },
+                          child:  GetContainerImage('Khata', 'assets/rupees.png'),
+                        ),
+                    ),
+                    CustomStyle.GetDivider(),
+
+                    /*if restaurant case then visiblity of table bookings = true*/
+                    /*My Table Bookings*/
+                    Visibility(
+                      visible: true,
+                      child:  InkWell(
+                        onTap: (){
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_TableBookingMerch',)));
+                        },
+                        child:  GetContainerImage('My Table Bookings', 'assets/chair.png'),
+                      ),
                     ),
                     CustomStyle.GetDivider(),
 

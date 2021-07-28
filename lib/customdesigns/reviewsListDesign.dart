@@ -36,7 +36,7 @@ class ReviewsListDesign extends State{
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              ReviewBorder('V',context,43,43,CustomColors.blueboxshade,CustomStyle.blueboldTitleText),
+                              ReviewBorder(entries[index].substring(0,1),context,44,44,CustomColors.blueboxshade,CustomStyle.blueboldTitleText,false),
                               SizedBox(width: 10,),
                               Flexible(
                                 flex: 1,

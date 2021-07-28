@@ -5,21 +5,20 @@ import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
-final List<String> entries = <String>[
-  "Reaching in 10 minutes","I will pick up order late","I will pick up order tomorrow",
-  "Please deliver order at my home","I am outside your shop"];
+final List<String> entries = <String>["English","Hindi","Marathi","Kannada"];
 
 bool isOptionSelected=false;
 int selectedIndex=0;
 var cardColor = CustomColors.white;
 var sideStyle = CustomStyle.blackOutline;
 var textStyle = CustomStyle.blackNormalCust_14;
+bool isCardEnable=false;
 
-class SendMessagePopup extends State{
+class ChooseLangPopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 427.0,
+        height: 367.0,
         color: Colors.transparent,
         child: new Center(
           child: Column(
@@ -37,7 +36,8 @@ class SendMessagePopup extends State{
                     child:Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(CustomString.sendMsg,style: CustomStyle.boldValueText, textAlign: TextAlign.center,)
+                        Text(CustomString.changeLanguage,style: CustomStyle.boldValueText,
+                          textAlign: TextAlign.center,)
                       ],
                     ),
                   ),
@@ -63,14 +63,16 @@ class SendMessagePopup extends State{
                 ],
               ),
               SizedBox(height: 30,),
-              OptionsList_(entries: entries,),
+              Container(
+                margin: EdgeInsets.only(left: 16,right: 16),
+                child:OptionsList_(entries: entries),
+              )
             ],
           ),
         ));
   }
 
 }
-
 class OptionsList_ extends StatefulWidget{
   List<String> entries;
   OptionsList_({Key key,this.entries}):super(key:key);

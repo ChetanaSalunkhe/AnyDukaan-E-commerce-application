@@ -1,25 +1,26 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/warninTemplate.dart';
+import 'package:anydukaan/merchant/myProducts.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
-final List<String> entries = <String>[
-  "Reaching in 10 minutes","I will pick up order late","I will pick up order tomorrow",
-  "Please deliver order at my home","I am outside your shop"];
+final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Restaurant","Grocery"];
 
-bool isOptionSelected=false;
+bool isAgentSelected=false;
 int selectedIndex=0;
 var cardColor = CustomColors.white;
 var sideStyle = CustomStyle.blackOutline;
-var textStyle = CustomStyle.blackNormalCust_14;
+var textStyle = CustomStyle.blackNormalMerch_14;
 
-class SendMessagePopup extends State{
+class AssignDeliveryAgentPopup extends State{
+  /*here get data from server list and display delivery agent's names*/
+
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 427.0,
+        height: 367.0,
         color: Colors.transparent,
         child: new Center(
           child: Column(
@@ -32,18 +33,18 @@ class SendMessagePopup extends State{
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Flexible(
-                    flex: 6,
+                    flex: 7,
                     fit: FlexFit.tight,
                     child:Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(CustomString.sendMsg,style: CustomStyle.boldValueText, textAlign: TextAlign.center,)
+                        Text(CustomString.assignAgent,style: CustomStyle.boldValueText, textAlign: TextAlign.center,)
                       ],
                     ),
                   ),
 
                   Flexible(
-                      flex: 4,
+                      flex: 3,
                       fit: FlexFit.loose,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -62,8 +63,11 @@ class SendMessagePopup extends State{
                       )),
                 ],
               ),
-              SizedBox(height: 30,),
-              OptionsList_(entries: entries,),
+              SizedBox(height: 20,),
+              Container(
+                margin: EdgeInsets.only(left: 16,right: 16,top: 12),
+                child:AgentsList_(entries: entries,),
+              ),
             ],
           ),
         ));
@@ -71,20 +75,20 @@ class SendMessagePopup extends State{
 
 }
 
-class OptionsList_ extends StatefulWidget{
+class AgentsList_ extends StatefulWidget{
   List<String> entries;
-  OptionsList_({Key key,this.entries}):super(key:key);
+  AgentsList_({Key key,this.entries}):super(key:key);
 
   @override
   State<StatefulWidget> createState() {
-    return OptionsList(entries: entries);
+    return AgentsList(entries: entries);
   }
 
 }
 
-class OptionsList extends State{
+class AgentsList extends State{
   List<String> entries;
-  OptionsList({Key key,this.entries});
+  AgentsList({Key key,this.entries});
 
   @override
   Widget build(BuildContext context) {
@@ -95,19 +99,17 @@ class OptionsList extends State{
       itemBuilder: (BuildContext context, int i){
         return InkWell(
           onTap: (){
-            /*perform further task of calling api*/
             setState(() {
               selectedIndex = i;
-              if(isOptionSelected){
-                isOptionSelected = false;
+              if(isAgentSelected){
+                isAgentSelected = false;
               }else{
-                isOptionSelected = true;
+                isAgentSelected = true;
               }
             });
           },
           child: Container(
             height: 50,
-            margin: EdgeInsets.only(top: 12),
             child: Card(
                 color: selectedIndex != null && selectedIndex == i? CustomColors.colorPrimaryOrange:CustomColors.white,
                 shadowColor: CustomColors.black,
@@ -120,8 +122,8 @@ class OptionsList extends State{
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(entries[i].toString(),
-                      style: selectedIndex != null && selectedIndex == i? CustomStyle.whiteBold14:CustomStyle.blackNormalCust_14,
+                    Text('Chetana Salunkhe',
+                      style: selectedIndex != null && selectedIndex == i? CustomStyle.whiteBoldMerch_14:CustomStyle.blackNormalMerch_14,
                       textAlign: TextAlign.center,),
                   ],
                 )

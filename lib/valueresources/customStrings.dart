@@ -23,6 +23,7 @@ class CustomString{
   static var cancel = "Cancel";
   static var searchHere = "Search here...";
   static var selectLanguage = "Select Language";
+  static var changeLanguage = "Changr Language";
   static var requestKhata = "Request Khata";
   static var otherProducts = "Other products from same dukaan";
   static var freqBrought = "Frequently Brought Together";
@@ -98,15 +99,29 @@ class CustomString{
   static var reqToAdd = "Request to Add";
   static var appOffers = "Apply Offers";
   static var saveChanges = "Save Changes";
+  static var addcont = "Add and Continue";
   static var changeImage = "Change Image";
   static var prodNotFound = "Product not Found";
   static var apply = "Apply";
+  static var choosebrands = "Choose Multiple Brands";
+  static var assignAgent = "Assign Delivery Agent";
+  static var specialseats = "(A/C, Open air...etc)";
+  static var numseats = "Number of Spl. seats";
+  static var cost = "Cost";
+  static var accptBookings = "Accept Table Bookings";
+  static var accept = "Accept";
+  static var chrgPckg = "Charge for Packaging";
+  static var chrg_Pckg = "Packaging Charge";
+  static var pckgDesc = "Packaging Description";
+  static var khataCleared = "Hurrey! All your Khata Request are cleared.";
 
   /*questions*/
   static var quePayOpt = "What Payment Option will you accept?";
   static var queDelOpt = "Where can you Deliver?";
   static var queDelOpt1 = "What are your Delivery timings?";
   static var queDelOpt2 = "What is the Minimum purchase amount?";
+  static var queProdOpt3 = "How many seats do you have?";
+  static var queProdOpt4 = "How many special seats do you have?";
 
   /*dialog messages*/
   static var dmsg1 = "Orders from different Merchants will have different Delivery Charge and Delivery timing.";
@@ -129,12 +144,14 @@ class CustomString{
   static var dmsg_success_preorder= "You have successfully pre-ordered dish items worth : ";
   static var adr = 'B-1204, Sun City, Goregoan Dindoshi Depot FlimCity Road, Goregoan East, Mumbai - 63';
   static var homeadr = "B-1204, Sun City, Goregoan Dindoshi Depot FlimCity Road Goregoan East, Mumbai - 63";
-  static var officeadr = "9 Continental Park Vritti Solutions Limited Near Karve Statue, Kothrud, Pune, 411038";
+  static var officeadr = "9 Continental park Vritti Solutions Limited Near Karve Statue, Kothrud, Pune, 411038";
   static var localadr = "";
   static var warning_Merchant = "Plase pay your bill before on or before 28th Marsh 2021, after this your shop will be Removed from Customer listing";
   static var noprod = "No Products Added! Click on the Plus button to ADD now!";
   static var dummyDesc = "Aashirvaad whole wheat atta is made of zero per cent maida and 100% atta, which makes it extremely nutritious since its packed with health benefits.   This also means more fluffy and soft rotis at home. ";
   static var sorryprodNotexist = "Sorry, this product doesn’t exist in the list! You can request to Add it.";
+  static var cat_ret_period = "Category Return & Replacement period : 5 hours";
+  static var createagent = "For easy tracking for Delivery,\n Create Delivery users";
 
   /*radio group values*/
   static String singleValue = "Text alignment right";

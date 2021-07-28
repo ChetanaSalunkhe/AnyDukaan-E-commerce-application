@@ -127,7 +127,6 @@ class ExpansionTileSampleState extends StatelessWidget {
   }
 }
 
-
 class CardShopReviewListTemplate extends StatefulWidget{
   List<String> entries;
   CardShopReviewListTemplate({Key key,this.entries}):super(key: key);

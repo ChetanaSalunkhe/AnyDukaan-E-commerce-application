@@ -14,15 +14,23 @@ import 'package:anydukaan/customdesigns/merchantReview.dart';
 import 'package:anydukaan/customdesigns/raiseComplaint.dart';
 import 'package:anydukaan/dialogBoxDesigns/scanProdNotFoundPopup.dart';
 import 'package:anydukaan/merchant/addNewProductMerchant.dart';
+import 'package:anydukaan/merchant/chooseBrandsMerchant.dart';
+import 'package:anydukaan/merchant/chooseFromList.dart';
+import 'package:anydukaan/merchant/delDetailsMerch.dart';
+import 'package:anydukaan/merchant/deliverySetupMerchant.dart';
 import 'package:anydukaan/merchant/editProductMerchant.dart';
 import 'package:anydukaan/merchant/filtersMerchant.dart';
+import 'package:anydukaan/merchant/khataCustDetailsMerchant.dart';
+import 'package:anydukaan/merchant/khataSectionMerchant.dart';
 import 'package:anydukaan/merchant/myProducts.dart';
+import 'package:anydukaan/merchant/packagingMerchant.dart';
 import 'package:anydukaan/merchant/reviewMerchant.dart';
 import 'package:anydukaan/merchant/homeScreenMerchant.dart';
 import 'package:anydukaan/merchant/myOrderDetailPageMerchant.dart';
 import 'package:anydukaan/merchant/myOrdersMerchant.dart';
 import 'package:anydukaan/merchant/revenueStatusMerchant.dart';
 import 'package:anydukaan/merchant/selectImagesProductMerch.dart';
+import 'package:anydukaan/merchant/tableBookingsListMerchant.dart';
 import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
 import 'package:anydukaan/onboardingScreens/walkThrough.dart';
 import 'package:flutter/material.dart';
@@ -94,10 +102,10 @@ class SecondRoute extends StatefulWidget {
         //return MyOrdersMerchant();
         break;
       case 'Drawer_MyOrdersMerch':
-        return MyOrdersMerchant();
+        return MyOrdersMerchant(isTabBarShop: true);
         break;
       case 'Drawer_KhataMerch':
-        //return MyOrdersMerchant();
+        return KhataSectionMerchant();
         break;
       case 'Drawer_PromotionsMerch':
         //return MyOrdersMerchant();
@@ -119,13 +127,16 @@ class SecondRoute extends StatefulWidget {
        // return TestPage();
         break;
       case 'Drawer_DeliverySetupMerch':
-        //return MyOrdersMerchant();
+        return DeliverySetupListMerchant();
         break;
       case 'Drawer_PackagingMerch':
-        //return MyOrdersMerchant();
+        return PackagingMerchant();
         break;
       case 'Drawer_ApplyOffersMerch':
         //return MyOrdersMerchant();
+        break;
+      case 'Drawer_TableBookingMerch':
+        return TableBookingsMerchant();
         break;
       case 'AddNewProd':
         return AddNewProductMerchant();
@@ -134,8 +145,20 @@ class SecondRoute extends StatefulWidget {
         return EditProductMerchant();
         break;
       case 'ChangeImageMerch':
-        //return SelectProductImagesMerchant();
-        return FiltersMerchant();
+        return SelectProductImagesMerchant();
+        //return FiltersMerchant();
+        break;
+      case 'ChooseListMerch':
+        return ChooseFromListMerchant();
+        break;
+      case 'ChooseBrandsMerch':
+        return ChooseBrandsMerchant();
+        break;
+      case 'AgentDetailsMerch':
+        return DeliveryAgentDetails();
+        break;
+      case 'KhataCustDtlsMerch':
+        return KhataCustDetails();
         break;
     }
   }

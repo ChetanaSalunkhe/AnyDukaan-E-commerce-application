@@ -16,7 +16,9 @@ Container GetPopup(BuildContext context){
         children: [
           InkWell(
             onTap: (){
-              //go to list of products
+              //go to choose from list screen
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'ChooseListMerch',)));
             },
             child: GetTemplate(CustomString.chooseTemplate,'assets/template.png'),
           ),
@@ -24,6 +26,9 @@ Container GetPopup(BuildContext context){
           InkWell(
             onTap: (){
               //write scan barcode logic here
+              /*  Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'AddNewProd',)));*/
+              //if scan fails open popup if scan successful open add new product screen
               showModalBottomSheet(
                   context: context,
                   isScrollControlled: true,

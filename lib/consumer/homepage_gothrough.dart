@@ -26,7 +26,8 @@ class HomePageState extends State<MyHomePage> {
     String searchHere = CustomString.searchHere;
 
     return Scaffold(
-      appBar: CustomAppBarWithSearch(title:"Home 1 - Pune",searchHint:'$searchHere',isLeadingVisible:true,isActionVisible:true,img: 'assets/audio_search.png',),//give your appbar title here
+      appBar: CustomAppBarWithSearch(title:"Home 1 - Pune",searchHint:'$searchHere',isLeadingVisible:true,
+        isActionVisible:true,img: 'assets/audio_search.png',),//give your appbar title here
       body:  SingleChildScrollView(
         child: Column(
           children: [

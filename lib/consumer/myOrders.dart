@@ -29,7 +29,7 @@ class MyOrders extends State {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //DisplayWidget_(lengthOfList: 0)
-              BlankState(msg:'No Orders Placed!', isBtnVisibile:true),
+              BlankState(msg:'No Orders Placed!', isBtnVisibile:true,img: 'assets/blankstate.png',),
             ],
           )
       ),
@@ -58,7 +58,8 @@ class DisplayWidget_ extends StatefulWidget{
 class BlankState extends StatelessWidget{
   String msg="";
   bool isBtnVisibile=true;
-  BlankState({Key key,this.msg,this.isBtnVisibile}):super(key: key);
+  String img="assets/blankstate.png";
+  BlankState({Key key,this.msg,this.isBtnVisibile,this.img}):super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +69,7 @@ class BlankState extends StatelessWidget{
           SizedBox(height: 55),
           Container(
             margin: EdgeInsets.only(left: 50,right:50),
-            child: CustomStyle.getImageBanner('assets/blankstate.png', 250, 216, BoxFit.cover),
+            child: CustomStyle.getImageBanner('$img', 250, 216, BoxFit.scaleDown),
           ),
           Padding(
             padding:EdgeInsets.only(top: 26),

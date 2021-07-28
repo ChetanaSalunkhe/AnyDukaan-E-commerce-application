@@ -30,6 +30,5 @@ class CustomColors{
   static Color orange_light= Color(0xffFFF1E1);
   static Color greenboxshade= Color(0xffBEE2C1);
   static Color blueBackground= Color(0xffE5F4FF);
-  static Color redbackground_warning= Color(0xffE55F5B);
   static Color blue_darkmerch= Color(0xffE6EDF4);
 }

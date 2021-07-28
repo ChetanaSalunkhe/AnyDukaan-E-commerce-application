@@ -10,13 +10,13 @@ import 'package:flutter/material.dart';
 final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
   "Sweets","Dry Fruits","Stationary"];
 
-class SelectProductImagesMerchant extends State{
+class ChooseBrandsMerchant extends State{
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch('Edit Product',true,true,'assets/upload.png','assets/delete.png',),
+      appBar: CustomAppBarWithoutSearch('Choose Brands',true,false,'assets/upload.png','assets/delete.png',),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(16),
@@ -24,7 +24,8 @@ class SelectProductImagesMerchant extends State{
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /*gridview of images*/
+              Text(CustomString.choosebrands,style: CustomStyle.blackBoldMerch_12,),
+              SizedBox(height: 12,),
               Container(
                 height: MediaQuery.of(context).size.height,
                 //gridview of segment list
@@ -39,9 +40,10 @@ class SelectProductImagesMerchant extends State{
         onTap: (){
           //send/update images to server
         },
-        child: BtnContinue(CustomString.saveChanges, context, 'ImagesList'),
+        child: BtnContinue(CustomString.addcont, context, 'ImagesList'),
       ),
 
     );
   }
 }
+

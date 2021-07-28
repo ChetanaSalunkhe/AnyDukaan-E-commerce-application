@@ -20,6 +20,7 @@ class MyProdListMerch extends State{
       itemCount: 10,
         itemBuilder: (BuildContext context, int index){
         return Container(
+          margin: EdgeInsets.only(top: 10),
           child: Card(
             //color: entries[index].switchStatus ? CustomColors.white:CustomColors.greyline,
             color: switchStatus ? CustomColors.white:CustomColors.greyline,

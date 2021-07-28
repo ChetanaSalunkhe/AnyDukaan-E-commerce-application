@@ -1,6 +1,9 @@
+import 'package:anydukaan/dialogBoxDesigns/assignDeliveryAgentPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/availableQtyPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/cancelOrder.dart';
 import 'package:anydukaan/dialogBoxDesigns/cancelOrderReasonsPopup.dart';
+import 'package:anydukaan/dialogBoxDesigns/chooseLangPopup.dart';
+import 'package:anydukaan/dialogBoxDesigns/createDelAgentPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/deliveryLocationPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/issueWithOrderPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/menuOptionsPopup.dart';
@@ -84,6 +87,15 @@ class ModalBottomSheetDialog extends StatefulWidget {
         break;
       case 'ScanProdPopup':
         return ProductNotPresentPopup();
+        break;
+      case 'AssignDelAgentPopup':
+        return AssignDeliveryAgentPopup();
+        break;
+      case 'ChooseLangPopup':
+        return ChooseLangPopup();
+        break;
+      case 'CreateAgentPopup':
+        return CreateDelAgentPopup();
         break;
     }
   }

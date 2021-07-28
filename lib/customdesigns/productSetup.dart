@@ -1,9 +1,14 @@
+import 'package:anydukaan/customdesigns/cardSetupMerch.dart';
 import 'package:anydukaan/customdesigns/cardTemplateSetup.dart';
+import 'package:anydukaan/customdesigns/tablebookingSetupCard.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
+import 'package:checkbox_formfield/checkbox_list_tile_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:progress_timeline/progress_timeline.dart';
+
+bool isRestaurant_visibleScan=true;/*if restaurant case then set it false otherwise set it true*/
 
 class ProductSetup extends StatefulWidget{
 
@@ -24,20 +29,25 @@ class ProductSetup_ extends State{
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 18,),
+          /*table booking setup card*/
+          GetTableBookingSetupCard(context),
           Transform(
             transform: Matrix4.translationValues(10, 0, 0.0),
             child:Text(CustomString.setProd,style: CustomStyle.blackBoldMerch_12,textAlign: TextAlign.start,),
           ),
           SizedBox(height: 16,),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              GetTemplate(CustomString.scanBarcode,'assets/scan.png'),
+              Visibility(
+                visible: isRestaurant_visibleScan,
+                  child:GetTemplate(CustomString.scanBarcode,'assets/scan.png'),),
               GetTemplate(CustomString.chooseTemplate,'assets/template.png'),
               GetTemplate(CustomString.createNew,'assets/createnew.png'),
             ],
           ),
+          SizedBox(height: 50,),
         ],
       )
     );

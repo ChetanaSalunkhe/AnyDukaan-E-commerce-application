@@ -46,7 +46,7 @@ class MyProductsMerchant extends State{
                           Text('0 Products',style: CustomStyle.blue_merch_normal_12,),
                         ],
                       ),
-                      BlankState(msg:CustomString.noprod, isBtnVisibile:false),
+                      BlankState(msg:CustomString.noprod, isBtnVisibile:false,img: 'assets/blankstate.png',),
                     ],
                   )),
 

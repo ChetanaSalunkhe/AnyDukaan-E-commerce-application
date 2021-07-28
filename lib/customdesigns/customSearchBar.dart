@@ -54,7 +54,7 @@ class SearchBar extends StatelessWidget {
                  flex: 10,
                  fit: FlexFit.tight,
                  child: Center(
-                   child: CustomStyle.getEditTextSearch('Search here...',14,1),
+                   child: CustomStyle.getEditTextSearch('$hint',14,1),
                  )
              ),
              Flexible(

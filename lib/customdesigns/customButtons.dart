@@ -344,29 +344,42 @@ Container BtnWithIconAdd(String title_,BuildContext context,double width, double
 }
 
 /*Initial inside box*/
-Container ReviewBorder(String title_,BuildContext context,double width, double height, Color backcolor, var textStyle){
+Container ReviewBorder(String title_,BuildContext context,double width, double height, Color backcolor, var textStyle, bool isDotVisible){
   return Container(
     width: width,
     height: height,
     color: Colors.transparent,
     alignment: Alignment.center,
-    child:  Card(
-        color: backcolor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-              Radius.circular(10)
-          ),
-          //side: CustomStyle.orangeOutline
+    child:Stack(
+      children: [
+        Card(
+            color: backcolor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                  Radius.circular(10)
+              ),
+              //side: CustomStyle.orangeOutline
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(9),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('$title_',style: textStyle,textAlign: TextAlign.center,),
+                ],
+              ),
+            )
         ),
-        child: Padding(
-          padding: EdgeInsets.all(10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('$title_',style: textStyle,textAlign: TextAlign.center,),
-            ],
-          ),
-        )
+        Visibility(
+          visible: isDotVisible,
+          child: Positioned(
+              left: 30,
+              top: 2,
+              child:   ClipRRect(
+                  child:CustomStyle.getIcons(Icons.circle, 8, CustomColors.green_merch_bar)
+              )
+          ),),
+      ],
     ),
   );
 }

@@ -155,20 +155,6 @@ class FiltersOptions extends State{
           values_toDisp= values_price;
           break;
       }
-      /*switch(selectedOpt){
-        case 'Category':
-          values_toDisp= values_options;
-          break;
-        case 'Sub : Category':
-          values_toDisp= values_subcats;
-          break;
-        case 'Brands':
-          values_toDisp= values_brands;
-          break;
-        case 'Price':
-          values_toDisp= values_price;
-          break;
-      }*/
       print(values_toDisp);
     });
   }

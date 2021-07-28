@@ -51,9 +51,11 @@ class EditProductMerchant extends State{
               Container(
                 margin: EdgeInsets.only(left:16,right:16,top: 10,bottom: 20),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     /*product name*/
-                    Text('Ashirvad Ata 5 kg',style:CustomStyle.blackBoldMerch_16,),
+                    Text('Ashirvad Ata 5 kg',style:CustomStyle.blackBoldMerch_16,textAlign: TextAlign.start,),
                     SizedBox(height: 16,),
                     /*applied offers*/
                     Container(

@@ -43,6 +43,12 @@ class CustomStyle{
       fontWeight: FontWeight.bold,
       fontSize: 12);
 
+  static var whiteBoldMerch_14= TextStyle(
+      color: CustomColors.white,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 14);
+
   /*-----------------------black consumer-----------------------------------------------*/
 
 /*black text 16, normal*/
@@ -147,6 +153,12 @@ class CustomStyle{
       fontFamily: 'Work Sans',
       fontWeight: FontWeight.bold,
       fontSize: 12);
+
+  static var blackBoldMerch_10= TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 10);
 
   static var blackoldMerch_20 = TextStyle(
       color: CustomColors.colorblackmerch,
@@ -365,6 +377,12 @@ class CustomStyle{
       fontWeight: FontWeight.bold,
       fontSize: 24);
 
+  static var orange_merch_16 = TextStyle(
+      color: CustomColors.colorPrimaryOrange,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 16);
+
   static var orangeMerch_12 = TextStyle(
       color: CustomColors.colorPrimaryOrange,
       fontFamily: 'Work Sans',
@@ -374,6 +392,11 @@ class CustomStyle{
   /******************************* Button outlines *******************************************************************/
   static var orangeOutline = BorderSide(
     color: CustomColors.colorPrimaryOrange,
+    width: 0.5,
+  );
+
+  static var issueCardOutline = BorderSide(
+    color: CustomColors.blueSelected,
     width: 0.5,
   );
 
@@ -469,7 +492,7 @@ class CustomStyle{
       style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
       cursorColor: CustomColors.black,
       textAlignVertical: TextAlignVertical.center,
-      textAlign: TextAlign.center,
+      textAlign: TextAlign.justify,
       maxLines: maxline,);
   }
 
@@ -494,7 +517,7 @@ class CustomStyle{
       keyboardType: type,
       decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,
         suffixIcon: Icon(icon,color: iconColor,size: iconsize,),),
-      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
+      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: textColor,),
       minLines: 1,
       maxLines: maxlines,
       cursorColor: CustomColors.black,

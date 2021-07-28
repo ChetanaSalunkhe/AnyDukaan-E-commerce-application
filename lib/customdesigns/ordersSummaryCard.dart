@@ -1,3 +1,4 @@
+import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
@@ -9,14 +10,31 @@ import 'orderListCardMerchant.dart';
 
 bool isLayerVisible = false;
 bool isButtonVisible = false;
+bool isRejButtonVisible = true;
+bool isAcceptButtonVisible = true;
 double mainContainerHeight = 352;
+String textName=CustomString.accept;
+bool isAgentAvailable=false;
 
-Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var imgColor,String tabName){
-  if(tabName == "ongoing"){
+int index=0;
+
+Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var imgColor,String tabName,int selectedIndex){
+  if(tabName == "ongoing" || tabName == "pending"){
     isButtonVisible = true;
+    isRejButtonVisible = true;
+    isAcceptButtonVisible = true;
     mainContainerHeight = 378;
+    textName = CustomString.accept;
+  }else if(tabName == "confirmed"){
+    isButtonVisible = true;
+    isRejButtonVisible = false;
+    isAcceptButtonVisible = true;
+    mainContainerHeight = 378;
+    textName = CustomString.assignToAgent;
   }else{
     isButtonVisible = false;
+    isRejButtonVisible = false;
+    isAcceptButtonVisible = false;
     mainContainerHeight = 328;
   }
 
@@ -113,7 +131,7 @@ Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var 
                               Text('₹ 200',style: CustomStyle.blackBoldMerch_16,textAlign: TextAlign.start,),
                               SizedBox(width: 4,),
                               //set status as per payment status
-                              ReviewBorder(CustomString.upi,context,60,38,CustomColors.greenboxshade,CustomStyle.greenText10_merch),
+                              ReviewBorder(CustomString.upi,context,60,38,CustomColors.greenboxshade,CustomStyle.greenText10_merch,false),
                             ],
                           ),
                         ),
@@ -167,7 +185,7 @@ Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var 
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Visibility(
-                            visible: true,
+                            visible: isRejButtonVisible,
                             child: InkWell(
                               splashColor: CustomColors.red,
                               onTap:(){
@@ -184,25 +202,44 @@ Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var 
                           //if order is not yet assign to del agent then visible
                           //if order assigned to del agent then visibility false
                           Visibility(
-                              visible: true,
+                              visible: isAcceptButtonVisible,
                               child: InkWell(
                                   splashColor: CustomColors.red,
                                   onTap:(){
-                                    //orange button click event here
-                                    setState() {
-                                      isLayerVisible = true;
+                                    index = selectedIndex;
+                                    String key = textName=='Accept'?'Accept':'AssignDelAgentPopup';
+                                    //open delivery agent names popup
+                                    if(key == 'AssignDelAgentPopup'){
+                                      /*if delivery agent not available*/
+
+                                      showModalBottomSheet(
+                                          context: context,
+                                          isDismissible: true,
+                                          isScrollControlled: true,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                                topRight: Radius.circular(14),
+                                                topLeft: Radius.circular(14)),),
+                                          builder: (context) => ModalBottomSheetDialog(
+                                              popupStyle:
+                                              isAgentAvailable?'AssignDelAgentPopup':'CreateAgentPopup'));
+                                    }else{
+                                      //order acceptance logic here
                                     }
+
                                   },
                                   child:ClipRRect(
                                     borderRadius: BorderRadius.only(
                                         bottomRight: Radius.circular(6),
-                                        topRight: Radius.circular(6)),
+                                        topRight: Radius.circular(6),
+                                        topLeft: Radius.circular(isRejButtonVisible==false?6:0),
+                                        bottomLeft: Radius.circular(isRejButtonVisible==false?6:0)),
                                     child: Container(
-                                      width: 156,
+                                      width: isRejButtonVisible==false?MediaQuery.of(context).size.width-40:156,
                                       height: 50,
                                       padding: EdgeInsets.only(top: 18),
                                       color: CustomColors.colorPrimaryOrange,
-                                      child: Text(CustomString.assignToAgent,style: CustomStyle.whiteBoldMerch_12,textAlign: TextAlign.center,),
+                                      child: Text(textName,style: CustomStyle.whiteBoldMerch_12,textAlign: TextAlign.center,),
                                     ),
                                   )
                               )),
@@ -219,7 +256,7 @@ Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var 
           child: Container(
             height: mainContainerHeight,
             margin: EdgeInsets.only(left: 16,right: 16,top: 7),
-            decoration: BoxDecoration(
+            decoration: index == selectedIndex?BoxDecoration(
               boxShadow: [
                 BoxShadow(
                   color: CustomColors.colorPrimaryBlue.withOpacity(0.5),
@@ -228,6 +265,7 @@ Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var 
                   offset: Offset(0, 5), // changes position of shadow
                 ),
               ],
+            ):BoxDecoration(
             ),
             child: Container(
                 width: 328,

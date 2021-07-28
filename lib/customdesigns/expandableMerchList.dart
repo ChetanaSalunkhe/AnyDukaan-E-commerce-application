@@ -1,5 +1,6 @@
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:flutter/material.dart';
 
 /*expandable list of merchants and products*/

@@ -8,6 +8,7 @@ import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
 final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat", "Sweets","Dry Fruits","Stationary"];
+String custName = 'Venkatesh K Shantanu';
 
 class MyOrderDetailsPageMerchant extends State{
 
@@ -101,7 +102,7 @@ class MyOrderDetailsPageMerchant extends State{
                                     Text('₹ 200',style: CustomStyle.blackBoldMerch_16,textAlign: TextAlign.start,),
                                     SizedBox(width: 4,),
                                     //set status as per payment status
-                                    ReviewBorder(CustomString.upi,context,60,38,CustomColors.greenboxshade,CustomStyle.greenText10_merch),
+                                    ReviewBorder(CustomString.upi,context,60,38,CustomColors.greenboxshade,CustomStyle.greenText10_merch,false),
                                   ],
                                 ),
                               ),
@@ -125,7 +126,8 @@ class MyOrderDetailsPageMerchant extends State{
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              ReviewBorder('V',context,43,43,CustomColors.blueboxshade,CustomStyle.blue_merch_normal_18),
+                              /*here put customername in custname string*/
+                              ReviewBorder(custName.substring(0,1),context,43,43,CustomColors.blueboxshade,CustomStyle.blue_merch_normal_18,false),
                               SizedBox(width: 10,),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
