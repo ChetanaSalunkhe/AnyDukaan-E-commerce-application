@@ -6,6 +6,7 @@ import 'package:anydukaan/customdesigns/myCustomAppBar2.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -94,55 +95,41 @@ class GetAdvanceOptions extends State{
         /*alternate mobile*/
         CustomStyle.getEditTextWithIcon('Alternate Mobile', 16, 1, TextInputType.number,Icons.perm_contact_cal_outlined,
             CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch),
+        SizedBox(height: 16,),
         /*designation*/
-        DropdownButton<String>(
-          value: dropdownValue,
-          icon: Icon(Icons.keyboard_arrow_down),
-          iconSize: 24,
-          elevation: 16,
-          isExpanded: true,
-          hint: Text('Designation',style: CustomStyle.blackNormalMerch_12,),
-          style: CustomStyle.blackNormalMerch_16,
-          underline: Container(
-            height: 1,
-            color: CustomColors.greydark,
-          ),
+        DropdownSearch<String>(
+            mode: Mode.MENU,
+            showSelectedItem: true,
+            items: spinnerItems,
+            showSearchBox: false,
+            showAsSuffixIcons: true,
+            popupBackgroundColor: CustomColors.greyline,
+            label: "Designation",
+            hint: "Choose Designation",
+            onChanged: (String data) {
+              setState(() {
+                dropdownValue = data;
+              });
+            },
+            //selectedItem: dropdownValue,
+        ),
+        SizedBox(height: 16,),
+        /*department*/
+        DropdownSearch<String>(
+          mode: Mode.MENU,
+          showSelectedItem: true,
+          items: spinnerItems_dept,
+          showSearchBox: false,
+          showAsSuffixIcons: true,
+          popupBackgroundColor: CustomColors.greyline,
+          label: "Department",
+          hint: "Choose Department",
           onChanged: (String data) {
             setState(() {
               dropdownValue = data;
             });
           },
-          items: spinnerItems.map<DropdownMenuItem<String>>((String value) {
-            return DropdownMenuItem<String>(
-              value: value,
-              child: Text(value),
-            );
-          }).toList(),
-        ),
-        /*department*/
-        DropdownButton<String>(
-          value: dropdownValue_dept,
-          icon: Icon(Icons.keyboard_arrow_down),
-          iconSize: 24,
-          elevation: 16,
-          isExpanded: true,
-          hint: Text('Department',style: CustomStyle.blackNormalMerch_12,),
-          style: CustomStyle.blackNormalMerch_16,
-          underline: Container(
-            height: 1,
-            color: CustomColors.greydark,
-          ),
-          onChanged: (String data) {
-            setState(() {
-              dropdownValue_dept = data;
-            });
-          },
-          items: spinnerItems_dept.map<DropdownMenuItem<String>>((String value) {
-            return DropdownMenuItem<String>(
-              value: value,
-              child: Text(value),
-            );
-          }).toList(),
+          //selectedItem: dropdownValue,
         ),
         /*adhar number*/
         CustomStyle.getEditTextEnterDetails('Adhar Number', 16, 1, TextInputType.text,CustomStyle.blackNormalMerch_16),

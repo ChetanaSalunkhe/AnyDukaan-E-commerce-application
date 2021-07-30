@@ -23,7 +23,7 @@ class CustomString{
   static var cancel = "Cancel";
   static var searchHere = "Search here...";
   static var selectLanguage = "Select Language";
-  static var changeLanguage = "Changr Language";
+  static var changeLanguage = "Change Language";
   static var requestKhata = "Request Khata";
   static var otherProducts = "Other products from same dukaan";
   static var freqBrought = "Frequently Brought Together";
@@ -114,6 +114,19 @@ class CustomString{
   static var chrg_Pckg = "Packaging Charge";
   static var pckgDesc = "Packaging Description";
   static var khataCleared = "Hurrey! All your Khata Request are cleared.";
+  static var applynewoff = "Apply New Offer";
+  static var shopDtls = "Shop Details";
+  static var payPref = "Payment Preferences";
+  static var shareApp = "Share App";
+  static var privacyPolicy = "Privacy Policy and Agreement";
+  static var notfcn = "Notification";
+  static var logout = "Logout";
+  static var selContact = "Select Contacts";
+  static var selPlan = "Select Plan";
+  static var buyBundle= "Buy Bundle";
+  static var buyPack= "Buy Pack";
+  static var reqBanner= "Request Banner";
+  static var callNow= "Call Now";
 
   /*questions*/
   static var quePayOpt = "What Payment Option will you accept?";
@@ -146,12 +159,17 @@ class CustomString{
   static var homeadr = "B-1204, Sun City, Goregoan Dindoshi Depot FlimCity Road Goregoan East, Mumbai - 63";
   static var officeadr = "9 Continental park Vritti Solutions Limited Near Karve Statue, Kothrud, Pune, 411038";
   static var localadr = "";
-  static var warning_Merchant = "Plase pay your bill before on or before 28th Marsh 2021, after this your shop will be Removed from Customer listing";
+  static var warning_Merchant = "Please pay your bill before on or before 28th March 2021, after this your shop will be removed from customer listing";
   static var noprod = "No Products Added! Click on the Plus button to ADD now!";
   static var dummyDesc = "Aashirvaad whole wheat atta is made of zero per cent maida and 100% atta, which makes it extremely nutritious since its packed with health benefits.   This also means more fluffy and soft rotis at home. ";
   static var sorryprodNotexist = "Sorry, this product doesn’t exist in the list! You can request to Add it.";
   static var cat_ret_period = "Category Return & Replacement period : 5 hours";
   static var createagent = "For easy tracking for Delivery,\n Create Delivery users";
+  static var offersucces = "Congratulations! \n Your offer is applied successfully.";
+  static var iaccept = "I accept and agree, privacy policy and terms and condition.";
+  static var bannReq = "Your Banner Request is in Process Any Dukaan team will get in Touch with you";
+  static var supportMsg = "Get in touch directly,\n Call on number +91 9561095610";
+  static var steps_1 = "1. Go to My products from navigation. \n2. Click the Plus floting button at buttom right. \n3. Choose an a Option of adding a product";
 
   /*radio group values*/
   static String singleValue = "Text alignment right";
@@ -210,5 +228,10 @@ class CustomString{
     SingleState(stateTitle: "\n Product \n Setup"),
   ];
 
+  static var policyData="A Terms and Conditions agreement is the agreement that includes the terms, the rules and the guidelines of acceptable behavior and other useful sections to which users must agree in order to use or access your website and mobile app.";
+  static var p1="Order Acceptance and Rejects";
+  static var p2="Return & Refunds";
+  static var p3="Replacement";
+  static var p4="Complaints";
 
 }

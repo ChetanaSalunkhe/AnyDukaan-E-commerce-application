@@ -1,5 +1,6 @@
 import 'package:anydukaan/customdesigns/bottombardesign.dart';
 import 'package:anydukaan/customdesigns/customSearchBar.dart';
+import 'package:anydukaan/customdesigns/dashedLine.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar2.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/customdesigns/title_viewall_btndesign1.dart';
@@ -381,7 +382,7 @@ class DashedLineTheme extends StatelessWidget {
         children: [
           Container(
               width:CustomDimens.cardWidth_105,
-              child: DashedLine()
+              child: DashedLine(color: CustomColors.colorPrimaryOrange,dashWidth:5.0,height:1)
           ),
           Container(
             margin: EdgeInsets.only(left: 16,right: 16),
@@ -389,42 +390,12 @@ class DashedLineTheme extends StatelessWidget {
           ),
           Container(
               width:CustomDimens.cardWidth_105,
-              child: DashedLine()
+              child: DashedLine(color: CustomColors.colorPrimaryOrange,dashWidth:5.0,height:1)
           ),
 
         ],
       ),
     );
-  }
-}
-
-class DashedLine extends StatelessWidget {
-  final double height;
-  final double dashWidth;
-  final Color color;
-  const DashedLine(
-      {this.height = 1, this.color = Colors.black, this.dashWidth = 5.0});
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) {
-          final boxWidth = constraints.constrainWidth();
-          final dashHeight = height;
-          final dashCount = (boxWidth / (2 * dashWidth)).floor();
-          return Flex(
-            children: List.generate(dashCount, (index) {
-              return SizedBox(
-                width: dashWidth,
-                height: dashHeight,
-                child: DecoratedBox(
-                  decoration: BoxDecoration(color: CustomColors.colorPrimaryOrange),
-                ),
-              );
-            }),
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            direction: Axis.horizontal,
-          );
-        });
   }
 }
 

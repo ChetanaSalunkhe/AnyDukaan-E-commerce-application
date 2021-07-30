@@ -1,3 +1,4 @@
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -179,6 +180,12 @@ class CustomStyle{
       fontWeight: FontWeight.bold,
       fontSize: 24);
 
+  static var blackNormalMerch_20 = TextStyle(
+      color: CustomColors.colorblackmerch,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 20);
+
   /*-----------------------blue-----------------------------------------------*/
 
   static var blueboldTitleText = TextStyle(
@@ -283,6 +290,12 @@ class CustomStyle{
       fontFamily: 'Work Sans',
       fontWeight: FontWeight.normal,
       fontSize: 12);
+
+  static var subTitle_merch_14 = TextStyle(
+      color: CustomColors.grey_subtitle,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 14);
   /*-----------------------red-----------------------------------------------*/
 
   /*warning text*/
@@ -388,6 +401,12 @@ class CustomStyle{
       fontFamily: 'Work Sans',
       fontWeight: FontWeight.bold,
       fontSize: 12);
+
+  static var orange_merch_20 = TextStyle(
+      color: CustomColors.colorPrimaryOrange,
+      fontFamily: 'Work Sans',
+      fontWeight: FontWeight.bold,
+      fontSize: 20);
 
   /******************************* Button outlines *******************************************************************/
   static var orangeOutline = BorderSide(

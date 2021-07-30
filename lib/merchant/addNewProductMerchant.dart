@@ -6,17 +6,17 @@ import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 
 class AddNewProductMerchant extends State{
-
-  String dropdownValue = 'One';
+  String dropdownValue = 'Bakery';
   List <String> spinnerItems = [
-    'One',
-    'Two',
-    'Three',
-    'Four',
-    'Five'
+    'Bakery',
+    'Flours and Grains',
+    'Rice',
+    'Dal and Pulses',
+    'Cold Drinks'
   ] ;
 
   @override
@@ -53,54 +53,40 @@ class AddNewProductMerchant extends State{
                     /*product name*/
                     CustomStyle.getEditTextEnterDetails('Product Name', 16, 2, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     /*select category*/
-                    DropdownButton<String>(
-                      value: dropdownValue,
-                      icon: Icon(Icons.keyboard_arrow_down),
-                      iconSize: 24,
-                      elevation: 16,
-                      isExpanded: true,
-                      hint: Text('Select Category',style: CustomStyle.blackNormalMerch_12,),
-                      style: CustomStyle.blackNormalMerch_16,
-                      underline: Container(
-                        height: 1,
-                        color: CustomColors.greydark,
-                      ),
+                    SizedBox(height: 16,),
+                    DropdownSearch<String>(
+                      mode: Mode.MENU,
+                      showSelectedItem: true,
+                      items: spinnerItems,
+                      showSearchBox: false,
+                      showAsSuffixIcons: true,
+                      popupBackgroundColor: CustomColors.greyline,
+                      label: "Category",
+                      hint: "Select Category",
                       onChanged: (String data) {
                         setState(() {
                           dropdownValue = data;
                         });
                       },
-                      items: spinnerItems.map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
+                      //selectedItem: dropdownValue,
                     ),
                     /*select sub category*/
-                    DropdownButton<String>(
-                      value: dropdownValue,
-                      icon: Icon(Icons.keyboard_arrow_down),
-                      iconSize: 24,
-                      elevation: 16,
-                      isExpanded: true,
-                      hint: Text('Select Category',style: CustomStyle.blackNormalMerch_12,),
-                      style: CustomStyle.blackNormalMerch_16,
-                      underline: Container(
-                        height: 1,
-                        color: CustomColors.greydark,
-                      ),
+                    SizedBox(height: 16,),
+                    DropdownSearch<String>(
+                      mode: Mode.MENU,
+                      showSelectedItem: true,
+                      items: spinnerItems,
+                      showSearchBox: false,
+                      showAsSuffixIcons: true,
+                      popupBackgroundColor: CustomColors.greyline,
+                      label: "Sub - Category",
+                      hint: "Select Sub- Vategory",
                       onChanged: (String data) {
                         setState(() {
                           dropdownValue = data;
                         });
                       },
-                      items: spinnerItems.map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
+                      //selectedItem: dropdownValue,
                     ),
                     /*MRP, selling rate*/
                     Row(

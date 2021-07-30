@@ -45,7 +45,7 @@ Column GetTabDesignKhata(context){
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: 16,),
-                    SearchBar(hint: 'Search Name',),
+                    SearchBar(hint: 'Search Name',width: 328,height: 44,radius: 20,margin: 16,),
                     Container(
                       child: listsize>0?GetKhataList(entries:entries,isBtnVisible: true,):Container(
                         child: BlankState(msg:CustomString.khataCleared, isBtnVisibile:false,img: 'assets/nopendingkhata.png',),

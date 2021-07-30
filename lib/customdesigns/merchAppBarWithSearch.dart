@@ -1,3 +1,5 @@
+import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
@@ -64,7 +66,26 @@ class CustomAppBarWithSearch_Merch extends StatelessWidget with PreferredSizeWid
                         children: [
                           Image.asset(img1,width: 24,height: 24,color: Colors.white,),
                           SizedBox(width: 16,),
-                          Image.asset(img2,width: 24,height: 24,color: Colors.white,),
+                          InkWell(
+                            onTap: (){
+                              if(img2.contains('assets/call.png')){
+                                showModalBottomSheet(
+                                    context: context,
+                                    isScrollControlled: true,
+                                    isDismissible: true,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(14),
+                                          topLeft: Radius.circular(14)),),
+                                    builder: (context) => ModalBottomSheetDialog(popupStyle:'SupportCallPopup'));
+                              }else{
+
+                              }
+                              /*Navigator.push(context,
+                              MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'AppBarAction2',)));*/
+                            },
+                            child:Image.asset(img2,width: 24,height: 24,color: Colors.white,),
+                          )
                         ],
                       )
                   ))
@@ -74,7 +95,7 @@ class CustomAppBarWithSearch_Merch extends StatelessWidget with PreferredSizeWid
           Positioned(
               top: 98,
               child: Container(
-                  child: SearchBar(hint: 'Search Products',))),
+                  child: SearchBar(hint: '$searchHint',width: 328,height: 44,radius: 20,margin:16))),
                   //child: SearchBar())),
         ],
       )

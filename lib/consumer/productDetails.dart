@@ -92,7 +92,7 @@ class StackDemo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(height: 32,),
-                  AdvPages(iName:'assets/prod2.png',width:151,height:150,),
+                  AdvPages(iName:'assets/prod2.png',width:151,height:150,boxHeight: 150,),
                 ],
               ),
             ),

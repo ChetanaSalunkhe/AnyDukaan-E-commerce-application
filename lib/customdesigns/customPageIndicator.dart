@@ -7,11 +7,12 @@ class AdvPages extends StatefulWidget{
   double width;
   double height;
   String iName;
-  AdvPages({Key key,this.iName,this.width,this.height}):super(key: key);
+  double boxHeight;
+  AdvPages({Key key,this.iName,this.width,this.height,this.boxHeight}):super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return AdvPagesView(iName: iName,width: width,height: height);
+    return AdvPagesView(iName: iName,width: width,height: height,boxHeight: boxHeight);
   }
 
 }
@@ -20,11 +21,12 @@ class AdvPagesView extends State{
   double width;
   double height;
   String iName;
-  AdvPagesView({Key key,this.iName,this.width,this.height});
+  double boxHeight;
+  AdvPagesView({Key key,this.iName,this.width,this.height,this.boxHeight});
 
   final _pageController = PageController();
   final _currentPageNotifier = ValueNotifier<int>(0);
-  final _boxHeight = 150.0;
+  //final _boxHeight = 150.0;
 
   final _items = [
     Colors.blue,
@@ -48,7 +50,7 @@ class AdvPagesView extends State{
   _buildPageView() {
     return Container(
       color: Colors.transparent,
-      height: _boxHeight,
+      height: boxHeight,
       child: PageView.builder(
           itemCount: _items.length,
           controller: _pageController,

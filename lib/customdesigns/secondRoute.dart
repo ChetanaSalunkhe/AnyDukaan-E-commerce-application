@@ -5,6 +5,7 @@ import 'package:anydukaan/consumer/myOrderDetails.dart';
 import 'package:anydukaan/consumer/myOrders.dart';
 import 'package:anydukaan/consumer/myOrdersList.dart';
 import 'package:anydukaan/consumer/myTableBookings.dart';
+import 'package:anydukaan/consumer/myaccount_list.dart';
 import 'package:anydukaan/consumer/productDetails.dart';
 import 'package:anydukaan/consumer/returnProducts.dart';
 import 'package:anydukaan/consumer/shopDetails.dart';
@@ -14,22 +15,33 @@ import 'package:anydukaan/customdesigns/merchantReview.dart';
 import 'package:anydukaan/customdesigns/raiseComplaint.dart';
 import 'package:anydukaan/dialogBoxDesigns/scanProdNotFoundPopup.dart';
 import 'package:anydukaan/merchant/addNewProductMerchant.dart';
+import 'package:anydukaan/merchant/apply_offersMerchant.dart';
 import 'package:anydukaan/merchant/chooseBrandsMerchant.dart';
 import 'package:anydukaan/merchant/chooseFromList.dart';
 import 'package:anydukaan/merchant/delDetailsMerch.dart';
 import 'package:anydukaan/merchant/deliverySetupMerchant.dart';
 import 'package:anydukaan/merchant/editProductMerchant.dart';
 import 'package:anydukaan/merchant/filtersMerchant.dart';
+import 'package:anydukaan/merchant/invoiceDtlPage.dart';
 import 'package:anydukaan/merchant/khataCustDetailsMerchant.dart';
 import 'package:anydukaan/merchant/khataSectionMerchant.dart';
 import 'package:anydukaan/merchant/myProducts.dart';
+import 'package:anydukaan/merchant/myProfileMerchant.dart';
+import 'package:anydukaan/merchant/offersDetailsMerchant.dart';
 import 'package:anydukaan/merchant/packagingMerchant.dart';
+import 'package:anydukaan/merchant/paymentPreference.dart';
+import 'package:anydukaan/merchant/paymentToAdukanMerchant.dart';
+import 'package:anydukaan/merchant/policyMerchant.dart';
+import 'package:anydukaan/merchant/promotions.dart';
 import 'package:anydukaan/merchant/reviewMerchant.dart';
 import 'package:anydukaan/merchant/homeScreenMerchant.dart';
 import 'package:anydukaan/merchant/myOrderDetailPageMerchant.dart';
 import 'package:anydukaan/merchant/myOrdersMerchant.dart';
 import 'package:anydukaan/merchant/revenueStatusMerchant.dart';
 import 'package:anydukaan/merchant/selectImagesProductMerch.dart';
+import 'package:anydukaan/merchant/settingsMerchant.dart';
+import 'package:anydukaan/merchant/smsBundle.dart';
+import 'package:anydukaan/merchant/supportMerchant.dart';
 import 'package:anydukaan/merchant/tableBookingsListMerchant.dart';
 import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
 import 'package:anydukaan/onboardingScreens/walkThrough.dart';
@@ -40,7 +52,8 @@ import 'overlayDesign.dart';
 
 class SecondRoute extends StatefulWidget {
   String callFrom="";
-  SecondRoute({Key key,this.callFrom}):super(key: key);
+  var params;
+  SecondRoute({Key key,this.callFrom,this.params}):super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -85,7 +98,7 @@ class SecondRoute extends StatefulWidget {
         return RaiseComplaint();
         break;
 
-        /******************** Merchant Calls ***********************************/
+        /**************************************** Merchant Calls *******************************************************/
       case 'DashBoardMerch':
         return RevenueStatusMerchant();
         break;
@@ -98,9 +111,6 @@ class SecondRoute extends StatefulWidget {
       case 'Drawer_HomeMerch':
         return HomeMerchant();
         break;
-      case 'Drawer_SetupMerch':
-        //return MyOrdersMerchant();
-        break;
       case 'Drawer_MyOrdersMerch':
         return MyOrdersMerchant(isTabBarShop: true);
         break;
@@ -108,23 +118,23 @@ class SecondRoute extends StatefulWidget {
         return KhataSectionMerchant();
         break;
       case 'Drawer_PromotionsMerch':
-        //return MyOrdersMerchant();
+        return PromotionsMerchant();
         break;
       case 'Drawer_SupportMerch':
-        //return MyOrdersMerchant();
+        return SupportMerchant();
         break;
       case 'Drawer_PaymentMerch':
-        //return MyOrdersMerchant();
+        return PaymentToAdukanMerchant();
         break;
       case 'Drawer_SettingsMerch':
-       // return MyOrdersMerchant();
+        return SettingsMerchant();
+
         break;
       case 'Drawer_LogoutMerch':
-        //return MyOrdersMerchant();
+        //Navigator.pop(context);
         break;
       case 'Drawer_MyProdMerch':
         return MyProductsMerchant();
-       // return TestPage();
         break;
       case 'Drawer_DeliverySetupMerch':
         return DeliverySetupListMerchant();
@@ -133,7 +143,7 @@ class SecondRoute extends StatefulWidget {
         return PackagingMerchant();
         break;
       case 'Drawer_ApplyOffersMerch':
-        //return MyOrdersMerchant();
+        return ApplyOffersMerchant();
         break;
       case 'Drawer_TableBookingMerch':
         return TableBookingsMerchant();
@@ -159,6 +169,27 @@ class SecondRoute extends StatefulWidget {
         break;
       case 'KhataCustDtlsMerch':
         return KhataCustDetails();
+        break;
+      case 'ApplyOffrDtlsMerch':
+        return ApplyOffersDetailsMerchant(title:params);
+        break;
+      case 'InvoiceDetails':
+        return InvoiceDetails(entries: params);
+        break;
+      case 'Setmerch_profile':
+        return MyProfileMerchant(params:params);
+        break;
+      case 'Setmerch_paypref':
+        return PaymentPrefSetting();
+        break;
+      case 'Setmerch_policy':
+        return PolicySetting();
+        break;
+      case 'Setmerch_shopdtl':
+        return MyProfileMerchant(params:params);
+        break;
+      case 'Promotions':
+        return SMSBundle(params:params);
         break;
     }
   }

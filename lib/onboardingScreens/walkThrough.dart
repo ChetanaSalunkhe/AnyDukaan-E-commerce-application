@@ -27,7 +27,7 @@ class WalkThroughScreen extends State{
                 ),
               ),
               SizedBox(height: 64,),
-              AdvPages(iName: 'assets/bannerimg2.png',width:360,height:150,),
+              AdvPages(iName: 'assets/bannerimg2.png',width:360,height:150,boxHeight: 150,),
               SizedBox(height: 73,),
               TextButton(
                   onPressed: (){

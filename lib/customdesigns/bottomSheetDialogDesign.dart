@@ -1,5 +1,7 @@
+import 'package:anydukaan/dialogBoxDesigns/applyOfferPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/assignDeliveryAgentPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/availableQtyPopup.dart';
+import 'package:anydukaan/dialogBoxDesigns/banerRequestPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/cancelOrder.dart';
 import 'package:anydukaan/dialogBoxDesigns/cancelOrderReasonsPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/chooseLangPopup.dart';
@@ -17,6 +19,7 @@ import 'package:anydukaan/dialogBoxDesigns/requestSentPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/returnProductReasonsPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/scanProdNotFoundPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/sendMessagePopup.dart';
+import 'package:anydukaan/dialogBoxDesigns/supportCallPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/tableReservedPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/tableReservedPopup_success.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
@@ -96,6 +99,16 @@ class ModalBottomSheetDialog extends StatefulWidget {
         break;
       case 'CreateAgentPopup':
         return CreateDelAgentPopup();
+        break;
+      case 'ApplyOfferPopup':
+        return ApplyOfferPopup();
+        break;
+      case 'BannerRequestPopup':
+        return BannerRequestPopup();
+        //return SupportCallPopup();
+        break;
+      case 'SupportCallPopup':
+        return SupportCallPopup();
         break;
     }
   }

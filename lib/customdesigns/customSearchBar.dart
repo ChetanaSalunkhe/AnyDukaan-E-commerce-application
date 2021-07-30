@@ -13,6 +13,8 @@ class SearchBar extends StatelessWidget {
   Function onPressed;
   String hint="";
   String img="";
+  double radius;
+  double margin;
 
   //SearchBar({Key key,this.hint}):super(key: key);
 
@@ -20,24 +22,26 @@ class SearchBar extends StatelessWidget {
     Key key,
     @required this.child,
     this.gradient,
-    this.width = 328,
-    this.height = 44.0,
+    this.width,
+    this.height,
     this.onPressed,
     this.hint,
     this.img,
+    this.radius,
+    this.margin,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 44.0,
-      padding: EdgeInsets.only(left: 16,right: 16),
+      height: height,
+      padding: EdgeInsets.only(left: margin,right: margin),
      child: Card(
        shape: RoundedRectangleBorder(
            borderRadius: BorderRadius.vertical(
-               bottom: Radius.circular(20),
-             top: Radius.circular(20)
+               bottom: Radius.circular(radius),
+             top: Radius.circular(radius)
            )
        ),
        child: Padding(
