@@ -1,4 +1,5 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
@@ -151,11 +152,16 @@ class TableBookingsList extends StatelessWidget{
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  BtnBlue_singletext_small('Pre-Order', context,144,40,CustomColors.colorPrimaryOrange),
+                                  InkWell(
+                                    onTap: (){
+                                      /*go to restaurant details screen*/
+                                      Navigator.push(context,
+                                      MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'HomeShop',params: 'Restaurant',)));
+                                    },
+                                    child:BtnBlue_singletext_small('Pre-Order', context,144,40,CustomColors.colorPrimaryOrange,6,CustomStyle.whiteBoldCust_12),                                  ),
                                 ],
                               ),
                             ),),
-
                         ],
                       ),),
                 ],
@@ -165,5 +171,4 @@ class TableBookingsList extends StatelessWidget{
         );
         });
   }
-  
 }

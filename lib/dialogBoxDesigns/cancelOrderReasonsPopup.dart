@@ -73,10 +73,18 @@ class CancelOrderReasonsPopup extends State{
 
               RadioGroupDesign(verticalGroupValue:CustomString.value_reasons_cancelorder,status:CustomString.reasons_cancelorder,direction: Axis.vertical,),
               SizedBox(height: 20,),
-
               InkWell(
                 onTap: (){
                   Navigator.pop(context);
+                  showModalBottomSheet(
+                      context: context,
+                      isScrollControlled: true,
+                      isDismissible: true,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(14),
+                            topLeft: Radius.circular(14)),),
+                      builder: (context) => ModalBottomSheetDialog(popupStyle:'CancelOrderPopup'));
                 },
                 child:BtnContinue(CustomString.submit, context,'CancelOrdReasonsPopup'),
               ),

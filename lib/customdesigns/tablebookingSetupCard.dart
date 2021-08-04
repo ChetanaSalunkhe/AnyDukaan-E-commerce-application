@@ -44,7 +44,7 @@ Container GetTableBookingSetupCard(BuildContext context){
               width: 140,
               child: Padding(
                 padding: EdgeInsets.only(left: 10),
-                child: CustomStyle.getEditTextBorder('2', 16, 1),),
+                child: CustomStyle.getEditTextBorder('2', 14, 1),),
             ),
           ],
         ),

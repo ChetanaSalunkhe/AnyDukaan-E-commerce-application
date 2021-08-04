@@ -72,7 +72,7 @@ class SMSBundle extends State{
                                           backgroundColor: CustomColors.greyline,
                                         ),
                                         SizedBox(height: 30,),
-                                        CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 16, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                                        CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
                                         SizedBox(height: 30,),
                                         /*button*/
                                         InkWell(
@@ -114,7 +114,7 @@ class SMSBundle extends State{
                               child: Column(
                                 children: [
                                   SizedBox(height: 20,),
-                                  CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 16, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                                  CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
                                   SizedBox(height: 30,),
                                   /*button*/
                                   InkWell(
@@ -201,7 +201,7 @@ class SMSBundle extends State{
                                     ],
                                   ),
                                   SizedBox(height: 30,),
-                                  CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 16, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                                  CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
                                   SizedBox(height: 30,),
                                   Text(CustomString.selPlan,style: CustomStyle.blackBoldMerch_16,),
                                   SizedBox(height: 20,),
@@ -258,7 +258,7 @@ class GetBundle2Design extends State{
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 16, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+          CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
           SizedBox(height: 30,),
           Text(CustomString.selPlan,style: CustomStyle.blackBoldMerch_16,),
           SizedBox(height: 20,),

@@ -99,7 +99,7 @@ class AvailableQtyPopup extends State{
                 onTap: (){
                   Navigator.pop(context);
                   //add to cart logic here
-                  showModalBottomSheet(
+                  /*showModalBottomSheet(
                       context: context,
                       isScrollControlled: true,
                       isDismissible: true,
@@ -107,7 +107,7 @@ class AvailableQtyPopup extends State{
                         borderRadius: BorderRadius.only(
                             topRight: Radius.circular(14),
                             topLeft: Radius.circular(14)),),
-                      builder: (context) => ModalBottomSheetDialog(popupStyle:'TableReserveSuccessPopup'));
+                      builder: (context) => ModalBottomSheetDialog(popupStyle:'TableReserveSuccessPopup'));*/
                 },
                 child: BtnContinue(CustomString.addToCart,context,'AvalQtyPopup'),
               ),

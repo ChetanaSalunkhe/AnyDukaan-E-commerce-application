@@ -45,8 +45,8 @@ Container GetDelSetupDesign(){
                           child:Padding(
                             padding: EdgeInsets.only(right: 8),
                             child:  CustomStyle.getEditTextWithIcon(CustomString.start,
-                                16, 1, TextInputType.text, Icons.keyboard_arrow_down, CustomColors.colorPrimaryBlue, 16, '8:00 AM ',
-                                CustomColors.colorblackmerch),
+                                14, 1, TextInputType.text, Icons.keyboard_arrow_down, CustomColors.colorPrimaryBlue, 16, '8:00 AM ',
+                                CustomColors.colorblackmerch,true),
                           )
                       ),
                       Flexible(
@@ -55,8 +55,8 @@ Container GetDelSetupDesign(){
                           child: Padding(
                             padding: EdgeInsets.only(left: 8),
                             child:  CustomStyle.getEditTextWithIcon(CustomString.end,
-                                16, 1, TextInputType.text, Icons.keyboard_arrow_down, CustomColors.colorPrimaryBlue, 16, '8:00 PM ',
-                                CustomColors.colorblackmerch),
+                                14, 1, TextInputType.text, Icons.keyboard_arrow_down, CustomColors.colorPrimaryBlue, 16, '8:00 PM ',
+                                CustomColors.colorblackmerch,true),
                           )
                       ),
                     ],
@@ -78,7 +78,7 @@ Container GetDelSetupDesign(){
               width: 140,
               child: Padding(
                 padding: EdgeInsets.only(left: 10),
-                child: CustomStyle.getEditTextBorder('₹ 20', 16, 1),),
+                child: CustomStyle.getEditTextBorder('₹ 20', 14, 1),),
             ),
           ],
         ),

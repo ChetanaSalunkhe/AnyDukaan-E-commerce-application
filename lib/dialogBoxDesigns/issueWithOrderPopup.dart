@@ -1,11 +1,13 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
+import 'package:anydukaan/customdesigns/ordersSummaryCard.dart';
 import 'package:anydukaan/customdesigns/warninTemplate.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
-final List<String> entries = <String>["Cancel Order","Return Product","Replace Product","Raise a Complaint"];
+final List<String> entries = <String>[CustomString.cancelOrd,CustomString.returnProduct,
+  CustomString.replaceProduct,CustomString.raiseComplaint];
 
 bool isOptionSelected=false;
 int selectedIndex=0;
@@ -62,7 +64,7 @@ class IssueWithOrderPopup extends State{
                       )),
                 ],
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: 10,),
               OptionsList_(entries: entries),
             ],
           ),
@@ -103,6 +105,9 @@ class OptionsList extends State{
                 isOptionSelected = true;
               }
             });
+
+            Navigator.of(context).pop({'selectedIssue':entries[i].toString()});
+
           },
           child: Container(
             height: 50,

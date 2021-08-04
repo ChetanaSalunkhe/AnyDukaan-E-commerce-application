@@ -1,5 +1,6 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/radioGroupDesign.dart';
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
@@ -45,6 +46,8 @@ class DeliveryLocPopup extends State{
                   InkWell(
                     onTap: (){
                       Navigator.pop(context);
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'checkoutDelDtls',)));
                     },
                     child:BtnContinue('Add Address', context,'DeliveryLocPopup')
                   ),

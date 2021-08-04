@@ -11,6 +11,12 @@ import 'package:flutter/widgets.dart';
 final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
   "Sweets","Dry Fruits","Stationary"];
 
+final List<List<String>> entries_banners = [
+  ["assets/bannerimg2.png",],
+  ["assets/banner1home.png",],
+  ["assets/banner_2.png",],
+];
+
 class ShopListing extends State{
 
   @override
@@ -18,14 +24,14 @@ class ShopListing extends State{
     String title = CustomString.title_shops_near;
 
     return Scaffold(
-      appBar: CustomAppBarWithoutSearch('Dukaans',true,true,'assets/serch.png','assets/module_info.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.dukans,true,true,'assets/serch.png','assets/module_info.png'),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: [
-              //banner image slider
-              AdvPages(iName: 'assets/bannerimg2.png',width:360,height:150,boxHeight: 150,),
+              //banner image sliderwk
+              AdvPages(iName: 'assets/bannerimg2.png',width:360,height:150,boxHeight: 150,entries:entries_banners),
 
               //text title
               blackNormalCust_14(title:'$title',),

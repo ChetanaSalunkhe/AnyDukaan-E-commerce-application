@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 Container getmyAccountCard(IconData i1, String title, IconData i2){
   return Container(
-    height:58 ,
+    height:58,
+    margin: EdgeInsets.only(top: 3),
     child: Card(
-      margin: EdgeInsets.only(top: 3),
       color: Colors.white,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
@@ -24,8 +24,7 @@ Container getmyAccountCard(IconData i1, String title, IconData i2){
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Icon(i1, size: 16, color: CustomColors.colorPrimaryBlue,
-                  ),
+                  Icon(i1, size: 16, color: CustomColors.colorPrimaryBlue,),
 
                   SizedBox(width: 13,),
 

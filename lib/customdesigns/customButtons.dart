@@ -53,13 +53,13 @@ Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,Build
                         onPressed: (){
                           /*Navigator.push(context,
                               MaterialPageRoute(builder: (context)=>ButtonClickActions.callActions("ViewCart")));*/
-                          showModalBottomSheet(
+                          /*showModalBottomSheet(
                               context: context,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.only(
                                     topRight: Radius.circular(14),
                                     topLeft: Radius.circular(14)),),
-                              builder: (context) => ModalBottomSheetDialog(popupStyle:'MultiMerch'));
+                              builder: (context) => ModalBottomSheetDialog(popupStyle:'MultiMerch'));*/
                          },
                         child: Text('$btnName',style: CustomStyle.progressTitle,textAlign: TextAlign.right,),)
                   ],
@@ -73,7 +73,6 @@ Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,Build
 
 /*single text on button*/
 Container BtnContinue(String title,BuildContext context,String callBtnFrom){
-
   return Container(
     width: 328,
     height: 50.0,
@@ -180,7 +179,6 @@ Container BtnWithOutline(String title_,BuildContext context){
 }
 
 Container BtnSelectedIssue(String title_,BuildContext context){
-
   return Container(
     width: 328,
     height: 50.0,
@@ -344,7 +342,8 @@ Container BtnWithIconAdd(String title_,BuildContext context,double width, double
 }
 
 /*Initial inside box*/
-Container ReviewBorder(String title_,BuildContext context,double width, double height, Color backcolor, var textStyle, bool isDotVisible){
+Container ReviewBorder(String title_,BuildContext context,double width, double height,
+    Color backcolor, var textStyle, bool isDotVisible){
   return Container(
     width: width,
     height: height,
@@ -385,8 +384,8 @@ Container ReviewBorder(String title_,BuildContext context,double width, double h
 }
 
 /*single text on blue button*/
-Container BtnBlue_singletext_small(String title,BuildContext context,double width, double height,Color btnColor){
-
+Container BtnBlue_singletext_small(String title,BuildContext context,double width, double height,Color btnColor,
+    double padding,var textstyle){
   return Container(
     width: width,
     height: height,
@@ -401,9 +400,8 @@ Container BtnBlue_singletext_small(String title,BuildContext context,double widt
                 Radius.circular(99)
             )
         ),
-
         child: Padding(
-          padding: EdgeInsets.only(top:6,bottom:6),
+          padding: EdgeInsets.only(top:padding,bottom:padding),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment:CrossAxisAlignment.center,

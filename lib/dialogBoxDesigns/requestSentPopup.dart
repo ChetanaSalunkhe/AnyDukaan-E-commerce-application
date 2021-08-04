@@ -46,7 +46,7 @@ class RequestSentPopup extends State{
                               icon: CustomStyle.getImageIcons('assets/close.png',10,CustomColors.black),
                               iconSize: 50,
                               onPressed: () {
-                                Navigator.pop(context);
+                                Navigator.of(context).pop({"reqStatus":"Table Requested"});
                               },
                             ),)
                         ],

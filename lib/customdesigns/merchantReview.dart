@@ -2,6 +2,7 @@ import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class MerchantReview extends State{
 
@@ -69,7 +70,6 @@ class MerchantReview extends State{
                 Padding(
                     padding: EdgeInsets.only(left: 16,top: 9),
                     child: CustomStyle.GetRatingBar(5, Icons.star_outline, CustomColors.grey_subtitle, 20)),
-
               ],
             ),
             Padding(

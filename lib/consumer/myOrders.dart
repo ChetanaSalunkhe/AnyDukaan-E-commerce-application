@@ -3,6 +3,7 @@ import 'package:anydukaan/customdesigns/bottombardesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar2.dart';
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
@@ -28,7 +29,7 @@ class MyOrders extends State {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              //DisplayWidget_(lengthOfList: 0)
+
               BlankState(msg:'No Orders Placed!', isBtnVisibile:true,img: 'assets/blankstate.png',),
             ],
           )
@@ -78,8 +79,14 @@ class BlankState extends StatelessWidget{
             visible: isBtnVisibile,
               child: Container(
                   margin: EdgeInsets.only(left: 40,right:40,top: 30),
-                  child: BtnWithArrow('See Past Orders',context,280,50,false,CustomStyle.orangeOutline,
-                      CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward)
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'AllOrdersList',)));
+                    },
+                    child: BtnWithArrow('See Past Orders',context,280,50,false,CustomStyle.orangeOutline,
+                        CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward),
+                  )
               )),
         ],
       ),

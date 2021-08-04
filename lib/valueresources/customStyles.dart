@@ -515,12 +515,26 @@ class CustomStyle{
       maxLines: maxline,);
   }
 
-  static getEditTextEnterDetails(String label, double size,int maxlines,TextInputType type, var labelStyle){
+  static getEditTextMobile(String label, double size,int maxlength,TextInputType type, var labelStyle/*, bool isError, String errText*/){
     return TextField(
       keyboardType: type,
       decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,
-          labelStyle: labelStyle,
-        //errorText: true ? 'Value Can\'t Be Empty' : null,
+        labelStyle: labelStyle,
+      ),
+      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
+      minLines: 1,
+      maxLength: maxlength,
+      cursorColor: CustomColors.black,
+      textAlignVertical: TextAlignVertical.center,
+      textAlign: TextAlign.start,);
+  }
+
+  static getEditTextEnterDetails(String label, double size,int maxlines,TextInputType type, var labelStyle/*, bool isError, String errText*/){
+    return TextField(
+      keyboardType: type,
+      decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,
+        labelStyle: labelStyle,
+        //errorText:isError==true?'$errText':'',
       ),
       style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: CustomColors.black,),
       minLines: 1,
@@ -531,17 +545,20 @@ class CustomStyle{
   }
 
   static getEditTextWithIcon(String label, double size,int maxlines,TextInputType type,IconData icon,Color iconColor,double iconsize,
-      String prefText,var textColor){
-    return TextField(
+      String initVal,var textColor,bool enable){
+    return TextFormField(
       keyboardType: type,
+      initialValue: initVal,
       decoration: InputDecoration(labelText: '$label', hoverColor: CustomColors.grey_subtitle,
         suffixIcon: Icon(icon,color: iconColor,size: iconsize,),),
-      style: TextStyle(fontSize: size,fontWeight: FontWeight.normal, color: textColor,),
+      style: TextStyle(fontSize: 14,fontWeight: FontWeight.normal, color: textColor,),
       minLines: 1,
       maxLines: maxlines,
       cursorColor: CustomColors.black,
       textAlignVertical: TextAlignVertical.center,
-      textAlign: TextAlign.start,);
+      textAlign: TextAlign.start,
+      enabled: enable,
+      textCapitalization: TextCapitalization.words,);
   }
 
   static getEditTextWithPlusMinus(String label, double size,int maxlines,TextInputType type,IconData icon,IconData iconPrefix,Color iconColor,double iconsize,){
@@ -592,8 +609,8 @@ class CustomStyle{
        gradient: LinearGradient(
            begin: Alignment.topCenter,
            end: Alignment.bottomCenter,
-           stops: [0.6,1],
-           colors: [CustomColors.white, CustomColors.colorPrimaryBlue])
+           stops: [0.5,1],
+           colors: [CustomColors.white, CustomColors.blueborder])
    );
  }
 

@@ -1,9 +1,12 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
+import 'package:anydukaan/customdesigns/languageList.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
+
+final List<String> entries = <String>["English","Hindi","Marathi","Kannada"];
 
 class SelectLanguageScreen extends State{
   @override
@@ -11,10 +14,9 @@ class SelectLanguageScreen extends State{
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          //height: MediaQuery.of(context).size.height,
-          height: 640,
-          color: CustomColors.white,
-          //margin: EdgeInsets.all(16),
+          height: MediaQuery.of(context).size.height,
+          width:MediaQuery.of(context).size.width,
+          decoration: CustomStyle.getGradientBackground(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,7 +26,7 @@ class SelectLanguageScreen extends State{
                 margin: EdgeInsets.only(left: 70,right: 70,top: 73),
                 child: CustomStyle.getWalkThroughImages('assets/sellang.png', 220),
               ),
-              SizedBox(height: 33,),
+              SizedBox(height: 10,),
 
               //text
               Flexible(
@@ -35,46 +37,14 @@ class SelectLanguageScreen extends State{
                     crossAxisAlignment: CrossAxisAlignment.start,   //vertical alignment=top aligned
                     children: [
                       Padding(padding: EdgeInsets.only(left: 16,right: 16),
-                        child: Text(CustomString.selectLanguage,style:CustomStyle.blackBoldCust_18,),)
+                        child: Text(CustomString.selectLanguage,style:CustomStyle.blackBoldMerch_16,),)
                     ],
-                  )
+                  ),
               ),
-              SizedBox(height: 10,),
 
-              //buttons
-              Column(
-                children: [
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(context, 
-                      MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'WalkThrough',)));
-                    },
-                    child: BtnContinue('English',context,'SelLangPopup'),
-                    //child: Text('English',style: CustomStyle.btnTitleBlack16,textAlign: TextAlign.center,),
-                  ),
-                  SizedBox(height: 12,),
-                  InkWell(
-                    onTap: (){
-
-                    },
-                    child: BtnWithOutline('Hindi',context),
-                  ),
-                  SizedBox(height: 12,),
-                  InkWell(
-                    onTap: (){
-
-                    },
-                    child: BtnWithOutline('Marathi',context),
-                  ),
-                  SizedBox(height: 12,),
-                  InkWell(
-                    onTap: (){
-
-                    },
-                    child: BtnWithOutline('Telugu',context),
-                  ),
-                  SizedBox(height: 12,),
-                ],
+              Container(
+                margin: EdgeInsets.only(left: 16,right: 16),
+                child:OptionsList_(entries: entries),
               )
             ],
           ),

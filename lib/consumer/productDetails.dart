@@ -18,6 +18,12 @@ final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruit
   "Sweets","Dry Fruits","Stationary"];
 String dropdownValue = "All";
 
+final List<List<String>> entries_banners = [
+  ["assets/prod2.png",],
+  ["assets/prod2.png",],
+  ["assets/prod2.png",],
+];
+
 class ProductDetails extends State{
 
   @override
@@ -92,7 +98,7 @@ class StackDemo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(height: 32,),
-                  AdvPages(iName:'assets/prod2.png',width:151,height:150,boxHeight: 150,),
+                  AdvPages(iName:'assets/prod2.png',width:151,height:150,boxHeight: 150,entries: entries_banners),
                 ],
               ),
             ),

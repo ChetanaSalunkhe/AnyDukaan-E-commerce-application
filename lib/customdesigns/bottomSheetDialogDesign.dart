@@ -8,11 +8,13 @@ import 'package:anydukaan/dialogBoxDesigns/chooseLangPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/createDelAgentPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/deliveryLocationPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/issueWithOrderPopup.dart';
+import 'package:anydukaan/dialogBoxDesigns/loginPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/menuOptionsPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/multiMerchPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/orderCancelPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/orderDeliveredPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/orderNotDeliveredPopup.dart';
+import 'package:anydukaan/dialogBoxDesigns/otpPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/replaceProductReasonsPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/requestKhataPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/requestSentPopup.dart';
@@ -36,6 +38,9 @@ class ModalBottomSheetDialog extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     switch(popupStyle){
+      case 'LoginOTP':
+        return OTPPopup();
+        break;
       case 'MultiMerch':
         return MultiMechPopup();
         break;
@@ -43,7 +48,9 @@ class ModalBottomSheetDialog extends StatefulWidget {
         return DeliveryLocPopup();
         break;
       case 'Login':
-        //return LoginPopup();
+        return LoginPopup();
+        break;
+      case 'AvalQty':
         return AvailableQtyPopup();
         break;
       case 'MenuOption':

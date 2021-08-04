@@ -1,3 +1,4 @@
+import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/bottombardesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
@@ -17,7 +18,22 @@ class ReturnProduct extends State{
       body:Container(
         child: ReturnProduct_(),
       ),
-      bottomSheet: BtnContinue('Return Product', context,'ReturnProduct'),
+      bottomSheet: InkWell(
+        onTap: (){
+          /*open popup of reasons cancel order*/
+          Navigator.pop(context);
+          showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              isDismissible: true,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(14),
+                    topLeft: Radius.circular(14)),),
+              builder: (context) => ModalBottomSheetDialog(popupStyle:'ReturnProductReasons'));
+        },
+        child:BtnContinue('Return Product', context,'ReturnProduct'),
+      ),
     );
   }
 }

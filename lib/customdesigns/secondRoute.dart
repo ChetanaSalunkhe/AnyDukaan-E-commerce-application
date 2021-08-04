@@ -1,23 +1,34 @@
 import 'package:anydukaan/consumer/bookTable.dart';
+import 'package:anydukaan/consumer/checkotutCOD.dart';
+import 'package:anydukaan/consumer/checkoutScreen_1.dart';
+import 'package:anydukaan/consumer/homepage_gothrough.dart';
 import 'package:anydukaan/consumer/itemsListing.dart';
+import 'package:anydukaan/consumer/khataDetails.dart';
+import 'package:anydukaan/consumer/khataDetailsOnDate.dart';
+import 'package:anydukaan/consumer/khataItemList.dart';
 import 'package:anydukaan/consumer/myCart.dart';
+import 'package:anydukaan/consumer/myItemsCust.dart';
 import 'package:anydukaan/consumer/myOrderDetails.dart';
 import 'package:anydukaan/consumer/myOrders.dart';
 import 'package:anydukaan/consumer/myOrdersList.dart';
 import 'package:anydukaan/consumer/myTableBookings.dart';
 import 'package:anydukaan/consumer/myaccount_list.dart';
+import 'package:anydukaan/consumer/preferenceSettings.dart';
 import 'package:anydukaan/consumer/productDetails.dart';
 import 'package:anydukaan/consumer/returnProducts.dart';
+import 'package:anydukaan/consumer/select_address.dart';
 import 'package:anydukaan/consumer/shopDetails.dart';
 import 'package:anydukaan/consumer/shoplisting.dart';
 import 'package:anydukaan/consumer/testThemes.dart';
 import 'package:anydukaan/customdesigns/merchantReview.dart';
+import 'package:anydukaan/customdesigns/notificationList.dart';
 import 'package:anydukaan/customdesigns/raiseComplaint.dart';
 import 'package:anydukaan/dialogBoxDesigns/scanProdNotFoundPopup.dart';
 import 'package:anydukaan/merchant/addNewProductMerchant.dart';
 import 'package:anydukaan/merchant/apply_offersMerchant.dart';
 import 'package:anydukaan/merchant/chooseBrandsMerchant.dart';
 import 'package:anydukaan/merchant/chooseFromList.dart';
+import 'package:anydukaan/merchant/dashboardMerchant.dart';
 import 'package:anydukaan/merchant/delDetailsMerch.dart';
 import 'package:anydukaan/merchant/deliverySetupMerchant.dart';
 import 'package:anydukaan/merchant/editProductMerchant.dart';
@@ -43,8 +54,11 @@ import 'package:anydukaan/merchant/settingsMerchant.dart';
 import 'package:anydukaan/merchant/smsBundle.dart';
 import 'package:anydukaan/merchant/supportMerchant.dart';
 import 'package:anydukaan/merchant/tableBookingsListMerchant.dart';
+import 'package:anydukaan/onboardingScreens/loginPage.dart';
+import 'package:anydukaan/onboardingScreens/merchantRegistration.dart';
 import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
 import 'package:anydukaan/onboardingScreens/walkThrough.dart';
+import 'package:anydukaan/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'mainSearchDesign.dart';
@@ -58,6 +72,22 @@ class SecondRoute extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     switch(callFrom){
+      /**********************  Splash, Onboarding  ****************************************/
+      case 'Splash':
+        return SelectLanguageScreen();
+        break;
+      case 'SelLang':
+        return WalkThroughScreen();
+        break;
+      case 'WalkThr':
+        return LoginPage();
+        break;
+      case 'LoginRegister':
+        return MerchantRegistration();
+        break;
+      /**************************************** Consumer Calls *******************************************************/
+      case 'ConsumerHome':
+        return HomePageState();
       case 'Shops':
         return ShopListing();
         break;
@@ -68,8 +98,7 @@ class SecondRoute extends StatefulWidget {
         return MainSearchDesign();
         break;
       case 'HomeShop':
-        return ShopDetails();
-        //return TestThemes();
+        return ShopDetails(params: params);
         break;
       case 'HomeProduct':
         return ProductDetails();
@@ -78,27 +107,73 @@ class SecondRoute extends StatefulWidget {
         return WalkThroughScreen();
         break;
       case 'BottomHome':
+        return HomePageState();
         break;
       case 'BottomCart':
         return MyCart();
         break;
       case 'BottomOrders':
         //consumer orders
-        //return MyOrders();
-        //return MyOrdersList();
-        //return MyOrderDetails();
-        //return ReturnProduct();
-        //return MerchantReview();
-        return BookTable();
+        return MyOrders();
+        break;
+      case 'AllOrdersList':
+        return MyOrdersList();
+        break;
+      case 'OrdersDetails':
+        return MyOrderDetails();
+        break;
+      case 'ReturnProductOrd':
+        return ReturnProduct();
+        break;
+      case 'WriteReview':
+        return MerchantReview();
         break;
       case 'BottomAccount':
+        return MyAccount();
         break;
       case 'BookTable':
-        //return MyTableBookings();
-        return RaiseComplaint();
+        return BookTable();
         break;
-
+      case 'Acc_MyAddress':
+      return SelectAddress();
+        break;
+      case 'Acc_MyKhata':
+      return KhataDetails();
+        break;
+      case 'KhataDetails':
+        return KhataDetailsOnDate();
+        break;
+      case 'KhataItemDetails':
+        return KhataItemList();
+        break;
+      case 'Acc_MyItems':
+        return KhataItems();
+        break;
+      case 'Acc_MyTableBooking':
+        return MyTableBookings();
+        break;
+      case 'Acc_Preferences':
+      return PreferenceSettings();
+        break;
+      case 'Acc_Complaint':
+      return RaiseComplaint();
+        break;
+      case 'Acc_ShareApp':
+      /*share app*/
+        break;
+      case 'Acc_Notification':
+      return NotificationList();
+        break;
+      case 'checkoutDelDtls':
+        return CheckoutScreen1();
+        break;
+      case 'checkoutSuccess':
+        return CheckoutCOD();
+        break;
         /**************************************** Merchant Calls *******************************************************/
+      case 'MerchantHome':
+        return Dashboard();
+        break;
       case 'DashBoardMerch':
         return RevenueStatusMerchant();
         break;
@@ -128,7 +203,6 @@ class SecondRoute extends StatefulWidget {
         break;
       case 'Drawer_SettingsMerch':
         return SettingsMerchant();
-
         break;
       case 'Drawer_LogoutMerch':
         //Navigator.pop(context);

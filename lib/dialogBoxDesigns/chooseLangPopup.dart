@@ -1,4 +1,5 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
+import 'package:anydukaan/customdesigns/languageList.dart';
 import 'package:anydukaan/customdesigns/warninTemplate.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
@@ -72,65 +73,4 @@ class ChooseLangPopup extends State{
         ));
   }
 
-}
-class OptionsList_ extends StatefulWidget{
-  List<String> entries;
-  OptionsList_({Key key,this.entries}):super(key:key);
-
-  @override
-  State<StatefulWidget> createState() {
-    return OptionsList(entries: entries);
-  }
-
-}
-
-class OptionsList extends State{
-  List<String> entries;
-  OptionsList({Key key,this.entries});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: BouncingScrollPhysics(),
-      itemCount: entries.length,    //pass merchants list length here
-      itemBuilder: (BuildContext context, int i){
-        return InkWell(
-          onTap: (){
-            /*perform further task of calling api*/
-            setState(() {
-              selectedIndex = i;
-              if(isOptionSelected){
-                isOptionSelected = false;
-              }else{
-                isOptionSelected = true;
-              }
-            });
-          },
-          child: Container(
-            height: 50,
-            margin: EdgeInsets.only(top: 12),
-            child: Card(
-                color: selectedIndex != null && selectedIndex == i? CustomColors.colorPrimaryOrange:CustomColors.white,
-                shadowColor: CustomColors.black,
-                elevation: 1,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  side: selectedIndex != null && selectedIndex == i? CustomStyle.orangeOutline:CustomStyle.blackOutline,
-                ),
-                child:Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(entries[i].toString(),
-                      style: selectedIndex != null && selectedIndex == i? CustomStyle.whiteBold14:CustomStyle.blackNormalCust_14,
-                      textAlign: TextAlign.center,),
-                  ],
-                )
-            ),
-          ),
-        );
-      },
-    );
-  }
 }

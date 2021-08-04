@@ -81,7 +81,7 @@ Container GetPackagingSetupCard(BuildContext context){
               width: 140,
               child: Padding(
                 padding: EdgeInsets.only(left: 10),
-                child: CustomStyle.getEditTextBorder('₹ 0', 16, 1),),
+                child: CustomStyle.getEditTextBorder('₹ 0', 14, 1),),
             ),
           ],
         ),

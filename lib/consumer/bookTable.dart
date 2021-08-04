@@ -1,3 +1,4 @@
+import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/bottombardesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/customPageIndicator.dart';
@@ -7,6 +8,12 @@ import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
+
+final List<List<String>> entries_banners = [
+  ["assets/hotel_img.png",],
+  ["assets/hotel_img.png",],
+  ["assets/hotel_img.png",],
+];
 
 class BookTable extends State{
 
@@ -31,7 +38,7 @@ class BookTable extends State{
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       //SizedBox(height: 32,),
-                      AdvPages(iName:'assets/hotel_img.png',width:360,height:212,boxHeight: 150,),
+                      AdvPages(iName:'assets/hotel_img.png',width:360,height:212,boxHeight: 212,entries: entries_banners,),
                     ],
                   ),
                 ),
@@ -49,7 +56,7 @@ class BookTable extends State{
                           child: Padding(
                             padding: EdgeInsets.only(right: 24),
                             child: CustomStyle.getEditTextWithIcon('Date', 14, 1,TextInputType.text,
-                                Icons.calendar_today,CustomColors.colorPrimaryBlue,16,'',CustomColors.black),
+                                Icons.calendar_today,CustomColors.colorPrimaryBlue,16,'',CustomColors.black,true),
                           )
                       ),
                       Flexible(
@@ -58,7 +65,7 @@ class BookTable extends State{
                           child: Padding(
                             padding: EdgeInsets.only(left: 24),
                             child: CustomStyle.getEditTextWithIcon('Schedule Time', 14, 1,TextInputType.text,
-                                Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,'',CustomColors.black))
+                                Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,'',CustomColors.black,true))
                       ),
                     ],
                   ),
@@ -127,7 +134,7 @@ class BookTable extends State{
                           child: Padding(
                               padding: EdgeInsets.only(left: 24,top: 15),
                               child: CustomStyle.getEditTextWithIcon('Special Seating', 14, 1,TextInputType.text,
-                                  Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,'',CustomColors.colorPrimaryBlue))
+                                  Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,'',CustomColors.colorPrimaryBlue,true))
                       ),
                     ],
                   ),
@@ -137,9 +144,19 @@ class BookTable extends State{
           )
         ),
       bottomSheet: InkWell(
-        onTap: (){
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'BookTable',)));
+        onTap: () async {
+          /*table booking popup*/
+          var result = await showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              isDismissible: true,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(14),
+                    topLeft: Radius.circular(14)),),
+              builder: (context) => ModalBottomSheetDialog(popupStyle:'RequestSentPopup'));
+          print('a:$result');
+          Navigator.of(context).pop(result);
         },
         child: BtnContinue(CustomString.bookTable, context,'BookTable'),
       )

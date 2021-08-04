@@ -9,7 +9,6 @@ class CustomListViewShops extends StatefulWidget{
 
   @override
   State<StatefulWidget> createState() {
-
     return ListView_shops(entries:entries);
   }
 }

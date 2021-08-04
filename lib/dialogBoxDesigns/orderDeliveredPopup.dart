@@ -1,3 +1,4 @@
+import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/warninTemplate.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
@@ -98,6 +99,15 @@ class OrderDeliveredPopup extends State{
                 onPressed: (){
                   //logic here
                   Navigator.pop(context);
+                  showModalBottomSheet(
+                      context: context,
+                      isScrollControlled: true,
+                      isDismissible: true,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(14),
+                            topLeft: Radius.circular(14)),),
+                      builder: (context) => ModalBottomSheetDialog(popupStyle:'OrderNotDelivered'));
                 },
                 child: Text(CustomString.notDeliver,style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.center,),),
               SizedBox(height: 20,),

@@ -6,6 +6,18 @@ import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
+final List<List<String>> entries_banners = [
+  ['assets/dummyboyimg.jpg',],
+  ['assets/dummyboyimg.jpg',],
+  ['assets/dummyboyimg.jpg',],
+];
+
+final List<List<String>> entries_banners_shops = [
+  ["assets/shop.png",],
+  ["assets/shop.png",],
+  ["assets/shop.png",],
+];
+
 class MyProfileMerchant extends State{
   String params="";
   MyProfileMerchant({Key key,this.params});
@@ -28,30 +40,31 @@ class MyProfileMerchant extends State{
                 borderRadius: BorderRadius.all(Radius.circular(8)),
                 child:Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 284,
+                  height: 306,
                   decoration: CustomStyle.getBoxShadow_gradient(),
                   child:AdvPages(iName:params=='Profile'?'assets/dummyboyimg.jpg':'assets/shop.png',
-                    width:MediaQuery.of(context).size.width,height:282,boxHeight: 260,),
+                    width:MediaQuery.of(context).size.width,height:282,boxHeight: 282,
+                      entries:params=='Profile'?entries_banners:entries_banners_shops),
                 ),
               ),
               /*name*/
-              CustomStyle.getEditTextEnterDetails('Name', 16, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+              CustomStyle.getEditTextEnterDetails('Name', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
               /*mobile*/
               Visibility(
                 visible: params=='Profile'?true:false,
-                  child:CustomStyle.getEditTextEnterDetails('Mobile', 16, 1, TextInputType.number,CustomStyle.blackBoldMerch_16),),
+                  child:CustomStyle.getEditTextMobile('Mobile', 14, 10, TextInputType.number,CustomStyle.blackBoldMerch_16),),
               SizedBox(height: 8,),
 
               /*location*/
               Visibility(
                 visible: params=='ShopDetails'?true:false,
-                child:CustomStyle.getEditTextEnterDetails('Location', 16, 6, TextInputType.text,CustomStyle.blackBoldMerch_16),),
+                child:CustomStyle.getEditTextEnterDetails('Location', 14, 6, TextInputType.text,CustomStyle.blackBoldMerch_16),),
               SizedBox(height: 8,),
 
               /*selected segment*/
               Visibility(
                 visible: params=='ShopDetails'?true:false,
-                child:CustomStyle.getEditTextEnterDetails('Selected Segment', 16, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),),
+                child:CustomStyle.getEditTextEnterDetails('Selected Segment', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),),
               SizedBox(height: 10,),
 
               /*working hrs*/

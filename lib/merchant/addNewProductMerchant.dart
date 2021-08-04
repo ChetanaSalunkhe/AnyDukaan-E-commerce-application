@@ -51,7 +51,7 @@ class AddNewProductMerchant extends State{
                 child: Column(
                   children: [
                     /*product name*/
-                    CustomStyle.getEditTextEnterDetails('Product Name', 16, 2, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                    CustomStyle.getEditTextEnterDetails('Product Name', 14, 2, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     /*select category*/
                     SizedBox(height: 16,),
                     DropdownSearch<String>(
@@ -98,7 +98,7 @@ class AddNewProductMerchant extends State{
                           fit: FlexFit.tight,
                           child:Padding(
                             padding: EdgeInsets.only(right: 8),
-                            child: CustomStyle.getEditTextEnterDetails('MRP', 16, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                            child: CustomStyle.getEditTextEnterDetails('MRP', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                           ),
                         ),
                         Flexible(
@@ -106,18 +106,18 @@ class AddNewProductMerchant extends State{
                           fit: FlexFit.tight,
                           child:Padding(
                             padding: EdgeInsets.only(right: 8),
-                            child: CustomStyle.getEditTextEnterDetails('Selling Rate', 16, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                            child: CustomStyle.getEditTextEnterDetails('Selling Rate', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                           ),
                         ),
                       ],
                     ),
                     /*manufacturing date*/
-                    CustomStyle.getEditTextWithIcon('Manufacturing Date', 16, 1, TextInputType.text,
-                        Icons.calendar_today, CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue),
+                    CustomStyle.getEditTextWithIcon('Manufacturing Date', 14, 1, TextInputType.text,
+                        Icons.calendar_today, CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue,true),
                     /*add description*/
-                    CustomStyle.getEditTextEnterDetails('Add Description', 16, 5, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                    CustomStyle.getEditTextEnterDetails('Add Description', 14, 5, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     /*product weight*/
-                    CustomStyle.getEditTextEnterDetails('Product Weight', 16, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                    CustomStyle.getEditTextEnterDetails('Product Weight', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     SizedBox(height: 30,),
                     /*button*/
                     InkWell(

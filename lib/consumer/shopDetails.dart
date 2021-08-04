@@ -5,6 +5,7 @@ import 'package:anydukaan/customdesigns/collapseToolbar.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/customPageIndicator.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/customdesigns/shopListDesign.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
@@ -15,9 +16,14 @@ import 'package:flutter/widgets.dart';
 
 final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
   "Sweets","Dry Fruits","Stationary"];
+
 String dropdownValue = "All";
+bool isStatusLineVisible=false;
+String status="";
 
 class ShopDetails extends State{
+  var params;
+  ShopDetails({Key key,this.params});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +31,8 @@ class ShopDetails extends State{
 
     return Scaffold(
         //resizeToAvoidBottomInset: true,
-      appBar: CustomAppBarWithoutSearch('Shop Details',true,false,'assets/serch.png','assets/module_info.png'),
+      appBar: CustomAppBarWithoutSearch(params=='Shops'?CustomString.shopDtls:CustomString.restDtls,
+          true,false,'assets/serch.png','assets/module_info.png'),
         body: SingleChildScrollView(
           child: Container(
             color: CustomColors.background_lightblue,
@@ -120,18 +127,55 @@ class ShopDetails extends State{
                                   ],
                                 ),
                                 SizedBox(height: 17,),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    BtnWithArrow(CustomString.requestKhata,context,172,40,true,CustomStyle.orangeOutline,
-                                        CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward)
-                                  ],
+                                Visibility(
+                                  visible:params=='Shops'?true:isStatusLineVisible==false?true:false,
+                                  child:Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      InkWell(
+                                        onTap:() async{
+                                          if(params=='Shops'){
+                                            showModalBottomSheet(
+                                                context: context,
+                                                isScrollControlled: true,
+                                                isDismissible: true,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.only(
+                                                      topRight: Radius.circular(14),
+                                                      topLeft: Radius.circular(14)),),
+                                                builder: (context) => ModalBottomSheetDialog(popupStyle:'RequestKhata'));
+                                          }else{
+                                            var result = await Navigator.push(context,
+                                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BookTable',)));
+                                            print(result['reqStatus'].toString());
+                                            setState(() {
+                                              isStatusLineVisible = true;
+                                              status = result['reqStatus'].toString();
+                                            });
+                                          }
+                                        },
+                                        child: BtnWithArrow(params=='Shops'?CustomString.requestKhata:CustomString.bookTable,context,172,40,true,CustomStyle.orangeOutline,
+                                            CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Visibility(
+                                  visible:isStatusLineVisible==true?true:false,
+                                  child:Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Text('$status',style: CustomStyle.primaryBtnTextOrange,),
+                                      SizedBox(width: 6,),
+                                      CustomStyle.getImageIcons('assets/time.png', 16, CustomColors.colorPrimaryOrange),
+                                    ],
+                                  ),
                                 )
                               ],
                             )
                         )
-
                       ],
                     ),
                   ),

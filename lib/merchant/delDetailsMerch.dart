@@ -39,10 +39,9 @@ class DeliveryAgentDetails_ extends StatelessWidget{
           child: Column(
             children: [
               /*name*/
-              CustomStyle.getEditTextEnterDetails('Name', 16, 1, TextInputType.text,CustomStyle.blackNormalMerch_16),
+              CustomStyle.getEditTextEnterDetails('Name', 14, 1, TextInputType.text,CustomStyle.blackNormalMerch_16),
               /*mobile*/
-              CustomStyle.getEditTextWithIcon('Mobile', 16, 1, TextInputType.number,Icons.perm_contact_cal_outlined,
-                  CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch),
+              CustomStyle.getEditTextMobile('Mobile', 14, 10, TextInputType.number,CustomStyle.blackNormalMerch_16),
               /*Advance options*/
               ExpansionTile(
                 title: Transform(
@@ -90,11 +89,10 @@ class GetAdvanceOptions extends State{
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         /*email*/
-        CustomStyle.getEditTextWithIcon('Email', 16, 1, TextInputType.text,Icons.email_outlined,
-            CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch),
+        CustomStyle.getEditTextWithIcon('Email', 14, 1, TextInputType.text,Icons.email_outlined,
+            CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch,true),
         /*alternate mobile*/
-        CustomStyle.getEditTextWithIcon('Alternate Mobile', 16, 1, TextInputType.number,Icons.perm_contact_cal_outlined,
-            CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch),
+        CustomStyle.getEditTextMobile('Alternate Mobile', 14, 10, TextInputType.number,CustomStyle.blackNormalMerch_16),
         SizedBox(height: 16,),
         /*designation*/
         DropdownSearch<String>(
@@ -132,17 +130,17 @@ class GetAdvanceOptions extends State{
           //selectedItem: dropdownValue,
         ),
         /*adhar number*/
-        CustomStyle.getEditTextEnterDetails('Adhar Number', 16, 1, TextInputType.text,CustomStyle.blackNormalMerch_16),
+        CustomStyle.getEditTextEnterDetails('Adhar Number', 14, 1, TextInputType.text,CustomStyle.blackNormalMerch_16),
         /*pan number*/
-        CustomStyle.getEditTextEnterDetails('Pan Number', 16, 1, TextInputType.text,CustomStyle.blackNormalMerch_16),
+        CustomStyle.getEditTextEnterDetails('Pan Number', 14, 1, TextInputType.text,CustomStyle.blackNormalMerch_16),
         /*address*/
-        CustomStyle.getEditTextEnterDetails('Address', 16, 5, TextInputType.text,CustomStyle.blackNormalMerch_16),
+        CustomStyle.getEditTextEnterDetails('Address', 14, 5, TextInputType.text,CustomStyle.blackNormalMerch_16),
         /*date of joining*/
-        CustomStyle.getEditTextWithIcon('Date of Joining', 16, 1, TextInputType.text,Icons.calendar_today,
-            CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch),
+        CustomStyle.getEditTextWithIcon('Date of Joining', 14, 1, TextInputType.text,Icons.calendar_today,
+            CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch,true),
         /*date of birth*/
-        CustomStyle.getEditTextWithIcon('Date of Birth', 16, 1, TextInputType.text,Icons.calendar_today,
-            CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch),
+        CustomStyle.getEditTextWithIcon('Date of Birth', 14, 1, TextInputType.text,Icons.calendar_today,
+            CustomColors.colorPrimaryBlue, 16,'',CustomColors.colorblackmerch,true),
       ],
     );
   }

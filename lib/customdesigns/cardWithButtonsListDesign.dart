@@ -1,3 +1,5 @@
+import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
@@ -60,7 +62,19 @@ class ListViewUI_cardWithbtns  extends State{
                                     maxLines: 2,
                                   ),
                                   SizedBox(height: 6,),
-                                  new Text('1 Ltr', textAlign: TextAlign.center, style: CustomStyle.subTitle,),
+                                  InkWell(
+                                    onTap: (){
+                                      showModalBottomSheet(
+                                          context: context,
+                                          isScrollControlled: true,
+                                          isDismissible: true,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                                topRight: Radius.circular(14),
+                                                topLeft: Radius.circular(14)),),
+                                          builder: (context) => ModalBottomSheetDialog(popupStyle:'AvalQty'));
+                                    },
+                                      child:Text('1 Ltr', textAlign: TextAlign.center, style: CustomStyle.subTitle,),),
                                   SizedBox(height: 6,),
                                   Visibility(
                                     visible: false,

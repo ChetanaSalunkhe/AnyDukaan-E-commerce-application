@@ -7,6 +7,13 @@ import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
+
+final List<List<String>> entries_banners = [
+  ["assets/dummy_prod.png",],
+  ["assets/dummy_prod.png",],
+  ["assets/dummy_prod.png",],
+];
+
 class EditProductMerchant extends State{
 
   @override
@@ -27,7 +34,7 @@ class EditProductMerchant extends State{
                   padding: EdgeInsets.only(top: 16),
                   child:Stack(
                     children: [
-                      AdvPages(iName:'assets/dummy_prod.png',width:360,height:212,boxHeight: 150,),
+                      AdvPages(iName:'assets/dummy_prod.png',width:360,height:212,boxHeight: 150,entries:entries_banners),
                       Positioned.fill(
                         top: 136,
                           child:Row(
@@ -129,8 +136,8 @@ class EditProductMerchant extends State{
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Text('Offer Duration',style: CustomStyle.blackBoldMerch_12,),
-                                              CustomStyle.getEditTextWithIcon('Date', 16, 1,TextInputType.text, Icons.calendar_today,
-                                                  CustomColors.colorPrimaryBlue,16,'',CustomColors.colorPrimaryBlue),
+                                              CustomStyle.getEditTextWithIcon('Date', 14, 1,TextInputType.text, Icons.calendar_today,
+                                                  CustomColors.colorPrimaryBlue,16,'',CustomColors.colorPrimaryBlue,true),
                                             ],
                                           )
                                       ),
@@ -155,7 +162,7 @@ class EditProductMerchant extends State{
                           fit: FlexFit.tight,
                           child:Padding(
                             padding: EdgeInsets.only(right: 8),
-                            child: CustomStyle.getEditTextEnterDetails('MRP', 16, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                            child: CustomStyle.getEditTextEnterDetails('MRP', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                           ),
                         ),
                         Flexible(
@@ -163,16 +170,16 @@ class EditProductMerchant extends State{
                           fit: FlexFit.tight,
                           child:Padding(
                             padding: EdgeInsets.only(right: 8),
-                            child: CustomStyle.getEditTextEnterDetails('Selling Rate', 16, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                            child: CustomStyle.getEditTextEnterDetails('Selling Rate', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                           ),
                         ),
                       ],
                     ),
                     /*product weight*/
-                    CustomStyle.getEditTextEnterDetails('Product Weight', 16, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                    CustomStyle.getEditTextEnterDetails('Product Weight', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     /*manufacturing date*/
-                    CustomStyle.getEditTextWithIcon('Manufacturing Date', 16, 1, TextInputType.text, Icons.calendar_today,
-                        CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue),
+                    CustomStyle.getEditTextWithIcon('Manufacturing Date', 14, 1, TextInputType.text, Icons.calendar_today,
+                        CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue,true),
                     SizedBox(height: 20,),
                     /*description*/
                     Row(

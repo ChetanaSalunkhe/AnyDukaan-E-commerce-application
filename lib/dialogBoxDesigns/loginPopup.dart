@@ -1,4 +1,5 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
@@ -55,10 +56,17 @@ class LoginPopup extends State{
               SizedBox(height: 34,),
               Padding(
                   padding: EdgeInsets.only(left: 16,right: 16),
-              child: CustomStyle.getEditTextEnterDetails('Mobile Number', 16,1,TextInputType.number,CustomStyle.blackBoldlCust_14),),
+              child: CustomStyle.getEditTextMobile('Mobile Number', 14,10,TextInputType.number,CustomStyle.blackBoldlCust_14),),
               SizedBox(height: 73,),
               //raisedbutton
-              BtnContinue(CustomString.sendOTP,context,'LoginPopup'),
+              InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                  Navigator.push(context, 
+                  MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomCart',)));
+                },
+                child: BtnContinue(CustomString.sendOTP,context,'LoginPopup'),
+              ),
             ],
           ),
         ));

@@ -1,4 +1,5 @@
 import 'package:anydukaan/merchant/dashboardMerchant.dart';
+import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'consumer/homepage_gothrough.dart';
@@ -10,6 +11,8 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  //HomePageState createState() => HomePageState();   //home page consumer
-  Dashboard createState() => Dashboard();   //home page merchant
+  //HomePageState createState() => HomePageState(); //home page consumer
+  //Dashboard createState() => Dashboard(); //home page merchant
+  MySplashScreenState createState() => MySplashScreenState();
+
 }

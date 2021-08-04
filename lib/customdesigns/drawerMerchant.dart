@@ -24,7 +24,7 @@ class GetMerchantDrawer extends StatelessWidget{
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(50)),
-                      child: CustomStyle.getImageBanner('assets/shop.png', 59, 59, BoxFit.cover),
+                      child: CustomStyle.getImageBanner('assets/dummyboyimg.jpg', 59, 59, BoxFit.cover),
                     ),
                     SizedBox(width: 14,),
                     Flexible(

@@ -17,7 +17,7 @@ import '../myMainPage.dart';
 final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
   "Sweets","Dry Fruits","Stationary"];
 
-class HomePageState extends State<MyHomePage> {
+class HomePageState extends State {
   var _selectedIndex;
 
   @override
@@ -233,7 +233,7 @@ class ListViewUI_dukaans extends State{
           return InkWell(
               onTap: (){
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'HomeShop',)));
+                    MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'HomeShop',params: 'Shops',)));
               },
               child:Column(
                 children: [

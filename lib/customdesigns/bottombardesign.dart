@@ -38,16 +38,16 @@ class BottomBarDesign extends State{
             _selectedIndex = index;
             switch(_selectedIndex){
               case 0:
-              //     Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomHome',)));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomHome',)));
                 break;
               case 1:
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomCart',)));
                 break;
               case 2:
-                   Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomOrders',)));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomOrders',)));
                 break;
               case 3:
-              //    Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomAccount',)));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'BottomAccount',)));
                 break;
             }
           }),

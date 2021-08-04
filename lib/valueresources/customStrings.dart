@@ -127,6 +127,36 @@ class CustomString{
   static var buyPack= "Buy Pack";
   static var reqBanner= "Request Banner";
   static var callNow= "Call Now";
+  static var defdeltype= "Default Delivery Type";
+  static var notType_place= "Order Placed";
+  static var notType_cancel= "Order Cancelled";
+  static var notType_tabreq= "Table Request";
+  static var notType_outfordel= "Out For Delivery";
+  static var doorstep= "Door Step";
+  static var takeaway= "Take Away";
+  static var timeslot1= "8AM - 10AM";
+  static var timeslot2= "10AM - 12PM";
+  static var timeslot3= "12PM - 3PM";
+  static var timeslot4= "3PM - 6PM";
+  static var timeslot5= "6PM - 10PM";
+  static var delChargeAdded= "Delivery Charge Added";
+  static var gtstart= "Get Started";
+  static var otp = "OTP";
+  static var verify = "Verify";
+  static var retry = "Retry in ";
+  static var entOtp = "Enter OTP sent to  ";
+  static var didntRcvOTP = "Didn't receive OTP?";
+  static var resend = "Resend OTP";
+  static var wrongOTP = "Oops ! You have entered the wrong OTP 3 times";
+  static var didntAcct = "Didn't have an Account?";
+  static var register = "REGISTER";
+  static var ownerDtls = "Owner Details";
+  static var alreadyUser = "Already have an Account";
+  static var dukans = "Dukaans";
+  static var restDtls = "Restaurant Details";
+  static var issue_wid_ord = "Issue with the order?";
+  static var change_pay_opt = "Change Payment Options";
+  static var downld_invoice = "Download Invoice";
 
   /*questions*/
   static var quePayOpt = "What Payment Option will you accept?";
@@ -170,6 +200,16 @@ class CustomString{
   static var bannReq = "Your Banner Request is in Process Any Dukaan team will get in Touch with you";
   static var supportMsg = "Get in touch directly,\n Call on number +91 9561095610";
   static var steps_1 = "1. Go to My products from navigation. \n2. Click the Plus floting button at buttom right. \n3. Choose an a Option of adding a product";
+  static var wk1_title="Purchase from nearby Merchants";
+  static var wk2_title="Order food from Restaurants";
+  static var wk3_title="Maintain Khata";
+  static var wk4_title="Direct Payment";
+  static var wk5_title="Assign work to Delivery Boy";
+  static var wk1_desc="Your can book order with your nearby merchants.";
+  static var wk2_desc="You can order online or can make table reservation from application.";
+  static var wk3_desc="Now maintain a Digital Khata for your trust-worthy customers.";
+  static var wk4_desc="Direct Payment from customer to you without any interuptions";
+  static var wk5_desc="Create account and quickly assign work to different delivery men";
 
   /*radio group values*/
   static String singleValue = "Text alignment right";

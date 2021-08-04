@@ -71,17 +71,17 @@ class ApplyOffersDetailsMerchant extends State{
                   //selectedItem: dropdownValue,
                 ),
                 SizedBox(height: 16,),
-                CustomStyle.getEditTextWithIcon('Search and Select Products', 16, 1, TextInputType.text,
-                    Icons.search, CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue),
+                CustomStyle.getEditTextWithIcon('Search and Select Products', 14, 1, TextInputType.text,
+                    Icons.search, CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue,true),
                 //SizedBox(height: 12,),
 
-                title=='By Quantity'?CustomStyle.getEditTextEnterDetails('Quantity type', 16, 2,
+                title=='By Quantity'?CustomStyle.getEditTextEnterDetails('Quantity type', 14, 2,
                     TextInputType.text,CustomStyle.blackNormalMerch_16):
-                title == 'By Percentage'?CustomStyle.getEditTextEnterDetails('Percentage type', 16, 2,
-                    TextInputType.text,CustomStyle.blackNormalMerch_16): CustomStyle.getEditTextEnterDetails('Reduced Amount', 16, 2,
+                title == 'By Percentage'?CustomStyle.getEditTextEnterDetails('Percentage type', 14, 2,
+                    TextInputType.text,CustomStyle.blackNormalMerch_16): CustomStyle.getEditTextEnterDetails('Reduced Amount', 14, 2,
                     TextInputType.text,CustomStyle.blackNormalMerch_16),
 
-                CustomStyle.getEditTextEnterDetails('Discount period', 16, 2, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                CustomStyle.getEditTextEnterDetails('Discount period', 14, 2, TextInputType.text,CustomStyle.blackNormalMerch_16),
                 SizedBox(height: 30,),
                 /*button*/
                 InkWell(

@@ -1,8 +1,13 @@
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/dialogBoxDesigns/choose_ScanPopupMerch.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:bottom_bar_with_sheet/bottom_bar_with_sheet.dart';
 import 'package:flutter/material.dart';
+
+String selectedSegment='';
+final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
+  "Sweets","Dry Fruits","Stationary",];
 
 class TutorialOverlay extends ModalRoute<void> {
   @override
@@ -80,33 +85,36 @@ class TutorialOverlay extends ModalRoute<void> {
 
   Widget _buildOverlayContent_segment(BuildContext context) {
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Flexible(
-                flex: 9,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Flexible(
+                  flex: 9,
                   fit: FlexFit.tight,
                   child: Text('Select Segment',style: CustomStyle.whiteBoldMerch_14,textAlign: TextAlign.center,),),
-              Flexible(
-                flex: 1,
-                fit: FlexFit.tight,
-                child:InkWell(
-                  onTap: (){
-                    Navigator.pop(context);
-                  },
-                  child: CustomStyle.getIcons(Icons.close, 16, CustomColors.white),
-                )),
-            ],
-          ),
-          SizedBox(height: 12,),
-          CustomGridView(),
-        ],
-      ),
+                Flexible(
+                    flex: 1,
+                    fit: FlexFit.tight,
+                    child:InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: CustomStyle.getIcons(Icons.close, 16, CustomColors.white),
+                    )),
+              ],
+            ),
+            SizedBox(height: 12,),
+            SingleChildScrollView(
+              child:CustomGridView(),
+            )
+          ],
+        ),
+      )
     );
   }
 
@@ -148,10 +156,14 @@ class GridViewUI  extends State{
         ),
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount: 8,
+        itemCount: entries.length,
         itemBuilder: (BuildContext context,int index){
           return InkWell(
               onTap: (){
+                setState(() {
+                  selectedSegment=entries[index].toString();
+                  Navigator.of(context).pop({'selectedSegment':selectedSegment});
+                });
               },
               child:Column(
                 children: [
@@ -159,22 +171,40 @@ class GridViewUI  extends State{
                     width: 117,
                     height: 106,
                     child: Card(
-                        margin: EdgeInsets.only(right: 8,left: 8,bottom: 8,top:8),
-                        clipBehavior: Clip.antiAlias,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        child:CustomStyle.getImageBanner('assets/rest.png', 567, 56, BoxFit.scaleDown),
+                      margin: EdgeInsets.only(right: 8,left: 8,bottom: 8,top:8),
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+                      child:CustomStyle.getImageBanner('assets/rest.png', 567, 56, BoxFit.scaleDown),
                     ),
 
                   ),
                   SizedBox(height: 6,),
-                  Text('Restaurant',style: CustomStyle.whiteBoldMerch_12,),
+                  Text(entries[index].toString(),style: CustomStyle.whiteBoldMerch_12,),
                 ],
               )
           );
+
+           /* ElevatedButton(
+              onPressed: () async {
+                // Navigator.push returns a Future that completes after calling
+                // Navigator.pop on the Selection Screen.
+               *//* print(selectedSegment);
+                final result = await Navigator.push(
+                  context, MaterialPageRoute(builder: (context) =>SecondRoute(callFrom: 'LoginRegister',)),
+                );*//*
+
+                // After the Selection Screen returns a result, hide any previous snackbars
+                // and show the new result.
+                *//*ScaffoldMessenger.of(context)
+                  ..removeCurrentSnackBar()
+                  ..showSnackBar(SnackBar(content: Text('$result')));*//*
+              },
+              child: );*/
         }
     );
   }
 
 }
+

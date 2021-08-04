@@ -16,6 +16,7 @@ import 'package:flutter/widgets.dart';
 final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
   "Sweets","Dry Fruits","Stationary"];
 
+bool isCartBtnVisible=true;
 class ItemsListing extends State{
 
   @override
@@ -46,10 +47,19 @@ class ItemsListing extends State{
 
         //make visible true on adding item in cart
         bottomSheet: Visibility(
-          visible: true,
-          child: BtnViewCart_Checkout('1 Item',CustomString.viewCart,'₹25',context,'ViewCart'),
-          //child: BtnViewCart_Checkout('Total Amount',CustomString.checkout,'₹25'),
-          //child: BtnViewCart_Checkout('Total Amount',CustomString.placeOrder,'₹25'),
+          visible: isCartBtnVisible==true?true:false,
+          child: InkWell(
+            onTap: (){
+              showModalBottomSheet(
+                  context: context,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(14),
+                        topLeft: Radius.circular(14)),),
+                  builder: (context) => ModalBottomSheetDialog(popupStyle:'MultiMerch'));
+            },
+            child:BtnViewCart_Checkout('1 Item',CustomString.viewCart,'₹25',context,'ViewCart'),
+          )
         ),//view cart button
       )
     );
@@ -113,6 +123,7 @@ class ListViewUI_shops extends State{
         itemBuilder: (BuildContext context,int index){
           return InkWell(
               onTap: (){
+
               },
               child:Container(
                 margin: EdgeInsets.only(bottom: 8),
