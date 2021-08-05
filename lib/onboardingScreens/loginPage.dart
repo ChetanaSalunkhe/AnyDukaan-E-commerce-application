@@ -43,7 +43,7 @@ class LoginPage extends State {
                         topRight: Radius.circular(14),
                       ),
                       child: Container(
-                        height: 430,
+                        height: MediaQuery.of(context).size.height,
                         decoration: CustomStyle.getBoxShadow(),
                         child: Column(
                             children: [
@@ -123,7 +123,7 @@ class LoginPage extends State {
                                                     borderRadius: BorderRadius.only(
                                                         topRight: Radius.circular(14),
                                                         topLeft: Radius.circular(14)),),
-                                                  builder: (context) => ModalBottomSheetDialog(popupStyle:'LoginOTP'));
+                                                  builder: (context) => ModalBottomSheetDialog(popupStyle:'LoginOTP',params:{'keyType':'Consumer'}));
                                             },
                                             child: Text('Allow only while using the app ',style: CustomStyle.primaryBtnTextOrange,),),
                                           TextButton(

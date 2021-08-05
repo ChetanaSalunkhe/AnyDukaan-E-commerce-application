@@ -38,22 +38,20 @@ Column GetTabDesignKhata(context){
         children: [
           SingleChildScrollView(
             physics: ScrollPhysics(),
-            child:  Container(
-                margin: EdgeInsets.only(left: 16,right: 16,),
-                child:Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 16,),
-                    SearchBar(hint: 'Search Name',width: 328,height: 44,radius: 20,margin: 16,),
-                    Container(
-                      child: listsize>0?GetKhataList(entries:entries,isBtnVisible: true,):Container(
-                        child: BlankState(msg:CustomString.khataCleared, isBtnVisibile:false,img: 'assets/nopendingkhata.png',),
-                      ),
-                    ),
-                  ],
-                )
-            ),
+            child:Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: 16,),
+                SearchBar(hint: 'Search Name',width: MediaQuery.of(context).size.width,height: 44,radius: 20,margin: 16,),
+                Container(
+                  margin: EdgeInsets.only(left: 16,right: 16),
+                  child: listsize>0?GetKhataList(entries:entries,isBtnVisible: true,):Container(
+                    child: BlankState(msg:CustomString.khataCleared, isBtnVisibile:false,img: 'assets/nopendingkhata.png',),
+                  ),
+                ),
+              ],
+            )
           ),
 
           Container(

@@ -60,9 +60,10 @@ Container GetTableBookingSetupCard(BuildContext context){
         ),
         SizedBox(height: 18,),
         Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GetCardSetupTile(CustomString.numseats,CustomString.cost),
-            GetCardSetup('10 Seats','₹ 120'),
+            GetCardSetup('10 Seats','₹ 120',context),
           ],
         ),
         SizedBox(height: 18,),

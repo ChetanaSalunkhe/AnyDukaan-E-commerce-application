@@ -11,7 +11,7 @@ class SupportCallPopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 475,
+        height: 500,
         color: Colors.transparent,
         child: new Center(
           child: Column(

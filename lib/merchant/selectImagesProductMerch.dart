@@ -35,12 +35,17 @@ class SelectProductImagesMerchant extends State{
           ),
         ),
       ),
-      bottomSheet: InkWell(
-        onTap: (){
-          //send/update images to server
-        },
-        child: BtnContinue(CustomString.saveChanges, context, 'ImagesList'),
-      ),
+      bottomSheet:Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          InkWell(
+            onTap: (){
+              //send/update images to server
+            },
+            child: BtnContinue(CustomString.saveChanges, context, 'ImagesList'),
+          ),
+        ],
+      )
 
     );
   }

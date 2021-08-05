@@ -18,15 +18,13 @@ class MyTableBookings extends State{
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: CustomAppBarWithoutSearch('My Table Bookings',true,false,'assets/serch.png','assets/module_info.png'),
-      body:Container(
-        margin: EdgeInsets.only(left: 16,right: 16,top: 12),
-        child: Column(
-          children: [
-            //list of bookings
-            TableBookingsList(entries:entries),
-          ],
-        ),
-      ),
+      body: SingleChildScrollView(
+          child:Container(
+            margin: EdgeInsets.only(left: 16,right: 16,top: 12),
+            height: MediaQuery.of(context).size.height-100,
+            child: TableBookingsList(entries:entries),
+          )
+      )
     );
   }
 

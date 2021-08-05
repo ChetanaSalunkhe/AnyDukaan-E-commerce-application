@@ -20,11 +20,19 @@ class PackagingMerchant extends State{
           child: GetTabDesignTable(context),
         ),
       ),
-      bottomSheet: InkWell(
-        onTap: (){
-          /*write save logic here*/
-        },
-        child: BtnContinue(CustomString.saveChanges, context, 'tableSetup'),
+      bottomSheet: Container(
+        color: Colors.transparent,
+        child:Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            InkWell(
+              onTap: (){
+                /*call API to add delivery agent to server*/
+              },
+              child:BtnContinue(CustomString.saveChanges, context, 'tableSetup'),
+            ),
+          ],
+        ),
       ),
     );
 

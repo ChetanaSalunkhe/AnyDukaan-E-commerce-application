@@ -117,7 +117,7 @@ class MerchantRegistration extends State {
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(14),
                                   topLeft: Radius.circular(14)),),
-                            builder: (context) => ModalBottomSheetDialog(popupStyle:'LoginOTP'));
+                            builder: (context) => ModalBottomSheetDialog(popupStyle:'LoginOTP',params:{'keyType':'Merchant'}));
                       },
                       child:BtnContinue(CustomString.sendOTP,context,'LoginPopup'),
                     ),

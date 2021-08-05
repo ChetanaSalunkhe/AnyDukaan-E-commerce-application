@@ -24,7 +24,7 @@ class OrdCardTemplate extends State{
       itemCount: entries.length,
       itemBuilder: (BuildContext context, int index){
         return Container(
-          width: 328,
+          width: MediaQuery.of(context).size.width,
           height: 77,
           margin: EdgeInsets.only(left: 16, top: 16,right:16,),
           child: Card(

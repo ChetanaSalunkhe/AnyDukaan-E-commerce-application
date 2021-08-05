@@ -41,7 +41,7 @@ Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var 
   return Stack(
     children: [
       Container(
-        height: mainContainerHeight,
+        //height: mainContainerHeight,
         margin: EdgeInsets.only(left: 16,right: 16,top: 7),
         child: Card(
           shape: RoundedRectangleBorder(
@@ -178,75 +178,85 @@ Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var 
                     ),
                     child: Container(
                       //decoration: CustomStyle.getBoxShadow(),
-                      width: 328,
+                      width: MediaQuery.of(context).size.width,
                       height: 50,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Visibility(
-                            visible: isRejButtonVisible,
-                            child: InkWell(
-                              splashColor: CustomColors.red,
-                              onTap:(){
-                                //click event here
-                              },
-                              child: Container(
-                                width: 164,
-                                height: 50,
-                                padding: EdgeInsets.only(top: 18),
-                                child: Text(CustomString.reject,style: CustomStyle.warningText_merch_bold_12,textAlign: TextAlign.center,),
-                              ),
-                            ),),
-
-                          //if order is not yet assign to del agent then visible
-                          //if order assigned to del agent then visibility false
-                          Visibility(
-                              visible: isAcceptButtonVisible,
-                              child: InkWell(
+                          /*reject and accept*/
+                          Flexible(
+                            flex:isRejButtonVisible==false?0:1,
+                              fit: FlexFit.loose,
+                              child: Visibility(
+                                visible: isRejButtonVisible,
+                                child: InkWell(
                                   splashColor: CustomColors.red,
                                   onTap:(){
-                                    index = selectedIndex;
-                                    String key = textName=='Accept'?'Accept':'AssignDelAgentPopup';
-                                    //open delivery agent names popup
-                                    if(key == 'AssignDelAgentPopup'){
-                                      /*if delivery agent not available*/
-
-                                      showModalBottomSheet(
-                                          context: context,
-                                          isDismissible: true,
-                                          isScrollControlled: true,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.only(
-                                                topRight: Radius.circular(14),
-                                                topLeft: Radius.circular(14)),),
-                                          builder: (context) => ModalBottomSheetDialog(
-                                              popupStyle:
-                                              isAgentAvailable?'AssignDelAgentPopup':'CreateAgentPopup'));
-                                    }else{
-                                      //order acceptance logic here
-                                    }
-
+                                    //click event here
                                   },
-                                  child:ClipRRect(
-                                    borderRadius: BorderRadius.only(
-                                        bottomRight: Radius.circular(6),
-                                        topRight: Radius.circular(6),
-                                        topLeft: Radius.circular(isRejButtonVisible==false?6:0),
-                                        bottomLeft: Radius.circular(isRejButtonVisible==false?6:0)),
-                                    child: Container(
-                                      width: isRejButtonVisible==false?MediaQuery.of(context).size.width-40:156,
-                                      height: 50,
-                                      padding: EdgeInsets.only(top: 18),
-                                      color: CustomColors.colorPrimaryOrange,
-                                      child: Text(textName,style: CustomStyle.whiteBoldMerch_12,textAlign: TextAlign.center,),
+                                  child: Container(
+                                    //width: 164,
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 50,
+                                    padding: EdgeInsets.only(top: 18),
+                                    child: Text(CustomString.reject,style: CustomStyle.warningText_merch_bold_12,textAlign: TextAlign.center,),
+                                  ),
+                                ),
+                              ),),
+                          //if order is not yet assign to del agent then visible
+                          //if order assigned to del agent then visibility false
+                          Flexible(
+                            flex:1,
+                            fit: FlexFit.loose,
+                            child:Visibility(
+                                visible: isAcceptButtonVisible,
+                                child: InkWell(
+                                    splashColor: CustomColors.red,
+                                    onTap:(){
+                                      index = selectedIndex;
+                                      String key = textName=='Accept'?'Accept':'AssignDelAgentPopup';
+                                      //open delivery agent names popup
+                                      if(key == 'AssignDelAgentPopup'){
+                                        /*if delivery agent not available*/
+
+                                        showModalBottomSheet(
+                                            context: context,
+                                            isDismissible: true,
+                                            isScrollControlled: true,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.only(
+                                                  topRight: Radius.circular(14),
+                                                  topLeft: Radius.circular(14)),),
+                                            builder: (context) => ModalBottomSheetDialog(
+                                                popupStyle:
+                                                isAgentAvailable?'AssignDelAgentPopup':'CreateAgentPopup'));
+                                      }else{
+                                        //order acceptance logic here
+                                      }
+
+                                    },
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                          bottomRight: Radius.circular(6),
+                                          topRight: Radius.circular(6),
+                                          topLeft: Radius.circular(isRejButtonVisible==false?6:0),
+                                          bottomLeft: Radius.circular(isRejButtonVisible==false?6:0)),
+                                      child: Container(
+                                        //width: isRejButtonVisible==false?MediaQuery.of(context).size.width-40:MediaQuery.of(context).size.width,
+                                        width: MediaQuery.of(context).size.width,
+                                        height: 50,
+                                        padding: EdgeInsets.only(top: 18),
+                                        color: CustomColors.colorPrimaryOrange,
+                                        child: Text(textName,style: CustomStyle.whiteBoldMerch_12,textAlign: TextAlign.center,),
+                                      ),
                                     ),
-                                  )
-                              )),
+                                )),),
                         ],
                       ),
                     ),
-                  ),),
+                  ),
+              ),
             ],
           ),
         ),
@@ -268,7 +278,7 @@ Stack GetOrdersCard(BuildContext context,List<String> entries, String image,var 
             ):BoxDecoration(
             ),
             child: Container(
-                width: 328,
+                width: MediaQuery.of(context).size.width,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,

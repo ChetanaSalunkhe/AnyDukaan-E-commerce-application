@@ -7,7 +7,6 @@ import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
-
 final List<List<String>> entries_banners = [
   ["assets/dummy_prod.png",],
   ["assets/dummy_prod.png",],
@@ -29,14 +28,14 @@ class EditProductMerchant extends State{
             children: [
               /*upload image or get scanned image here*/
               Container(
-                  height: 212,
+                  height: 245,
                   decoration: CustomStyle.getBoxShadow_gradient(),
                   padding: EdgeInsets.only(top: 16),
                   child:Stack(
                     children: [
-                      AdvPages(iName:'assets/dummy_prod.png',width:360,height:212,boxHeight: 150,entries:entries_banners),
+                      AdvPages(iName:'assets/dummy_prod.png',width:360,height:190,boxHeight: 190,entries:entries_banners),
                       Positioned.fill(
-                        top: 136,
+                        top: 170,
                           child:Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
@@ -144,7 +143,7 @@ class EditProductMerchant extends State{
                                     ],
                                   ),
                                   SizedBox(height: 26,),
-                                  BtnWithArrow('End Offer', context, 292, 45,false,CustomStyle.orangeOutline,CustomStyle.textOrange16,
+                                  BtnWithArrow('End Offer', context, MediaQuery.of(context).size.width, 45,false,CustomStyle.orangeOutline,CustomStyle.textOrange16,
                                   CustomColors.colorPrimaryOrange,Icons.keyboard_arrow_down),
                                 ],
                               )

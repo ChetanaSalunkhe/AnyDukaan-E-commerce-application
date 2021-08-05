@@ -28,42 +28,48 @@ Container GetCardMerch(String status, Color indicatorColor,double value, String 
           children: [
             Text('$status',style: CustomStyle.blackBoldMerch_12,textAlign: TextAlign.center,),
             SizedBox(height: 10,),
-            Visibility(
-              visible: isIndicatorVisible,
-              child:Column(
-                children: [
-                  LinearPercentIndicator(
-                    width: 77.0,
-                    lineHeight: 8.0,
-                    percent: value,
-                    backgroundColor: CustomColors.colorgrey_f4,
-                    progressColor: indicatorColor,
-                  ),
-                  SizedBox(height: 5,),
-                  Row(
-                    children: [
-                      Flexible(
-                        flex: 7,
-                        fit: FlexFit.tight,
-                        child: Text('12',style: CustomStyle.blackNormalMerch_12,textAlign: TextAlign.start,),),
-                      Flexible(
-                        flex: 3,
-                        fit: FlexFit.tight,
-                        child: Text('120',style: CustomStyle.subTitle_merch,textAlign: TextAlign.end,),),
-                    ],
-                  ),
-                ],
-              )
-            ),
-            Visibility(
-                visible:isTextVisible,
-                child: Text('$amt2',style: CustomStyle.orange_merch_24,textAlign: TextAlign.center,),),
-            SizedBox(height: 10,),
+            Flexible(
+              flex: 1,
+                child: Column(
+                  children: [
+                    Visibility(
+                        visible: isIndicatorVisible,
+                        child:Column(
+                          children: [
+                            LinearPercentIndicator(
+                              width: 77.0,
+                              lineHeight: 8.0,
+                              percent: value,
+                              backgroundColor: CustomColors.colorgrey_f4,
+                              progressColor: indicatorColor,
+                            ),
+                            SizedBox(height: 5,),
+                            Row(
+                              children: [
+                                Flexible(
+                                  flex: 7,
+                                  fit: FlexFit.tight,
+                                  child: Text('12',style: CustomStyle.blackNormalMerch_12,textAlign: TextAlign.start,),),
+                                Flexible(
+                                  flex: 3,
+                                  fit: FlexFit.tight,
+                                  child: Text('120',style: CustomStyle.subTitle_merch,textAlign: TextAlign.end,),),
+                              ],
+                            ),
+                          ],
+                        )
+                    ),
+                    Visibility(
+                      visible:isTextVisible,
+                      child: Text('$amt2',style: CustomStyle.orange_merch_24,textAlign: TextAlign.center,),),
+                  ],
+                )),
+            SizedBox(height: 8,),
             Divider(
               height: 1,
               color: CustomColors.grey_subtitle,
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 8,),
             Text('$amt',style: style,textAlign: TextAlign.center,),
           ],
         ),

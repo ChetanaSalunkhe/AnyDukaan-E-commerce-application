@@ -57,7 +57,7 @@ class LoginPopup extends State{
               Padding(
                   padding: EdgeInsets.only(left: 16,right: 16),
               child: CustomStyle.getEditTextMobile('Mobile Number', 14,10,TextInputType.number,CustomStyle.blackBoldlCust_14),),
-              SizedBox(height: 73,),
+              SizedBox(height: 53,),
               //raisedbutton
               InkWell(
                 onTap: (){

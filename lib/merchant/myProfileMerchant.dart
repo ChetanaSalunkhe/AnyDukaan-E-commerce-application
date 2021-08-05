@@ -73,7 +73,7 @@ class MyProfileMerchant extends State{
                 child: Column(
                   children: [
                     GetCardSetupTile(CustomString.start,CustomString.end),
-                    GetCardSetup('₹ 250','₹ 550'),
+                    GetCardSetup('₹ 250','₹ 550',context),
                   ],
                 )),
               SizedBox(height: 10,),

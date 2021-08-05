@@ -17,7 +17,7 @@ Container GetDelSetupDesign(){
         ),
         SizedBox(height: 16,),
         Transform(
-          transform: Matrix4.translationValues(-10, 0, 0.0),
+          transform: Matrix4.translationValues(-16, 0, 0.0),
           child: Theme(
             data:CustomStyle.getThemeCheckBox_RadioButton,
             child:AreaOptions(),

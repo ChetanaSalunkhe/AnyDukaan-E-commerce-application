@@ -79,7 +79,8 @@ class GetBookingsList extends StatelessWidget{
         itemCount: entries.length,
         itemBuilder: (BuildContext context, int index){
           return Container(
-            height: 153,
+            //height: 153,
+            width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.only(top: 10),
             child: Card(
               shape: RoundedRectangleBorder(
@@ -174,44 +175,50 @@ class GetBookingsList extends StatelessWidget{
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Visibility(
-                              visible: true,
-                              child: InkWell(
-                                splashColor: CustomColors.red,
-                                onTap:(){
-                                  //click event here
-                                },
-                                child: Container(
-                                  width: 164,
-                                  height: 50,
-                                  padding: EdgeInsets.only(top: 18),
-                                  child: Text(CustomString.reject,style: CustomStyle.warningText_merch_bold_12,textAlign: TextAlign.center,),
-                                ),
-                              ),),
+                            Flexible(
+                              flex: 1,
+                                fit: FlexFit.tight,
+                                child:Visibility(
+                                  visible: true,
+                                  child: InkWell(
+                                    splashColor: CustomColors.red,
+                                    onTap:(){
+                                      //click event here
+                                    },
+                                    child: Container(
+                                      width: MediaQuery.of(context).size.width,
+                                      height: 50,
+                                      padding: EdgeInsets.only(top: 18),
+                                      child: Text(CustomString.reject,style: CustomStyle.warningText_merch_bold_12,textAlign: TextAlign.center,),
+                                    ),
+                                  ),),),
 
                             //if order is not yet assign to del agent then visible
                             //if order assigned to del agent then visibility false
-                            Visibility(
-                                visible: true,
-                                child: InkWell(
-                                    splashColor: CustomColors.red,
-                                    onTap:(){
-                                      index = selectedIndex;
+                            Flexible(
+                              flex: 1,
+                              fit: FlexFit.tight,
+                              child:Visibility(
+                                  visible: true,
+                                  child: InkWell(
+                                      splashColor: CustomColors.red,
+                                      onTap:(){
+                                        index = selectedIndex;
 
-                                    },
-                                    child:ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        bottomRight: Radius.circular(6),
-                                        topRight: Radius.circular(6),),
-                                      child: Container(
-                                        width: 156,
-                                        height: 50,
-                                        padding: EdgeInsets.only(top: 18),
-                                        color: CustomColors.colorPrimaryOrange,
-                                        child: Text(CustomString.accept,style: CustomStyle.whiteBoldMerch_12,textAlign: TextAlign.center,),
-                                      ),
-                                    )
-                                )),
+                                      },
+                                      child:ClipRRect(
+                                        borderRadius: BorderRadius.only(
+                                          bottomRight: Radius.circular(6),
+                                          topRight: Radius.circular(6),),
+                                        child: Container(
+                                          width: MediaQuery.of(context).size.width,
+                                          height: 50,
+                                          padding: EdgeInsets.only(top: 18),
+                                          color: CustomColors.colorPrimaryOrange,
+                                          child: Text(CustomString.accept,style: CustomStyle.whiteBoldMerch_12,textAlign: TextAlign.center,),
+                                        ),
+                                      )
+                                  )),),
                           ],
                         ),
                       ),

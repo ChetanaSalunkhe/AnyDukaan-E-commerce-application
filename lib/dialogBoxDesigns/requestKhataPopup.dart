@@ -9,7 +9,7 @@ class RequestKhataPopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 542.0,
+        height: 550.0,
         color: Colors.transparent,
         child: new Center(
           child: Column(

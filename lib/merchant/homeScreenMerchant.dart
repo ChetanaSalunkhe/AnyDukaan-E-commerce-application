@@ -33,7 +33,7 @@ class HomeMerchant extends State{
       connectorColor: CustomColors.greenlight,
       iconSize: 16,
       connectorWidth: 2,
-      connectorLength: 72,
+      //connectorLength: 72,
       currentIcon: Icon(
         Icons.radio_button_checked,
         color: CustomColors.greenlight,
@@ -93,10 +93,7 @@ class HomeMerchant extends State{
                   /*stage 2 - payment options*/
                   Visibility(
                     visible: isStage2,
-                    child:Container(
-                      height: MediaQuery.of(context).size.height-150,
-                      margin: EdgeInsets.zero,
-                      padding: EdgeInsets.zero,
+                    child: Container(
                       child: PaymentOpt(),
                     ),),
 
@@ -120,10 +117,9 @@ class HomeMerchant extends State{
         ),
       ),
       bottomSheet:Container(
-        margin: EdgeInsets.zero,
         padding: EdgeInsets.zero,
-        child:  Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Visibility(
@@ -143,7 +139,7 @@ class HomeMerchant extends State{
                     isStage2 = true;
                   });
                 },
-                child: BtnContinue(CustomString.upload, context, 'UploadImage'),
+                child:BtnContinue(CustomString.upload, context, 'UploadImage'),
               ),
             ),
             Visibility(

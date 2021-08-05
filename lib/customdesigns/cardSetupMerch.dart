@@ -2,10 +2,11 @@ import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
-Container GetCardSetup(String hint1, String hint2){
+Container GetCardSetup(String hint1, String hint2,BuildContext context){
   return Container(
     height: 40,
-    width: 328,
+    width: MediaQuery.of(context).size.width,
+    margin: EdgeInsets.zero,
     child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10)),

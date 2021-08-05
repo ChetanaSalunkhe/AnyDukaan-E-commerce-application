@@ -37,7 +37,6 @@ class ShopDetails extends State{
           child: Container(
             color: CustomColors.background_lightblue,
             margin: EdgeInsets.zero,
-           // height: MediaQuery.of(context).size.height,
             child: Column(
               children: [
                 ClipRRect(
@@ -46,17 +45,18 @@ class ShopDetails extends State{
                       bottomLeft: Radius.circular(14)
                   ),
                   child: Container(
-                    //color: CustomColors.white,
                     margin: EdgeInsets.zero,
                     alignment: Alignment.center,
-                    height: 318,
+                    height: 330,
                     decoration: CustomStyle.getBoxShadow(),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(height: 32,),
-                        CustomStyle.getImageBanner('assets/shop.png',328,144,BoxFit.cover),
+                        Padding(
+                          padding: EdgeInsets.only(left: 16,right: 16),
+                          child: CustomStyle.getImageBanner('assets/shop.png',MediaQuery.of(context).size.width,144,BoxFit.cover),),
 
                         SizedBox(height: 22,),
                         Container(
@@ -155,7 +155,7 @@ class ShopDetails extends State{
                                             });
                                           }
                                         },
-                                        child: BtnWithArrow(params=='Shops'?CustomString.requestKhata:CustomString.bookTable,context,172,40,true,CustomStyle.orangeOutline,
+                                        child: BtnWithArrow(params=='Shops'?CustomString.requestKhata:CustomString.bookTable,context,200,40,true,CustomStyle.orangeOutline,
                                             CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward),
                                       ),
                                     ],
@@ -194,7 +194,7 @@ class ShopDetails extends State{
                       ),
                       SizedBox(height: 25,),
                       Container(
-                        width: 328,
+                        width: MediaQuery.of(context).size.width,
                         height: 44,
                         child: Card(
                             shape: RoundedRectangleBorder(
@@ -248,9 +248,10 @@ class ShopDetails extends State{
                     ],
                   ),
                 ),
-                SizedBox(height: 30,),
+                SizedBox(height: 20,),
                 Container(
                   height: MediaQuery.of(context).size.height,
+                  margin: EdgeInsets.only(left: 16),
                   child: CustomGridView(entries:entries),
                 )
               ],

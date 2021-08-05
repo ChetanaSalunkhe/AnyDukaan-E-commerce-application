@@ -27,7 +27,7 @@ class CustomString{
   static var requestKhata = "Request Khata";
   static var otherProducts = "Other products from same dukaan";
   static var freqBrought = "Frequently Brought Together";
-  static var manfcture = "Manufactured on: 23 March 21’";
+  static var manfcture = "Manufactured on: 23 March 21";
   static var shopReviews = "Shop Reviews";
   static var login = "Login";
   static var avalQty = "Available Quantity";
@@ -157,6 +157,8 @@ class CustomString{
   static var issue_wid_ord = "Issue with the order?";
   static var change_pay_opt = "Change Payment Options";
   static var downld_invoice = "Download Invoice";
+  static var radwise = "Radius Wise";
+  static var areawise = "Area Wise";
 
   /*questions*/
   static var quePayOpt = "What Payment Option will you accept?";

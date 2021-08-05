@@ -66,10 +66,13 @@ class BlankState extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: 55),
           Container(
-            margin: EdgeInsets.only(left: 50,right:50),
+            alignment: Alignment.center,
+            //margin: EdgeInsets.only(left: 50,right:50),
             child: CustomStyle.getImageBanner('$img', 250, 216, BoxFit.scaleDown),
           ),
           Padding(
@@ -78,7 +81,7 @@ class BlankState extends StatelessWidget{
           Visibility(
             visible: isBtnVisibile,
               child: Container(
-                  margin: EdgeInsets.only(left: 40,right:40,top: 30),
+                  margin: EdgeInsets.only(top: 30),
                   child: InkWell(
                     onTap: (){
                       Navigator.push(context, 

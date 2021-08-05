@@ -230,7 +230,9 @@ class SecondRoute extends StatefulWidget {
         break;
       case 'ChangeImageMerch':
         return SelectProductImagesMerchant();
-        //return FiltersMerchant();
+        break;
+      case 'FiltersMerch':
+        return FiltersMerchant();
         break;
       case 'ChooseListMerch':
         return ChooseFromListMerchant();

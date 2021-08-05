@@ -37,7 +37,6 @@ class DeliveryOptionSetup extends State{
 
   @override
   Widget build(BuildContext context) {
-
     return SingleChildScrollView(
       physics: ScrollPhysics(),
       child:Column(
@@ -51,7 +50,7 @@ class DeliveryOptionSetup extends State{
           ),
           SizedBox(height: 16,),
           Transform(
-            transform: Matrix4.translationValues(-10, 0, 0.0),
+            transform: Matrix4.translationValues(-16, 0, 0.0),
             child: Theme(
               data:CustomStyle.getThemeCheckBox_RadioButton,
               child:AreaOptions(),
@@ -199,7 +198,7 @@ class GetChargeByWeight extends State{
                                 shrinkWrap: true,
                                 itemCount: _count_charge,
                                 itemBuilder: (BuildContext context,int index){
-                                  return GetCardSetup('5 KG','₹ 10');
+                                  return GetCardSetup('5 KG','₹ 10',context);
                                 },
                                 //children: _chargeCard,
                                 //scrollDirection: Axis.vertical,
@@ -294,7 +293,7 @@ class AddDelBoy_ extends State{
                               shrinkWrap: true,
                               itemCount: _count_delboy,
                               itemBuilder: (BuildContext context,int index){
-                                return GetCardSetup('Rajiv Gupta','+91 0987654321');
+                                return GetCardSetup('Rajiv Gupta','+91 0987654321',context);
                               },
                               //children: _chargeCard,
                               //scrollDirection: Axis.vertical,
@@ -323,71 +322,112 @@ class AreaOptions extends StatefulWidget{
 
 }
 
+int _groupValue = -1;
+int selIndex=0;
+
+Widget _myRadioButton({String title, int value, Function onChanged}) {
+  return RadioListTile(
+    value: value,
+    groupValue: _groupValue,
+    onChanged: onChanged,
+    title: Text(title),
+  );
+}
+
 class AreaOptionsRbtn extends State{
   @override
   Widget build(BuildContext context) {
     int _stackIndex = 0;
-
-    String _singleValue = "Text alignment right";
-    String _verticalGroupValue = "Pending";
-
-    List<String> _status = ["Pending", "Released", "Blocked"];
-
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        RadioGroupDesign(
-          verticalGroupValue:CustomString.value_radius,
-          status:CustomString.delsetup,
-          direction: Axis.horizontal,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Flexible(
+              flex: 1,
+              fit: FlexFit.loose,
+              child: _myRadioButton(
+                title: CustomString.radwise,
+                value: 0,
+                onChanged: (newValue){
+                  setState(() {
+                    _groupValue = newValue;
+                    selIndex = 0;
+                    print(selIndex);
+                    isRadiuswiseVisible = true;
+                    isAreawiseVisible = false;
+                  });
+                },
+              ),),
+            Flexible(
+              flex: 1,
+              fit: FlexFit.tight,
+              child: _myRadioButton(
+                title: CustomString.areawise,
+                value: 1,
+                onChanged: (newValue){
+                  setState(() {
+                    _groupValue = newValue;
+                    selIndex = 1;
+                    print(selIndex);
+                    isRadiuswiseVisible = false;
+                    isAreawiseVisible = true;
+                  });
+                },
+              ),),
+          ],
         ),
         Visibility(
           visible: isRadiuswiseVisible,
-            child:Padding(
-              padding: EdgeInsets.only(left: 16),
-              child: Visibility(
-                  visible: isKhataBoxVisible,
-                  child: Column(
+            child: Container(
+              margin: EdgeInsets.only(left: 16),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  InkWell(
+                      onTap:(){
+                        setState(() {
+                          _count_radius++;
+                        });
+                      },
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text('+ Add', style: CustomStyle.orangeMerch_12,textAlign: TextAlign.end,),
+                        ],
+                      )
+                  ),
+                  SizedBox(height: 10,),
+                  Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      InkWell(
-                          onTap:(){
-                            setState(() {
-                              _count_radius++;
-                            });
+                      GetCardSetupTile(CustomString.radius,CustomString.charge),
+                      /*card setup*/
+                      Container(
+                        height: 100,
+                        //width: MediaQuery.of(context).size.width,
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: _count_radius,
+                          itemBuilder: (BuildContext context,int index){
+                            return GetCardSetup('01 KM','₹ 10',context);
                           },
-                          child:Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Text('+ Add', style: CustomStyle.orangeMerch_12,textAlign: TextAlign.end,),
-                            ],
-                          )
-                      ),
-                      SizedBox(height: 10,),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          GetCardSetupTile(CustomString.radius,CustomString.charge),
-                          /*card setup*/
-                          Container(
-                            height: 100,
-                            child: ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: _count_radius,
-                              itemBuilder: (BuildContext context,int index){
-                                return GetCardSetup('01 KM','₹ 10');
-                              },
-                              //children: _chargeCard,
-                              //scrollDirection: Axis.vertical,
-                            ),
-                          )
-                        ],
-                      ),
-
+                          //children: _chargeCard,
+                          //scrollDirection: Axis.vertical,
+                        ),
+                      )
                     ],
-                  )
-              ),),),
+                  ),
+
+                ],
+              ),
+            )
+        ),
         Visibility(
           visible: isAreawiseVisible,
           child:Padding(
@@ -419,7 +459,7 @@ class AreaOptionsRbtn extends State{
                           onTap: (){
                             //select address
                           },
-                          child: BtnBlue_singletext_small_outline('Goregaon (E)', context, 328, 36)
+                          child: BtnBlue_singletext_small_outline('Goregaon (E)', context, MediaQuery.of(context).size.width, 36)
                       );
                     },
                     //children: _chargeCard,

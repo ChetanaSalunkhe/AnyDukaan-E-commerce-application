@@ -140,7 +140,7 @@ class OrderCardDesign extends StatelessWidget{
                                     bottomLeft: Radius.circular(6)
                                 ),
                                 child: Container(
-                                    width: 328,
+                                    width: MediaQuery.of(context).size.width,
                                     color: CustomColors.background_lightblue,
                                     margin: EdgeInsets.zero,
                                     height: 38,

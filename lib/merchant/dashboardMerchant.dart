@@ -35,7 +35,7 @@ class Dashboard extends State{
                 ),
                 SizedBox(height: 12,),
                 Container(
-                  height: 290,
+                  //height: 290,
                   child: Column(
                     children: [
                       CustomStyle.getImageBanner('assets/dash_shop.png',360,158,BoxFit.cover),
@@ -113,7 +113,7 @@ class Dashboard extends State{
                 SizedBox(height: 30,),
                 //horizontal scroll orders
                 Container(
-                  height: 150,
+                  //height: 150,
                   margin: EdgeInsets.only(left: 16,right: 16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -129,7 +129,7 @@ class Dashboard extends State{
                               children: [
                                 GetCardMerch('Pending',CustomColors.colorPrimaryOrange,0.12,'+ ₹880',true,false,'',CustomStyle.greenText12_merch),
                                 SizedBox(width: 4,),
-                                GetCardMerch('Undelivered',CustomColors.coloryellow,0.25,'₹1080',true,false,'',CustomStyle.blue_merch_normal_12),
+                                GetCardMerch('Undelivered',CustomColors.coloryellow,0.25,'₹ 1080',true,false,'',CustomStyle.blue_merch_normal_12),
                                 SizedBox(width: 4,),
                                 GetCardMerch('Refund',CustomColors.colorPrimaryOrange,0.12,'- ₹480',false,true,'02',CustomStyle.warningText_merch_12),
                                 SizedBox(width: 4,),
@@ -138,7 +138,6 @@ class Dashboard extends State{
                             ),
                           )
                       )
-
                     ],
                   ),
                 ),

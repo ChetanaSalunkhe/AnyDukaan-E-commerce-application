@@ -71,11 +71,16 @@ Column GetTabDesignDelivery(context){
                     margin: EdgeInsets.only(left: 16,right: 16),
                     child: GetDelSetupDesign(),
                   ),
-                  InkWell(
-                    onTap: (){
-                      /*write save logic here*/
-                    },
-                    child: BtnContinue(CustomString.saveChanges, context, 'tableSetup'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: (){
+                          /*write save logic here*/
+                        },
+                        child: BtnContinue(CustomString.saveChanges, context, 'tableSetup'),
+                      )
+                    ],
                   )
                 ],
               )

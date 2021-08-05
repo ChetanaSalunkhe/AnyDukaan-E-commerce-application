@@ -78,8 +78,9 @@ class CustomAppBarWithSearch_Merch extends StatelessWidget with PreferredSizeWid
                                           topRight: Radius.circular(14),
                                           topLeft: Radius.circular(14)),),
                                     builder: (context) => ModalBottomSheetDialog(popupStyle:'SupportCallPopup'));
-                              }else{
-
+                              }else if(img2.contains('assets/module_info.png')){
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'FiltersMerch')));
                               }
                               /*Navigator.push(context,
                               MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'AppBarAction2',)));*/
@@ -95,7 +96,7 @@ class CustomAppBarWithSearch_Merch extends StatelessWidget with PreferredSizeWid
           Positioned(
               top: 98,
               child: Container(
-                  child: SearchBar(hint: '$searchHint',width: 328,height: 44,radius: 20,margin:16))),
+                  child: SearchBar(hint: '$searchHint',width: MediaQuery.of(context).size.width,height: 44,radius: 20,margin:16))),
                   //child: SearchBar())),
         ],
       )

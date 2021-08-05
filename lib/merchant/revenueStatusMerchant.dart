@@ -89,15 +89,13 @@ class RevenueStatusMerchant extends State{
               margin: EdgeInsets.only(left: 16,right: 16,bottom: 16),
               child: CustomRadioButton(
                 elevation: 0,
-                width: 102,
+                //width: 102,
                 height: 32,
                 absoluteZeroSpacing: false,
                 enableShape: true,
                 unSelectedColor: Theme.of(context).canvasColor,
-                buttonLables: ['Category', 'SubCategory', 'Product',
-                ],
-                buttonValues: ["Category", "SubCategory", "Product",
-                ],
+                buttonLables: ['Category', 'SubCategory', 'Product',],
+                buttonValues: ["Category", "SubCategory", "Product",],
                 buttonTextStyle: ButtonTextStyle(
                     selectedColor: CustomColors.white,
                     unSelectedColor: CustomColors.colorblackmerch,

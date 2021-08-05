@@ -54,19 +54,23 @@ class GetKhataList extends StatelessWidget{
                                     },
                                     child: Padding(
                                       padding: EdgeInsets.only(left: 16,right: 16),
-                                      child: BtnWithArrow(CustomString.reject,context,328,50,false,CustomStyle.orangeOutline,
+                                      child: BtnWithArrow(CustomString.reject,context,MediaQuery.of(context).size.width,50,false,CustomStyle.orangeOutline,
                                           CustomStyle.orange_merch_16,CustomColors.colorPrimaryOrange,Icons.arrow_forward),),
                                   )
                               ),
                               Flexible(
                                   flex: 1,
                                   fit: FlexFit.tight,
-                                  child: InkWell(
-                                    onTap: (){
-                                      /*api call here status khata accept */
-                                    },
-                                    child: BtnContinue(CustomString.accept, context, 'acceptKhata'),
-                                  )),
+                                  child:Padding(
+                                    padding: EdgeInsets.only(right: 16),
+                                    child: InkWell(
+                                      onTap: (){
+                                        /*api call here status khata accept */
+                                      },
+                                      child: BtnContinue(CustomString.accept, context, 'acceptKhata'),
+                                    ),
+                                  )
+                              ),
                             ],
                           ),),
                       ],

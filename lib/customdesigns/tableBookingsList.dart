@@ -12,10 +12,11 @@ class TableBookingsList extends StatelessWidget{
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: 3,
+      itemCount: entries.length,
         itemBuilder: (BuildContext context, int index){
         return Container(
-          height: 154,
+          //height: 154,
+          margin: EdgeInsets.only(top: 12),
           child: Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(10)),

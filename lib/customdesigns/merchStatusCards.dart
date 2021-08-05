@@ -9,16 +9,24 @@ Container GetMerchOrdStatusCards(){
       children: [
         Row(
           children: [
-            GetCardDesign('assets/clock_pending.png','₹880','Pending',CustomColors.orange_light,CustomColors.colorPrimaryOrange),
+            Expanded(
+              child:GetCardDesign('assets/clock_pending.png','₹880','Pending',CustomColors.orange_light,CustomColors.colorPrimaryOrange),
+            ),
             SizedBox(width: 16,),
-            GetCardDesign('assets/undelivered.png','₹1,080','Undelivered',CustomColors.orange_light,CustomColors.colorPrimaryOrange),
+            Expanded(
+              child:GetCardDesign('assets/undelivered.png','₹1,080','Undelivered',CustomColors.orange_light,CustomColors.colorPrimaryOrange),
+            ),
           ],
         ),
         Row(
           children: [
-            GetCardDesign('assets/rupees.png','₹4980','Refund',CustomColors.red_card_light,CustomColors.red),
+            Expanded(
+              child:GetCardDesign('assets/rupees.png','₹4980','Refund',CustomColors.red_card_light,CustomColors.red),
+            ),
             SizedBox(width: 16,),
-            GetCardDesign('assets/cancel_ord.png','₹480','Cancelled',CustomColors.red_card_light,CustomColors.red),
+            Expanded(
+              child:GetCardDesign('assets/cancel_ord.png','₹480','Cancelled',CustomColors.red_card_light,CustomColors.red),
+            ),
           ],
         ),
       ],
@@ -29,7 +37,7 @@ Container GetMerchOrdStatusCards(){
 Container GetCardDesign(String image, String amt, String status,var backColor,var iconColor){
   return Container(
     height: 80,
-    width: 156,
+   //width: 156,
     margin: EdgeInsets.only(bottom: 16,),
     child: Card(
         shape: RoundedRectangleBorder(
@@ -39,7 +47,7 @@ Container GetCardDesign(String image, String amt, String status,var backColor,va
           padding: EdgeInsets.all(12),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(40)),

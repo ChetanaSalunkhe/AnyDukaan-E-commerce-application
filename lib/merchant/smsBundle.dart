@@ -42,65 +42,66 @@ class SMSBundle extends State{
           appBar:CustomAppBarWithoutSearch('$params',true,true,'','assets/help.png'),
           body:SingleChildScrollView(
             child: Container(
-                margin: EdgeInsets.all(16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     /*sms bundles*/
-                    Visibility(
+                    Padding(
+                        padding: EdgeInsets.only(left: 16,right: 16),
+                        child: Visibility(
                       visible:params=='SMS Bundles'?true:false,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Visibility(
-                                visible: isSmsBundle1Visible==true?true:false,
-                                child:Container(
-                                  /*child: GetBundle1Design_(),*/
-                                  child: Container(
-                                    child: Column(
-                                      children: [
-                                        SizedBox(height: 20,),
-                                        CircularPercentIndicator(
-                                          radius: 202.0,
-                                          lineWidth: 10.0,
-                                          percent: 0.7,
-                                          circularStrokeCap: CircularStrokeCap.round,
-                                          center: new Text("70%"),
-                                          progressColor: CustomColors.colorPrimaryBlue,
-                                          backgroundColor: CustomColors.greyline,
-                                        ),
-                                        SizedBox(height: 30,),
-                                        CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
-                                        SizedBox(height: 30,),
-                                        /*button*/
-                                        InkWell(
-                                          onTap: (){
-                                            //btn click logic here
-                                            /*call api to submit apply offer then on success open popup*/
-                                            HandleVisibility();
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Visibility(
+                              visible: isSmsBundle1Visible==true?true:false,
+                              child:Container(
+                                /*child: GetBundle1Design_(),*/
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 20,),
+                                      CircularPercentIndicator(
+                                        radius: 202.0,
+                                        lineWidth: 10.0,
+                                        percent: 0.7,
+                                        circularStrokeCap: CircularStrokeCap.round,
+                                        center: new Text("70%"),
+                                        progressColor: CustomColors.colorPrimaryBlue,
+                                        backgroundColor: CustomColors.greyline,
+                                      ),
+                                      SizedBox(height: 30,),
+                                      CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                                      SizedBox(height: 30,),
+                                      /*button*/
+                                      InkWell(
+                                        onTap: (){
+                                          //btn click logic here
+                                          /*call api to submit apply offer then on success open popup*/
+                                          HandleVisibility();
+                                        },
+                                        child: BtnContinue(CustomString.selContact, context, 'SMSBundleBtn'),
+                                      ),
+                                      SizedBox(height: 20,),
+                                      TextButton(
+                                          onPressed: (){
+                                            Navigator.pop(context);
                                           },
-                                          child: BtnContinue(CustomString.selContact, context, 'SMSBundleBtn'),
-                                        ),
-                                        SizedBox(height: 20,),
-                                        TextButton(
-                                            onPressed: (){
-                                              Navigator.pop(context);
-                                            },
-                                            child: Text(CustomString.cancel,style: CustomStyle.blackBoldMerch_16,textAlign: TextAlign.center,))
-                                      ],
-                                    ),
+                                          child: Text(CustomString.cancel,style: CustomStyle.blackBoldMerch_16,textAlign: TextAlign.center,))
+                                    ],
                                   ),
-                                )
-                            ),
-                            Visibility(
-                                visible: isSmsBundle1Visible==false?true:false,
-                                child: SingleChildScrollView(
-                                  //height: MediaQuery.of(context).size.height,
-                                  child:GetBundle2Design_(),)),
-                          ],
-                        ),),
+                                ),
+                              )
+                          ),
+                          Visibility(
+                              visible: isSmsBundle1Visible==false?true:false,
+                              child: SingleChildScrollView(
+                                //height: MediaQuery.of(context).size.height,
+                                child:GetBundle2Design_(),)),
+                        ],
+                      ),),),
 
                     /*banners*/
                     Visibility(
@@ -110,6 +111,7 @@ class SMSBundle extends State{
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
+                            margin: EdgeInsets.only(left: 16,right: 16),
                             child: Container(
                               child: Column(
                                 children: [
@@ -149,6 +151,7 @@ class SMSBundle extends State{
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
+                            margin: EdgeInsets.only(left: 16,right: 16),
                             /*child: GetBundle1Design_(),*/
                             child: Container(
                               child: Column(
@@ -222,19 +225,30 @@ class SMSBundle extends State{
                 )
             ),
           ),
-          bottomSheet:params=='Whatsapp Promotions'?InkWell(
-            onTap: (){
-              //btn click logic here
-            },
-            child: BtnContinue(CustomString.buyPack, context, 'SMSBundleBtnBuy'),
-          ):Visibility(
+          bottomSheet:params=='Whatsapp Promotions'?
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: (){
+                      //btn click logic here
+                    },
+                    child: BtnContinue(CustomString.buyPack, context, 'SMSBundleBtnBuy'),
+                  )
+                ],
+              ):Visibility(
             visible: isSmsBundle1Visible==true || (params=='Banners')?false:true,
-            child: InkWell(
-              onTap: (){
-                //btn click logic here
-              },
-              child: BtnContinue(params=='SMS Bundles'?CustomString.buyBundle:CustomString.buyPack, context, 'SMSBundleBtnBuy'),
-            ),
+            child:Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                InkWell(
+                  onTap: (){
+                    //btn click logic here
+                  },
+                  child: BtnContinue(params=='SMS Bundles'?CustomString.buyBundle:CustomString.buyPack, context, 'SMSBundleBtnBuy'),
+                ),
+              ],
+            )
           )
       ),
     );

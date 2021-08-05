@@ -9,7 +9,7 @@ class RequestSentPopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 463.0,
+        height: 500.0,
         color: Colors.transparent,
         child: new Center(
           child: Column(

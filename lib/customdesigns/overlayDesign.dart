@@ -39,8 +39,8 @@ class TutorialOverlay extends ModalRoute<void> {
       type: MaterialType.transparency,
       // make sure that the overlay content is not cut off
       child: SafeArea(
-        //child: _buildOverlayContent(context),
-        child: _buildOverlayContent_segment(context),
+        child: _buildOverlayContent(context),
+       // child: _buildOverlayContent_segment(context),
       ),
     );
   }
@@ -186,22 +186,6 @@ class GridViewUI  extends State{
               )
           );
 
-           /* ElevatedButton(
-              onPressed: () async {
-                // Navigator.push returns a Future that completes after calling
-                // Navigator.pop on the Selection Screen.
-               *//* print(selectedSegment);
-                final result = await Navigator.push(
-                  context, MaterialPageRoute(builder: (context) =>SecondRoute(callFrom: 'LoginRegister',)),
-                );*//*
-
-                // After the Selection Screen returns a result, hide any previous snackbars
-                // and show the new result.
-                *//*ScaffoldMessenger.of(context)
-                  ..removeCurrentSnackBar()
-                  ..showSnackBar(SnackBar(content: Text('$result')));*//*
-              },
-              child: );*/
         }
     );
   }

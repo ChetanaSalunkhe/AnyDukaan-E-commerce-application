@@ -55,7 +55,7 @@ class PreferenceSettings extends State {
               InkWell(
                 onTap: (){
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Acc_Notification',)));
+                      MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Acc_Notification',params: 'Consumer',)));
                 },
                 child:Container(
                   height:58 ,

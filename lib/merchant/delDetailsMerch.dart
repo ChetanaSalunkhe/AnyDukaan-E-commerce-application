@@ -63,11 +63,19 @@ class DeliveryAgentDetails_ extends StatelessWidget{
           ),
         )
       ),
-      bottomSheet: InkWell(
-        onTap: (){
-          /*call API to add delivery agent to server*/
-        },
-        child: BtnContinue(CustomString.saveChanges, context, 'AddAgent'),
+      bottomSheet:Container(
+        color: Colors.transparent,
+        child:Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            InkWell(
+              onTap: (){
+                /*call API to add delivery agent to server*/
+              },
+              child: BtnContinue(CustomString.saveChanges, context, 'AddAgent'),
+            ),
+          ],
+        ),
       ),
     );
   }

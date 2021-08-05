@@ -166,33 +166,28 @@ class FiltersOptions extends State{
         scrollDirection: Axis.vertical,
         itemCount: options.length,
         itemBuilder: (BuildContext context,int index){
-          return InkWell(
-              onTap: (){
-                //open list of selected type
-              },
-              child:Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(left: 16),
-                    width: CustomDimens.cardWidth_130,
-                    decoration: _selectedIndex != null && _selectedIndex == index
-                          ? CustomStyle.getBoxShadow_gradient()
-                          : CustomStyle.getBoxShadow_none(),
-                    child: Padding(
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  padding: EdgeInsets.only(left: 16),
+                  width: CustomDimens.cardWidth_130,
+                  decoration: _selectedIndex != null && _selectedIndex == index
+                      ? CustomStyle.getBoxShadow_gradient()
+                      : CustomStyle.getBoxShadow_none(),
+                  child: Padding(
                       padding: EdgeInsets.only(left: 12,top: 16,bottom: 12,),
-                      child: InkWell(
-                        onTap: () {
-                          _onSelected(index);
-                        },
-                        child: Text(options[index].toString(),style: CustomStyle.blackNormalMerch_12,textAlign: TextAlign.start,),
-                      )
-                    )
-
+                      child:InkWell(
+                          onTap: () {
+                           _onSelected(index);
+                          },
+                          child: Text(options[index].toString(),style: CustomStyle.blackNormalMerch_12,textAlign: TextAlign.start,),
+                        ),
                   ),
-                ],
-              )
+
+              ),
+            ],
           );
         }
     );
@@ -206,25 +201,6 @@ class CheckboxWidget extends StatefulWidget {
 }
 
 class CheckboxWidgetState extends State {
-
-  var tmpArray = [];
-
-  getCheckboxItems(){
-
-    values_toDisp.forEach((key, value) {
-      if(value == true)
-      {
-        tmpArray.add(key);
-      }
-    });
-
-    // Printing all selected items on Terminal screen.
-    print(tmpArray);
-    // Here you will get all your selected Checkbox items.
-
-    // Clear array after use.
-    tmpArray.clear();
-  }
 
   @override
   Widget build(BuildContext context) {

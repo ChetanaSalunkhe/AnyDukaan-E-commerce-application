@@ -9,51 +9,60 @@ import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
 final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
-  "Sweets","Dry Fruits","Stationary"];
+  "Sweets","Dry Fruits",];
 
 class KhataDetailsOnDate extends State{
   @override
   Widget build(BuildContext context) {
    return Scaffold(
      appBar:CustomAppBarWithoutSearch('Khata Details',true,true,'','assets/chat_bubble.png'),
-     body:Container(
-       height: MediaQuery.of(context).size.height,
-       margin: EdgeInsets.only(left: 16, right: 16,top: 10),
-       color: CustomColors.background_lightblue,
-       child: Column(
-           mainAxisAlignment: MainAxisAlignment.start, crossAxisAlignment: CrossAxisAlignment.start,
-           children: [
-             getmyKhataCard("Rajesh Kirana Store", "Groceries",'assets/placed_ord.png', "Accepted",'(₹83) Pay Now',context,false,''),
-             SizedBox(height: 21,),
-             Row(
-               mainAxisAlignment: MainAxisAlignment.start,
-               crossAxisAlignment:  CrossAxisAlignment.start,
-               children: [
-                 Padding(padding: EdgeInsets.only(left: 16 )),
-                 Icon(Icons.date_range,
-                   size: 14,
-                   color: CustomColors.colorPrimaryBlue,
+     body:SingleChildScrollView(
+       child:Container(
+         height: MediaQuery.of(context).size.height,
+         margin: EdgeInsets.only(left: 16, right: 16,top: 10),
+         color: CustomColors.background_lightblue,
+         child: Column(
+             mainAxisAlignment: MainAxisAlignment.start, crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+               getmyKhataCard("Rajesh Kirana Store", "Groceries",'assets/placed_ord.png', "Accepted",'(₹83) Pay Now',context,false,''),
+               SizedBox(height: 21,),
+               Row(
+                 mainAxisAlignment: MainAxisAlignment.start,
+                 crossAxisAlignment:  CrossAxisAlignment.start,
+                 children: [
+                   Padding(padding: EdgeInsets.only(left: 16 )),
+                   Icon(Icons.date_range,
+                     size: 14,
+                     color: CustomColors.colorPrimaryBlue,
+                   ),
+                   SizedBox(width: 16,),
+                   Text("MAR 2021", style:CustomStyle.blackBoldlCust_14, textAlign: TextAlign.left,),
+                   SizedBox(height: 20,),
+                 ],
+
+               ),
+               Flexible(
+                 flex: 1,
+                 child:Container(
+                   height: MediaQuery.of(context).size.height-50,
+                   child:CustomListView(),
                  ),
-                 SizedBox(width: 16,),
-                 Text("MAR 2021", style:CustomStyle.blackBoldlCust_14, textAlign: TextAlign.left,),
-                 SizedBox(height: 20,),
+               )
 
-               ],
-
-             ),
-             Container(
-               height: MediaQuery.of(context).size.height,
-               child:CustomListView(),
-             )
-
-           ]
+             ]
+         ),
        ),
      ),
-       bottomSheet:InkWell(
-         onTap: (){
-           /*open payment options*/
-         },
-         child: BtnContinue('(₹3,360) Pay Now',context,''),
+       bottomSheet:Row(
+         mainAxisAlignment: MainAxisAlignment.center,
+         children: [
+           InkWell(
+             onTap: (){
+               /*open payment options*/
+             },
+             child: BtnContinue('(₹3,360) Pay Now',context,''),
+           )
+         ],
        )
    );
 
@@ -77,7 +86,7 @@ class ListViewUIkhata extends State {
     print(i.toString());
     return ListView.builder(
         scrollDirection: Axis.vertical,
-        itemCount: entries.length,
+        itemCount: 15,
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
               onTap: () {

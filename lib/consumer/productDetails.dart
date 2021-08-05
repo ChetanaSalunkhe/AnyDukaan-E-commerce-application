@@ -119,11 +119,8 @@ class StackDemo extends StatelessWidget {
                     Flexible(
                         child: Padding(
                           padding: EdgeInsets.only(top: 83,left: 16,right: 16),
-                          child: Text(CustomString.dmsg2,style: CustomStyle.subTitle,
-                            textAlign: TextAlign.justify,
-                            maxLines: 6,
-                            softWrap: true,
-                            overflow: TextOverflow.fade,),))
+                          child: Text(CustomString.dmsg2,style: CustomStyle.subTitle, textAlign: TextAlign.justify,
+                            maxLines: 6, softWrap: true, overflow: TextOverflow.fade,),))
                   ],
                 ),
               ),
@@ -135,12 +132,10 @@ class StackDemo extends StatelessWidget {
         new Container(
           alignment: Alignment.topCenter,
           padding: new EdgeInsets.only(
-            top: 210,
-              right: 20.0,
-              left: 20.0),
+            top: 210, right: 20.0, left: 20.0),
           child:
           new Container(
-              height: 158,
+              //height: 165,
                width: MediaQuery.of(context).size.width,
               child: new Card(
                   shadowColor: CustomColors.black,
@@ -192,10 +187,16 @@ class StackDemo extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          BtnWithIconNextArrow('500 ml',context,126,40),
+                          Flexible(
+                            flex: 1,
+                              fit: FlexFit.tight,
+                              child:BtnWithIconNextArrow('500 ml',context,MediaQuery.of(context).size.width,40),),
                           //BtnBlue_singletext_small('Delivery',context,109,34),
                           SizedBox(width: 24,),
-                          BtnWithIconAdd('+ Add',context,126,40),
+                          Flexible(
+                            flex: 1,
+                            fit: FlexFit.tight,
+                            child:BtnWithIconAdd('+ Add',context,MediaQuery.of(context).size.width,40),),
                           //BtnBlue_singletext_small_outline('Take Away',context,109,34),
                         ],
                       )

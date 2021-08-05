@@ -41,9 +41,14 @@ class KhataItemList extends State{
           ],
         ),
       ),
-      bottomSheet: InkWell(
-        child: BtnContinue('(₹72) Pay Now', context, 'KhataDetailBtn'),
-      ),
+      bottomSheet:Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          InkWell(
+            child: BtnContinue('(₹72) Pay Now', context, 'KhataDetailBtn'),
+          ),
+        ],
+      )
     );
   }
 

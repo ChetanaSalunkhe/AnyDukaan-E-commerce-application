@@ -36,13 +36,17 @@ class ChooseBrandsMerchant extends State{
           ),
         ),
       ),
-      bottomSheet: InkWell(
-        onTap: (){
-          //send/update images to server
-        },
-        child: BtnContinue(CustomString.addcont, context, 'ImagesList'),
-      ),
-
+      bottomSheet:Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          InkWell(
+            onTap: (){
+              //send/update images to server
+            },
+            child: BtnContinue(CustomString.addcont, context, 'ImagesList'),
+          ),
+        ],
+      )
     );
   }
 }

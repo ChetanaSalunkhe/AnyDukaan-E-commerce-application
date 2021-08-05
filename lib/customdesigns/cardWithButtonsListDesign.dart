@@ -20,6 +20,8 @@ class ListViewUI_cardWithbtns  extends State{
               onTap: (){
               },
               child:Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     width: 156,
@@ -31,6 +33,8 @@ class ListViewUI_cardWithbtns  extends State{
                         ),
 
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
                                 alignment: Alignment.center,
@@ -55,11 +59,8 @@ class ListViewUI_cardWithbtns  extends State{
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   SizedBox(height: 8,),
-                                  new Text('Govardhan milk',
-                                    textAlign: TextAlign.center,
-                                    style: CustomStyle.blackBoldlCust_12,
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
+                                  new Text('Govardhan milk', textAlign: TextAlign.center, style: CustomStyle.blackBoldlCust_12,
+                                    overflow: TextOverflow.ellipsis, maxLines: 2,
                                   ),
                                   SizedBox(height: 6,),
                                   InkWell(

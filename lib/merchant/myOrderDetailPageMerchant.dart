@@ -167,12 +167,20 @@ class MyOrderDetailsPageMerchant extends State{
             ],
           )
         ),
-      bottomSheet: InkWell(
-        onTap: (){
+      bottomSheet:Container(
+        color: Colors.transparent,
+        child:Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            InkWell(
+              onTap: (){
 
-        },
-        child: BtnContinue('Refund (₹ 250)', context, 'OrdDetailPage'),
-      ),
+              },
+              child: BtnContinue('Refund (₹ 250)', context, 'OrdDetailPage'),
+            ),
+          ],
+        )
+      )
     );
   }
 }

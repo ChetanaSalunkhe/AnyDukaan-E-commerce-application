@@ -143,22 +143,27 @@ class BookTable extends State{
             ),
           )
         ),
-      bottomSheet: InkWell(
-        onTap: () async {
-          /*table booking popup*/
-          var result = await showModalBottomSheet(
-              context: context,
-              isScrollControlled: true,
-              isDismissible: true,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(14),
-                    topLeft: Radius.circular(14)),),
-              builder: (context) => ModalBottomSheetDialog(popupStyle:'RequestSentPopup'));
-          print('a:$result');
-          Navigator.of(context).pop(result);
-        },
-        child: BtnContinue(CustomString.bookTable, context,'BookTable'),
+      bottomSheet: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          InkWell(
+            onTap: () async {
+              /*table booking popup*/
+              var result = await showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  isDismissible: true,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(14),
+                        topLeft: Radius.circular(14)),),
+                  builder: (context) => ModalBottomSheetDialog(popupStyle:'RequestSentPopup'));
+              print('a:$result');
+              Navigator.of(context).pop(result);
+            },
+            child: BtnContinue(CustomString.bookTable, context,'BookTable'),
+          )
+        ],
       )
     );
   }

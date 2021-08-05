@@ -66,7 +66,7 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
           Positioned(
               top: 98,
               child: Container(
-                  child: SearchBar(hint: '$searchHint',width: 328,height: 44,radius: 20,margin:16))),
+                  child: SearchBar(hint: '$searchHint',width: MediaQuery.of(context).size.width,height: 44,radius: 20,margin:16))),
                   //child: SearchBar())),
         ],
       )

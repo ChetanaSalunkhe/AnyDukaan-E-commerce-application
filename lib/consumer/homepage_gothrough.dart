@@ -35,7 +35,7 @@ class HomePageState extends State {
             SizedBox(height: 30),
 
             Container(
-              height: 180,
+              height: 190,
               //gridview of segment list
               child: CustomGridView(),
 
@@ -49,8 +49,8 @@ class HomePageState extends State {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ClipRRect(
-                  //child: Image.asset("assets/banner1home.png",width: 328,height: 128,)
-                    child: CustomStyle.getImageBanner("assets/banner1home.png",328,128, BoxFit.fill,)
+                  //child: Image.asset("assets/banner1home.png",width: MediaQuery.of(context).size.width,height: 128,)
+                    child: CustomStyle.getImageBanner("assets/banner1home.png",MediaQuery.of(context).size.width,128, BoxFit.fill,)
                 ),
               ],
             ),
@@ -66,7 +66,8 @@ class HomePageState extends State {
             ),
 
             Container(
-              height: 135,
+              height: 140,
+              margin: EdgeInsets.only(right: 16),
               //listview of dukans and rest list
               child: CustomListView(),
 
@@ -85,6 +86,7 @@ class HomePageState extends State {
             Container(
               height: 198,
               //listview of recommend for you
+              margin: EdgeInsets.only(right: 16),
               child: CustomListView_recommend(),
 
             ),
@@ -118,7 +120,8 @@ class HomePageState extends State {
                   flex: 1,
                   fit: FlexFit.loose,
                   child:  Container(
-                    height: 262,
+                    height: 266,
+                    margin: EdgeInsets.only(right: 16),
                     //listview of dukans and rest list
                     child: CustomListView_cardWithbtns(),
 
@@ -251,7 +254,7 @@ class ListViewUI_dukaans extends State{
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ClipRRect(
-                              child: CustomStyle.getImageBanner("assets/dukanimg.png",130,85,BoxFit.fill,)
+                              child: CustomStyle.getImageBanner("assets/dukanimg.png",130,85,BoxFit.cover,)
                           ),
                         ],
                       ),
@@ -259,10 +262,12 @@ class ListViewUI_dukaans extends State{
 
                   ),
                   Container(
+                      width: CustomDimens.cardWidth_130,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          new Text('Apna Kirana Store', textAlign: TextAlign.center, style: CustomStyle.blackBoldlCust_14,),
+                          new Text('Apna Kirana Store', textAlign: TextAlign.center, style: CustomStyle.blackBoldlCust_14,
+                          softWrap: true,maxLines: 1,overflow: TextOverflow.ellipsis,),
                           SizedBox(height: 9,),
                           Row(
                             children: [
@@ -449,6 +454,8 @@ class ListViewUI_cardWithbtns  extends State{
               onTap: (){
               },
               child:Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     margin: EdgeInsets.only(left: 16),
@@ -460,6 +467,8 @@ class ListViewUI_cardWithbtns  extends State{
                         ),
 
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
                                 alignment: Alignment.center,
@@ -482,18 +491,17 @@ class ListViewUI_cardWithbtns  extends State{
                               margin: EdgeInsets.only(left: 12,right: 12),
                               child:Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   SizedBox(height: 8,),
-                                  new Text('Govardhan milk',
-                                    textAlign: TextAlign.center,
-                                    style: CustomStyle.blackBoldlCust_12,
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
+                                  Text('Govardhan milk', textAlign: TextAlign.start, style: CustomStyle.blackBoldlCust_12,
+                                    overflow: TextOverflow.ellipsis, maxLines: 2,softWrap: true,
                                   ),
                                   SizedBox(height: 6,),
                                   new Text('1 Ltr', textAlign: TextAlign.center, style: CustomStyle.subTitle,),
                                   SizedBox(height: 6,),
-                                  new Text('Apna Kirana Store', textAlign: TextAlign.center, style: CustomStyle.subTitleBlack,),
+                                  Text('Apna Kirana Store', textAlign: TextAlign.start, style: CustomStyle.subTitleBlack,
+                                    overflow: TextOverflow.ellipsis, maxLines: 1,softWrap: true,),
                                   SizedBox(height: 10,),
                                   Row(
                                     children: [

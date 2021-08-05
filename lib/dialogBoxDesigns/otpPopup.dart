@@ -11,6 +11,9 @@ int btnClickCnt = 0;
 int maxLimit = 3;
 bool isOtpCompleted = false;
 class OTPPopup extends State{
+  var params;
+  OTPPopup({Key key,this.params});
+
   @override
   Widget build(BuildContext context) {
     return new Container(
@@ -113,13 +116,15 @@ class OTPPopup extends State{
                   child: InkWell(
                     onTap: (){
                       /*if otp match then success else give 2 more chances to click button*/
-                      /*if consumer app then */
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'ConsumerHome',)));
-
-                      /*if merchant app then */
-                     /* Navigator.push(context,
-                          MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'MerchantHome',)));*/
+                      if(params['keyType'].toString()=='Consumer'){
+                        /*if consumer app then */
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'ConsumerHome',)));
+                      }else{
+                        /*if merchant app then */
+                         Navigator.push(context,
+                          MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'MerchantHome',)));
+                      }
 
                      /* setState(() {
                         if(btnClickCnt<maxLimit){

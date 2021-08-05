@@ -33,13 +33,14 @@ import 'customButtons.dart';
 
 class ModalBottomSheetDialog extends StatefulWidget {
   String popupStyle ="";
-  ModalBottomSheetDialog({Key key,this.popupStyle}):super(key: key);
+  var params;
+  ModalBottomSheetDialog({Key key,this.popupStyle,this.params}):super(key: key);
 
   @override
   State<StatefulWidget> createState() {
     switch(popupStyle){
       case 'LoginOTP':
-        return OTPPopup();
+        return OTPPopup(params:params);
         break;
       case 'MultiMerch':
         return MultiMechPopup();

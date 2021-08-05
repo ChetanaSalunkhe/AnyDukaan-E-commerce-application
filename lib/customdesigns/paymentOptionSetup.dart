@@ -28,17 +28,22 @@ class PaymentOptionSetup extends State{
       padding: EdgeInsets.zero,
       physics: ScrollPhysics(),
       child:Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 18,),
           Transform(
             transform: Matrix4.translationValues(10, 0, 0.0),
-            child:Text(CustomString.quePayOpt,style: CustomStyle.blackBoldMerch_12,textAlign: TextAlign.start,),
+            child:Padding(
+              padding: EdgeInsets.only(top: 18),
+              child: Text(CustomString.quePayOpt,style: CustomStyle.blackBoldMerch_12,textAlign: TextAlign.start,),
+            )
           ),
           SizedBox(height: 16,),
           Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /*cod*/
               Transform(
                 transform: Matrix4.translationValues(-12, 0, 0.0),
                 child:Theme(
@@ -48,6 +53,7 @@ class PaymentOptionSetup extends State{
                     checkColor: CustomColors.white,
                     activeColor: CustomColors.colorPrimaryBlue,
                     onSaved: (bool value) {
+
                     },
                     validator: (bool value) {
                       if (value) {
@@ -59,14 +65,14 @@ class PaymentOptionSetup extends State{
                   ),
                 ),
               ),
-
-              Transform(
-                transform: Matrix4.translationValues(-12, 0, 0.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Theme(
+              /*upi*/
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Transform(
+                    transform: Matrix4.translationValues(-12, 0, 0.0),
+                    child: Theme(
                       data:  CustomStyle.getThemeCheckBox_RadioButton,
                       child: CheckboxListTileFormField(
                         title:CustomStyle.CheckboxTitle(CustomString.upi),
@@ -88,62 +94,60 @@ class PaymentOptionSetup extends State{
                         },
                       ),
                     ),
-                    Visibility(
-                        visible: isUpiBoxVisible,
-                        child: Container(
-                          height: 40,
-                          margin: EdgeInsets.only(left: 16),
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.only(left: 16),
-                              child: CustomStyle.getEditTextSearch(CustomString.hintUpi,14,1),
-                            ),
-
+                  ),
+                  Visibility(
+                      visible: isUpiBoxVisible,
+                      child: Container(
+                        height: 40,
+                        width: MediaQuery.of(context).size.width,
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
-                        )
-                    ),
-                  ],
-                ),
-              ),
-              Transform(
-                transform: Matrix4.translationValues(-12, 0, 0.0),
-                child:Column(
-                  children: [
-                    Theme(
-                      data:  CustomStyle.getThemeCheckBox_RadioButton,
-                      child: CheckboxListTileFormField(
-                        title:CustomStyle.CheckboxTitle(CustomString.khata),
-                        checkColor: CustomColors.white,
-                        activeColor: CustomColors.colorPrimaryBlue,
-                        onSaved: (bool value) {
-                        },
-                        validator: (bool value) {
-                          if (value) {
-                            return null;
-                          } else {
-                            return 'False!';
-                          }
-                        },
-                      ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(left: 16),
-                    child: Visibility(
-                        visible: isKhataBoxVisible,
-                        child: Column(
-                          children: [
-                            GetCardSetupTile(CustomString.minAmt,CustomString.maxAMmt),
-                            GetCardSetup('₹ 250','₹ 550'),
-                          ],
-                        )
-                    ),),
-                  ],
-                )
-              ),
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 16),
+                            child: CustomStyle.getEditTextSearch(CustomString.hintUpi,14,1),
+                          ),
 
+                        ),
+                      )
+                  ),
+                ],
+              ),
+              /*khata*/
+              Column(
+                children: [
+                  Transform(
+                      transform: Matrix4.translationValues(-12, 0, 0.0),
+                      child: Theme(
+                        data:  CustomStyle.getThemeCheckBox_RadioButton,
+                        child: CheckboxListTileFormField(
+                          title:CustomStyle.CheckboxTitle(CustomString.khata),
+                          checkColor: CustomColors.white,
+                          activeColor: CustomColors.colorPrimaryBlue,
+                          onSaved: (bool value) {
+                          },
+                          validator: (bool value) {
+                            if (value) {
+                              return null;
+                            } else {
+                              return 'False!';
+                            }
+                          },
+                        ),
+                      ),
+                  ),
+                  Visibility(
+                      visible: isKhataBoxVisible,
+                      child: Column(
+                        children: [
+                          GetCardSetupTile(CustomString.minAmt,CustomString.maxAMmt),
+                          GetCardSetup('₹ 250','₹ 550',context),
+                        ],
+                      )
+                  ),
+                ],
+              ),
             ],
           ),
         ],

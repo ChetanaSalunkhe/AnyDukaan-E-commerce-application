@@ -9,7 +9,7 @@ class TableReservedPopup extends State{
   @override
   Widget build(BuildContext context) {
     return new Container(
-        height: 497.0,
+        height: 500,
         color: Colors.transparent,
         child: new Center(
           child: Column(

@@ -77,14 +77,14 @@ Column GetTabDesign(context){
           SingleChildScrollView(
             physics: ScrollPhysics(),
             child:  Container(
-                margin: EdgeInsets.only(left: 16,right: 16,),
                 child:Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: 16,),
-                    SearchBar(hint: 'Search Invoices',width: 328,height: 44,radius: 20,margin: 16,),
+                    SearchBar(hint: 'Search Invoices',width: MediaQuery.of(context).size.width,height: 44,radius: 20,margin: 16,),
                     Container(
+                      margin: EdgeInsets.only(left: 16,right: 16,),
                       child: GetPaidInvoiceList(entries_paid: entries_paid,),
                     ),
                   ],
@@ -129,7 +129,6 @@ class GetPaidInvoiceList extends StatelessWidget{
               MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'InvoiceDetails',params: entries,)));
             },
             child: Container(
-              height: 97,
               margin: EdgeInsets.only(top: 10),
               child: Card(
                   shape: RoundedRectangleBorder(
@@ -178,6 +177,7 @@ class GetPaidInvoiceList extends StatelessWidget{
                               child:ReviewBorder(entries_paid[index].elementAt(3),context,70,38,CustomColors.greenboxshade,CustomStyle.greenText10_merch,false),),
                           ],
                         ),
+                        SizedBox(height: 10,),
                       ],
                     ),
                   )

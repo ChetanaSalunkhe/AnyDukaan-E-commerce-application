@@ -10,7 +10,7 @@ import 'buttonClickActions.dart';
 /*cart, checkout, place order buttons*/
 Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,BuildContext context,String clickAction){
   return  Container(
-    width: 328,
+    width: MediaQuery.of(context).size.width,
     height: 58.0,
     color: Colors.transparent,
     margin: EdgeInsets.only(left: 16,right: 16),
@@ -74,10 +74,8 @@ Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,Build
 /*single text on button*/
 Container BtnContinue(String title,BuildContext context,String callBtnFrom){
   return Container(
-    width: 328,
+    width: MediaQuery.of(context).size.width-32,
     height: 50.0,
-    //color: Colors.transparent,
-    margin: EdgeInsets.only(left: 16,right: 16),
     alignment: Alignment.center,
     child:  Card(
         color: CustomColors.colorPrimaryOrange,
@@ -90,41 +88,12 @@ Container BtnContinue(String title,BuildContext context,String callBtnFrom){
         ),
 
         child: Padding(
-          padding: EdgeInsets.only(left: 0,right: 0),
+          padding: EdgeInsets.only(top: 10,bottom: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Flexible(
-                flex: 1,
-                fit: FlexFit.loose,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('',style: CustomStyle.whiteNormalCust_12,),
-                    Text('',style: CustomStyle.progressTitle,)
-
-                  ],
-                ),
-              ),
-
-              Flexible(
-                flex: 9,
-                fit: FlexFit.loose,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    //Text('$title',style: CustomStyle.progressTitle,textAlign: TextAlign.center,)
-                    TextButton(
-                      onPressed: (){
-                        //logic here
-                        /*Navigator.push(context,
-                            MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:callBtnFrom,)));*/
-                      },
-                      child: Text('$title',style: CustomStyle.progressTitle,textAlign: TextAlign.right,),)
-                  ],
-                ),)
+              Text('$title',style: CustomStyle.progressTitle,textAlign: TextAlign.right,),
             ],
           ),
         )
@@ -136,7 +105,7 @@ Container BtnContinue(String title,BuildContext context,String callBtnFrom){
 Container BtnWithOutline(String title_,BuildContext context){
 
   return Container(
-    width: 328,
+    width: MediaQuery.of(context).size.width,
     height: 50.0,
     color: Colors.transparent,
     margin: EdgeInsets.only(left: 16,right: 16),
@@ -180,7 +149,7 @@ Container BtnWithOutline(String title_,BuildContext context){
 
 Container BtnSelectedIssue(String title_,BuildContext context){
   return Container(
-    width: 328,
+    width: MediaQuery.of(context).size.width,
     height: 50.0,
     color: Colors.transparent,
     margin: EdgeInsets.only(left: 16,right: 16),
@@ -389,7 +358,6 @@ Container BtnBlue_singletext_small(String title,BuildContext context,double widt
   return Container(
     width: width,
     height: height,
-    //margin: EdgeInsets.only(left: 16,right: 16),
     alignment: Alignment.center,
     child:  Card(
         color: btnColor,
@@ -421,7 +389,6 @@ Container BtnBlue_singletext_small(String title,BuildContext context,double widt
 
 /*single text on blue button ourtlinw*/
 Container BtnBlue_singletext_small_outline(String title_,BuildContext context,double width, double height){
-
   return Container(
       width: width,
       height: height,

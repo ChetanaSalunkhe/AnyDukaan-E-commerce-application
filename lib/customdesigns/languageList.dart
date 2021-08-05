@@ -51,7 +51,7 @@ class OptionsList extends State{
           },
           child: Container(
             height: 50,
-            margin: EdgeInsets.only(top: 12),
+            margin: EdgeInsets.only(top: 10),
             child: Card(
                 color: selectedIndex != null && selectedIndex == i? CustomColors.colorPrimaryOrange:CustomColors.white,
                 shadowColor: CustomColors.black,

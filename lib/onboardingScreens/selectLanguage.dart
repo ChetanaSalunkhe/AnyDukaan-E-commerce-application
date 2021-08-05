@@ -29,17 +29,13 @@ class SelectLanguageScreen extends State{
               SizedBox(height: 10,),
 
               //text
-              Flexible(
-                  flex: 1,
-                  fit: FlexFit.tight,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,   //horizontal alignment=left aligned
-                    crossAxisAlignment: CrossAxisAlignment.start,   //vertical alignment=top aligned
-                    children: [
-                      Padding(padding: EdgeInsets.only(left: 16,right: 16),
-                        child: Text(CustomString.selectLanguage,style:CustomStyle.blackBoldMerch_16,),)
-                    ],
-                  ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,   //horizontal alignment=left aligned
+                crossAxisAlignment: CrossAxisAlignment.start,   //vertical alignment=top aligned
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 16,right: 16),
+                    child: Text(CustomString.selectLanguage,style:CustomStyle.blackBoldMerch_16,),)
+                ],
               ),
 
               Container(

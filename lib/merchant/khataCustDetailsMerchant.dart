@@ -41,12 +41,17 @@ class KhataCustDetails extends State{
           ),
         ),
       ),
-      bottomSheet: InkWell(
-        onTap: (){
-          /*call API to add delivery agent to server*/
-        },
-        child: BtnContinue('(₹ 1200) Request Payment', context, 'AddAgent'),
-      ),
+      bottomSheet:Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          InkWell(
+            onTap: (){
+              /*call API to add delivery agent to server*/
+            },
+            child: BtnContinue('(₹ 1200) Request Payment', context, 'AddAgent'),
+          ),
+        ],
+      )
     );
   }
 }
