@@ -22,7 +22,7 @@ class MyOrdersList extends State {
       backgroundColor: CustomColors.background_all,
       appBar: CustomAppBarWithSearch(title:'Orders',searchHint:'Search here...',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png'),
       body: SingleChildScrollView(
-          clipBehavior: Clip.antiAlias,
+          //clipBehavior: Clip.antiAlias,
           scrollDirection: Axis.vertical,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,6 @@ class MyOrdersList extends State {
             Container(
               color: CustomColors.background_lightblue,
               margin: EdgeInsets.only(top: 8),
-              //height: MediaQuery.of(context).size.height,
                 child: OrderCardDesign(ordCount: '03 Products',ordSTatus: 'In Progress',shop: 'Rajesh Kirana Store',
                     amt:'₹ 22',isOrdBtnVisible: false,ordBtnTitle: 'Track Order')),
 
@@ -45,9 +44,10 @@ class MyOrdersList extends State {
 
             Container(
                 color: CustomColors.white,
-                height: MediaQuery.of(context).size.height,
                 child: OrderCardDesign(ordCount: '07 Products',ordSTatus: 'On the Way',shop: 'Shiv Krishna Dairy',
                     amt:'₹ 125',isOrdBtnVisible: true,ordBtnTitle: 'Track Order')),
+
+            SizedBox(height: 100,)
           ],
         ),
       ),

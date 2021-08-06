@@ -12,8 +12,9 @@ class ComboCardListReviewsList extends State{
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
+    return /*SingleChildScrollView(
+      physics: ScrollPhysics(),
+      child: */Column(
         children: [
           Container(
               height: CustomDimens.cardheight_242,
@@ -28,7 +29,7 @@ class ComboCardListReviewsList extends State{
                   topLeft: Radius.circular(14),
                   topRight: Radius.circular(14)
               ),
-              child: SingleChildScrollView(
+            //  child: SingleChildScrollView(
                 child:  Container(
                     margin: EdgeInsets.zero,
                     height: MediaQuery.of(context).size.height,
@@ -49,11 +50,11 @@ class ComboCardListReviewsList extends State{
                       ],
                     )
                 ),
-              )
+          //    )
           ),
         ],
-      ),
-    );
+      );
+  //  );
   }
 
 }

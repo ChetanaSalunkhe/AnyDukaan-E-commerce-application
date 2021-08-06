@@ -4,6 +4,11 @@ import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+double ratingCnt=0;
+var ratingColor=CustomColors.grey_subtitle;
+var icon = Icons.star_outline;
+int selIndex;
+
 class MerchantReview extends State{
 
   @override
@@ -69,7 +74,29 @@ class MerchantReview extends State{
                   child: Text('Rating',style: CustomStyle.blackNormalCust_14, textAlign: TextAlign.start,),),
                 Padding(
                     padding: EdgeInsets.only(left: 16,top: 9),
-                    child: CustomStyle.GetRatingBar(5, Icons.star_outline, CustomColors.grey_subtitle, 20)),
+                    //child: CustomStyle.GetRatingBar(5, Icons.star_outline, CustomColors.grey_subtitle, 20)),
+                    //child: CustomStyle.GetRatingBar(5, Icons.star, CustomColors.colorPrimaryOrange, 20)),
+                  child: RatingBar.builder(
+                    initialRating: ratingCnt,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: false,
+                    itemCount: 5,
+                    itemSize: 30,
+                    itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
+                    itemBuilder: (context, int index) => Icon(
+                      index<ratingCnt?Icons.star:Icons.star_outline,
+                      color:ratingColor,
+                    ),
+                    onRatingUpdate: (rating) {
+                      setState(() {
+                        ratingCnt=rating;
+                        ratingColor=CustomColors.colorPrimaryOrange;
+                      });
+                      print(rating);
+                    },
+                  ),
+                ),
               ],
             ),
             Padding(

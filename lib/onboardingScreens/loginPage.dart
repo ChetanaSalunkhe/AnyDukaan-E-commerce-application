@@ -13,39 +13,44 @@ class LoginPage extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              new Opacity(
-                  opacity: 0.3,
-                  child:Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(height: 40,),
-                        CustomStyle.getImageBanner('assets/loginboy.png', 220, 220, BoxFit.scaleDown),
-                      ],
+      body:Container(
+        height: MediaQuery.of(context).size.height,
+        width:MediaQuery.of(context).size.width,
+        child: Column(
+         // mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+             // height: MediaQuery.of(context).size.height,
+             // width:MediaQuery.of(context).size.width,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  new Opacity(
+                    opacity: 0.3,
+                    child:Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(height: 40,),
+                          CustomStyle.getImageBanner('assets/loginboy.png', 220, 220, BoxFit.scaleDown),
+                        ],
+                      ),
                     ),
                   ),
-              ),
-              new  Container(
-                  alignment: Alignment.topCenter,
-                  padding: new EdgeInsets.only(
-                    top: 210,),
-                  child:SingleChildScrollView(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(14),
-                        topRight: Radius.circular(14),
-                      ),
-                      child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        decoration: CustomStyle.getBoxShadow(),
-                        child: Column(
+                  new  Container(
+                    alignment: Alignment.topCenter,
+                    padding: new EdgeInsets.only(
+                      top: 210,),
+                    child:SingleChildScrollView(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(14),
+                          topRight: Radius.circular(14),
+                        ),
+                        child: Container(
+                          decoration: CustomStyle.getBoxShadow(),
+                          child: Column(
                             children: [
                               //row for text and cross button
                               SizedBox(height: 20,),
@@ -154,21 +159,21 @@ class LoginPage extends State {
                               /*open consumer and merchant registeration page as per flavor*/
                               Visibility(
                                 visible: true,
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Text(CustomString.didntAcct,style: CustomStyle.blackNormalMerch_12,),
-                                      SizedBox(width: 6,),
-                                      TextButton(
-                                        onPressed: (){
-                                          /*open registration page*/
-                                          Navigator.push(context,
-                                              MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'LoginRegister',params: 'Consumer',)));
-                                        },
-                                        child:Text(CustomString.register,style: CustomStyle.tabbarTitleText,),),
-                                    ],
-                                  ),),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(CustomString.didntAcct,style: CustomStyle.blackNormalMerch_12,),
+                                    SizedBox(width: 6,),
+                                    TextButton(
+                                      onPressed: (){
+                                        /*open registration page*/
+                                        Navigator.push(context,
+                                            MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'LoginRegister',params: 'Consumer',)));
+                                      },
+                                      child:Text(CustomString.register,style: CustomStyle.tabbarTitleText,),),
+                                  ],
+                                ),),
                               SizedBox(height: 12,),
                               TextButton(
                                 onPressed: (){
@@ -177,14 +182,16 @@ class LoginPage extends State {
                                 child: Text('Skip for now',style: CustomStyle.primaryBtnTextOrange,),),
                             ],
                           ),
+                        ),
                       ),
                     ),
                   ),
+                ],
               ),
-            ],
-          ),
+            )
+          ],
         ),
-      ),
+      )
     );
   }
 }

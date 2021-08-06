@@ -694,6 +694,7 @@ class CustomStyle{
         color:colr,
       ),
       onRatingUpdate: (rating) {
+        ratingCnt=rating;
         print(rating);
       },
     );

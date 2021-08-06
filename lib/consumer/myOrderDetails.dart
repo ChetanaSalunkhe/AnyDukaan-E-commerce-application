@@ -88,7 +88,7 @@ class MyOrderDetails extends State{
                       )
                   ),
                   Container(
-                      height: MediaQuery.of(context).size.height,
+                    //  height: MediaQuery.of(context).size.height,
                       child: Card(
                           elevation: 2,
                           margin: EdgeInsets.zero,

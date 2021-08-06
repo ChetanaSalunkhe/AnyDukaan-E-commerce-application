@@ -64,7 +64,7 @@ class HomePageState extends State {
               child: Title_ViewBtnWidget(dukansAndRest:'$duk_Rest',callFrom:'Shops'),
 
             ),
-
+            /*dukaans and restaurant nearby list*/
             Container(
               height: 140,
               margin: EdgeInsets.only(right: 16),
@@ -83,6 +83,7 @@ class HomePageState extends State {
 
             ),
 
+            /*recommended for you list*/
             Container(
               height: 198,
               //listview of recommend for you
@@ -99,7 +100,6 @@ class HomePageState extends State {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ClipRRect(
-                  //child: Image.asset("assets/banner_2.png",width: 360,height: 190,)
                     child: CustomStyle.getImageBanner("assets/banner_2.png",360,190, BoxFit.cover,)
                 ),
               ],
@@ -112,7 +112,7 @@ class HomePageState extends State {
 
             SizedBox(height: 20),
 
-            //offer zone list
+            /*offer zone list*/
             Row(
               children: [
                 OfferZoneCardTheme(),

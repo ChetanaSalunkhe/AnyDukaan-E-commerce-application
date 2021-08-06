@@ -21,6 +21,7 @@ class GridViewUI_cardWithbtns  extends State{
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
         itemCount: entries.length,
+        physics: NeverScrollableScrollPhysics(),
         itemBuilder: (BuildContext context,int index){
           return InkWell(
               onTap: (){

@@ -45,7 +45,7 @@ class MerchantRegistration extends State {
                     showSearchBox: false,
                     showAsSuffixIcons: true,
                     popupBackgroundColor: CustomColors.greyline,
-                    label: "Designation",
+                    label: "Segment",
                     hint: "Select Segment",
                     enabled: false,
                     selectedItem: selectedSegment,

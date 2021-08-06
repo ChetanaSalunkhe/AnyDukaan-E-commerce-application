@@ -34,6 +34,7 @@ class ShopDetails extends State{
       appBar: CustomAppBarWithoutSearch(params=='Shops'?CustomString.shopDtls:CustomString.restDtls,
           true,false,'assets/serch.png','assets/module_info.png'),
         body: SingleChildScrollView(
+          physics: ScrollPhysics(),
           child: Container(
             color: CustomColors.background_lightblue,
             margin: EdgeInsets.zero,

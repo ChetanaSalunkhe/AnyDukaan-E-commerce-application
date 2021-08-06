@@ -15,9 +15,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-final List<String> entries = <String>["Restaurant","Grocery","Vegetables"];
+final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Restaurant","Grocery","Vegetables","Restaurant","Grocery","Vegetables"];
 
-final List<String> subentries = <String>["Restaurant","Grocery","Vegetables"];
+final List<String> subentries = <String>["Restaurant","Grocery","Vegetables","Restaurant","Grocery","Vegetables","Restaurant","Grocery","Vegetables"];
 
 List<ItemBeans> sectionList = List<ItemBeans>();
 
@@ -41,6 +41,7 @@ class ExpansionTileSampleState extends StatelessWidget {
       backgroundColor: CustomColors.background_all,
         appBar: CustomAppBarWithoutSearch('Cart',true,false,'assets/serch.png','assets/module_info.png'),
         body: SingleChildScrollView(
+          physics: ScrollPhysics(),
           clipBehavior: Clip.antiAlias,
           scrollDirection: Axis.vertical,
           child: Column(
@@ -85,7 +86,6 @@ class ExpansionTileSampleState extends StatelessWidget {
                       SizedBox(height: 20,),
                       //list of order products and shop reviews
                       Container(
-                        height: MediaQuery.of(context).size.height,
                         child: CardShopReviewListTemplate(entries: entries,),
                       ),
                     ],
@@ -95,16 +95,6 @@ class ExpansionTileSampleState extends StatelessWidget {
             ],
           )
         ),
-     /* floatingActionButton: SizedBox(
-        height: 150.0,
-        width: 58.0,
-        child: FittedBox(
-          child: FloatingActionButton(
-            child: Icon(Icons.add),
-            onPressed: () {},
-          ),
-        ),
-      ),*/
         floatingActionButton:Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
