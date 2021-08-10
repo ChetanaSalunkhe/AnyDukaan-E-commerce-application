@@ -25,6 +25,7 @@ class ItemsListing extends State{
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        resizeToAvoidBottomInset: true,
         backgroundColor: CustomColors.background_lightblue,
         appBar: CustomAppBarWithSearch(title:'Search Items',searchHint:'Milk',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png',),
         body: Container(

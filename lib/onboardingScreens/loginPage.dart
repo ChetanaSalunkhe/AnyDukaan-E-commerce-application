@@ -13,6 +13,7 @@ class LoginPage extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body:Container(
         height: MediaQuery.of(context).size.height,
         width:MediaQuery.of(context).size.width,
@@ -20,8 +21,6 @@ class LoginPage extends State {
          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
-             // height: MediaQuery.of(context).size.height,
-             // width:MediaQuery.of(context).size.width,
               child: Stack(
                 alignment: Alignment.center,
                 children: [

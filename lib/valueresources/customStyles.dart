@@ -1,3 +1,4 @@
+import 'package:bubble/bubble.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -49,6 +50,12 @@ class CustomStyle{
       fontFamily: 'Work Sans',
       fontWeight: FontWeight.bold,
       fontSize: 14);
+
+  static var whiteNormalCust_10= TextStyle(
+      color: CustomColors.white,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.normal,
+      fontSize: 10);
 
   /*-----------------------black consumer-----------------------------------------------*/
 
@@ -735,21 +742,39 @@ class CustomStyle{
     );
   }
 
-  /*FlutterSwitch(
-  width: 35.0,
-  height: 20.0,
-  toggleSize: 16,
-  value: switchStatus,
-  borderRadius: 30.0,
-  padding: 2.0,
-  toggleColor: Color.fromRGBO(225, 225, 225, 1),
-  activeColor: CustomColors.colorPrimaryBlue,
-  inactiveColor: CustomColors.greydark,
-  onToggle: (val) {
-  setState(() {
-  switchStatus = val;
-  });
-  },
-  ),*/
+  static ReceiverBubble(String msg,BuildContext context){
+    return Bubble(
+      padding: BubbleEdges.all(11),
+      margin: BubbleEdges.only(top: 10),
+      nip: BubbleNip.rightTop,
+      color:CustomColors.colorPrimaryOrange,
+      child:Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Text('$msg', textAlign: TextAlign.right,style: CustomStyle.whiteNormalCust_12,
+            softWrap: true,overflow: TextOverflow.fade,),
+          SizedBox(height: 4,),
+          Text('10.10 am', textAlign: TextAlign.right,style: CustomStyle.whiteNormalCust_10,),
+        ],
+      )
+    );
+  }
+
+  static SenderBubble(String msg){
+    return Bubble(
+      padding: BubbleEdges.all(11),
+      margin: BubbleEdges.only(top: 10),
+      nip: BubbleNip.leftTop,
+      color:CustomColors.colorPrimaryBlue,
+      child:Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Text('$msg', textAlign: TextAlign.left,style: CustomStyle.whiteNormalCust_12,),
+          SizedBox(height: 4,),
+          Text('10.10 am', textAlign: TextAlign.right,style: CustomStyle.whiteNormalCust_10,),
+        ],
+      )
+    );
+  }
 
 }

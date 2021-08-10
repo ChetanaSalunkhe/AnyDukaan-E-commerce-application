@@ -78,27 +78,29 @@ class CheckoutScreen1 extends State{
                         Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                          children:[
-                            CustomRadioButton(
-                              elevation: 0,
-                              height: 32,
-                              absoluteZeroSpacing: false,
-                              enableShape: true,
-                              unSelectedColor: Theme.of(context).canvasColor,
-                              enableButtonWrap: true,
-                              buttonLables: [CustomString.timeslot1, CustomString.timeslot2,CustomString.timeslot3,CustomString.timeslot4,CustomString.timeslot5],
-                              buttonValues: [CustomString.timeslot1, CustomString.timeslot2,CustomString.timeslot3,CustomString.timeslot4,CustomString.timeslot5],
-                              buttonTextStyle: ButtonTextStyle(
-                                  selectedColor: CustomColors.white,
-                                  unSelectedColor: CustomColors.colorblackmerch,
-                                  textStyle: CustomStyle.subTitleBlack),
-                              radioButtonValue: (value) {
-                                print(value);
-                              },
-                              selectedColor: CustomColors.colorPrimaryBlue,
-                            ),
-                          ]
-                        )
+                            children:[
+                              CustomRadioButton(
+                                elevation: 0,
+                                height: 32,
+                                width: 100,
+                                wrapAlignment: WrapAlignment.start,
+                                absoluteZeroSpacing: false,
+                                enableShape: true,
+                                unSelectedColor: Theme.of(context).canvasColor,
+                                enableButtonWrap: true,
+                                buttonLables: [CustomString.timeslot1, CustomString.timeslot2,CustomString.timeslot3,CustomString.timeslot4,CustomString.timeslot5],
+                                buttonValues: [CustomString.timeslot1, CustomString.timeslot2,CustomString.timeslot3,CustomString.timeslot4,CustomString.timeslot5],
+                                buttonTextStyle: ButtonTextStyle(
+                                    selectedColor: CustomColors.white,
+                                    unSelectedColor: CustomColors.colorblackmerch,
+                                    textStyle: CustomStyle.subTitleBlack),
+                                radioButtonValue: (value) {
+                                  print(value);
+                                },
+                                selectedColor: CustomColors.colorPrimaryBlue,
+                              ),
+                            ]
+                        ),
                       ],
                     ),
                     SizedBox(height: 24,),

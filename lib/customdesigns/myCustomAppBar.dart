@@ -1,3 +1,5 @@
+import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
@@ -44,14 +46,69 @@ class CustomAppBarWithoutSearch extends StatelessWidget with PreferredSizeWidget
                 margin: EdgeInsets.only(right: 16),
                 child: Row(
                   children: [
-                    Image.asset(img1,width: 24,height: 24,color: Colors.white,),
+                    InkWell(
+                      onTap: (){
+                        switch(img1){
+                          case 'assets/help.png':
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'Drawer_SupportMerch')));
+                            break;
+                          case 'assets/share1.png':
+                          /*share order logic here*/
+                            break;
+                          case 'assets/serch.png':
+                          /*search screen logic here*/
+                            break;
+                          case 'assets/.png':
+                          /*search screen logic here*/
+                            break;
+                          case 'assets/upload.png':
+                          /*upload logic here*/
+                            break;
+                        }
+                      },
+                      child:Image.asset(img1,width: 24,height: 24,color: Colors.white,),
+                    ),
                     SizedBox(width: 16,),
-                    Image.asset(img2,width: 24,height: 24,color: Colors.white,),
+                    InkWell(
+                      onTap: (){
+                        switch(img2){
+                          case 'assets/chat_bubble.png':
+                            showModalBottomSheet(
+                                context: context,
+                                isScrollControlled: true,
+                                isDismissible: true,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(14),
+                                      topLeft: Radius.circular(14)),),
+                                builder: (context) => ModalBottomSheetDialog(popupStyle:'ChatPopup'));
+                            break;
+                          case 'assets/module_info.png':
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'Drawer_SupportMerch')));
+                            break;
+                          case 'assets/notification_merch.png':
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'Acc_Notification')));
+                            break;
+                          case 'assets/delete.png':
+                            /*Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'')));*/
+                            break;
+                          case 'assets/close.png':
+                          /*Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'')));*/
+                            break;
+
+                        }
+                      },
+                      child: Image.asset(img2,width: 24,height: 24,color: Colors.white,),
+                    ),
                   ],
                 )
             ))
       ],
     );
   }
-
 }

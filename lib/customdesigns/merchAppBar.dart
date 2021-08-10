@@ -1,3 +1,4 @@
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
@@ -47,9 +48,37 @@ class CustomAppBarWithoutSearch_Merchant extends StatelessWidget with PreferredS
                 margin: EdgeInsets.only(right: 16),
                 child: Row(
                   children: [
-                    Image.asset(img1,width: 24,height: 24,color: Colors.white,),
+                    InkWell(
+                      onTap: (){
+                        switch(img1){
+                          case 'assets/help.png':
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'Drawer_SupportMerch')));
+                            break;
+                        }
+                      },
+                      child:Image.asset(img1,width: 24,height: 24,color: Colors.white,),
+                    ),
                     SizedBox(width: 16,),
-                    Image.asset(img2,width: 24,height: 24,color: Colors.white,),
+                    InkWell(
+                      onTap: (){
+                        switch(img2){
+                          case 'assets/help.png':
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'Drawer_SupportMerch')));
+                            break;
+                          case 'assets/module_info.png':
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'Drawer_SupportMerch')));
+                            break;
+                          case 'assets/notification_merch.png':
+                          Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'Acc_Notification')));
+                            break;
+                        }
+                      },
+                      child:Image.asset(img2,width: 24,height: 24,color: Colors.white,),
+                    )
                   ],
                 )
             ))

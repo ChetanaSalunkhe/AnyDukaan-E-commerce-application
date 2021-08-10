@@ -57,6 +57,8 @@ dependencies:
   dropdown_search:
   otp_text_field:
   awesome_dialog:
+  flutter_chat_ui:
+  bubble:
 
 dev_dependencies:
   flutter_test:

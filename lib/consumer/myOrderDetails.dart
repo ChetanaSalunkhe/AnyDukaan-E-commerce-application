@@ -16,6 +16,7 @@ class MyOrderDetails extends State{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: CustomColors.background_all,
       appBar: CustomAppBarWithoutSearch('Order Details',true,true,'assets/share1.png','assets/chat_bubble.png'),
       body: SingleChildScrollView(

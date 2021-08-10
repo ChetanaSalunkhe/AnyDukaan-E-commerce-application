@@ -1,3 +1,4 @@
+import 'package:anydukaan/chatModule/chatScreen.dart';
 import 'package:anydukaan/dialogBoxDesigns/applyOfferPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/assignDeliveryAgentPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/availableQtyPopup.dart';
@@ -24,12 +25,7 @@ import 'package:anydukaan/dialogBoxDesigns/sendMessagePopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/supportCallPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/tableReservedPopup.dart';
 import 'package:anydukaan/dialogBoxDesigns/tableReservedPopup_success.dart';
-import 'package:anydukaan/valueresources/customColors.dart';
-import 'package:anydukaan/valueresources/customStrings.dart';
-import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
-
-import 'customButtons.dart';
 
 class ModalBottomSheetDialog extends StatefulWidget {
   String popupStyle ="";
@@ -113,10 +109,13 @@ class ModalBottomSheetDialog extends StatefulWidget {
         break;
       case 'BannerRequestPopup':
         return BannerRequestPopup();
-        //return SupportCallPopup();
         break;
       case 'SupportCallPopup':
         return SupportCallPopup();
+        break;
+    /**************************************** Chat Section *******************************************************/
+      case 'ChatPopup':
+        return ChatPage();
         break;
     }
   }

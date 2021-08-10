@@ -38,6 +38,7 @@ class ExpansionTileSampleState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: CustomColors.background_all,
         appBar: CustomAppBarWithoutSearch('Cart',true,false,'assets/serch.png','assets/module_info.png'),
         body: SingleChildScrollView(
@@ -95,27 +96,24 @@ class ExpansionTileSampleState extends StatelessWidget {
             ],
           )
         ),
-        floatingActionButton:Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 90,
-              margin: EdgeInsets.only(bottom: 25,),
-              child:FloatingActionButton(
-                onPressed: ()=>showModalBottomSheet(
-                    context: context,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(14),
-                          topLeft: Radius.circular(14)),),
-                    builder: (context) => ModalBottomSheetDialog(popupStyle:'DeliveryLoc')),
-                backgroundColor: Colors.transparent,
-                elevation: 0,
-                child: BtnViewCart_Checkout('Total Amount',CustomString.checkout,'₹25',context,'Checkout'),
-              ),
-            ),
-          ],
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: Container(
+          width: MediaQuery.of(context).size.width,
+          height: 90,
+          margin: EdgeInsets.only(bottom: 25,),
+          child:FloatingActionButton(
+            onPressed:()=>showModalBottomSheet(
+                context: context,
+                isDismissible: true,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(14),
+                      topLeft: Radius.circular(14)),),
+                builder: (context) => ModalBottomSheetDialog(popupStyle:'DeliveryLoc')),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            child:BtnViewCart_Checkout('Total Amount',CustomString.checkout,'₹25',context,'Checkout'),
+          ),
         ),
         bottomSheet: CustomBottomBar(),
     );

@@ -1,3 +1,4 @@
+import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,7 +16,8 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
   bool isActionVisible = true;
   String img="";
 
-  CustomAppBarWithSearch({Key key,this.isLeadingVisible,this.isActionVisible, this.title,this.searchHint,this.img}):preferredSize=Size.fromHeight(100),super(key: key);
+  CustomAppBarWithSearch({Key key,this.isLeadingVisible,this.isActionVisible, this.title,this.searchHint,this.img})
+      :preferredSize=Size.fromHeight(100),super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,13 @@ class CustomAppBarWithSearch extends StatelessWidget with PreferredSizeWidget{
                 visible: isActionVisible,
                   child: Container(
                     margin: EdgeInsets.only(right: 16),
-                    child: Image.asset("assets/notification.png",width: 24,height: 24,),
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'Acc_Notification')));
+                      },
+                      child:Image.asset("assets/notification.png",width: 24,height: 24,),
+                    ),
                   ))
             ],
           ),

@@ -15,7 +15,6 @@ class DeliveryLocPopup extends State{
         fit: FlexFit.loose,
         child: new Container(
             height: 550.0,
-            //height: MediaQuery.of(context).size.height,
             color: Colors.transparent,
             child: Padding(
               padding: EdgeInsets.only(left: 16,right: 16,top: 13),
