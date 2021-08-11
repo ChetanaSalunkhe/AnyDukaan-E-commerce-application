@@ -3,9 +3,10 @@ import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
-Container GetWarning(){
+Container GetWarning(BuildContext context){
   return Container(
       height: 100,
+      width: MediaQuery.of(context).size.width,
       color:CustomColors.red_card,
       padding: EdgeInsets.all(16),
       child: Column(

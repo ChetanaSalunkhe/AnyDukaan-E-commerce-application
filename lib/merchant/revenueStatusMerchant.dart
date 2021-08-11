@@ -46,7 +46,7 @@ class RevenueStatusMerchant extends State{
                 children: [
                   Container(
                       color: CustomColors.white,
-                      width: 360,
+                      width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.zero,
                       child:Column(
                         children: [

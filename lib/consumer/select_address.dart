@@ -24,7 +24,7 @@ class SelectAddress extends State{
                   /*select address logic here*/
                 },
                 /*pass address type here*/
-                child: AddressCard('Home',),
+                child: AddressCard(CustomString.home,),
               );
             }),
       ),

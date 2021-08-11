@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 /*Created by Chetana*/
+
 class CustomColors{
   static Color black = Color(0xff303B40);
   static Color white = Color(0xffffffff);

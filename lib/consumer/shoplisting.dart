@@ -31,7 +31,7 @@ class ShopListing extends State{
           child: Column(
             children: [
               //banner image sliderwk
-              AdvPages(iName: 'assets/bannerimg2.png',width:360,height:150,boxHeight: 150,entries:entries_banners),
+              AdvPages(iName: 'assets/bannerimg2.png',width:MediaQuery.of(context).size.width,height:150,boxHeight: 150,entries:entries_banners),
 
               //text title
               blackNormalCust_14(title:'$title',),

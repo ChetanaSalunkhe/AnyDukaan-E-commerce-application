@@ -66,7 +66,7 @@ class CheckoutScreen1 extends State{
                 isDoorStep==true?Column(
                   children: [
                     /*address card*/
-                    AddressCard('Home',),
+                    AddressCard(CustomString.home,),
                     SizedBox(height: 24,),
                     /*timings*/
                     Column(

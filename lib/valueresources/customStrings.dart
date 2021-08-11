@@ -1,5 +1,6 @@
-/*Created by Chetana*/
 import 'package:progress_timeline/progress_timeline.dart';
+
+/*Created by Chetana*/
 
 class CustomString{
   static var search = "Search";

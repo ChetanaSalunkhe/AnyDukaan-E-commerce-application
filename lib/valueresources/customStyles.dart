@@ -1,15 +1,12 @@
 import 'package:bubble/bubble.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:flutter_switch/flutter_switch.dart';
-import 'package:group_radio_button/group_radio_button.dart';
 import 'package:slide_digital_clock/slide_digital_clock.dart';
 import 'customColors.dart';
-import 'customStrings.dart';
 
 /*Created by Chetana*/
+
 class CustomStyle{
   /*custom text styles to use dynamically*/
   /*-----------------------white-----------------------------------------------*/

@@ -33,7 +33,7 @@ class EditProductMerchant extends State{
                   padding: EdgeInsets.only(top: 16),
                   child:Stack(
                     children: [
-                      AdvPages(iName:'assets/dummy_prod.png',width:360,height:190,boxHeight: 190,entries:entries_banners),
+                      AdvPages(iName:'assets/dummy_prod.png',width:MediaQuery.of(context).size.width,height:190,boxHeight: 190,entries:entries_banners),
                       Positioned.fill(
                         top: 170,
                           child:Row(

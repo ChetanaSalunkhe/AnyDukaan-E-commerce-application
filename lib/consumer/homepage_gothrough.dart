@@ -100,7 +100,7 @@ class HomePageState extends State {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ClipRRect(
-                    child: CustomStyle.getImageBanner("assets/banner_2.png",360,190, BoxFit.cover,)
+                    child: CustomStyle.getImageBanner("assets/banner_2.png",MediaQuery.of(context).size.width,190, BoxFit.cover,)
                 ),
               ],
             ),
@@ -119,13 +119,13 @@ class HomePageState extends State {
                 Flexible(
                   flex: 1,
                   fit: FlexFit.loose,
-                  child:  Container(
-                    height: 266,
+                  child:Container(
+                    height: 270,
                     margin: EdgeInsets.only(right: 16),
                     //listview of dukans and rest list
                     child: CustomListView_cardWithbtns(),
-
-                  ),)
+                  ),
+                )
               ],
             ),
 
@@ -552,6 +552,116 @@ class ListViewUI_cardWithbtns  extends State{
         }
     );
   }
+
+}
+
+ListView GetList(){
+  return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: entries.length,
+      itemBuilder: (BuildContext context,int index){
+        return InkWell(
+            onTap: (){
+            },
+            child:Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(left: 16),
+                  width: CustomDimens.cardWidth_135,
+                  child: Card(
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                              alignment: Alignment.center,
+                              child: Padding(
+                                padding: EdgeInsets.all(16),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    ClipRRect(
+                                      //child: Image.asset("assets/prod2.png",width: 70,height: 70, fit: BoxFit.cover,alignment: Alignment.center,)
+                                        child: CustomStyle.getImageBanner("assets/prod2.png",70,70, BoxFit.cover,)
+                                    ),
+                                  ],
+                                ),
+                              )
+                          ),
+
+                          Container(
+                            margin: EdgeInsets.only(left: 12,right: 12),
+                            child:Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(height: 8,),
+                                Text('Govardhan milk', textAlign: TextAlign.start, style: CustomStyle.blackBoldlCust_12,
+                                  overflow: TextOverflow.ellipsis, maxLines: 2,softWrap: true,
+                                ),
+                                SizedBox(height: 6,),
+                                new Text('1 Ltr', textAlign: TextAlign.center, style: CustomStyle.subTitle,),
+                                SizedBox(height: 6,),
+                                Text('Apna Kirana Store', textAlign: TextAlign.start, style: CustomStyle.subTitleBlack,
+                                  overflow: TextOverflow.ellipsis, maxLines: 1,softWrap: true,),
+                                SizedBox(height: 10,),
+                                Row(
+                                  children: [
+                                    new Text('₹ 300', textAlign: TextAlign.center, style: CustomStyle.textWithLine,),
+                                    SizedBox(width: 14,),
+                                    new Text('₹ 120', textAlign: TextAlign.center, style: CustomStyle.boldValueText,),
+                                  ],
+                                ),
+                                SizedBox(height: 6,),
+                                Container(
+                                    alignment: Alignment.center,
+                                    child: Card(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(18), // if you need this
+                                          side: CustomStyle.orangeOutline
+                                      ),
+                                      child: Container(
+                                        color: Colors.white,
+                                        width: CustomDimens.cardWidth_104,
+                                        height: 34,
+                                        child: Row(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            new Text('+', textAlign: TextAlign.center, style: CustomStyle.primaryBtnTextOrange,),
+                                            SizedBox(width: 24,),
+                                            new Text('1', textAlign: TextAlign.center, style: CustomStyle.primaryBtnTextOrange,),
+                                            SizedBox(width: 24,),
+                                            new Text('-', textAlign: TextAlign.center, style: CustomStyle.primaryBtnTextOrange,),
+                                          ],
+                                        ),
+                                      ),
+                                    )
+                                ),
+
+                                SizedBox(height: 10,),
+
+                              ],
+                            ),
+                          )
+                        ],
+                      )
+                  ),
+
+                ),
+              ],
+            )
+        );
+      }
+  );
 
 }
 

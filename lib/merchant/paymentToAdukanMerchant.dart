@@ -52,7 +52,7 @@ Column GetTabDesign(context){
                 children: [
                   Column(
                     children: [
-                      GetWarning(),
+                      GetWarning(context),
                       Container(
                         margin: EdgeInsets.only(left: 16,right: 16),
                         child: GetInvoiceList(entries: entries,),

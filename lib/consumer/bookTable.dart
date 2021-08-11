@@ -38,7 +38,7 @@ class BookTable extends State{
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       //SizedBox(height: 32,),
-                      AdvPages(iName:'assets/hotel_img.png',width:360,height:212,boxHeight: 212,entries: entries_banners,),
+                      AdvPages(iName:'assets/hotel_img.png',width:MediaQuery.of(context).size.width,height:212,boxHeight: 212,entries: entries_banners,),
                     ],
                   ),
                 ),

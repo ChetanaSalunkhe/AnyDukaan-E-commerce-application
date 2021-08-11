@@ -19,7 +19,7 @@ class Dashboard extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch_Merchant('Home',true,true,'assets/help.png','assets/notification_merch.png',
+      appBar: CustomAppBarWithoutSearch_Merchant(CustomString.home,true,true,'assets/help.png','assets/notification_merch.png',
           'assets/hamburger_menu.png'),
       body: SingleChildScrollView(
         child: Stack(
@@ -31,14 +31,14 @@ class Dashboard extends State{
                 /*visibility handled as per merchants payment to vsl status*/
                 Visibility(
                   visible: isWarningVisible,
-                  child: GetWarning(),
+                  child: GetWarning(context),
                 ),
                 SizedBox(height: 12,),
                 Container(
                   //height: 290,
                   child: Column(
                     children: [
-                      CustomStyle.getImageBanner('assets/dash_shop.png',360,158,BoxFit.cover),
+                      CustomStyle.getImageBanner('assets/dash_shop.png',MediaQuery.of(context).size.width,158,BoxFit.cover),
                       SizedBox(height: 16,),
                       Padding(
                         padding: EdgeInsets.only(left: 16,right: 16),
