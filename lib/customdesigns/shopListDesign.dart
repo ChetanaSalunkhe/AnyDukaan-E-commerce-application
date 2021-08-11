@@ -1,5 +1,6 @@
 //listview shops
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -117,7 +118,7 @@ class ListView_shops extends State{
                                                 children: [
                                                   CustomStyle.getImageIcons("assets/free_delivery.png",12,CustomColors.greenlight),
                                                   SizedBox(width: 4,),
-                                                  new Text('Free Delivery', style: CustomStyle.greenText10,),
+                                                  new Text(CustomString.freeDel, style: CustomStyle.greenText10,),
                                                 ],
                                               )
                                             ],

@@ -1,4 +1,5 @@
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class OrdSummaryTemplate extends StatelessWidget{
               Flexible(
                   flex:8,
                   fit: FlexFit.tight,
-                  child: Text('Selling Price',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                  child: Text(CustomString.sprice,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
               Flexible(
                   flex:2,
                   fit: FlexFit.tight,
@@ -36,7 +37,7 @@ class OrdSummaryTemplate extends StatelessWidget{
               Flexible(
                   flex:8,
                   fit: FlexFit.tight,
-                  child: Text('Product Offer',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                  child: Text(CustomString.prodOffer,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
               Flexible(
                   flex:2,
                   fit: FlexFit.tight,
@@ -51,7 +52,7 @@ class OrdSummaryTemplate extends StatelessWidget{
               Flexible(
                   flex:8,
                   fit: FlexFit.tight,
-                  child: Text('Delivery Charges',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                  child: Text(CustomString.delcharges,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
               Flexible(
                   flex:2,
                   fit: FlexFit.tight,
@@ -68,7 +69,7 @@ class OrdSummaryTemplate extends StatelessWidget{
               Flexible(
                   flex:8,
                   fit: FlexFit.tight,
-                  child: Text('Sub Total',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                  child: Text(CustomString.subtot,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
               Flexible(
                   flex:2,
                   fit: FlexFit.tight,
@@ -83,7 +84,7 @@ class OrdSummaryTemplate extends StatelessWidget{
               Flexible(
                   flex:8,
                   fit: FlexFit.tight,
-                  child: Text('Return Product',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                  child: Text(CustomString.returnProduct,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
               Flexible(
                   flex:2,
                   fit: FlexFit.tight,
@@ -100,7 +101,7 @@ class OrdSummaryTemplate extends StatelessWidget{
               Flexible(
                   flex:8,
                   fit: FlexFit.tight,
-                  child: Text('Final Cost',style: CustomStyle.blackBold16,textAlign: TextAlign.start,)),
+                  child: Text(CustomString.finalCost,style: CustomStyle.blackBold16,textAlign: TextAlign.start,)),
               Flexible(
                   flex:2,
                   fit: FlexFit.tight,

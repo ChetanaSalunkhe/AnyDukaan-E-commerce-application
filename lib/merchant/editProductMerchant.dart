@@ -135,7 +135,7 @@ class EditProductMerchant extends State{
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Text('Offer Duration',style: CustomStyle.blackBoldMerch_12,),
-                                              CustomStyle.getEditTextWithIcon('Date', 14, 1,TextInputType.text, Icons.calendar_today,
+                                              CustomStyle.getEditTextWithIcon(CustomString.date_, 14, 1,TextInputType.text, Icons.calendar_today,
                                                   CustomColors.colorPrimaryBlue,16,'',CustomColors.colorPrimaryBlue,true),
                                             ],
                                           )
@@ -169,15 +169,15 @@ class EditProductMerchant extends State{
                           fit: FlexFit.tight,
                           child:Padding(
                             padding: EdgeInsets.only(right: 8),
-                            child: CustomStyle.getEditTextEnterDetails('Selling Rate', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                            child: CustomStyle.getEditTextEnterDetails(CustomString.sprice, 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                           ),
                         ),
                       ],
                     ),
                     /*product weight*/
-                    CustomStyle.getEditTextEnterDetails('Product Weight', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                    CustomStyle.getEditTextEnterDetails(CustomString.prodwt, 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     /*manufacturing date*/
-                    CustomStyle.getEditTextWithIcon('Manufacturing Date', 14, 1, TextInputType.text, Icons.calendar_today,
+                    CustomStyle.getEditTextWithIcon(CustomString.manfcturedt, 14, 1, TextInputType.text, Icons.calendar_today,
                         CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue,true),
                     SizedBox(height: 20,),
                     /*description*/

@@ -64,7 +64,7 @@ Widget Categoryist() {
                             ),
                             subtitle: Transform(
                                 transform: Matrix4.translationValues(0, 5, 10.0),
-                                child:Text('Milk Powder mbfjahfbhaf', style: CustomStyle.blackBoldMerch_10,
+                                child:Text('Milk Powder', style: CustomStyle.blackBoldMerch_10,
                                   textAlign: TextAlign.center, softWrap: true,
                                   overflow: TextOverflow.ellipsis,maxLines: 1,),
                             ),

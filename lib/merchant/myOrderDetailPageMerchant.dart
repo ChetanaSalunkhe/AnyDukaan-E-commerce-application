@@ -1,5 +1,4 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
-import 'package:anydukaan/customdesigns/merchAppBar.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/customdesigns/orderListCardMerchant.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
@@ -16,7 +15,7 @@ class MyOrderDetailsPageMerchant extends State{
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: CustomColors.background_lightblue,
-        appBar: CustomAppBarWithoutSearch('My Orders',true,true,'assets/share1.png','assets/chat_bubble.png',),
+        appBar: CustomAppBarWithoutSearch(CustomString.myords,true,true,'assets/share1.png','assets/chat_bubble.png',),
         body: SingleChildScrollView(
           child:Stack(
             children: [
@@ -176,7 +175,7 @@ class MyOrderDetailsPageMerchant extends State{
               onTap: (){
 
               },
-              child: BtnContinue('Refund (₹ 250)', context, 'OrdDetailPage'),
+              child: BtnContinue(CustomString.refund_+' (₹ 250)', context, 'OrdDetailPage'),
             ),
           ],
         )
@@ -198,7 +197,6 @@ class CustomView extends StatelessWidget{
         itemBuilder: (BuildContext context, int index){
           return Container(
             //here pass entries[index] value as per requirement
-            //child:GetCard('assets/prod2.png','Ashirvad Aata','5 kg','₹ 200','2','ordStatus'),
             child:GetCard('assets/prod2.png','Ashirvad Aata','5 kg','₹ 200','2','Returns'),
           );
         }

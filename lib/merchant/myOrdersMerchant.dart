@@ -6,6 +6,7 @@ import 'package:anydukaan/customdesigns/shopListDesign.dart';
 import 'package:anydukaan/customdesigns/tabBarIndicator.dart';
 import 'package:anydukaan/customdesigns/tabbarDesign.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:flutter/material.dart';
 
 final List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
@@ -53,7 +54,7 @@ class MyOrdersMerchant extends State{
       length:isTabBarShop==true?3:2,
       child: Scaffold(
         backgroundColor: CustomColors.background_lightblue,
-        appBar: CustomAppBarWithoutSearch_Merchant('My Orders',true,true,'assets/help.png','assets/module_info.png','assets/hamburger_menu.png'),
+        appBar: CustomAppBarWithoutSearch_Merchant(CustomString.myords,true,true,'assets/help.png','assets/module_info.png','assets/hamburger_menu.png'),
         body: Container(
           child: tabCount>2?GetTabDesignShop(context):GetTabDesignRest(context),
         )

@@ -54,22 +54,22 @@ class BottomBarDesign extends State{
           items: [
             BottomNavyBarItem(
               icon: Icon(Icons.home),
-              title: Text('Home'),
+              title: Text(CustomString.home),
               activeColor: CustomColors.colorPrimaryBlue,
             ),
             BottomNavyBarItem(
                 icon: Icon(Icons.shopping_cart),
-                title: Text('Cart'),
+                title: Text(CustomString.cart),
                 activeColor: CustomColors.colorPrimaryBlue
             ),
             BottomNavyBarItem(
                 icon: Icon(Icons.shopping_bag),
-                title: Text('Orders'),
+                title: Text(CustomString.ords),
                 activeColor: CustomColors.colorPrimaryBlue
             ),
             BottomNavyBarItem(
                 icon: Icon(Icons.supervisor_account),
-                title: Text('Account'),
+                title: Text(CustomString.accnt),
                 activeColor: CustomColors.colorPrimaryBlue
             ),
           ],

@@ -40,7 +40,7 @@ class ExpansionTileSampleState extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: CustomColors.background_all,
-        appBar: CustomAppBarWithoutSearch('Cart',true,false,'assets/serch.png','assets/module_info.png'),
+        appBar: CustomAppBarWithoutSearch(CustomString.cart,true,false,'assets/serch.png','assets/module_info.png'),
         body: SingleChildScrollView(
           physics: ScrollPhysics(),
           clipBehavior: Clip.antiAlias,
@@ -112,7 +112,7 @@ class ExpansionTileSampleState extends StatelessWidget {
                 builder: (context) => ModalBottomSheetDialog(popupStyle:'DeliveryLoc')),
             backgroundColor: Colors.transparent,
             elevation: 0,
-            child:BtnViewCart_Checkout('Total Amount',CustomString.checkout,'₹25',context,'Checkout'),
+            child:BtnViewCart_Checkout(CustomString.totAmt,CustomString.checkout,'₹25',context,CustomString.checkout),
           ),
         ),
         bottomSheet: CustomBottomBar(),

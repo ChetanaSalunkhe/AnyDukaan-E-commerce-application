@@ -75,7 +75,7 @@ class LoginPage extends State {
                               SizedBox(height: 20,),
                               Padding(
                                 padding: EdgeInsets.only(left: 16,right: 16),
-                                child: CustomStyle.getEditTextMobile('Mobile Number', 14,10,TextInputType.number,CustomStyle.blackBoldlCust_14),),
+                                child: CustomStyle.getEditTextMobile(CustomString.mobNum, 14,10,TextInputType.number,CustomStyle.blackBoldlCust_14),),
                               SizedBox(height: 10,),
                               Transform(
                                 transform: Matrix4.translationValues(-12, 0, 0.0),
@@ -113,7 +113,7 @@ class LoginPage extends State {
                                         children: [
                                           CustomStyle.getImageIcons('assets/location_blue.png', 18, CustomColors.colorPrimaryBlue),
                                           SizedBox(height: 12,),
-                                          Text('Allow AnyDukaan to access this device’s location?',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),
+                                          Text(CustomString.hintallow,style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),
                                           SizedBox(height: 15,),
                                           CustomStyle.GetDivider(),
                                           TextButton(
@@ -129,13 +129,13 @@ class LoginPage extends State {
                                                         topLeft: Radius.circular(14)),),
                                                   builder: (context) => ModalBottomSheetDialog(popupStyle:'LoginOTP',params:{'keyType':'Consumer'}));
                                             },
-                                            child: Text('Allow only while using the app ',style: CustomStyle.primaryBtnTextOrange,),),
+                                            child: Text(CustomString.hintallowonly,style: CustomStyle.primaryBtnTextOrange,),),
                                           TextButton(
                                             onPressed: (){
                                               /*deny logic here*/
                                               Navigator.pop(context);
                                             },
-                                            child:Text('Deny',style: CustomStyle.tabbarTitleText,),),
+                                            child:Text(CustomString.deny,style: CustomStyle.tabbarTitleText,),),
 
                                         ],
                                       ),
@@ -149,7 +149,7 @@ class LoginPage extends State {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text('Login with',style: CustomStyle.bottombarTitleText,textAlign: TextAlign.center,),
+                                  Text(CustomString.loginwith,style: CustomStyle.bottombarTitleText,textAlign: TextAlign.center,),
                                   SizedBox(width: 6,),
                                   CustomStyle.getImageBanner('assets/fblogo.png', 18, 18,BoxFit.scaleDown),
                                 ],
@@ -178,7 +178,7 @@ class LoginPage extends State {
                                 onPressed: (){
                                   /*skip current image*/
                                 },
-                                child: Text('Skip for now',style: CustomStyle.primaryBtnTextOrange,),),
+                                child: Text(CustomString.skipForNow,style: CustomStyle.primaryBtnTextOrange,),),
                             ],
                           ),
                         ),

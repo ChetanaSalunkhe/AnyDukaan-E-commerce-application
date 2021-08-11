@@ -1,14 +1,9 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
-import 'package:anydukaan/customdesigns/expanded_categoryList.dart';
-import 'package:anydukaan/customdesigns/merchAppBar.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
-import 'package:anydukaan/customdesigns/myCustomAppBar2.dart';
-import 'package:anydukaan/customdesigns/paymentOptionSetup.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:checkbox_formfield/checkbox_list_tile_formfield.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

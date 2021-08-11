@@ -4,6 +4,7 @@ import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/customdesigns/orderCardTemplate.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:flutter/material.dart';
 
 List<String> entries = <String>["Restaurant","Grocery","Vegetables","Fruits","Meat",
@@ -14,7 +15,7 @@ class ReturnProduct extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_all,
-      appBar: CustomAppBarWithoutSearch('Return Product',true,true,'','assets/chat_bubble.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.returnProduct,true,true,'','assets/chat_bubble.png'),
       body:Container(
         child: ReturnProduct_(),
       ),
@@ -35,7 +36,7 @@ class ReturnProduct extends State{
                         topLeft: Radius.circular(14)),),
                   builder: (context) => ModalBottomSheetDialog(popupStyle:'ReturnProductReasons'));
             },
-            child:BtnContinue('Return Product', context,'ReturnProduct'),
+            child:BtnContinue(CustomString.returnProduct, context,'ReturnProduct'),
           ),
         ],
       )

@@ -54,7 +54,7 @@ class HomeMerchant extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch_Merchant('Home',true,true,'assets/help.png','assets/notification_merch.png',
+      appBar: CustomAppBarWithoutSearch_Merchant(CustomString.home,true,true,'assets/help.png','assets/notification_merch.png',
           'assets/hamburger_menu.png'),
       body: SingleChildScrollView(
         child: Stack(

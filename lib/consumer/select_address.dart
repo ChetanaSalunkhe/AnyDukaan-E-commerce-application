@@ -11,7 +11,7 @@ class SelectAddress extends State{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBarWithoutSearch('My Addresses',true,false,'assets/serch.png','assets/module_info.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.myAddr,true,false,'assets/serch.png','assets/module_info.png'),
       body:Container(
         height: MediaQuery.of(context).size.height,
         margin: EdgeInsets.only(left: 16,right: 16),

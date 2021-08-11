@@ -21,7 +21,7 @@ class MyOrders extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_all,
-      appBar: CustomAppBarWithSearch(title:'Orders',searchHint:'Search here...',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png'),
+      appBar: CustomAppBarWithSearch(title:CustomString.ords,searchHint:'Search here...',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png'),
       body: SingleChildScrollView(
           clipBehavior: Clip.antiAlias,
           scrollDirection: Axis.vertical,
@@ -30,7 +30,7 @@ class MyOrders extends State {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
 
-              BlankState(msg:'No Orders Placed!', isBtnVisibile:true,img: 'assets/blankstate.png',),
+              BlankState(msg:CustomString.noOrd, isBtnVisibile:true,img: 'assets/blankstate.png',),
             ],
           )
       ),
@@ -87,7 +87,7 @@ class BlankState extends StatelessWidget{
                       Navigator.push(context, 
                       MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'AllOrdersList',)));
                     },
-                    child: BtnWithArrow('See Past Orders',context,280,50,false,CustomStyle.orangeOutline,
+                    child: BtnWithArrow(CustomString.seePastOrds,context,280,50,false,CustomStyle.orangeOutline,
                         CustomStyle.primaryBtnTextOrange,CustomColors.colorPrimaryOrange,Icons.arrow_forward),
                   )
               )),

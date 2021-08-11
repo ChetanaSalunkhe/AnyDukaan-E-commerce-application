@@ -60,6 +60,7 @@ class GridViewUI extends State{
                         )
                     ),*/
                   ),
+
                   /*give brand/product name here retrieved from list*/
                   Text('Amul Milk',style: CustomStyle.blackBoldMerch_10,
                   softWrap: true,maxLines: 1,textAlign: TextAlign.center,overflow: TextOverflow.ellipsis,),

@@ -1,6 +1,7 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -115,7 +116,7 @@ class TableBookingsList extends StatelessWidget{
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  BtnWithArrow('Cancel Request', context,144,38,false,CustomStyle.redOutline,CustomStyle.warningText,
+                                  BtnWithArrow(CustomString.cancelReq, context,144,38,false,CustomStyle.redOutline,CustomStyle.warningText,
                                       CustomColors.colorPrimaryOrange,Icons.arrow_forward),
                                 ],
                               ),
@@ -159,7 +160,7 @@ class TableBookingsList extends StatelessWidget{
                                       Navigator.push(context,
                                       MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'HomeShop',params: 'Restaurant',)));
                                     },
-                                    child:BtnBlue_singletext_small('Pre-Order', context,144,40,CustomColors.colorPrimaryOrange,6,CustomStyle.whiteBoldCust_12),                                  ),
+                                    child:BtnBlue_singletext_small(CustomString.preOrder, context,144,40,CustomColors.colorPrimaryOrange,6,CustomStyle.whiteBoldCust_12),                                  ),
                                 ],
                               ),
                             ),),

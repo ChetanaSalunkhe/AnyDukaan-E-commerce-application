@@ -1,13 +1,9 @@
-import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/customSearchBar.dart';
-import 'package:anydukaan/customdesigns/dashedLine.dart';
 import 'package:anydukaan/customdesigns/invoiceDetailMerchant.dart';
 import 'package:anydukaan/customdesigns/merchAppBar.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/customdesigns/tabbarDesign.dart';
-import 'package:anydukaan/customdesigns/tablebookingSetupCard.dart';
-import 'package:anydukaan/customdesigns/warninTemplate.dart';
 import 'package:anydukaan/customdesigns/warningToMerchant.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
@@ -35,7 +31,7 @@ class PaymentToAdukanMerchant extends State{
       length:2,
       child: Scaffold(
           backgroundColor: CustomColors.background_lightblue,
-          appBar: CustomAppBarWithoutSearch_Merchant('Payment to Anydukaan',true,true,'','assets/help.png','assets/hamburger_menu.png'),
+          appBar: CustomAppBarWithoutSearch_Merchant(CustomString.payToAd,true,true,'','assets/help.png','assets/hamburger_menu.png'),
           body: Container(
             child: GetTabDesign(context),
           ),
@@ -66,7 +62,7 @@ Column GetTabDesign(context){
                         onTap: (){
                           /*write save logic here*/
                         },
-                        child: BtnContinue('(₹404) Pay Now', context, 'PendingInvoice'),
+                        child: BtnContinue('(₹404) '+CustomString.payNow, context, 'PendingInvoice'),
                       )
                     ],
                   )
@@ -82,7 +78,7 @@ Column GetTabDesign(context){
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: 16,),
-                    SearchBar(hint: 'Search Invoices',width: MediaQuery.of(context).size.width,height: 44,radius: 20,margin: 16,),
+                    SearchBar(hint: CustomString.serchInvoice,width: MediaQuery.of(context).size.width,height: 44,radius: 20,margin: 16,),
                     Container(
                       margin: EdgeInsets.only(left: 16,right: 16,),
                       child: GetPaidInvoiceList(entries_paid: entries_paid,),

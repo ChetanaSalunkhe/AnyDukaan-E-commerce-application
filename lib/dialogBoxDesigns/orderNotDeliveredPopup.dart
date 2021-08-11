@@ -61,11 +61,6 @@ class OrderNotDeliveredPopup extends State{
                 margin: EdgeInsets.only(left: 16,right: 16,top: 26),
                 child: GetWarningTemplate(CustomString.dmsg_warning_sorry,3),
               ),
-             /* Padding(
-                padding: EdgeInsets.only(left: 22,right: 22),
-                child: Text(CustomString.dmsg_warning_sorry,style: CustomStyle.blackNormalCust_14,softWrap: true,overflow: TextOverflow.fade,
-                  textAlign: TextAlign.center,maxLines: 3,),
-              ),*/
               SizedBox(height: 20,),
               Padding(
                 padding: EdgeInsets.only(left: 35,right: 35,bottom: 0),

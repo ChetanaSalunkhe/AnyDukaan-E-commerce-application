@@ -13,7 +13,7 @@ class KhataCustDetails extends State{
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch('Khata Customer Details',true,true,'','assets/chat_bubble.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.khataCustDtls,true,true,'','assets/chat_bubble.png'),
       body:SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(top: 16,bottom: 60,left: 16,right: 16),
@@ -48,7 +48,7 @@ class KhataCustDetails extends State{
             onTap: (){
               /*call API to add delivery agent to server*/
             },
-            child: BtnContinue('(₹ 1200) Request Payment', context, 'AddAgent'),
+            child: BtnContinue('(₹ 1200) '+CustomString.reqPaymnt, context, 'AddAgent'),
           ),
         ],
       )

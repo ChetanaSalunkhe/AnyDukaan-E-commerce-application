@@ -1,6 +1,7 @@
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/customdesigns/reviewsListDesign.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class ReviewMerchant extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch('Reviews',true,true,'assets/help.png','assets/notification_merch.png',),
+      appBar: CustomAppBarWithoutSearch(CustomString.reviews,true,true,'assets/help.png','assets/notification_merch.png',),
       body: SingleChildScrollView(
         child: Container(
             margin: EdgeInsets.all(16),

@@ -55,7 +55,7 @@ class BookTable extends State{
                           fit: FlexFit.tight,
                           child: Padding(
                             padding: EdgeInsets.only(right: 24),
-                            child: CustomStyle.getEditTextWithIcon('Date', 14, 1,TextInputType.text,
+                            child: CustomStyle.getEditTextWithIcon(CustomString.date_, 14, 1,TextInputType.text,
                                 Icons.calendar_today,CustomColors.colorPrimaryBlue,16,'',CustomColors.black,true),
                           )
                       ),
@@ -64,7 +64,7 @@ class BookTable extends State{
                           fit: FlexFit.tight,
                           child: Padding(
                             padding: EdgeInsets.only(left: 24),
-                            child: CustomStyle.getEditTextWithIcon('Schedule Time', 14, 1,TextInputType.text,
+                            child: CustomStyle.getEditTextWithIcon(CustomString.schTime, 14, 1,TextInputType.text,
                                 Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,'',CustomColors.black,true))
                       ),
                     ],
@@ -89,7 +89,7 @@ class BookTable extends State{
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text('No. of Guests', style: CustomStyle.subTitle,textAlign: TextAlign.start,),
+                                  Text(CustomString.no_guest, style: CustomStyle.subTitle,textAlign: TextAlign.start,),
                                   Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -133,7 +133,7 @@ class BookTable extends State{
                           fit: FlexFit.tight,
                           child: Padding(
                               padding: EdgeInsets.only(left: 24,top: 15),
-                              child: CustomStyle.getEditTextWithIcon('Special Seating', 14, 1,TextInputType.text,
+                              child: CustomStyle.getEditTextWithIcon(CustomString.spcl_seating, 14, 1,TextInputType.text,
                                   Icons.keyboard_arrow_down,CustomColors.colorPrimaryBlue,20,'',CustomColors.colorPrimaryBlue,true))
                       ),
                     ],

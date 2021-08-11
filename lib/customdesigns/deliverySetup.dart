@@ -445,7 +445,7 @@ class AreaOptionsRbtn extends State{
                     child:Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text('More Options', style: CustomStyle.orangeMerch_12,textAlign: TextAlign.end,),
+                        Text(CustomString.moreopt, style: CustomStyle.orangeMerch_12,textAlign: TextAlign.end,),
                       ],
                     )
                 ),

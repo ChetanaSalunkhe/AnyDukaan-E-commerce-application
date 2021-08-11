@@ -34,9 +34,9 @@ class HomePageState extends State {
           children: [
             SizedBox(height: 30),
 
+            //gridview of segment list
             Container(
               height: 190,
-              //gridview of segment list
               child: CustomGridView(),
 
             ),
@@ -334,7 +334,6 @@ class ListViewUI_recommend extends State{
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     ClipRRect(
-                                        //child: Image.asset("assets/product1.png",width: 112,height: 78,fit: BoxFit.cover,alignment: Alignment.center,)
                                           child: CustomStyle.getImageBanner("assets/product1.png",112,78, BoxFit.cover,)
 
                                     ),

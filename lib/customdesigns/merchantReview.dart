@@ -1,5 +1,6 @@
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -15,7 +16,7 @@ class MerchantReview extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_all,
-      appBar: CustomAppBarWithoutSearch('Merchant Review',true,false,'assets/share1.png','assets/chat_bubble.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.merchReview,true,false,'assets/share1.png','assets/chat_bubble.png'),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -71,7 +72,7 @@ class MerchantReview extends State{
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 16,top: 18),
-                  child: Text('Rating',style: CustomStyle.blackNormalCust_14, textAlign: TextAlign.start,),),
+                  child: Text(CustomString.rating,style: CustomStyle.blackNormalCust_14, textAlign: TextAlign.start,),),
                 Padding(
                     padding: EdgeInsets.only(left: 16,top: 9),
                     //child: CustomStyle.GetRatingBar(5, Icons.star_outline, CustomColors.grey_subtitle, 20)),
@@ -101,7 +102,7 @@ class MerchantReview extends State{
             ),
             Padding(
               padding: EdgeInsets.only(left: 16,top: 18,right: 16),
-              child: CustomStyle.getEditTextSearch('A detailed, Honest reviews helps Merchants to improve', 14,10),),
+              child: CustomStyle.getEditTextSearch(CustomString.hintReview, 14,10),),
           ],
         ),
       ),

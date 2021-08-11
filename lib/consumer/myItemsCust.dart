@@ -16,7 +16,7 @@ class KhataItems extends State{
   Widget build(BuildContext context) {
    return Scaffold(
      backgroundColor: CustomColors.background_lightblue,
-     appBar: CustomAppBarWithoutSearch('My Items',true,false,'assets/serch.png','assets/module_info.png'),
+     appBar: CustomAppBarWithoutSearch(CustomString.myItems,true,false,'assets/serch.png','assets/module_info.png'),
      body:SingleChildScrollView(
        child:Container(
          margin: EdgeInsets.all(16),

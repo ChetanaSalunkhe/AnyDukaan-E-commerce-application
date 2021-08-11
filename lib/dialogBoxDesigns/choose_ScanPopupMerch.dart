@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 
 Container GetPopup(BuildContext context){
   return Container(
-    //height: MediaQuery.of(context).size.height,
     color: Colors.transparent,
     child: Padding(
       padding: EdgeInsets.only(left: 55,right: 55,bottom: 25),

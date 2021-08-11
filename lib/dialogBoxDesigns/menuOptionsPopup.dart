@@ -127,11 +127,6 @@ class CheckboxWidgetState extends State {
                   contentPadding: EdgeInsets.only(top: 0,bottom: 0),
                   controlAffinity: ListTileControlAffinity.leading,
                   title: CustomStyle.CheckboxTitle(key),
-                  /*Transform(
-                    transform: Matrix4.translationValues(-12, 0, 0.0),
-                    child: new Text(key,style: CustomStyle.blackNormalCust_14,),
-                  )*/
-                  //value: values[key],   //restaurants
                   value: values_groceries[key],   //grocery
                   activeColor: CustomColors.colorPrimaryBlue,
                   checkColor: Colors.white,

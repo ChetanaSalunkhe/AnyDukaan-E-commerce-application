@@ -1,5 +1,6 @@
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class RaiseComplaint extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_all,
-      appBar: CustomAppBarWithoutSearch('Raise a Complaint',true,false,'assets/share1.png','assets/chat_bubble.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.raiseComplaint,true,false,'assets/share1.png','assets/chat_bubble.png'),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -17,11 +18,10 @@ class RaiseComplaint extends State{
           children: [
             Padding(
               padding: EdgeInsets.only(left: 16,top: 18,right: 16),
-              child: CustomStyle.getEditTextEnterDetails('Enter Dukaan or Restaurant Name', 14,2,TextInputType.text,CustomStyle.blackBoldlCust_14),),
+              child: CustomStyle.getEditTextEnterDetails(CustomString.hintnamedukan, 14,2,TextInputType.text,CustomStyle.blackBoldlCust_14),),
             Padding(
               padding: EdgeInsets.only(left: 16,top: 18,right: 16),
-              child: CustomStyle.getEditTextItalic('Please raise a complaint only in case no help is provided by the Shopkeer or Restaurant',
-                  14,10),),
+              child: CustomStyle.getEditTextItalic(CustomString.hintraisecomplaint, 14,10),),
           ],
         ),
       ),

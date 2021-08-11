@@ -27,7 +27,7 @@ class MyProfileMerchant extends State{
 
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch(params=='Profile'?'My Profile':'Shop Details',true,true,'','assets/edit.png',),
+      appBar: CustomAppBarWithoutSearch(params=='Profile'?CustomString.myProf:CustomString.shopDtls,true,true,'','assets/edit.png',),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(16),
@@ -48,23 +48,23 @@ class MyProfileMerchant extends State{
                 ),
               ),
               /*name*/
-              CustomStyle.getEditTextEnterDetails('Name', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+              CustomStyle.getEditTextEnterDetails(CustomString.name, 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
               /*mobile*/
               Visibility(
                 visible: params=='Profile'?true:false,
-                  child:CustomStyle.getEditTextMobile('Mobile', 14, 10, TextInputType.number,CustomStyle.blackBoldMerch_16),),
+                  child:CustomStyle.getEditTextMobile(CustomString.mobNum, 14, 10, TextInputType.number,CustomStyle.blackBoldMerch_16),),
               SizedBox(height: 8,),
 
               /*location*/
               Visibility(
                 visible: params=='ShopDetails'?true:false,
-                child:CustomStyle.getEditTextEnterDetails('Location', 14, 6, TextInputType.text,CustomStyle.blackBoldMerch_16),),
+                child:CustomStyle.getEditTextEnterDetails(CustomString.loc, 14, 6, TextInputType.text,CustomStyle.blackBoldMerch_16),),
               SizedBox(height: 8,),
 
               /*selected segment*/
               Visibility(
                 visible: params=='ShopDetails'?true:false,
-                child:CustomStyle.getEditTextEnterDetails('Selected Segment', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),),
+                child:CustomStyle.getEditTextEnterDetails(CustomString.selSegmnt, 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),),
               SizedBox(height: 10,),
 
               /*working hrs*/
@@ -78,7 +78,7 @@ class MyProfileMerchant extends State{
                 )),
               SizedBox(height: 10,),
 
-              Text('Documents',style: CustomStyle.blackBoldMerch_12,textAlign: TextAlign.start,),
+              Text(CustomString.docs,style: CustomStyle.blackBoldMerch_12,textAlign: TextAlign.start,),
               SizedBox(height: 8,),
               Container(
                 height: 120,

@@ -23,18 +23,6 @@ class ApplyOfferPopup extends State{
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  /*Flexible(
-                    flex: 6,
-                    fit: FlexFit.tight,
-                    child:Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text('',style: CustomStyle.boldValueText,
-                          textAlign: TextAlign.center,)
-                      ],
-                    ),
-                  ),*/
-
                   Flexible(
                       flex: 4,
                       fit: FlexFit.loose,

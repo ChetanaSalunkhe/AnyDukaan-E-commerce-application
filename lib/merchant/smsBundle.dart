@@ -1,15 +1,11 @@
 import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
-import 'package:anydukaan/customdesigns/merchAppBar.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
-import 'package:anydukaan/customdesigns/radioGroupDesign.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
-import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:group_radio_button/group_radio_button.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 bool isSmsBundle1Visible = true;
@@ -73,7 +69,7 @@ class SMSBundle extends State{
                                         backgroundColor: CustomColors.greyline,
                                       ),
                                       SizedBox(height: 30,),
-                                      CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                                      CustomStyle.getEditTextEnterDetails(CustomString.hintsmsdesc, 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
                                       SizedBox(height: 30,),
                                       /*button*/
                                       InkWell(
@@ -116,7 +112,7 @@ class SMSBundle extends State{
                               child: Column(
                                 children: [
                                   SizedBox(height: 20,),
-                                  CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                                  CustomStyle.getEditTextEnterDetails(CustomString.hintsmsdesc, 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
                                   SizedBox(height: 30,),
                                   /*button*/
                                   InkWell(
@@ -175,7 +171,7 @@ class SMSBundle extends State{
                                               children: [
                                                 new Text("150/200",style: CustomStyle.blackBoldMerch_14,),
                                                 SizedBox(height: 10,),
-                                                new Text("Weekly \n Messages",style: CustomStyle.subTitle_merch,textAlign: TextAlign.center,),
+                                                new Text(CustomString.weeklymsgs,style: CustomStyle.subTitle_merch,textAlign: TextAlign.center,),
                                               ],
                                             ),
                                             progressColor: CustomColors.colorPrimaryBlue,
@@ -195,7 +191,7 @@ class SMSBundle extends State{
                                             children: [
                                               new Text("22/200",style: CustomStyle.blackBoldMerch_14,),
                                               SizedBox(height: 10,),
-                                              new Text("Lead \n Messages",style: CustomStyle.subTitle_merch,textAlign: TextAlign.center,),
+                                              new Text(CustomString.leadmsgs,style: CustomStyle.subTitle_merch,textAlign: TextAlign.center,),
                                             ],
                                           ),
                                           progressColor: CustomColors.colorPrimaryBlue,
@@ -204,7 +200,7 @@ class SMSBundle extends State{
                                     ],
                                   ),
                                   SizedBox(height: 30,),
-                                  CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                                  CustomStyle.getEditTextEnterDetails(CustomString.hintsmsdesc, 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
                                   SizedBox(height: 30,),
                                   Text(CustomString.selPlan,style: CustomStyle.blackBoldMerch_16,),
                                   SizedBox(height: 20,),
@@ -272,7 +268,7 @@ class GetBundle2Design extends State{
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          CustomStyle.getEditTextEnterDetails('SMS Description for promotions', 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
+          CustomStyle.getEditTextEnterDetails(CustomString.hintsmsdesc, 14, 10, TextInputType.text,CustomStyle.blackNormalMerch_16),
           SizedBox(height: 30,),
           Text(CustomString.selPlan,style: CustomStyle.blackBoldMerch_16,),
           SizedBox(height: 20,),

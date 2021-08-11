@@ -16,7 +16,6 @@ Container AddressCard(String addrType){
           )
       ),
 
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,

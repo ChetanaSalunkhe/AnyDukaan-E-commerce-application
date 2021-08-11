@@ -5,6 +5,7 @@ import 'package:anydukaan/customdesigns/myKhataCards.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/dialogBoxDesigns/loginPopup.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class KhataDetailsOnDate extends State{
   @override
   Widget build(BuildContext context) {
    return Scaffold(
-     appBar:CustomAppBarWithoutSearch('Khata Details',true,true,'','assets/chat_bubble.png'),
+     appBar:CustomAppBarWithoutSearch(CustomString.khataDtls,true,true,'','assets/chat_bubble.png'),
      body:SingleChildScrollView(
        child:Container(
          height: MediaQuery.of(context).size.height,
@@ -60,7 +61,7 @@ class KhataDetailsOnDate extends State{
              onTap: (){
                /*open payment options*/
              },
-             child: BtnContinue('(₹3,360) Pay Now',context,''),
+             child: BtnContinue('(₹3,360) '+CustomString.payNow,context,''),
            )
          ],
        )

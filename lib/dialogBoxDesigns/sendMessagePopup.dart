@@ -1,5 +1,3 @@
-import 'package:anydukaan/customdesigns/customButtons.dart';
-import 'package:anydukaan/customdesigns/warninTemplate.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';

@@ -32,7 +32,7 @@ class ProductDetails extends State{
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-        appBar: CustomAppBarWithoutSearch('Product Details',true,false,'assets/serch.png','assets/module_info.png'),
+        appBar: CustomAppBarWithoutSearch(CustomString.prodDtls,true,false,'assets/serch.png','assets/module_info.png'),
         body: SingleChildScrollView(
           clipBehavior: Clip.antiAlias,
           child:   Column(

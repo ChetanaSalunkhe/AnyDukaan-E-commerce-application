@@ -26,13 +26,13 @@ class DeliveryLocPopup extends State{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Delivery Location',style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.start,),
+                      Text(CustomString.delLoc,style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.start,),
                     ],
                   ),
                   SizedBox(height: 10,),
-                  CustomStyle.getEditTextEnterDetails('Flat, Floor, Building Name', 14,2,TextInputType.multiline,CustomStyle.blackBoldlCust_14),
-                  CustomStyle.getEditTextEnterDetails('Landmark', 14,1,TextInputType.text,CustomStyle.blackBoldlCust_14),
-                  CustomStyle.getEditTextEnterDetails('Road, area and location', 14,2,TextInputType.multiline,CustomStyle.blackBoldlCust_14),
+                  CustomStyle.getEditTextEnterDetails(CustomString.hintflat, 14,2,TextInputType.multiline,CustomStyle.blackBoldlCust_14),
+                  CustomStyle.getEditTextEnterDetails(CustomString.hintLandmark, 14,1,TextInputType.text,CustomStyle.blackBoldlCust_14),
+                  CustomStyle.getEditTextEnterDetails(CustomString.hintRoad, 14,2,TextInputType.multiline,CustomStyle.blackBoldlCust_14),
                   SizedBox(height: 8,),
                   Row(
                     children: [
@@ -48,7 +48,7 @@ class DeliveryLocPopup extends State{
                       Navigator.push(context, 
                       MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'checkoutDelDtls',)));
                     },
-                    child:BtnContinue('Add Address', context,'DeliveryLocPopup')
+                    child:BtnContinue(CustomString.addAddress, context,'DeliveryLocPopup')
                   ),
                 ],
               ),

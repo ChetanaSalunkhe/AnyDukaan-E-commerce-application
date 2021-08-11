@@ -1,4 +1,5 @@
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ Container TextViewBtnCard(String text){
             fit: FlexFit.tight,
             child: Row(
               children: [
-                Text('View All',style: CustomStyle.orangeMerch_12,),
+                Text(CustomString.viewAll_small,style: CustomStyle.orangeMerch_12,),
                 SizedBox(width: 4,),
                 CustomStyle.getIcons(Icons.arrow_forward_ios_outlined, 12, CustomColors.colorPrimaryOrange)
               ],

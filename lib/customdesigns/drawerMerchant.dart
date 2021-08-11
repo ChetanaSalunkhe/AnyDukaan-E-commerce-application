@@ -1,5 +1,6 @@
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -58,7 +59,7 @@ class GetMerchantDrawer extends StatelessWidget{
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_HomeMerch',)));
                       },
-                      child: GetContainer('Home', Icons.home_filled),
+                      child: GetContainer(CustomString.home, Icons.home_filled),
                     ),
                     CustomStyle.GetDivider(),
 
@@ -78,7 +79,7 @@ class GetMerchantDrawer extends StatelessWidget{
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_MyOrdersMerch',)));
                       },
-                      child: GetContainerImage('My Orders', 'assets/orders.png'),
+                      child: GetContainerImage(CustomString.myords, 'assets/orders.png'),
                     ),
                     CustomStyle.GetDivider(),
 
@@ -91,7 +92,7 @@ class GetMerchantDrawer extends StatelessWidget{
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_KhataMerch',)));
                           },
-                          child:  GetContainerImage('Khata', 'assets/rupees.png'),
+                          child:  GetContainerImage(CustomString.khata, 'assets/rupees.png'),
                         ),
                     ),
                     CustomStyle.GetDivider(),
@@ -105,7 +106,7 @@ class GetMerchantDrawer extends StatelessWidget{
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_TableBookingMerch',)));
                         },
-                        child:  GetContainerImage('My Table Bookings', 'assets/chair.png'),
+                        child:  GetContainerImage(CustomString.myTableBookings, 'assets/chair.png'),
                       ),
                     ),
                     CustomStyle.GetDivider(),
@@ -116,7 +117,7 @@ class GetMerchantDrawer extends StatelessWidget{
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_PromotionsMerch',)));
                       },
-                      child:GetContainerImage('Promotions', 'assets/pctg.png'),
+                      child:GetContainerImage(CustomString.promotions, 'assets/pctg.png'),
                     ),
                     CustomStyle.GetDivider(),
 
@@ -126,7 +127,7 @@ class GetMerchantDrawer extends StatelessWidget{
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_SupportMerch',)));
                       },
-                      child:GetContainer('Support', Icons.chat_outlined),
+                      child:GetContainer(CustomString.support, Icons.chat_outlined),
                     ),
                     CustomStyle.GetDivider(),
 
@@ -136,7 +137,7 @@ class GetMerchantDrawer extends StatelessWidget{
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_PaymentMerch',)));
                       },
-                      child:GetContainerImage('Payment to Anydukaan', 'assets/paytoad.png'),
+                      child:GetContainerImage(CustomString.payToAd, 'assets/paytoad.png'),
                     ),
                     CustomStyle.GetDivider(),
 
@@ -146,7 +147,7 @@ class GetMerchantDrawer extends StatelessWidget{
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_SettingsMerch',)));
                       },
-                      child:GetContainer('Settings', Icons.settings),
+                      child:GetContainer(CustomString.settings, Icons.settings),
                     ),
                     CustomStyle.GetDivider(),
 
@@ -156,7 +157,7 @@ class GetMerchantDrawer extends StatelessWidget{
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_LogoutMerch',)));
                       },
-                      child:GetContainer('Logout', Icons.logout),
+                      child:GetContainer(CustomString.logout, Icons.logout),
                     ),
                     CustomStyle.GetDivider(),
                   ],
@@ -240,7 +241,7 @@ class SetUp extends State{
               }
             });
           },
-          child: GetContainerImage('Setup', 'assets/module_info.png'),
+          child: GetContainerImage(CustomString.setup, 'assets/module_info.png'),
         ),
         Visibility(
           visible: isSubSetupVisible,
@@ -254,7 +255,7 @@ class SetUp extends State{
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_MyProdMerch',)));
                   },
-                  child: GetContainerText('My Products'),
+                  child: GetContainerText(CustomString.myprod),
                 ),
 
                 InkWell(
@@ -262,7 +263,7 @@ class SetUp extends State{
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_DeliverySetupMerch',)));
                   },
-                  child: GetContainerText('Delivery Setup'),
+                  child: GetContainerText(CustomString.delstup),
                 ),
 
                 InkWell(
@@ -270,7 +271,7 @@ class SetUp extends State{
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_PackagingMerch',)));
                   },
-                  child:GetContainerText('Packaging'),
+                  child:GetContainerText(CustomString.pckgng),
                 ),
 
                 InkWell(
@@ -278,7 +279,7 @@ class SetUp extends State{
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'Drawer_ApplyOffersMerch',)));
                   },
-                  child:GetContainerText('Apply Offers'),
+                  child:GetContainerText(CustomString.appOffers),
                 ),
                 
               ],

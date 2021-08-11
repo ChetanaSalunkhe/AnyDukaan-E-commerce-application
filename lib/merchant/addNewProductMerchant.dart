@@ -1,6 +1,4 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
-import 'package:anydukaan/customdesigns/merchAppBar.dart';
-import 'package:anydukaan/customdesigns/merchAppBarWithSearch.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
@@ -23,7 +21,7 @@ class AddNewProductMerchant extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch('Add New Product',true,false,'assets/help.png','assets/notification_merch.png',),
+      appBar: CustomAppBarWithoutSearch(CustomString.addNewProd,true,false,'assets/help.png','assets/notification_merch.png',),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(16),
@@ -41,7 +39,7 @@ class AddNewProductMerchant extends State{
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       CustomStyle.getIcons(Icons.image_outlined, 70, CustomColors.colorPrimaryBlue),
-                      Text('Tap to upload image',style: CustomStyle.blue_merch_bold_12,textAlign: TextAlign.center,),
+                      Text(CustomString.tapToUpload,style: CustomStyle.blue_merch_bold_12,textAlign: TextAlign.center,),
                     ],
                   )
               ),
@@ -51,7 +49,7 @@ class AddNewProductMerchant extends State{
                 child: Column(
                   children: [
                     /*product name*/
-                    CustomStyle.getEditTextEnterDetails('Product Name', 14, 2, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                    CustomStyle.getEditTextEnterDetails(CustomString.prodname, 14, 2, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     /*select category*/
                     SizedBox(height: 16,),
                     DropdownSearch<String>(
@@ -61,8 +59,8 @@ class AddNewProductMerchant extends State{
                       showSearchBox: false,
                       showAsSuffixIcons: true,
                       popupBackgroundColor: CustomColors.greyline,
-                      label: "Category",
-                      hint: "Select Category",
+                      label: CustomString.cat,
+                      hint: CustomString.selCategory,
                       onChanged: (String data) {
                         setState(() {
                           dropdownValue = data;
@@ -79,8 +77,8 @@ class AddNewProductMerchant extends State{
                       showSearchBox: false,
                       showAsSuffixIcons: true,
                       popupBackgroundColor: CustomColors.greyline,
-                      label: "Sub - Category",
-                      hint: "Select Sub- Vategory",
+                      label: CustomString.subcat,
+                      hint: CustomString.selSubcat,
                       onChanged: (String data) {
                         setState(() {
                           dropdownValue = data;
@@ -106,18 +104,19 @@ class AddNewProductMerchant extends State{
                           fit: FlexFit.tight,
                           child:Padding(
                             padding: EdgeInsets.only(right: 8),
-                            child: CustomStyle.getEditTextEnterDetails('Selling Rate', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                            child: CustomStyle.getEditTextEnterDetails(CustomString.sprice, 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                           ),
                         ),
                       ],
                     ),
                     /*manufacturing date*/
-                    CustomStyle.getEditTextWithIcon('Manufacturing Date', 14, 1, TextInputType.text,
+                    /*if restaurant hide visibility*/
+                    CustomStyle.getEditTextWithIcon(CustomString.manfcturedt, 14, 1, TextInputType.text,
                         Icons.calendar_today, CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue,true),
                     /*add description*/
-                    CustomStyle.getEditTextEnterDetails('Add Description', 14, 5, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                    CustomStyle.getEditTextEnterDetails(CustomString.addDesc, 14, 5, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     /*product weight*/
-                    CustomStyle.getEditTextEnterDetails('Product Weight', 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
+                    CustomStyle.getEditTextEnterDetails(CustomString.prodwt, 14, 1, TextInputType.text,CustomStyle.blackBoldMerch_16),
                     SizedBox(height: 30,),
                     /*button*/
                     InkWell(

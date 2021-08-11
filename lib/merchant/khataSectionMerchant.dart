@@ -21,7 +21,7 @@ class KhataSectionMerchant extends State{
       length:2,
       child: Scaffold(
           backgroundColor: CustomColors.background_lightblue,
-          appBar: CustomAppBarWithoutSearch_Merchant('Khata',true,true,'','assets/help.png','assets/hamburger_menu.png'),
+          appBar: CustomAppBarWithoutSearch_Merchant(CustomString.khata,true,true,'','assets/help.png','assets/hamburger_menu.png'),
           body: Container(
             child: GetTabDesignKhata(context),
           )
@@ -43,7 +43,7 @@ Column GetTabDesignKhata(context){
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: 16,),
-                SearchBar(hint: 'Search Name',width: MediaQuery.of(context).size.width,height: 44,radius: 20,margin: 16,),
+                SearchBar(hint: CustomString.serchName,width: MediaQuery.of(context).size.width,height: 44,radius: 20,margin: 16,),
                 Container(
                   margin: EdgeInsets.only(left: 16,right: 16),
                   child: listsize>0?GetKhataList(entries:entries,isBtnVisible: true,):Container(

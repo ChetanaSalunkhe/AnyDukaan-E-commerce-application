@@ -16,7 +16,7 @@ class CheckoutScreen1 extends State{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:CustomAppBarWithoutSearch('Checkout',true,false,'','assets/chat_bubble.png'),
+      appBar:CustomAppBarWithoutSearch(CustomString.checkout,true,false,'','assets/chat_bubble.png'),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(left: 16,right: 16),
@@ -107,7 +107,7 @@ class CheckoutScreen1 extends State{
                   ],
                 ):Column(
                   children: [
-                    CustomStyle.getEditTextWithIcon('Pickup Date and Time', 14, 1, TextInputType.text,
+                    CustomStyle.getEditTextWithIcon(CustomString.pickupDtime, 14, 1, TextInputType.text,
                         Icons.calendar_today, CustomColors.colorPrimaryBlue, 16, '', CustomColors.black,true),
                     SizedBox(height: 40,),
                     CustomStyle.getDigitalClock(),
@@ -178,7 +178,7 @@ class CheckoutScreen1 extends State{
           Navigator.push(context,
               MaterialPageRoute(builder: (context)=>SecondRoute(callFrom:'checkoutSuccess',)));
         },
-        child:BtnViewCart_Checkout('Total Amount','Place Order','56',context,'checkoutplaceord'),
+        child:BtnViewCart_Checkout(CustomString.totAmt,CustomString.placeOrder,'56',context,'checkoutplaceord'),
       )
     );
   }

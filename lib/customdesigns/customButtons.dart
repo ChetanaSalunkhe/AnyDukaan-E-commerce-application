@@ -4,8 +4,6 @@ import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'bottomSheetDialogDesign.dart';
-import 'buttonClickActions.dart';
 
 /*cart, checkout, place order buttons*/
 Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,BuildContext context,String clickAction){
@@ -51,15 +49,6 @@ Container BtnViewCart_Checkout(String text1, String btnName, String amtVal,Build
                   children: [
                     TextButton(
                         onPressed: (){
-                          /*Navigator.push(context,
-                              MaterialPageRoute(builder: (context)=>ButtonClickActions.callActions("ViewCart")));*/
-                          /*showModalBottomSheet(
-                              context: context,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(14),
-                                    topLeft: Radius.circular(14)),),
-                              builder: (context) => ModalBottomSheetDialog(popupStyle:'MultiMerch'));*/
                          },
                         child: Text('$btnName',style: CustomStyle.progressTitle,textAlign: TextAlign.right,),)
                   ],

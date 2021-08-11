@@ -74,7 +74,7 @@ class OrderCancelPopup extends State{
                 onTap: (){
                   Navigator.pop(context);
                 },
-                child:BtnContinue('Check Shops', context,'OrdCancelPopup'),
+                child:BtnContinue(CustomString.chkShops, context,'OrdCancelPopup'),
               ),
               SizedBox(height: 30,),
 

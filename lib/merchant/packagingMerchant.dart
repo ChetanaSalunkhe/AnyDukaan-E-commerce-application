@@ -14,7 +14,7 @@ class PackagingMerchant extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch_Merchant('Packaging',true,true,'','assets/help.png','assets/hamburger_menu.png'),
+      appBar: CustomAppBarWithoutSearch_Merchant(CustomString.pckgng,true,true,'','assets/help.png','assets/hamburger_menu.png'),
       body:SingleChildScrollView(
         child:  Container(
           child: GetTabDesignTable(context),
@@ -114,7 +114,7 @@ Container GetPackagingSetupCard(BuildContext context){
                 ),
                 child:Padding(
                   padding: EdgeInsets.only(left: 10,right: 10,top: 8,bottom: 8),
-                  child: CustomStyle.getEditText('Enter your packaging material and method', 14, 10)
+                  child: CustomStyle.getEditText(CustomString.hintpckgmat, 14, 10)
                 )
             )
         ),

@@ -1,5 +1,4 @@
 import 'package:anydukaan/beanClasses/itemsBean.dart';
-import 'package:anydukaan/consumer/homepage_gothrough.dart';
 import 'package:anydukaan/consumer/myOrders.dart';
 import 'package:anydukaan/customdesigns/listMyProdctsMerch.dart';
 import 'package:anydukaan/customdesigns/merchAppBarWithSearch.dart';
@@ -21,7 +20,7 @@ class MyProductsMerchant extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithSearch_Merch(title:"My Products",searchHint:'Search Products',
+      appBar: CustomAppBarWithSearch_Merch(title:CustomString.myprod,searchHint:CustomString.serchProd,
         isLeadingVisible:true,isActionVisible:true,img: 'assets/audio_search.png',img1:'assets/help.png',
         img2: 'assets/module_info.png',imgLead: 'assets/hamburger_menu.png',),
       body: SingleChildScrollView(

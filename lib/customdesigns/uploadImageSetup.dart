@@ -1,4 +1,5 @@
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:progress_timeline/progress_timeline.dart';
@@ -31,7 +32,7 @@ class UploadImageSetup extends State{
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   CustomStyle.getIcons(Icons.image_outlined, 70, CustomColors.colorPrimaryBlue),
-                  Text('Tap to upload image',style: CustomStyle.blue_merch_bold_12,textAlign: TextAlign.center,),
+                  Text(CustomString.tapToUpload,style: CustomStyle.blue_merch_bold_12,textAlign: TextAlign.center,),
                 ],
               )
           ),

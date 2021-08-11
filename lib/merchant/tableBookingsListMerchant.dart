@@ -1,4 +1,3 @@
-import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/merchAppBar.dart';
 import 'package:anydukaan/customdesigns/tabbarDesign.dart';
@@ -25,7 +24,7 @@ class TableBookingsMerchant extends State{
       length:2,
       child: Scaffold(
           backgroundColor: CustomColors.background_lightblue,
-          appBar: CustomAppBarWithoutSearch_Merchant('My Table Bookings',true,true,'','assets/help.png','assets/hamburger_menu.png'),
+          appBar: CustomAppBarWithoutSearch_Merchant(CustomString.myTableBookings,true,true,'','assets/help.png','assets/hamburger_menu.png'),
           body: Container(
             child: GetTabDesignTable(context),
           )
@@ -96,7 +95,6 @@ class GetBookingsList extends StatelessWidget{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        //Text('Chetana Salunkhe',style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.start,),
                         Text(entries[index].first,style: CustomStyle.blackBoldlCust_14,textAlign: TextAlign.start,),
                         SizedBox(height: 8,),
                         Row(
@@ -190,8 +188,7 @@ class GetBookingsList extends StatelessWidget{
                                       height: 50,
                                       padding: EdgeInsets.only(top: 18),
                                       child: Text(CustomString.reject,style: CustomStyle.warningText_merch_bold_12,textAlign: TextAlign.center,),
-                                    ),
-                                  ),),),
+                                    ),),),),
 
                             //if order is not yet assign to del agent then visible
                             //if order assigned to del agent then visibility false

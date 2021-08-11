@@ -1,4 +1,5 @@
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:timeline_list2/timeline.dart';
@@ -20,7 +21,7 @@ class DeliveryTimeline extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Ordered",style: CustomStyle.blackNormalCust_14,),
+                      Text(CustomString.ordred,style: CustomStyle.blackNormalCust_14,),
                       Text("Rajesh Kirana Store, Apr 1, 5:30 PM",style: CustomStyle.greyText10,),
                     ],
                   )
@@ -38,7 +39,7 @@ class DeliveryTimeline extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Delivered",style: CustomStyle.subTitle,),
+                      Text(CustomString.delvrd,style: CustomStyle.subTitle,),
                       Text("Home - B-1204, Sun City, Goregoan Paid - UPI ",style: CustomStyle.greyText10,),
                     ],
                   )
@@ -56,7 +57,7 @@ class DeliveryTimeline extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Return",style: CustomStyle.subTitle,),
+                      Text(CustomString.return_,style: CustomStyle.subTitle,),
                       Text("Home - B-1204, Sun City, Goregoan Paid - UPI ",style: CustomStyle.greyText10,),
                     ],
                   )
@@ -74,7 +75,7 @@ class DeliveryTimeline extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Refund",style: CustomStyle.subTitle,),
+                      Text(CustomString.refund_,style: CustomStyle.subTitle,),
                       Text("UPI",style: CustomStyle.greyText10,),
                     ],
                   )

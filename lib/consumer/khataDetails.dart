@@ -3,6 +3,7 @@ import 'package:anydukaan/customdesigns/myCustomAppBar2.dart';
 import 'package:anydukaan/customdesigns/myKhataCards.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -76,7 +77,7 @@ class ListViewUIkhata extends State{
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   getmyKhataCard("Rajesh Kirana Store", "Groceries",'assets/placed_ord.png', "Accepted",
-                      '(₹83) Pay Now',context,true,'accepted'),
+                      '(₹83) '+CustomString.payNow,context,true,'accepted'),
                 ],
               )
           );

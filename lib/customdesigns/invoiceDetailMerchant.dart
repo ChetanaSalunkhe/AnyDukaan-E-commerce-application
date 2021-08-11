@@ -1,5 +1,6 @@
 import 'package:anydukaan/customdesigns/dashedLine.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,7 @@ Container GetInvoiceDetailCard(List<List<String>> entries, bool isStatusVisible,
                         child:Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text('Successful', style:CustomStyle.greenText12_merch,),
+                            Text(CustomString.succssful, style:CustomStyle.greenText12_merch,),
                             SizedBox(width: 4,),
                             CustomStyle.getIcons(Icons.check_circle, 16, CustomColors.greenlight),
                           ],
@@ -60,7 +61,7 @@ Container GetInvoiceDetailCard(List<List<String>> entries, bool isStatusVisible,
                   Flexible(
                     flex: 9,
                     fit: FlexFit.tight,
-                    child:Text('Total Sale', style:CustomStyle.blackNormalMerch_14,),),
+                    child:Text(CustomString.totSale, style:CustomStyle.blackNormalMerch_14,),),
                   Flexible(
                     flex: 1,
                     fit: FlexFit.tight,
@@ -76,7 +77,7 @@ Container GetInvoiceDetailCard(List<List<String>> entries, bool isStatusVisible,
                   Flexible(
                     flex: 9,
                     fit: FlexFit.tight,
-                    child:Text('Commission Per Sale', style:CustomStyle.blackNormalMerch_14,),),
+                    child:Text(CustomString.commPerSale, style:CustomStyle.blackNormalMerch_14,),),
                   Flexible(
                     flex: 1,
                     fit: FlexFit.tight,
@@ -92,7 +93,7 @@ Container GetInvoiceDetailCard(List<List<String>> entries, bool isStatusVisible,
                   Flexible(
                     flex: 9,
                     fit: FlexFit.tight,
-                    child:Text('GST & Taxes', style:CustomStyle.blackNormalMerch_14,),),
+                    child:Text(CustomString.gstTax, style:CustomStyle.blackNormalMerch_14,),),
                   Flexible(
                     flex: 1,
                     fit: FlexFit.tight,
@@ -110,7 +111,7 @@ Container GetInvoiceDetailCard(List<List<String>> entries, bool isStatusVisible,
                   Flexible(
                     flex: 8,
                     fit: FlexFit.tight,
-                    child:Text('Total Amount', style:CustomStyle.blackBoldMerch_16,),),
+                    child:Text(CustomString.totAmt, style:CustomStyle.blackBoldMerch_16,),),
                   Flexible(
                     flex: 2,
                     fit: FlexFit.tight,

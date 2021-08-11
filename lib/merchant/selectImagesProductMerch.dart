@@ -16,7 +16,7 @@ class SelectProductImagesMerchant extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch('Edit Product',true,true,'assets/upload.png','assets/delete.png',),
+      appBar: CustomAppBarWithoutSearch(CustomString.edtProd,true,true,'assets/upload.png','assets/delete.png',),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(16),

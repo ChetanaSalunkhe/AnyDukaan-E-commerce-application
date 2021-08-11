@@ -5,6 +5,7 @@ import 'package:anydukaan/customdesigns/ordFeedbackTemplate.dart';
 import 'package:anydukaan/customdesigns/ordSumaryTemplate.dart';
 import 'package:anydukaan/customdesigns/orderCardTemplate.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:timeline_tile/timeline_tile.dart';
@@ -18,7 +19,7 @@ class MyOrderDetails extends State{
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: CustomColors.background_all,
-      appBar: CustomAppBarWithoutSearch('Order Details',true,true,'assets/share1.png','assets/chat_bubble.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.ordDtls,true,true,'assets/share1.png','assets/chat_bubble.png'),
       body: SingleChildScrollView(
         clipBehavior: Clip.antiAlias,
         scrollDirection: Axis.vertical,

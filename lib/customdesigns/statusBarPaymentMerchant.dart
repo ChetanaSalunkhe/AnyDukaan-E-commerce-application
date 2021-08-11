@@ -1,4 +1,5 @@
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
@@ -20,7 +21,7 @@ Container GetStatusBarMerchant(){
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('COD',style: CustomStyle.blackNormalMerch_12,),
+                    Text(CustomString.cod,style: CustomStyle.blackNormalMerch_12,),
                     Text('₹ 12,880',style: CustomStyle.blackBoldMerch_16,),
                   ],
                 ),),
@@ -31,7 +32,7 @@ Container GetStatusBarMerchant(){
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('UPI',style: CustomStyle.blackNormalMerch_12,),
+                    Text(CustomString.upi,style: CustomStyle.blackNormalMerch_12,),
                     Text('₹ 21,180',style: CustomStyle.blackBoldMerch_16,),
                   ],
                 ),),
@@ -42,7 +43,7 @@ Container GetStatusBarMerchant(){
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Khata',style: CustomStyle.blackNormalMerch_12,),
+                    Text(CustomString.khata,style: CustomStyle.blackNormalMerch_12,),
                     Text('₹ 42,280',style: CustomStyle.blackBoldMerch_16,),
                   ],
                 ),),

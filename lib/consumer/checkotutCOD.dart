@@ -9,7 +9,7 @@ class CheckoutCOD extends State{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:CustomAppBarWithoutSearch('Checkout',true,false,'','assets/chat_bubble.png'),
+      appBar:CustomAppBarWithoutSearch(CustomString.checkout,true,false,'','assets/chat_bubble.png'),
        body: SingleChildScrollView(
          child: Container(
            child: Column(

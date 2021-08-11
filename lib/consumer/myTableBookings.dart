@@ -17,7 +17,7 @@ class MyTableBookings extends State{
     String title = CustomString.title_shops_near;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: CustomAppBarWithoutSearch('My Table Bookings',true,false,'assets/serch.png','assets/module_info.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.myTableBookings,true,false,'assets/serch.png','assets/module_info.png'),
       body: SingleChildScrollView(
           child:Container(
             margin: EdgeInsets.only(left: 16,right: 16,top: 12),

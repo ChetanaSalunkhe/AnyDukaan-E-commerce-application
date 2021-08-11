@@ -1,6 +1,7 @@
 import 'package:anydukaan/consumer/myOrders.dart';
 import 'package:anydukaan/customdesigns/ordersSummaryCard.dart';
 import 'package:anydukaan/customdesigns/secondRoute.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:flutter/material.dart';
 
 Container GetListOrdersCard(BuildContext context,List<String> entries,String image,var imgColor,String tabName,int listSize){
@@ -18,6 +19,6 @@ Container GetListOrdersCard(BuildContext context,List<String> entries,String ima
         }
     ),
   ):Container(
-    child: BlankState(msg:'No Orders Placed!', isBtnVisibile:false,img: 'assets/blankstate.png',),
+    child: BlankState(msg:CustomString.noOrd, isBtnVisibile:false,img: 'assets/blankstate.png',),
   );
 }

@@ -43,8 +43,8 @@ class ApplyOffersDetailsMerchant extends State{
                   showSearchBox: false,
                   showAsSuffixIcons: true,
                   popupBackgroundColor: CustomColors.greyline,
-                  label: "Category",
-                  hint: "Select Category",
+                  label: CustomString.cat,
+                  hint: CustomString.selCategory,
                   onChanged: (String data) {
                     setState(() {
                       dropdownValue = data;
@@ -61,8 +61,8 @@ class ApplyOffersDetailsMerchant extends State{
                   showSearchBox: false,
                   showAsSuffixIcons: true,
                   popupBackgroundColor: CustomColors.greyline,
-                  label: "Sub - Category",
-                  hint: "Select Sub- Vategory",
+                  label: CustomString.subcat,
+                  hint: CustomString.selSubcat,
                   onChanged: (String data) {
                     setState(() {
                       dropdownValue = data;
@@ -71,17 +71,17 @@ class ApplyOffersDetailsMerchant extends State{
                   //selectedItem: dropdownValue,
                 ),
                 SizedBox(height: 16,),
-                CustomStyle.getEditTextWithIcon('Search and Select Products', 14, 1, TextInputType.text,
+                CustomStyle.getEditTextWithIcon(CustomString.hintSerchSel, 14, 1, TextInputType.text,
                     Icons.search, CustomColors.colorPrimaryBlue, 16, '',CustomColors.colorPrimaryBlue,true),
                 //SizedBox(height: 12,),
 
-                title=='By Quantity'?CustomStyle.getEditTextEnterDetails('Quantity type', 14, 2,
+                title=='By Quantity'?CustomStyle.getEditTextEnterDetails(CustomString.qtyType, 14, 2,
                     TextInputType.text,CustomStyle.blackNormalMerch_16):
-                title == 'By Percentage'?CustomStyle.getEditTextEnterDetails('Percentage type', 14, 2,
-                    TextInputType.text,CustomStyle.blackNormalMerch_16): CustomStyle.getEditTextEnterDetails('Reduced Amount', 14, 2,
+                title == 'By Percentage'?CustomStyle.getEditTextEnterDetails(CustomString.pctgType, 14, 2,
+                    TextInputType.text,CustomStyle.blackNormalMerch_16): CustomStyle.getEditTextEnterDetails(CustomString.reducedAmt, 14, 2,
                     TextInputType.text,CustomStyle.blackNormalMerch_16),
 
-                CustomStyle.getEditTextEnterDetails('Discount period', 14, 2, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                CustomStyle.getEditTextEnterDetails(CustomString.discPeriod, 14, 2, TextInputType.text,CustomStyle.blackNormalMerch_16),
                 SizedBox(height: 30,),
                 /*button*/
                 InkWell(

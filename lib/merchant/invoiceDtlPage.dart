@@ -2,6 +2,7 @@ import 'package:anydukaan/customdesigns/invoiceDetailMerchant.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/merchant/myProducts.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class InvoiceDetails_ extends StatelessWidget{
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch('Invoice Details',true,false,'assets/serch.png','assets/module_info.png'),
+      appBar: CustomAppBarWithoutSearch(CustomString.invDtls,true,false,'assets/serch.png','assets/module_info.png'),
       body: SingleChildScrollView(
           clipBehavior: Clip.antiAlias,
           scrollDirection: Axis.vertical,
@@ -37,12 +38,12 @@ class InvoiceDetails_ extends StatelessWidget{
                 SizedBox(height: 20,),
                 Container(
                   margin: EdgeInsets.only(left: 16,right: 16),
-                  child: GetCardTemplate(0,entries,'Bill Generated on :','Bill Paid on :',entries[0].elementAt(6),entries[0].elementAt(7)),
+                  child: GetCardTemplate(0,entries,CustomString.billGnrtOn,CustomString.billPaidOn,entries[0].elementAt(6),entries[0].elementAt(7)),
                 ),
                 SizedBox(height: 18,),
                 Container(
                   margin: EdgeInsets.only(left: 16,right: 16),
-                  child: GetCardTemplate(0,entries,'Paid By :','Account ID :',entries[0].elementAt(8),entries[0].elementAt(9)),
+                  child: GetCardTemplate(0,entries,CustomString.paidBy,CustomString.accID,entries[0].elementAt(8),entries[0].elementAt(9)),
                 )
 
               ],

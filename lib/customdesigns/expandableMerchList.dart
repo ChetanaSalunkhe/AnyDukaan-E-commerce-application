@@ -9,7 +9,7 @@ Widget MerchantList() {
     child: ExpansionTile(
       leading:Transform(
         transform: Matrix4.translationValues(-16, -10, 0.0),
-        child:  Radio(
+        child: Radio(
           value: true,
           groupValue: false,
           hoverColor: CustomColors.colorPrimaryBlue,
@@ -60,12 +60,6 @@ Widget MerchantList() {
                           ],
                         )
                     ),
-                    /*trailing:  Container(
-            child: Transform(
-              transform: Matrix4.translationValues(0.0, -10, 0.0),
-              child: BtnPlusMinus(),
-            ),
-          )*/
                   );
                 }),
             Container(
@@ -81,7 +75,7 @@ Widget MerchantList() {
                       Flexible(
                           flex:8,
                           fit: FlexFit.tight,
-                          child: Text('Selling Price',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                          child: Text(CustomString.sprice,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
                       Flexible(
                           flex:2,
                           fit: FlexFit.tight,
@@ -96,7 +90,7 @@ Widget MerchantList() {
                       Flexible(
                           flex:8,
                           fit: FlexFit.tight,
-                          child: Text('Product Offer',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                          child: Text(CustomString.prodOffer,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
                       Flexible(
                           flex:2,
                           fit: FlexFit.tight,
@@ -111,7 +105,7 @@ Widget MerchantList() {
                       Flexible(
                           flex:8,
                           fit: FlexFit.tight,
-                          child: Text('Delivery Charges',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                          child: Text(CustomString.delcharges,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
                       Flexible(
                           flex:2,
                           fit: FlexFit.tight,
@@ -126,7 +120,7 @@ Widget MerchantList() {
                       Flexible(
                           flex:8,
                           fit: FlexFit.tight,
-                          child: Text('Packaging',style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
+                          child: Text(CustomString.pckgng,style: CustomStyle.subTitle,textAlign: TextAlign.start,)),
                       Flexible(
                           flex:2,
                           fit: FlexFit.tight,
@@ -143,7 +137,7 @@ Widget MerchantList() {
                       Flexible(
                           flex:8,
                           fit: FlexFit.tight,
-                          child: Text('Sub Total',style: CustomStyle.blackBold16,textAlign: TextAlign.start,)),
+                          child: Text(CustomString.subtot,style: CustomStyle.blackBold16,textAlign: TextAlign.start,)),
                       Flexible(
                           flex:2,
                           fit: FlexFit.tight,

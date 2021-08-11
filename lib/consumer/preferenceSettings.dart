@@ -15,7 +15,7 @@ class PreferenceSettings extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:CustomAppBarWithoutSearch('Preference Settings',true,false,'assets/serch.png','assets/module_info.png'),
+      appBar:CustomAppBarWithoutSearch(CustomString.prefset,true,false,'assets/serch.png','assets/module_info.png'),
       body: SingleChildScrollView(
         child: Container(
          margin: EdgeInsets.only(left: 16,right: 16,top: 16),

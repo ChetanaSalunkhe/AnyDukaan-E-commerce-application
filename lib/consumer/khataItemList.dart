@@ -2,6 +2,7 @@ import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/khata_ItemListCard.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class KhataItemList extends State{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:CustomAppBarWithoutSearch('Khata Details',true,true,'','assets/chat_bubble.png'),
+      appBar:CustomAppBarWithoutSearch(CustomString.khataDtls,true,true,'','assets/chat_bubble.png'),
       body:Container(
         height: MediaQuery.of(context).size.height,
         margin: EdgeInsets.only(left: 16, right: 16,top: 20),
@@ -45,7 +46,7 @@ class KhataItemList extends State{
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           InkWell(
-            child: BtnContinue('(₹72) Pay Now', context, 'KhataDetailBtn'),
+            child: BtnContinue('(₹72) '+CustomString.payNow, context, 'KhataDetailBtn'),
           ),
         ],
       )

@@ -1,6 +1,7 @@
 import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/dialogBoxDesigns/choose_ScanPopupMerch.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:bottom_bar_with_sheet/bottom_bar_with_sheet.dart';
 import 'package:flutter/material.dart';
@@ -96,7 +97,7 @@ class TutorialOverlay extends ModalRoute<void> {
                 Flexible(
                   flex: 9,
                   fit: FlexFit.tight,
-                  child: Text('Select Segment',style: CustomStyle.whiteBoldMerch_14,textAlign: TextAlign.center,),),
+                  child: Text(CustomString.selSegment,style: CustomStyle.whiteBoldMerch_14,textAlign: TextAlign.center,),),
                 Flexible(
                     flex: 1,
                     fit: FlexFit.tight,

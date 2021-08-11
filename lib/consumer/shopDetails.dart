@@ -122,7 +122,7 @@ class ShopDetails extends State{
                                         children: [
                                           CustomStyle.getImageIcons('assets/free_delivery.png', 12, CustomColors.greenlight),
                                           SizedBox(width: 6,),
-                                          Text('Free Delivery',style: CustomStyle.greenText12,),
+                                          Text(CustomString.freeDel,style: CustomStyle.greenText12,),
                                         ],
                                       ),),
                                   ],

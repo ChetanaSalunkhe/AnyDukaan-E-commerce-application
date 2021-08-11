@@ -1,4 +1,5 @@
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -10,22 +11,22 @@ Container GetMerchOrdStatusCards(){
         Row(
           children: [
             Expanded(
-              child:GetCardDesign('assets/clock_pending.png','₹880','Pending',CustomColors.orange_light,CustomColors.colorPrimaryOrange),
+              child:GetCardDesign('assets/clock_pending.png','₹880',CustomString.pending,CustomColors.orange_light,CustomColors.colorPrimaryOrange),
             ),
             SizedBox(width: 16,),
             Expanded(
-              child:GetCardDesign('assets/undelivered.png','₹1,080','Undelivered',CustomColors.orange_light,CustomColors.colorPrimaryOrange),
+              child:GetCardDesign('assets/undelivered.png','₹1,080',CustomString.undelvrd,CustomColors.orange_light,CustomColors.colorPrimaryOrange),
             ),
           ],
         ),
         Row(
           children: [
             Expanded(
-              child:GetCardDesign('assets/rupees.png','₹4980','Refund',CustomColors.red_card_light,CustomColors.red),
+              child:GetCardDesign('assets/rupees.png','₹4980',CustomString.refund_,CustomColors.red_card_light,CustomColors.red),
             ),
             SizedBox(width: 16,),
             Expanded(
-              child:GetCardDesign('assets/cancel_ord.png','₹480','Cancelled',CustomColors.red_card_light,CustomColors.red),
+              child:GetCardDesign('assets/cancel_ord.png','₹480',CustomString.cancld,CustomColors.red_card_light,CustomColors.red),
             ),
           ],
         ),

@@ -10,6 +10,7 @@ import 'package:otp_text_field/style.dart';
 int btnClickCnt = 0;
 int maxLimit = 3;
 bool isOtpCompleted = false;
+
 class OTPPopup extends State{
   var params;
   OTPPopup({Key key,this.params});
@@ -125,15 +126,6 @@ class OTPPopup extends State{
                          Navigator.push(context,
                           MaterialPageRoute(builder: (context)=>SecondRoute(callFrom: 'MerchantHome',)));
                       }
-
-                     /* setState(() {
-                        if(btnClickCnt<maxLimit){
-                          btnClickCnt++;
-                        }else{
-                          *//*after timer ends*//*
-                          btnClickCnt=0;
-                        }
-                      });*/
                     },
                     child:BtnContinue(btnClickCnt==maxLimit?CustomString.retry:CustomString.verify, context, 'OTPScreen'),
                   ),

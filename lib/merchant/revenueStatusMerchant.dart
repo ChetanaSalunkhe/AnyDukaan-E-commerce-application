@@ -1,17 +1,15 @@
 import 'package:anydukaan/customdesigns/customButtons.dart';
 import 'package:anydukaan/customdesigns/listRevenueDataMerchant.dart';
-import 'package:anydukaan/customdesigns/merchAppBar.dart';
 import 'package:anydukaan/customdesigns/merchStatusCards.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar.dart';
 import 'package:anydukaan/customdesigns/statusBarPaymentMerchant.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:step_progress_indicator/step_progress_indicator.dart';
-import 'package:steps_indicator/steps_indicator.dart';
 
 List<charts.Series> seriesList=_createSampleData();
 
@@ -21,7 +19,7 @@ class RevenueStatusMerchant extends State{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithoutSearch('Revenue Status',true,true,'assets/help.png','assets/notification_merch.png',),
+      appBar: CustomAppBarWithoutSearch(CustomString.revenueStatus,true,true,'assets/help.png','assets/notification_merch.png',),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +30,7 @@ class RevenueStatusMerchant extends State{
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                    BtnWithArrow('Month', context, 130, 40, true, CustomStyle.blueOutline, CustomStyle.blue_merch_normal_12,
+                    BtnWithArrow(CustomString.month, context, 130, 40, true, CustomStyle.blueOutline, CustomStyle.blue_merch_normal_12,
                       CustomColors.colorPrimaryBlue,Icons.keyboard_arrow_down),
                     Flexible(
                       flex:1,
@@ -82,7 +80,7 @@ class RevenueStatusMerchant extends State{
 
             Padding(
               padding:EdgeInsets.only(left:16,right:16,bottom: 16),
-              child:Text('Buying Patterns',style:CustomStyle.blackBoldMerch_16,textAlign: TextAlign.start,),
+              child:Text(CustomString.buyPatterns,style:CustomStyle.blackBoldMerch_16,textAlign: TextAlign.start,),
             ),
 
             Container(
@@ -94,8 +92,8 @@ class RevenueStatusMerchant extends State{
                 absoluteZeroSpacing: false,
                 enableShape: true,
                 unSelectedColor: Theme.of(context).canvasColor,
-                buttonLables: ['Category', 'SubCategory', 'Product',],
-                buttonValues: ["Category", "SubCategory", "Product",],
+                buttonLables: [CustomString.cat, CustomString.subcat, CustomString.prod,],
+                buttonValues: [CustomString.cat, CustomString.subcat, CustomString.prod,],
                 buttonTextStyle: ButtonTextStyle(
                     selectedColor: CustomColors.white,
                     unSelectedColor: CustomColors.colorblackmerch,

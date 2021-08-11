@@ -1,5 +1,4 @@
-import 'package:anydukaan/consumer/myCart.dart';
-import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -48,15 +47,7 @@ class OrdCardTemplate extends State{
                               setState(() {
                                 product.isCheck = value;
                               });
-                            })),/*Theme(
-                      data: CustomStyle.getThemeCheckBox_RadioButton,
-                      child: Checkbox(
-                        checkColor: CustomColors.colorPrimaryBlue,
-                        onChanged: (bool value) {
-                        },
-                        value: false,
-                      ),
-                    ),*/
+                            })),
                   ),),
               Padding(
                 padding: EdgeInsets.only(right: 7,top: 5,bottom: 5),
@@ -101,7 +92,7 @@ class OrdCardTemplate extends State{
                               Flexible(
                                   flex:2,
                                   fit: FlexFit.tight,
-                                  child: Text('Return',style: CustomStyle.warningText,textAlign: TextAlign.end,)),
+                                  child: Text(CustomString.return_,style: CustomStyle.warningText,textAlign: TextAlign.end,)),
                             ],
                           ),
                         ),

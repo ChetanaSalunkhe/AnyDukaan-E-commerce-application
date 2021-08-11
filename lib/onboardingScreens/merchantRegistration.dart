@@ -20,7 +20,7 @@ class MerchantRegistration extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:CustomAppBarWithoutSearch('Registration',true,false,'assets/help.png','assets/notification_merch.png',),
+      appBar:CustomAppBarWithoutSearch(CustomString.registration,true,false,'assets/help.png','assets/notification_merch.png',),
       body:SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -45,8 +45,8 @@ class MerchantRegistration extends State {
                     showSearchBox: false,
                     showAsSuffixIcons: true,
                     popupBackgroundColor: CustomColors.greyline,
-                    label: "Segment",
-                    hint: "Select Segment",
+                    label: CustomString.segmnt,
+                    hint: CustomString.selSegment,
                     enabled: false,
                     selectedItem: selectedSegment,
                   ),
@@ -58,7 +58,7 @@ class MerchantRegistration extends State {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     /*Shop Name*/
-                    CustomStyle.getEditTextEnterDetails('Name of the shop', 14, 2, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                    CustomStyle.getEditTextEnterDetails(CustomString.hintname, 14, 2, TextInputType.text,CustomStyle.blackNormalMerch_16),
                     SizedBox(height: 10,),
                     /*Location*/
                     InkWell(
@@ -75,36 +75,36 @@ class MerchantRegistration extends State {
                               children: [
                                 CustomStyle.getImageIcons('assets/location_blue.png', 18, CustomColors.colorPrimaryBlue),
                                 SizedBox(height: 12,),
-                                Text('Allow AnyDukaan to access this device’s location?',style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),
+                                Text(CustomString.hintallow,style: CustomStyle.blackNormalCust_14,textAlign: TextAlign.center,),
                                 SizedBox(height: 15,),
                                 CustomStyle.GetDivider(),
                                 TextButton(
                                     onPressed: (){
                                       /*allow logic here*/
                                     },
-                                    child: Text('Allow only while using the app ',style: CustomStyle.primaryBtnTextOrange,),),
+                                    child: Text(CustomString.hintallowonly,style: CustomStyle.primaryBtnTextOrange,),),
                                 TextButton(
                                   onPressed: (){
                                     /*deny logic here*/
                                     Navigator.pop(context);
                                   },
-                                  child:Text('Deny',style: CustomStyle.tabbarTitleText,),),
+                                  child:Text(CustomString.deny,style: CustomStyle.tabbarTitleText,),),
 
                               ],
                             ),
                           ),
                         ).show();
                       },
-                      child:CustomStyle.getEditTextWithIcon('Location', 14, 5, TextInputType.text,Icons.my_location_outlined,
+                      child:CustomStyle.getEditTextWithIcon(CustomString.loc, 14, 5, TextInputType.text,Icons.my_location_outlined,
                           CustomColors.colorPrimaryBlue, 16,'$selectedLocation',CustomColors.colorblackmerch,false),
                     ),
                     SizedBox(height: 20,),
                     Text(CustomString.ownerDtls,style: CustomStyle.blackBoldMerch_14,),
                     /*Merchant name*/
-                    CustomStyle.getEditTextEnterDetails('Name of the owner', 14, 2, TextInputType.text,CustomStyle.blackNormalMerch_16),
+                    CustomStyle.getEditTextEnterDetails(CustomString.hintnameowner, 14, 2, TextInputType.text,CustomStyle.blackNormalMerch_16),
                     SizedBox(height: 10,),
                     /*Mobile*/
-                    CustomStyle.getEditTextMobile('Mobile', 14, 10, TextInputType.number,CustomStyle.blackNormalMerch_16),
+                    CustomStyle.getEditTextMobile(CustomString.mobNum, 14, 10, TextInputType.number,CustomStyle.blackNormalMerch_16),
                     SizedBox(height: 12,),
                     InkWell(
                       onTap: (){
@@ -202,7 +202,7 @@ class TutorialOverlay extends ModalRoute<void> {
                   Flexible(
                     flex: 9,
                     fit: FlexFit.tight,
-                    child: Text('Select Segment',style: CustomStyle.whiteBoldMerch_14,textAlign: TextAlign.center,),),
+                    child: Text(CustomString.selSegment,style: CustomStyle.whiteBoldMerch_14,textAlign: TextAlign.center,),),
                   Flexible(
                       flex: 1,
                       fit: FlexFit.tight,

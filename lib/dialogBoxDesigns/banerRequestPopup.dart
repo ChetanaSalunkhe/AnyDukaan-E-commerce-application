@@ -1,7 +1,3 @@
-import 'package:anydukaan/customdesigns/bottomSheetDialogDesign.dart';
-import 'package:anydukaan/customdesigns/cardTemplateSetup.dart';
-import 'package:anydukaan/customdesigns/customButtons.dart';
-import 'package:anydukaan/customdesigns/secondRoute.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';

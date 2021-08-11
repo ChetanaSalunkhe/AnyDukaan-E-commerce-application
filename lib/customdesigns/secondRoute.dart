@@ -19,11 +19,9 @@ import 'package:anydukaan/consumer/returnProducts.dart';
 import 'package:anydukaan/consumer/select_address.dart';
 import 'package:anydukaan/consumer/shopDetails.dart';
 import 'package:anydukaan/consumer/shoplisting.dart';
-import 'package:anydukaan/consumer/testThemes.dart';
 import 'package:anydukaan/customdesigns/merchantReview.dart';
 import 'package:anydukaan/customdesigns/notificationList.dart';
 import 'package:anydukaan/customdesigns/raiseComplaint.dart';
-import 'package:anydukaan/dialogBoxDesigns/scanProdNotFoundPopup.dart';
 import 'package:anydukaan/merchant/addNewProductMerchant.dart';
 import 'package:anydukaan/merchant/apply_offersMerchant.dart';
 import 'package:anydukaan/merchant/chooseBrandsMerchant.dart';
@@ -58,11 +56,8 @@ import 'package:anydukaan/onboardingScreens/loginPage.dart';
 import 'package:anydukaan/onboardingScreens/merchantRegistration.dart';
 import 'package:anydukaan/onboardingScreens/selectLanguage.dart';
 import 'package:anydukaan/onboardingScreens/walkThrough.dart';
-import 'package:anydukaan/splashScreen.dart';
 import 'package:flutter/material.dart';
-
 import 'mainSearchDesign.dart';
-import 'overlayDesign.dart';
 
 class SecondRoute extends StatefulWidget {
   String callFrom="";
@@ -113,7 +108,7 @@ class SecondRoute extends StatefulWidget {
         return MyCart();
         break;
       case 'BottomOrders':
-        //consumer orders
+        /*consumer orders*/
         return MyOrders();
         break;
       case 'AllOrdersList':

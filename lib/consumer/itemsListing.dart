@@ -21,20 +21,20 @@ class ItemsListing extends State{
 
   @override
   Widget build(BuildContext context) {
-
     return DefaultTabController(
       length: 2,
       child: Scaffold(
         resizeToAvoidBottomInset: true,
         backgroundColor: CustomColors.background_lightblue,
-        appBar: CustomAppBarWithSearch(title:'Search Items',searchHint:'Milk',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png',),
+        appBar: CustomAppBarWithSearch(title:CustomString.srchItems,searchHint:'Milk',isLeadingVisible:true,isActionVisible:false,img: 'assets/audio_search.png',),
         body: Container(
           height: MediaQuery.of(context).size.height-150,
           child: Column(
             children: [
               SizedBox(height: 12,),
               GetTabBar('Items (03)','Shops (05)'),
-              Expanded(child: TabBarView(
+              Expanded(
+                child: TabBarView(
                 children: [
                   CustomListView_shops(),   //items list
 
@@ -168,7 +168,7 @@ class ListViewUI_shops extends State{
                                     children: [
                                       CustomStyle.getImageIcons("assets/free_delivery.png",12,CustomColors.greenlight),
                                       SizedBox(width: 4,),
-                                      Text('Free Delivery',style: CustomStyle.greenText10,),
+                                      Text(CustomString.freeDel,style: CustomStyle.greenText10,),
                                     ],
                                   ))
                             ],

@@ -3,6 +3,7 @@ import 'package:anydukaan/customdesigns/expanded_questionsList.dart';
 import 'package:anydukaan/customdesigns/merchAppBarWithSearch.dart';
 import 'package:anydukaan/customdesigns/myCustomAppBar2.dart';
 import 'package:anydukaan/valueresources/customColors.dart';
+import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:flutter/material.dart';
 
 final List<String> entries = <String>
@@ -26,7 +27,7 @@ class ChooseFromListMerchant_ extends StatelessWidget{
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: CustomColors.background_lightblue,
-      appBar: CustomAppBarWithSearch_Merch(title:"Support",searchHint:'Search Questions',
+      appBar: CustomAppBarWithSearch_Merch(title:CustomString.support,searchHint:'Search Questions',
         isLeadingVisible:true,isActionVisible:true,img: 'assets/audio_search.png',img1:'assets/chat_bubble.png',
         img2: 'assets/call.png',imgLead: 'assets/backarrow.png',),
       body: SingleChildScrollView(

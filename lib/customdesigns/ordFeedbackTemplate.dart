@@ -5,7 +5,6 @@ import 'package:anydukaan/valueresources/customColors.dart';
 import 'package:anydukaan/valueresources/customStrings.dart';
 import 'package:anydukaan/valueresources/customStyles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class OrdFeedbackTemplate extends StatelessWidget{
   @override
@@ -107,7 +106,7 @@ class OrdFeedbackTemplate extends StatelessWidget{
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text('Write Review',style: CustomStyle.blackBoldlCust_14,textAlign:TextAlign.start,),
+                            Text(CustomString.writereview,style: CustomStyle.blackBoldlCust_14,textAlign:TextAlign.start,),
                             SizedBox(width: 6,),
                             CustomStyle.GetRatingBar(0,Icons.star_outline,CustomColors.grey_subtitle,20),
                           ],
